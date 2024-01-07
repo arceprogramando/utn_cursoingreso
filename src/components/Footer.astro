@@ -1,0 +1,31 @@
+---
+import Social from "./Social.astro";
+const platform = "github";
+const username = "withastro";
+const socialMedias = [
+  { red: "instagram", perfil: "https://www.instagram.com/arceprog/" },
+  { red: "twitter", perfil: "https://twitter.com/Felipe_skt1" },
+];
+---
+<footer>
+  <p>
+    Learn more about my projects on{" "}
+    <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!
+  </p>
+  <p>Check my social media</p>
+  <ul>
+    {socialMedias.map((media) => (
+      <li >
+        <Social platform={media.red} username={media.perfil}/>
+      </li>
+    ))}
+  </ul>
+</footer>
+
+<style>
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+</style>
