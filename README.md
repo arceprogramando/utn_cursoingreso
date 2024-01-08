@@ -12,6 +12,7 @@ npm create astro@latest -- --template basics
 - 🧼 Cleanup: Utiliza este emoji cuando realices tareas de refactorización o limpieza de código, sin cambios funcionales.
 - 🚀 Refactor: Marca commits que mejoren el rendimiento de la aplicación.
 - 🚧 Work in Progress: Puedes usar este emoji para indicar que el commit contiene trabajo en progreso que no está listo para ser implementado.
+- 📚 Study Needed: Commit para publicaciones en las que necesito continuar estudiando sobre lo que se aplicó, ya que no tiene el efecto deseado o aún lo desconozco.
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
