@@ -6,13 +6,9 @@ html {
 body {
   margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
+  max-width: 120ch;
   padding: 1rem;
   line-height: 1.5;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 h1 {
@@ -90,4 +86,3 @@ html.dark {
 .dark .nav-links a {
   color: #fff;
 }
-
