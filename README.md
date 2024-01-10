@@ -1,8 +1,6 @@
-# Astro Starter Kit: Basics
+# Tecnicatura Universitaria en programacion
 
-```sh
-npm create astro@latest -- --template basics
-```
+
 ## Seguir los siguientes commits para trabajar posteriormente en este proyecto
 
 - 🌈 Change Styles: Úsalo para commits que afecten principalmente la apariencia o el diseño de la aplicación.
@@ -14,13 +12,6 @@ npm create astro@latest -- --template basics
 - 🚧 Work in Progress: Puedes usar este emoji para indicar que el commit contiene trabajo en progreso que no está listo para ser implementado.
 - 📚 Study Needed: Commit para publicaciones en las que necesito continuar estudiando sobre lo que se aplicó, ya que no tiene el efecto deseado o aún lo desconozco.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
 ## 🚀 Project Structure
 
@@ -29,12 +20,13 @@ Inside of your Astro project, you'll see the following folders and files:
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   └── [images]
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   │── Componentes.astro
+│   │   └──── Componentes.js
 │   ├── layouts/
-│   │   └── Layout.astro
+│   │   └── Layouts.astro
 │   └── pages/
 │       └── index.astro
 └── package.json

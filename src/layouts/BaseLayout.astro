@@ -1,22 +1,25 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import "../styles/global.css"
 const { pageTitle } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="overflow-x-hidden 2xl:max-w-6xl mx-auto">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/favicon.svg" />
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <body class="flex flex-col min-h-svh justify-between">
     <Header />
-    <h1>{pageTitle}</h1>
-    <slot />
+    <main class="flex flex-col flex-1">
+      <slot />
+      <div class="flex justify-center">
+        <img src="./centrouniversitariodeinnovacion.jpg" alt="centro universitario de innovacion" class="rounded-xl max-h-52 " />
+      </div>
+    </main>
     <Footer />
     <script>
       import "../scripts/menu.js";
