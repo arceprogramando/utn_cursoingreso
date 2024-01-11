@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "My First Blog Post"
-pubDate: 2022-07-01
-description: "This is the first post of my new Astro blog."
-author: "Astro Learner"
+title: "Apunte Programacion"
+pubDate: 2024-01-10
+description: "Este es un apunte de Programacion para la introduccion a la tecnicatura universitaria en programacion"
+author: "Felipe Arce"
 image:
-  url: "https://docs.astro.build/assets/full-logo-light.png"
-  alt: "The full Astro logo."
-tags: ["astro", "blogging", "learning in public"]
+  url: "/ApunteProgramacion.png"
+  alt: "Apunte programacion"
+tags: ["programacion", "Apunte", "Python"]
 ---
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.

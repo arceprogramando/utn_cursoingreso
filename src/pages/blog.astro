@@ -3,15 +3,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
 const pageTitle = "Apuntes";
+
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="container max-w-xl mx-auto">
   <h2 class="text-center">{pageTitle}</h2>
-    <ul>
+    <ul class="flex justify-center gap-2 flex-wrap">
       {
         allPosts.map((post) => (
-          <BlogPost url={post.url} title={post.frontmatter.title} />
+          <BlogPost url={post.url} title={post.frontmatter.title} tag={post.frontmatter.image.url} />
         ))
       }
     </ul>
