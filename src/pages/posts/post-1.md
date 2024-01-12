@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Apunte Programacion"
-pubDate: 10-01-2024-
+pubDate: 10-01-2024
 description: "Este es un apunte de Programacion para la introducción a la tecnicatura universitaria en programacion"
 author: "Felipe Arce"
 image:
@@ -11,9 +11,7 @@ tags: ["Apunte", "Programacion" , "Python"]
 ---
 
 # Bienvenido
-```console
-hola
-```
+
 ## What I've accomplished
 
 1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.

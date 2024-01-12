@@ -15,23 +15,26 @@ export async function getStaticPaths() {
     );
     return {
       params: { tag },
-      props: { posts: filteredPosts },
+      props: {
+        posts: filteredPosts.map((post) => ({
+          ...post,
+          image: post.frontmatter.image,
+        })),
+      },
     };
   });
 }
 
 const { tag } = Astro.params;
-const { posts } = Astro.props;
+const { posts} = Astro.props;
 ---
 
 <BaseLayout pageTitle={tag}>
-  <h2>
-    Apuntes Taggeados con <span class="text-sky-800 uppercase">"{tag}"</span>
-  </h2>
-    <ul>
+  <h2>Apuntes Taggeados con <span class="text-sky-800 uppercase">"{tag}"</span></h2>
+    <ul class="flex">
       {
         posts.map((post) => (
-          <TagPost url={post.url} title={post.frontmatter.title} />
+          <TagPost url={post.url} title={post.frontmatter.title}  image={post.image.url} alt={post.image.alt}/>
         ))
       }
     </ul>
