@@ -14,11 +14,9 @@ const { pageTitle } = Astro.props;
   </head>
   <body class="flex flex-col min-h-svh justify-between">
     <Header />
-    <main class="flex flex-col flex-1">
+    <main class="flex flex-col max-w-3xl mx-auto  flex-1">
       <slot />
-      <div class="flex justify-center">
-        <img src="/centrouniversitariodeinnovacion.jpg" alt="centro universitario de innovacion" class="rounded-xl max-h-52 " />
-      </div>
+      
     </main>
     <Footer />
     <script>

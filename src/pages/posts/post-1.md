@@ -1,17 +1,19 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Apunte Programacion"
-pubDate: 2024-01-10
-description: "Este es un apunte de Programacion para la introduccion a la tecnicatura universitaria en programacion"
+pubDate: 10-01-2024-
+description: "Este es un apunte de Programacion para la introducción a la tecnicatura universitaria en programacion"
 author: "Felipe Arce"
 image:
   url: "/ApunteProgramacion.png"
   alt: "Apunte programacion"
-tags: ["programacion", "Apunte", "Python"]
+tags: ["Apunte", "Programacion" , "Python"]
 ---
 
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
-
+# Bienvenido
+```console
+hola
+```
 ## What I've accomplished
 
 1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
