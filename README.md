@@ -11,7 +11,7 @@
 - 🚀 Refactor: Marca commits que mejoren el rendimiento de la aplicación.
 - 🚧 Work in Progress: Puedes usar este emoji para indicar que el commit contiene trabajo en progreso que no está listo para ser implementado.
 - 📚 Study Needed: Commit para publicaciones en las que necesito continuar estudiando sobre lo que se aplicó, ya que no tiene el efecto deseado o aún lo desconozco.
-
+- 📁 Added archives : Commit para publicaciones donde se agreguen archivos necesarios
 
 ## 🚀 Project Structure
 

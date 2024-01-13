@@ -9,12 +9,18 @@ const { frontmatter } = Astro.props;
     <div>
       <p><em>{frontmatter.description}</em></p>
       <p>Escrito por: {frontmatter.author}</p>
-      
+      <div class="m-4">
+        <a
+          href={frontmatter.downloadUrl}
+          download="PlanDeEstudio.pdf"
+          class="bg-blue-500 hover:bg-blue-100 text-white hover:text-black font-bold py-2 px-4 rounded"
+        >
+          Descargar {frontmatter.title}
+        </a>
+      </div>
     </div>
   </div>
   <p>{frontmatter.pubDate.slice(0, 10)}</p>
-
-
 
   <slot />
   <ul class="tags">
@@ -28,7 +34,8 @@ const { frontmatter } = Astro.props;
   </ul>
 </BaseLayout>
 <style>
-  a {
+
+.tags  a {
     color: #00539f;
   }
 
