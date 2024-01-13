@@ -7,19 +7,43 @@ author: "Felipe Arce"
 image:
   url: "/ApunteProgramacion.png"
   alt: "Apunte programacion"
-tags: ["Apunte", "Programacion" , "Python"]
+tags: ["Apuntes", "Programacion" , "Python"]
+downloadUrl: "/Introduccion_Programacion_PY.pdf"
+totalTime: 32
+totalExam: 4 
+total : 36
 ---
 
-# Bienvenido
+# Explorando el Código: Apunte de Programación en Python - UTN 2024
 
-## What I've accomplished
+¡Saludos, amantes de la programación y buscadores de conocimiento! En esta ocasión, nos sumergiremos en el fascinante mundo del código, específicamente en nuestro apunte de programación en Python durante el periodo 2024, basado en las valiosas lecciones proporcionadas por la Universidad Tecnológica Nacional (UTN).
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
+## Desafiando la Lógica y Desentrañando el Python
 
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
+- **Periodo 2024:** Nuestro Viaje de Aprendizaje
+  - Hemos explorado desde los conceptos básicos hasta desafíos avanzados, siguiendo los apuntes detallados de la UTN.
+  
+- **Herramientas Poderosas en Nuestras Manos**
+  - Gracias a estos apuntes, ahora contamos con un arsenal de herramientas poderosas para abordar problemas de programación en Python.
 
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
+## Aplicando el Conocimiento en el Mundo Real
 
-## What's next
+- **Proyecto Práctico: Desarrollando Habilidades**
+  - Aplicamos nuestro conocimiento en un proyecto práctico, enfrentándonos a desafíos del mundo real y desarrollando soluciones innovadoras.
+  
+- **Python en Acción: Código que Cobra Vida**
+  - Transformamos líneas de código en programas funcionales que resuelven problemas y simplifican tareas.
 
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+## Celebrando Logros y Mirando Hacia el Futuro
+
+- **Comunidad de Aprendizaje**
+  - Nos sumergimos en una comunidad de aprendices, compartiendo conocimientos y celebrando cada logro.
+  
+- **Futuras Exploraciones: Más Allá del Código**
+  - Miramos hacia el futuro, explorando nuevas fronteras en el vasto campo de la programación.
+
+## Únete a Nuestra Odisea de Código
+
+¡Te invitamos a unirte a nuestra odisea de código! Descubre el apasionante mundo de la programación en Python a través de nuestros apuntes y comparte tus experiencias. Juntos, construiremos un futuro donde el código sea la herramienta que da forma al mundo.
+
+¡Codificación exitosa!
