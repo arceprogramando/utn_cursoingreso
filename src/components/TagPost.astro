@@ -1,0 +1,10 @@
+---
+const {title ,url,image,alt } = Astro.props;
+---
+
+<div class="flex flex-wrap">
+  <a href={url} >
+    {title}
+    <img src={image} alt={alt} class="max-h-40">
+  </a>
+</div>

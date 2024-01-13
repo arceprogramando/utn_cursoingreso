@@ -4,7 +4,10 @@ import Greeting from '../components/Greeting';
 const pageTitle = "Inicio";
 ---
 <BaseLayout pageTitle={pageTitle}>
+  <h1 class="text-center uppercase">{pageTitle}</h1>
   
   <Greeting client:load messages={["📚", "📔", "🥸", "👋"]} />
-  
+  <div class="flex justify-center">
+    <img src="/centrouniversitariodeinnovacion.jpg" alt="centro universitario de innovacion" class="rounded-xl max-h-52 " />
+  </div>
 </BaseLayout>

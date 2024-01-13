@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: My Second Blog Post
-author: Astro Learner
+title: Apunte Matematica
+author: Felipe Arce
 description: "After learning some Astro, I couldn't stop!"
 image:
-  url: "https://docs.astro.build/assets/arc.webp"
-  alt: "Thumbnail of Astro arcs."
-pubDate: 2022-07-08
-tags: ["astro", "blogging", "learning in public", "successes"]
+  url: "/ApunteMatematicainicial.png"
+  alt: "Apunte Matematica inicial"
+pubDate: 2024-01-10
+tags: ["Apunte", "matematica", "calculos", "aricmetica"]
 ---
 
 After a successful first week learning Astro, I decided to try some more. I wrote and imported a small component from memory!

@@ -6,10 +6,11 @@ const pageTitle = "Índice de Tags";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div class="tags">
+  <h1 class="text-center uppercase">Tags</h1>
+  <div class="tags max-w-2xl flex justify-center">
     {
       tags.map((tag) => (
-        <p class="tag">
+        <p class="tag uppercase">
           <a href={`/tags/${tag}`}>{tag}</a>
         </p>
       ))

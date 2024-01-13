@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogPost from "../../components/BlogPost.astro";
+import TagPost from "../../components/TagPost.astro";
 
 export async function getStaticPaths() {
   const allPosts = await Astro.glob("../posts/*.md");
@@ -15,22 +15,27 @@ export async function getStaticPaths() {
     );
     return {
       params: { tag },
-      props: { posts: filteredPosts },
+      props: {
+        posts: filteredPosts.map((post) => ({
+          ...post,
+          image: post.frontmatter.image,
+        })),
+      },
     };
   });
 }
 
 const { tag } = Astro.params;
-const { posts } = Astro.props;
+const { posts} = Astro.props;
 ---
 
 <BaseLayout pageTitle={tag}>
-  <p>Posts tagged with {tag}</p>
-  <ul>
-    {
-      posts.map((post) => (
-        <BlogPost url={post.url} title={post.frontmatter.title} />
-      ))
-    }
-  </ul>
+  <h2>Apuntes Taggeados con <span class="text-sky-800 uppercase">"{tag}"</span></h2>
+    <ul class="flex">
+      {
+        posts.map((post) => (
+          <TagPost url={post.url} title={post.frontmatter.title}  image={post.image.url} alt={post.image.alt}/>
+        ))
+      }
+    </ul>
 </BaseLayout>
