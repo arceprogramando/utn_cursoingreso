@@ -1,9 +1,17 @@
 ---
 const {url, tag, alt } = Astro.props;
+import { Image } from "astro:assets";
 ---
 
 <li>
-  <a href={url} class="">
-    <img src={tag} alt={alt} class="max-h-48" />
+  <a href={url} >
+    <Image 
+    src={tag} 
+    alt={alt}  
+    decoding="async" 
+    width={175} 
+    height={175} 
+    densities={[1.5, 2]} 
+    class=" max-w-44" />
   </a>
 </li>

@@ -4,21 +4,43 @@ import Footer from "../components/Footer.astro";
 const { pageTitle } = Astro.props;
 ---
 
-<html lang="en" class="">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta http-equiv="content-language" content="es" />
+
+    <meta
+      name="description"
+      content="Apuntes, recursos y guías para la Tecnicatura en Programación en UTN. Estudia programación de manera efectiva con material específico para la carrera en CUDI, La Matanza, González Catán y otras sedes de UTN."
+    />
+    <meta property="og:locale" content="es_AR" />
+    <meta name="twitter:creator" content="@Felipe_skt1" />
+    <meta property="og:image" content="/centrouniversitariodeinnovacion.avif" />
+    <meta
+      name="keywords"
+      content="Tecnicatura en Programación, UTN, CUDI, La Matanza, González Catán, Estudiar Programación, Apuntes de Programación"
+    />
+    <meta property="og:title" content={pageTitle} />
+    <meta name="author" content="Felipe Arce" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="article" />
     <link rel="icon" href="/favicon.svg" />
     <title>{pageTitle}</title>
   </head>
-  <body class="min-h-screen bg-gray-50  flex flex-col justify-center relative  ">
+
+  <body class="min-h-screen flex flex-col justify-between bg-white">
     <Header />
-    <main class="flex flex-col  mx-auto max-w-4xl flex-1 bg-white">
+    <main class="flex flex-col bg-opacity-80 mx-auto md:px-20 bg-slate-100">
       <slot />
-      
     </main>
+
     <Footer />
+    <div
+      class="absolute -z-10 bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"
+    >
+    </div>
     <script>
       import "../scripts/menu.js";
     </script>

@@ -2,43 +2,55 @@
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 import Prose from "../components/Prose.astro";
+import { Image } from "astro:assets";
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <div class="flex  justify-center items-center rounded-md shadow-md mb-4 ">
-    <div class="flex flex-col justify-around items-center p-4">
-      <img
-        src={frontmatter.image.url}
-        class="m-2 h-72"
-        alt={frontmatter.image.alt}
-      />
-    </div>
-    <div class="flex flex-col gap-8 items-center ">
-      <div class="flex flex-row gap-2">
-          <p class="font-semibold  text-black p-2 text-center rounded-md shadow-md ">Cursada: <span class=" text-sm uppercase">{frontmatter.totalTimeClass} hs</span></p>
-          <p class="font-semibold  text-black p-2 text-center rounded-md shadow-md ">Examen:  <span class="text-sm uppercase">{frontmatter.totalExam} hs</span></p>
-        <p class="font-semibold  text-black p-2 text-center rounded-md shadow-md ">Total: <span class="text-sm uppercase">{frontmatter.totalTime} hs</span></p>
-      </div>
-      <p class="w-80"><em>{frontmatter.description}</em></p>
-      <div
-        class="text-center bg-blue-500 max-w-40 md:max-w-48 hover:bg-blue-100"
-      >
-        <a
-          href={frontmatter.downloadUrl}
-          download="PlanDeEstudio.pdf"
-          class="text-white hover:text-black font-bold rounded"
-        >
-          Descargar {frontmatter.title}
-        </a>
-      </div>
-      
-    </div>
-  </div>
-  <div class="flex gap-4 flex-row">
-    <p class="font-bold">{frontmatter.pubDate.slice(0, 10)}</p> 
-    <p class=" font-light">Escrito por: {frontmatter.author}</p>
+  <div class="flex rounded-md shadow-md mb-4">
+    <Image
+      src={frontmatter.image.url}
+      width={175}
+      height={75}
+      class="m-2 z-10"
+      alt={frontmatter.image.alt}
+    />
 
+    <div class="flex flex-row  justify-center gap-2 md:items-start">
+      <p
+        class="font-semibold text-black p-2 text-center shadow-md bg-white z-10"
+      >
+        Cursada:
+        <span class="text-sm uppercase">
+          {frontmatter.totalTimeClass} hs
+        </span>
+      </p>
+      <p
+        class="font-semibold text-black p-2 text-center shadow-md bg-white z-10"
+      >
+        Examen: <span class="text-sm uppercase">{frontmatter.totalExam} hs</span
+        >
+      </p>
+      <p
+        class="font-semibold text-black p-2 text-center shadow-md bg-white z-10"
+      >
+        Total: <span class="text-sm uppercase">{frontmatter.totalTime} hs</span>
+      </p>
+    </div>
+    <p ><em>{frontmatter.description}</em></p>
+    <div class="text-center bg-blue-500 max-w-40 md:max-w-48 hover:bg-blue-100">
+      <a
+        href={frontmatter.downloadUrl}
+        download="PlanDeEstudio.pdf"
+        class="text-white hover:text-black font-bold rounded"
+      >
+        Descargar {frontmatter.title}
+      </a>
+    </div>
   </div>
+</BaseLayout>
+<div class="flex flex-col gap-4">
+  <p class="font-bold">{frontmatter.pubDate.slice(0, 10)}</p>
+  <p class="font-light">Escrito por: {frontmatter.author}</p>
 
   <div class="p-2">
     <Prose>
@@ -54,9 +66,7 @@ import Prose from "../components/Prose.astro";
       ))
     }
   </ul>
-</BaseLayout>
-
-
+</div>
 
 <style>
   .tags a {

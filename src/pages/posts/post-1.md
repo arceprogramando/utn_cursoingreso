@@ -15,7 +15,6 @@ totalExam: 4
 totalTime : 20
 ---
 
-# Ciclo Introductorio
 
 # Lectura Comprensiva
 

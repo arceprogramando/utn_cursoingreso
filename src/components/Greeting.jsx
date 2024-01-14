@@ -13,14 +13,14 @@ export default function Greeting({ messages }) {
   }, []);
 
   return (
-    <div className="max-w-sm mx-auto">
+    <div className="mx-auto">
       <div class="flex flex-col justify-center text-center ">
 
-        <p> {greeting} ¡Gracias por tu visita! ☝️  </p>
-        <p >Pueden aportar o dejar sus estrellitas en <span>
+        <p class="p-2">Pueden aportar o dejar sus estrellitas en <span>
         <a href="https://github.com/arceprogramando/astro-practice" className="text-teal-400">Github </a>
-          
           </span> </p>
+
+          
       </div>
       <div className="text-center">
       </div>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting';
+import { Image } from 'astro:assets';
 const pageTitle = "Inicio";
 ---
 <BaseLayout pageTitle={pageTitle}>
@@ -8,11 +9,11 @@ const pageTitle = "Inicio";
   
   <Greeting client:load messages={["📚", "📔", "🥸", "👋"]} />
   <div class="flex justify-center">
-    <img src="/centrouniversitariodeinnovacion.jpg" alt="centro universitario de innovacion" class="rounded-xl max-h-52 " />
+    <Image src="/centrouniversitariodeinnovacion.avif" alt="centro universitario de innovacion" width={320} height={180}    />
   </div>
   <div class="flex justify-center mt-4">
-    <a href="/PlanDeEstudio.pdf" download="PlanDeEstudio.pdf" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-      Descargar Plan de estudio
+    <a href="/PlanDeEstudio.pdf" download="PlanDeEstudio.pdf" class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
+      Descargar Plan de Estudio
     </a>
   </div>
 </BaseLayout>

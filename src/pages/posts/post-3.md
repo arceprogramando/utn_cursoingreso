@@ -9,9 +9,9 @@ image:
 pubDate: 2024-01-10
 tags: ["Apuntes", "matematica", "calculos", "aricmetica"]
 downloadUrl: "/Matematica_Inicial.pdf"
-totalTimeClass: 16
+totalTimeClass: 32
 totalExam: 4 
-totalTime : 20
+totalTime : 36
 ---
 
 # Explorando los Números y Polinomios: Apunte de Matemática Inicial - UTN 2024

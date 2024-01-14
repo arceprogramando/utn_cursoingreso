@@ -9,9 +9,9 @@ image:
   alt: "Apunte programacion"
 tags: ["Apuntes", "Programacion" , "Python"]
 downloadUrl: "/Introduccion_Programacion_PY.pdf"
-totalTimeClass: 16
+totalTimeClass: 32
 totalExam: 4 
-totalTime : 20
+totalTime : 36
 ---
 
 # Explorando el Código: Apunte de Programación en Python - UTN 2024

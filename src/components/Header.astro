@@ -1,15 +1,18 @@
 ---
-import Hamburger from './Hamburger.astro';
 import Navigation from './Navigation.astro';
 ---
-<header class="bg-white">
-  <div class="bg-black text-white p-2">
+<header class="mb-4">
+  <div class="bg-black  text-white p-2">
     <h1 class="text-center text-2xl uppercase">
       Tecnicatura universitaria <span class="block"> en Programación</span>
     </h1>
   </div>
-  <nav class="m-4">
-    <Hamburger />
+  <nav class="flex  justify-around md:justify-between items-center max-w-3xl mx-auto m-4">
+    <img
+      src="/logoutn.avif"
+      alt="Logo Universidad Tecnica Nacional"
+      class="h-4 md:h-6 md:pl-8"
+    />
     <Navigation />
   </nav>
 </header>

@@ -1,5 +1,4 @@
 ---
-
 const navigationTags = [
   { href: "/", tag: "Inicio" },
   { href: "/blog/", tag: "Apuntes" },
@@ -7,17 +6,19 @@ const navigationTags = [
 ];
 ---
 
-<ul class="flex justify-center items-center gap-3">
-  <img src="/logoutn.png" alt="Logo Universidad Tecnica Nacional" class="h-6  md:h-8">
+<ul class="flex gap-6">
+    
   {
     navigationTags.map((item) => (
       <li class="relative cursor-pointer group">
-        <a href={item.href} class="block relative z-10 border bg-[#3DD1E7] border-[#24365a] text-black border-solid py-1 px-2 uppercase text-sm font-bold leading-7">
+        <a
+          href={item.href}
+          class="block relative z-10 border bg-[#3DD1E7] border-[#24365a] text-black border-solid py-1 px-2 uppercase text-sm font-bold leading-7"
+        >
           {item.tag}
         </a>
         <div class="absolute border border-black transform origin-top-right transition-all duration-300 -top-1 right-1 w-full h-full z-0 group-hover:top-0 group-hover:right-0" />
       </li>
     ))
   }
-
 </ul>
