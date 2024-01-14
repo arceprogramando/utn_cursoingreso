@@ -15,9 +15,7 @@ totalExam: 4
 totalTime : 20
 ---
 
-# Ingreso a la Carrera Técnico Superior en Programación
-
-## Ciclo Introductorio
+# Ciclo Introductorio
 
 # Lectura Comprensiva
 
@@ -32,7 +30,7 @@ totalTime : 20
 - Aplicar instrumentalmente los conocimientos adquiridos a diferentes tipos textuales.
 - Valorar la lectura comprensiva como una habilidad básica para desempeñarse satisfactoriamente a lo largo de toda su carrera 
 
-### COntenidos conceptuales (POR CLASE)
+### Contenidos conceptuales (POR CLASE)
 
 1. CLASE 1
 
