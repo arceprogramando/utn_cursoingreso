@@ -1,55 +1,49 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Apunte Matematica
-author: Felipe Arce
-description: "After learning some Astro, I couldn't stop!"
+title: "Apunte Programacion"
+pubDate: 10-01-2024
+description: "Este es un apunte de Programacion para la introducción a la tecnicatura universitaria en programacion"
+author: "Felipe Arce"
 image:
-  url: "/ApunteMatematicainicial.png"
-  alt: "Apunte Matematica inicial"
-pubDate: 2024-01-10
-tags: ["Apuntes", "matematica", "calculos", "aricmetica"]
-downloadUrl: "/Matematica_Inicial.pdf"
-
+  url: "/ApunteProgramacion.png"
+  alt: "Apunte programacion"
+tags: ["Apuntes", "Programacion" , "Python"]
+downloadUrl: "/Introduccion_Programacion_PY.pdf"
 totalTime: 32
 totalExam: 4 
 total : 36
 ---
 
-# Explorando los Números y Polinomios: Apunte de Matemática Inicial - UTN 2024
+# Explorando el Código: Apunte de Programación en Python - UTN 2024
 
-¡Saludos, apasionados por los números y las ecuaciones! En esta ocasión, nos sumergiremos en el fascinante mundo de la matemática inicial y los polinomios durante el periodo 2024, siguiendo los apuntes proporcionados por la Universidad Tecnológica Nacional (UTN).
+¡Saludos, amantes de la programación y buscadores de conocimiento! En esta ocasión, nos sumergiremos en el fascinante mundo del código, específicamente en nuestro apunte de programación en Python durante el periodo 2024, basado en las valiosas lecciones proporcionadas por la Universidad Tecnológica Nacional (UTN).
 
-## Descubriendo los Fundamentos de la Matemática
+## Desafiando la Lógica y Desentrañando el Python
 
 - **Periodo 2024:** Nuestro Viaje de Aprendizaje
-  - Exploraremos desde los conceptos básicos hasta las aplicaciones prácticas, siguiendo los apuntes detallados de la UTN.
+  - Hemos explorado desde los conceptos básicos hasta desafíos avanzados, siguiendo los apuntes detallados de la UTN.
+  
+- **Herramientas Poderosas en Nuestras Manos**
+  - Gracias a estos apuntes, ahora contamos con un arsenal de herramientas poderosas para abordar problemas de programación en Python.
 
-- **Exploración de Números y Operaciones Básicas**
-  - Desde la aritmética hasta los fundamentos de la álgebra, estamos construyendo una base sólida en los principios matemáticos esenciales.
+## Aplicando el Conocimiento en el Mundo Real
 
-## Introducción a los Polinomios
-
-- **Definición y Estructura de los Polinomios**
-  - Desglosaremos la anatomía de los polinomios, comprendiendo términos, coeficientes y grados.
-
-- **Operaciones Básicas con Polinomios**
-  - Suma, resta, multiplicación y división: dominaremos las operaciones fundamentales con polinomios.
-
-## Aplicando Conceptos a Problemas del Mundo Real
-
-- **Proyecto Práctico: Resolviendo Problemas Matemáticos**
-  - Aplicaremos nuestros conocimientos en un proyecto práctico, resolviendo problemas del mundo real con ecuaciones y polinomios.
+- **Proyecto Práctico: Desarrollando Habilidades**
+  - Aplicamos nuestro conocimiento en un proyecto práctico, enfrentándonos a desafíos del mundo real y desarrollando soluciones innovadoras.
+  
+- **Python en Acción: Código que Cobra Vida**
+  - Transformamos líneas de código en programas funcionales que resuelven problemas y simplifican tareas.
 
 ## Celebrando Logros y Mirando Hacia el Futuro
 
-- **Comunidad de Aprendizaje Matemático**
-  - Nos sumergiremos en una comunidad de aprendices matemáticos, compartiendo conocimientos y celebrando cada avance.
+- **Comunidad de Aprendizaje**
+  - Nos sumergimos en una comunidad de aprendices, compartiendo conocimientos y celebrando cada logro.
+  
+- **Futuras Exploraciones: Más Allá del Código**
+  - Miramos hacia el futuro, explorando nuevas fronteras en el vasto campo de la programación.
 
-- **Futuras Exploraciones: Más Allá de los Números**
-  - Mientras celebramos nuestros logros, también miramos hacia el futuro, explorando nuevas áreas de la matemática.
+## Únete a Nuestra Odisea de Código
 
-## Únete a Nuestra Odisea Matemática
+¡Te invitamos a unirte a nuestra odisea de código! Descubre el apasionante mundo de la programación en Python a través de nuestros apuntes y comparte tus experiencias. Juntos, construiremos un futuro donde el código sea la herramienta que da forma al mundo.
 
-¡Te invitamos a unirte a nuestra odisea matemática! Descubre la fascinación de los números y polinomios a través de nuestros apuntes y comparte tus experiencias. Juntos, construiremos un futuro donde las ecuaciones y polinomios son herramientas poderosas.
-
-¡Matemáticas exitosas!
+¡Codificación exitosa!

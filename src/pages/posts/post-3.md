@@ -1,54 +1,55 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Apuntes de Lectura comprensiva
+title: Apunte Matematica
 author: Felipe Arce
-description: "Apuntes a la Lectura comprensiva"
+description: "Este es un apunte de Matematica para la introducción a la tecnicatura universitaria en programacion"
 image:
-  url: "/ApunteLecturaComprensiva.png"
-  alt: "ApunteLecturaComprensiva"
+  url: "/ApunteMatematicainicial.png"
+  alt: "Apunte Matematica inicial"
 pubDate: 2024-01-10
-tags: ["Apuntes","Lectura Comprensiva", "learning in public"]
-downloadUrl: "/Lectura_Comprensiva.pdf"
-totalTime: 16
+tags: ["Apuntes", "matematica", "calculos", "aricmetica"]
+downloadUrl: "/Matematica_Inicial.pdf"
+
+totalTime: 32
 totalExam: 4 
-total : 20
+total : 36
 ---
 
-# Explorando las Palabras: Lectura Comprensiva y Análisis de Textos - UTN 2024
+# Explorando los Números y Polinomios: Apunte de Matemática Inicial - UTN 2024
 
-¡Saludos, amantes de la literatura y la comprensión textual! En esta ocasión, nos sumergiremos en el apasionante mundo de la lectura comprensiva y el análisis de textos durante el periodo 2024, basándonos en los apuntes proporcionados por la Universidad Tecnológica Nacional (UTN).
+¡Saludos, apasionados por los números y las ecuaciones! En esta ocasión, nos sumergiremos en el fascinante mundo de la matemática inicial y los polinomios durante el periodo 2024, siguiendo los apuntes proporcionados por la Universidad Tecnológica Nacional (UTN).
 
-## Descubriendo las Dimensiones de la Lectura
+## Descubriendo los Fundamentos de la Matemática
 
 - **Periodo 2024:** Nuestro Viaje de Aprendizaje
-  - Exploraremos desde los fundamentos de la lectura hasta técnicas avanzadas de análisis, siguiendo los apuntes detallados de la UTN.
+  - Exploraremos desde los conceptos básicos hasta las aplicaciones prácticas, siguiendo los apuntes detallados de la UTN.
 
-- **Inmersión en el Universo de Borges**
-  - Nos sumergiremos en las obras de Jorge Luis Borges, explorando su estilo único y sus contribuciones al mundo literario.
+- **Exploración de Números y Operaciones Básicas**
+  - Desde la aritmética hasta los fundamentos de la álgebra, estamos construyendo una base sólida en los principios matemáticos esenciales.
 
-## Técnicas de Lectura Comprensiva
+## Introducción a los Polinomios
 
-- **Comprensión Profunda de Textos**
-  - Desarrollaremos habilidades para extraer significados más allá de las palabras, comprendiendo contextos y matices.
+- **Definición y Estructura de los Polinomios**
+  - Desglosaremos la anatomía de los polinomios, comprendiendo términos, coeficientes y grados.
 
-- **Análisis de Estructuras Narrativas**
-  - Desglosaremos las estructuras narrativas, identificando elementos clave que dan forma a la riqueza de los textos.
+- **Operaciones Básicas con Polinomios**
+  - Suma, resta, multiplicación y división: dominaremos las operaciones fundamentales con polinomios.
 
-## Proyecto de Análisis Literario
+## Aplicando Conceptos a Problemas del Mundo Real
 
-- **Análisis de Textos Borgianos**
-  - Aplicaremos nuestras habilidades en un proyecto práctico, desglosando y analizando textos de Borges para revelar capas ocultas de significado.
+- **Proyecto Práctico: Resolviendo Problemas Matemáticos**
+  - Aplicaremos nuestros conocimientos en un proyecto práctico, resolviendo problemas del mundo real con ecuaciones y polinomios.
 
 ## Celebrando Logros y Mirando Hacia el Futuro
 
-- **Comunidad de Exploradores Literarios**
-  - Nos sumergiremos en una comunidad de lectores y analistas literarios, compartiendo interpretaciones y celebrando descubrimientos.
+- **Comunidad de Aprendizaje Matemático**
+  - Nos sumergiremos en una comunidad de aprendices matemáticos, compartiendo conocimientos y celebrando cada avance.
 
-- **Futuras Exploraciones: Más Allá de las Páginas**
-  - Mientras celebramos nuestros logros, también miramos hacia el futuro, explorando nuevas dimensiones en el vasto mundo de la literatura.
+- **Futuras Exploraciones: Más Allá de los Números**
+  - Mientras celebramos nuestros logros, también miramos hacia el futuro, explorando nuevas áreas de la matemática.
 
-## Únete a Nuestra Odisea de Palabras
+## Únete a Nuestra Odisea Matemática
 
-¡Te invitamos a unirte a nuestra odisea de palabras! Descubre la riqueza de la lectura comprensiva y el análisis de textos a través de nuestros apuntes y comparte tus experiencias. Juntos, construiremos un futuro donde las palabras se convierten en portales hacia mundos inexplorados.
+¡Te invitamos a unirte a nuestra odisea matemática! Descubre la fascinación de los números y polinomios a través de nuestros apuntes y comparte tus experiencias. Juntos, construiremos un futuro donde las ecuaciones y polinomios son herramientas poderosas.
 
-¡Lecturas exitosas!
+¡Matemáticas exitosas!

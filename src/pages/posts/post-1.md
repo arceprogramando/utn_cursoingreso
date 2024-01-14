@@ -1,49 +1,61 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "Apunte Programacion"
-pubDate: 10-01-2024
-description: "Este es un apunte de Programacion para la introducción a la tecnicatura universitaria en programacion"
-author: "Felipe Arce"
+title: Apuntes de Lectura comprensiva
+author: Felipe Arce
+description: "Apuntes de  Lectura comprensiva"
+
 image:
-  url: "/ApunteProgramacion.png"
-  alt: "Apunte programacion"
-tags: ["Apuntes", "Programacion" , "Python"]
-downloadUrl: "/Introduccion_Programacion_PY.pdf"
-totalTime: 32
+  url: "/ApunteLecturaComprensiva.png"
+  alt: "ApunteLecturaComprensiva"
+pubDate: 2024-01-10
+tags: ["Apuntes","Lectura Comprensiva", "learning in public"]
+downloadUrl: "/Lectura_Comprensiva.pdf"
+totalTimeClass: 16
 totalExam: 4 
-total : 36
+totalTime : 20
 ---
 
-# Explorando el Código: Apunte de Programación en Python - UTN 2024
+# Ingreso a la Carrera Técnico Superior en Programación
 
-¡Saludos, amantes de la programación y buscadores de conocimiento! En esta ocasión, nos sumergiremos en el fascinante mundo del código, específicamente en nuestro apunte de programación en Python durante el periodo 2024, basado en las valiosas lecciones proporcionadas por la Universidad Tecnológica Nacional (UTN).
+## Ciclo Introductorio
 
-## Desafiando la Lógica y Desentrañando el Python
+# Lectura Comprensiva
 
-- **Periodo 2024:** Nuestro Viaje de Aprendizaje
-  - Hemos explorado desde los conceptos básicos hasta desafíos avanzados, siguiendo los apuntes detallados de la UTN.
-  
-- **Herramientas Poderosas en Nuestras Manos**
-  - Gracias a estos apuntes, ahora contamos con un arsenal de herramientas poderosas para abordar problemas de programación en Python.
+### Expectativas De logro
+- Reconocimiento de la importancia del método hermeneútico en lectura comprensiva.
+- Poner de manifiesto los procesos metacognitivos de lectura y escritura.
 
-## Aplicando el Conocimiento en el Mundo Real
+### Objetivos de la Materia 
 
-- **Proyecto Práctico: Desarrollando Habilidades**
-  - Aplicamos nuestro conocimiento en un proyecto práctico, enfrentándonos a desafíos del mundo real y desarrollando soluciones innovadoras.
-  
-- **Python en Acción: Código que Cobra Vida**
-  - Transformamos líneas de código en programas funcionales que resuelven problemas y simplifican tareas.
+- Entender la lectura comprensiva como intrinseca al proceso de aprendizaje
+- Relacionar la explicación y la argumentacion como parte de la comprensión.
+- Aplicar instrumentalmente los conocimientos adquiridos a diferentes tipos textuales.
+- Valorar la lectura comprensiva como una habilidad básica para desempeñarse satisfactoriamente a lo largo de toda su carrera 
 
-## Celebrando Logros y Mirando Hacia el Futuro
+### COntenidos conceptuales (POR CLASE)
 
-- **Comunidad de Aprendizaje**
-  - Nos sumergimos en una comunidad de aprendices, compartiendo conocimientos y celebrando cada logro.
-  
-- **Futuras Exploraciones: Más Allá del Código**
-  - Miramos hacia el futuro, explorando nuevas fronteras en el vasto campo de la programación.
+1. CLASE 1
 
-## Únete a Nuestra Odisea de Código
+Texto y discurso; elementos paratextuales: portada, índice, apéndices , notas al píe , bibliografia y citas . Técnica de lectura , síntesis, resumen (subrayado), parafraseado. Ejercitación sobre textos de trama más simple (narrativa, descriptiva). Uso del diccionario.
 
-¡Te invitamos a unirte a nuestra odisea de código! Descubre el apasionante mundo de la programación en Python a través de nuestros apuntes y comparte tus experiencias. Juntos, construiremos un futuro donde el código sea la herramienta que da forma al mundo.
+1. CLASE 2
 
-¡Codificación exitosa!
+Estrategias argumentativas: ejemplos, analogías ,reformulaciones, citas de autoridad, pregunta crítica. 
+Ejercitación de técnicas de lectura sobre la trama argumentativa. Ideas centrales y periféricas. Uso del diccionario.
+
+3. CLASE 3
+
+Estrategias expositivo-explicativas: en serie, secuencia comparativa, problema-solución, la definición , la analogía, la ejemplificación. Ejercitación de técnicas de lectura sobre la trama expositivo-explicativa. Cuadro sinóptico . Uso de diccionario.
+
+4. CLASE 4 
+
+### Examen
+
+#### Metodología 
+
+Se trabajará con el presente cuadernillo de material teórico y de textos para la ejercitación. Se buscará minimizar la exposición teórica utilizando una metodología activa. Se propondrán trabajos de práctica domiciliaria. Se anexará material teórico tendiente a favorecer el trabajo del alumno.
+
+- Nota : Las citas bibliográficas se completaran oportunamente en las clases.
+
+# EL TEXTO Y EL DISCURSO
+
