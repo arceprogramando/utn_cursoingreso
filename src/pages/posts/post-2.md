@@ -2,10 +2,10 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Apunte Programacion"
 pubDate: 10-01-2024
-description: "Este es un apunte de Programacion para la introducción a la tecnicatura universitaria en programacion"
+description: "Apunte de Programacion "
 author: "Felipe Arce"
 image:
-  url: "/ApunteProgramacion.png"
+  url: "/ApunteProgramacion.avif"
   alt: "Apunte programacion"
 tags: ["Apuntes", "Programacion" , "Python"]
 downloadUrl: "/Introduccion_Programacion_PY.pdf"

@@ -2,13 +2,13 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Apunte Matematica
 author: Felipe Arce
-description: "Este es un apunte de Matematica para la introducción a la tecnicatura universitaria en programacion"
+description: "Apunte de Matematica "
 image:
-  url: "/ApunteMatematicainicial.png"
+  url: "/ApunteMatematicainicial.avif"
   alt: "Apunte Matematica inicial"
 pubDate: 2024-01-10
 tags: ["Apuntes", "matematica", "calculos", "aricmetica"]
-downloadUrl: "/Matematica_Inicial.pdf"
+downloadUrl: "/Matematica_Inicial.pdwf"
 totalTimeClass: 32
 totalExam: 4 
 totalTime : 36

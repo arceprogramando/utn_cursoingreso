@@ -7,7 +7,7 @@ const pageTitle = "Índice de Tags";
 
 <BaseLayout pageTitle={pageTitle}>
   <h1 class="text-center uppercase">Tags</h1>
-  <div class="tags flex justify-center">
+  <div class="tags flex justify-center max-w-3xl">
     {
       tags.map((tag) => (
         <p class="tag uppercase">
@@ -17,6 +17,7 @@ const pageTitle = "Índice de Tags";
     }
   </div>
 </BaseLayout>
+
 <style>
   a {
     color: #00539f;

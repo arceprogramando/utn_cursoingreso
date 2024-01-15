@@ -6,68 +6,74 @@ import { Image } from "astro:assets";
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <div class="flex rounded-md shadow-md mb-4">
+  <div class="flex justify-around border-b-2 mb-8">
     <Image
       src={frontmatter.image.url}
       width={175}
       height={75}
-      class="m-2 z-10"
+      class="m-2 z-10 w-36 md:w-52"
       alt={frontmatter.image.alt}
     />
 
-    <div class="flex flex-row  justify-center gap-2 md:items-start">
-      <p
-        class="font-semibold text-black p-2 text-center shadow-md bg-white z-10"
-      >
-        Cursada:
-        <span class="text-sm uppercase">
-          {frontmatter.totalTimeClass} hs
-        </span>
-      </p>
-      <p
-        class="font-semibold text-black p-2 text-center shadow-md bg-white z-10"
-      >
-        Examen: <span class="text-sm uppercase">{frontmatter.totalExam} hs</span
-        >
-      </p>
-      <p
-        class="font-semibold text-black p-2 text-center shadow-md bg-white z-10"
-      >
-        Total: <span class="text-sm uppercase">{frontmatter.totalTime} hs</span>
-      </p>
+    <div class="flex flex-col justify-around p-4 md:items-center">
+      <div class="flex flex-col gap-2">
+        <div class="flex md:gap-8 justify-around">
+          <p
+            class="font-semibold text-xs md:text-base px-2 text-black text-center shadow-md z-10"
+          >
+            Cursada:
+            <span class="block  uppercase">
+              {frontmatter.totalTimeClass} hs
+            </span>
+          </p>
+          <p
+            class="font-semibold text-xs md:text-base px-2 text-black text-center shadow-md z-10"
+          >
+            Examen: <span class="block uppercase"
+              >{frontmatter.totalExam} hs</span
+            >
+          </p>
+        </div>
+        <p class="font-semibold text-xs md:text-base text-black text-center shadow-md z-10">
+          Total: <span class="block uppercase">{frontmatter.totalTime} hs</span>
+        </p>
+      </div>
+
+      <div>
+        <p class="max-w-40 md:max-w-80"><em>{frontmatter.description}</em></p>
+      </div>
+
+      <div class="flex hover:bg-blue-100 text-center">
+        <a
+          href={frontmatter.downloadUrl}
+          download="PlanDeEstudio.pdf"
+          class=" bg-black hover:bg-zinc-800 text-white hover:text-zinc-200 p-2 "
+        >Descargar Apunte</a>
+      </div>
     </div>
-    <p ><em>{frontmatter.description}</em></p>
-    <div class="text-center bg-blue-500 max-w-40 md:max-w-48 hover:bg-blue-100">
-      <a
-        href={frontmatter.downloadUrl}
-        download="PlanDeEstudio.pdf"
-        class="text-white hover:text-black font-bold rounded"
-      >
-        Descargar {frontmatter.title}
-      </a>
+  </div>
+  <div class="flex-col p-2 md:max-w-3xl mx-auto gap-4">
+    <div class="flex gap-4">
+      <p class="font-bold">{frontmatter.pubDate.slice(0, 10)}</p>
+      <p class="font-light">Escrito por: {frontmatter.author}</p>
     </div>
+
+    <div class="p-2">
+      <Prose>
+        <slot />
+      </Prose>
+    </div>
+    <ul class="tags">
+      {
+        frontmatter.tags.map((tag) => (
+          <li class="tag">
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </BaseLayout>
-<div class="flex flex-col gap-4">
-  <p class="font-bold">{frontmatter.pubDate.slice(0, 10)}</p>
-  <p class="font-light">Escrito por: {frontmatter.author}</p>
-
-  <div class="p-2">
-    <Prose>
-      <slot />
-    </Prose>
-  </div>
-  <ul class="tags">
-    {
-      frontmatter.tags.map((tag) => (
-        <li class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </li>
-      ))
-    }
-  </ul>
-</div>
-
 <style>
   .tags a {
     color: #00539f;

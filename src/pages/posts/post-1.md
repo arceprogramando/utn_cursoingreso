@@ -5,7 +5,7 @@ author: Felipe Arce
 description: "Apuntes de  Lectura comprensiva"
 
 image:
-  url: "/ApunteLecturaComprensiva.png"
+  url: "/ApunteLecturaComprensiva.avif"
   alt: "ApunteLecturaComprensiva"
 pubDate: 2024-01-10
 tags: ["Apuntes","Lectura Comprensiva", "learning in public"]
