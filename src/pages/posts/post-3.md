@@ -8,7 +8,7 @@ image:
   alt: "Apunte Matematica inicial"
 pubDate: 2024-01-10
 tags: ["Apuntes", "matematica", "calculos", "aricmetica"]
-downloadUrl: "/Matematica_Inicial.pdwf"
+downloadUrl: "/Matematica_Inicial.pdf"
 totalTimeClass: 32
 totalExam: 4 
 totalTime : 36
