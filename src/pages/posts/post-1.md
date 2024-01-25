@@ -103,19 +103,65 @@ Como podemos observar, los discursos reales se clasifican bajo varios criterios,
 
 Debemos señalar también que, según se analice el momento de producción o uno de los momentos de recepción de un discurso, cambiará su clasificación. Por ejemplo, las crónicas de la conquista de América, en el momento de su producción, eran en general diarios de viajeros. Hoy en día se las considera dentro del corpus de la literatura. Otro caso similar es el de los cantares de gesta medievales: en su contexto de producción se consideraban discursos históricos; hoy en día se los clasifica como literarios.
 
-<h3 class="text-center underline mb-0">El proceso de la comunicación</h3>
+<h3 class="text-center underline mb-0 uppercase">El proceso de la comunicación</h3>
 <h4 class="text-block text-center ">(Circuito comunicacional)</h4>
 
 Para comprender cómo es este proceso, partiremos del esquema planteado por Roman Jakobson (en 1960), que muestra que en todo proceso comunicativo intervienen seis factores, a saber:
 
 <img src="/EsquemaRomanJakobson.avif" alt="Esquema Roman Jakobson">
 
-| Via| Descripción|
-| --------| -------------------------------------------------------------------- |
-| **<p class="text-bold ">Emisor</p>** |    Individuo o institución que inicia el proceso codificando un mensaje 
-| **<p class="text-bold ">Mensaje</p>**| Lo que se comunica 
-| **<p class="text-bold ">Receptor</p>**| Individuo/s que codifica/n el mensaje.
-| **<p class="text-bold ">Código</p>**| El sistema de signos utilizado para codificar el mensaje.
-| **<p class="text-bold ">Canal</p>**| El medio fisico a través del cual se transmite el mensaje.(Jakobson hace referencia también al definir el factor "contacto", a la conexión psicológica entre el emisor y el receptor que les permite establecer comunicación )
+| Via                                    | Descripción                                                                                                                                                                                                                    |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **<p class="text-bold ">Emisor</p>**   | Individuo o institución que inicia el proceso codificando un mensaje                                                                                                                                                           |
+| **<p class="text-bold ">Mensaje</p>**  | Lo que se comunica                                                                                                                                                                                                             |
+| **<p class="text-bold ">Receptor</p>** | Individuo/s que codifica/n el mensaje.                                                                                                                                                                                         |
+| **<p class="text-bold ">Código</p>**   | El sistema de signos utilizado para codificar el mensaje.                                                                                                                                                                      |
+| **<p class="text-bold ">Canal</p>**    | El medio fisico a través del cual se transmite el mensaje.(Jakobson hace referencia también al definir el factor "contacto", a la conexión psicológica entre el emisor y el receptor que les permite establecer comunicación ) |
 
+Es importante observar que este circuito se pone en funcionamiento en todo tipo de comunicación, tanto verbal (lingüística), como icónica o de otro tipo, siendo la situación comunicativa la que generalmente determina cómo jugarán su papel los factores intervinientes en el proceso comunicativo.
 
+Por ejemplo, si dos individuos desean comunicarse y no comparten el mismo código lingüístico, intentarán una comunicación por medio de gestos. O bien, si están a una distancia relativa, aún compartiendo la misma lengua, si el medio físico se lo impidiera (están a una distancia de 100m de cada orilla de un río), no podrán comunicarse sino por señas.
+
+<img src="/69.avif" alt="Imagen mirando un mismo numero 69 uno de arriba y otro de abajo">
+
+A la vez, no toda situación comunicativa permite el establecimiento del diálogo (alternancia de la condición emisor ~ receptor) de manera simultánea.
+Si tomamos para ello el ejemplo del proceso comunicativo que se pone en marcha en una emisión de televisión, v.g. en un programa periodístico de opinión, veremos también cómo aquí es el factor "canal" el que juega un papel preponderante, de modo que si se quisiera entablar un diálogo con el conductor del programa se debería cambiar de "canal" (la T.V. por el teléfono).
+
+Del mismo modo, las particularidades del emisor o del receptor pueden determinar la elección del código a utilizar para lograr la comunicación; v.g., un periódico codificado en sistema Braille, o un programa de T.V. realizado con la utilización del lenguaje para sordomudos; al mismo tiempo veremos cómo las particularidades del emisor o del receptor determinan también el canal a utilizar (la ceguera impide ver T.V.; la sordomudez impide comunicarse por radio o por teléfono).
+
+Por último, es necesario señalar que el factor "referente" juega un papel muy importante en el proceso comunicativo, es decir que así como, para que se establezca comunicación, es necesario que emisor y receptor compartan el mismo código, también es imprescindible que compartan lo que podríamos denominar el mismo "código referencial", esto es, que la temática y la forma de desarrollarla estén al alcance de las posibilidades de comprensión del posible receptor del mensaje (no es lo mismo un texto de Biología para un niño de 10 años que para un joven de 17).
+
+Vemos así que el proceso de la comunicación es un fenómeno muy complejo. De ahí que estudios más recientes sobre el tema, como los de Catherine Kerbrat-Orecchioni, hayan reformulado el clásico esquema. Se ha avanzado más allá del marco establecido por Jakobson, considerando el proceso comunicativo y admitiendo que el mismo sigue siendo un simple esquema que solo amplía el anterior.
+
+<h3 class="text-center underline mb-0 uppercase">La reformulación del esquema de la comunicación</h3>
+
+<img src="/esquemadelacomunicacion.avif" alt="Esquema de la comunicacion , codificación y decodificación">
+
+**Competencia:** conjunto de conocimientos implícitos que un individuo tiene para la ejecución de algo.
+
+**Competencia lingüística:** la suma de todas las posibilidades lingüísticas de un sujeto, la totalidad de lo que es capaz de codificar y decodificar lingüísticamente. Kerbrat-Orecchioni plantea que, al menos en la comunicación oral, dicha competencia no puede disociarse de la competencia paralingüística (mímica, gestos), ya que hablar es "proceder a la selección de las diversas categorías de apoyos formales de la comunicación (lengua, gesto, mímica...), privilegiando uno de los sistemas semióticos en detrimento de los otros, usarlos alternativamente (una mirada en lugar de una palabra) o en co-ocurrencia (el gesto facial y corporal acompañando a la misma)".
+
+**Competencias culturales:** conjunto de conocimientos implícitos que un sujeto tiene del mundo, de sí y de los otros.
+
+**Competencias ideológicas:** conjunto de los sistemas de interpretación y de evaluación y/o de valoración del universo referencial.
+
+**Modelos de Producción y de Interpretación:** Conjunto de las reglas generales que rigen los procesos de codificación y decodificación, las cuales son puestas en funcionamiento por los sujetos emisor y receptor, movilizando para un acto enunciativo concreto el conjunto de conocimientos que conforman su competencia lingüística.
+
+**Restricciones del universo del discurso:** filtros que limitan las posibilidades de elección y que dependen de:
+
+1. condiciones concretas de la comunicación (situación comunicativa).
+2. características temáticas y retóricas del discurso, es decir, en términos generales, las restricciones del género. (limitaciones estilístico-tematicas).
+
+“Por ejemplo, para analizar al discurso de un profesor de lingüística, hay que tener en cuenta":
+
+1. La naturaleza particular del locutor (donde entran en juego numerosos parametros}; la naturaleza de los alocutarios (su número , su edad, su “nivel”, su comportamiento); la organización material, politica y social del espacio en que se instala la relacin didactica, etc.
+2. El hecho de que se trata de un discurso que obedece a las siguientes restricciones: discurso didáctico(restricción de género) que se refiere al lenguaje (restricción tematica).
+
+**Determinaciones Psicológicas:** están constituidas por todo el universo afectivo que entre en juego en la situación comunicativa concreta, tanto en la codificación como en la decodificación del mensaje , es decir , en las instancies emisora y receptora del circuito comunicacional. Ellas pueden tener incidencia, por ejemplo, en las competencias de los sujetes intervinientes en un acto comunicativo concreto. Pensemos en una situación de examen, en la que factores psicológicos como la inseguridad, el temor , el excesivo respeto hacia el receptor (de un alumno, un entrevistado) pueden determinar la desaprobación del mismo respecto de las instancias emisora y receptora podemos destacar su complejidad viendo cómo el emisor puede ser simple (un solo sujeto enunciador) o complejo (mensajes institucionales, la publicidad, el hecho teatral).
+
+En cuanto al receptor, éste puede ser alocutario (o destinatario directo) o no alocutario, que a su vez puede Clasificarse en destinatario indirecto (previsto por el alocutor) y en receptor adicional (no previsto por el alocutor). El receptor puede ser también real, virtual o ficcional. (El lector virtual se convierte en ficcional cuando le son otorgados los poderes de un ser “real”, como el don de Ia palabra, y dialoga con el emisor).
+
+<h3 class="text-center underline mb-0 uppercase">El resumen y la sintesis</h3>
+<div class="flex justify-center">
+  <img src="/articulosubrayado.avif" alt="Imagen de un libro siendo subrayado" class="h-48  ">
+</div>
