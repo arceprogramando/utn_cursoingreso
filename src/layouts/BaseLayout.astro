@@ -10,19 +10,16 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta http-equiv="content-language" content="es" />
-
+    <meta property="og:locale" content="es_AR" />
     <meta
       name="description"
       content="Apuntes, recursos y guías para la Tecnicatura en Programación en UTN. Estudia programación de manera efectiva con material específico para la carrera en CUDI, La Matanza, González Catán y otras sedes de UTN."
     />
-    <meta property="og:locale" content="es_AR" />
     <meta name="twitter:creator" content="@Felipe_skt1" />
     <meta
       property="og:image"
       content="https://res.cloudinary.com/dyanh7yda/image/upload/v1705374365/c77n6krmnazj9yaafrxh.jpg"
     />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
     <meta
       name="twitter:image"
       content="https://res.cloudinary.com/dyanh7yda/image/upload/v1705374365/c77n6krmnazj9yaafrxh.jpg"
@@ -32,11 +29,13 @@ const { pageTitle } = Astro.props;
       content="Tecnicatura en Programación, UTN, CUDI, La Matanza, González Catán, Estudiar Programación, Apuntes de Programación"
     />
     <meta property="og:title" content={pageTitle} />
+    <meta name="description" content="Apuntes para la tecnicatura universitaria en programacion , 2024 , matematica , programacion y lectura compreensiva ">
     <meta name="author" content="Felipe Arce" />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="article" />
     <link rel="icon" href="/favicon.svg" />
     <title>{pageTitle}</title>
+    
   </head>
 
   <body class="min-h-screen flex flex-col justify-between bg-white">

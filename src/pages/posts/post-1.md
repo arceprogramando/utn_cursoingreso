@@ -19,7 +19,6 @@ totalTime: 20
 
 <img src="/ChicoLeyendo.avif" alt="Imagen de chico leyendo">
 
-
 ## Expectativas De logro
 
 - Reconocimiento de la importancia del método hermeneútico en lectura comprensiva.
@@ -61,13 +60,11 @@ Se trabajará con el presente cuadernillo de material teórico y de textos para 
 
 <img src="/AnimeLeyendo.avif" alt="Personaje de anime leyendo">
 
-
 ### TEXTO
 
 Un texto es el resultado de la codificación lingüística de un mensaje. Como tal, un texto puede estar conformado por una oración o un conjunto de oraciones cuyos componentes establecen una particular relación entre sí. Es decir, un texto no es una mera serie de oraciones yuxtapuestas, ni la suma de sus significados, sino una compleja red de estructuras dadas en diferentes niveles interrelacionados que posee un sentido global. Asimismo, un texto está formado por reglas, que pertenecen a los órdenes sintáctico, semántico y pragmático. En este sentido, para que un conjunto de elementos lingüísticos conformen un texto deben establecer entre sí una relación de cohesión y de coherencia.
 
 ### DISCURSO
-
 
 El término discurso no tiene un significado totalmente unívoco. Se lo ha asimilado tanto al concepto de texto como al de enunciado, pero nosotros adoptaremos la postura que sostiene que el discurso es el resultado de la suma de un texto o enunciado y su situación de enunciación o situación comunicativa. Es decir, un discurso es lenguaje puesto en acción, un texto que ha adoptado una modalidad en una situación comunicativa particular. Consideramos el discurso como un sistema de significación complejo cuyas distintas articulaciones, y no sus partes por separado, producen sentido. De esta forma, el concepto de discurso incorpora -con respecto al de texto y al de enunciado- una dimensión social e ideológica, ya que las situaciones comunicativas son siempre sociales y la ideología es una componente insoslayable de toda comunicación.
 
@@ -102,7 +99,6 @@ Por ejemplo:
 
 4. **El discurso publicitario:** según las funciones del lenguaje, es un discurso apelativo que hace uso de recursos poéticos; según su base textual, fundamentalmente argumentativo y descriptivo; según su relación con el referente, no ficcional; según el canal utilizado, escrito u oral; según las condiciones de elaboración, elaborado; y, tanto su diagramación como su relación con una institución no son relevantes para su clasificación.
 
-
 Como podemos observar, los discursos reales se clasifican bajo varios criterios, ya que uno solo de ellos no da cuenta de todas sus características. Por otra parte, un solo criterio no es suficiente para la diferenciación de distintos discursos. Un tercer factor a tener en cuenta es que estos criterios no son 'rígidos', ya que pueden manifestarse en distintos grados. Además, cabe aclarar que la lista de criterios puede extenderse, como de hecho ha sucedido.
 
 Debemos señalar también que, según se analice el momento de producción o uno de los momentos de recepción de un discurso, cambiará su clasificación. Por ejemplo, las crónicas de la conquista de América, en el momento de su producción, eran en general diarios de viajeros. Hoy en día se las considera dentro del corpus de la literatura. Otro caso similar es el de los cantares de gesta medievales: en su contexto de producción se consideraban discursos históricos; hoy en día se los clasifica como literarios.
@@ -113,3 +109,13 @@ Debemos señalar también que, según se analice el momento de producción o uno
 Para comprender cómo es este proceso, partiremos del esquema planteado por Roman Jakobson (en 1960), que muestra que en todo proceso comunicativo intervienen seis factores, a saber:
 
 <img src="/EsquemaRomanJakobson.avif" alt="Esquema Roman Jakobson">
+
+| Via| Descripción|
+| --------| -------------------------------------------------------------------- |
+| **<p class="text-bold ">Emisor</p>** |    Individuo o institución que inicia el proceso codificando un mensaje 
+| **<p class="text-bold ">Mensaje</p>**| Lo que se comunica 
+| **<p class="text-bold ">Receptor</p>**| Individuo/s que codifica/n el mensaje.
+| **<p class="text-bold ">Código</p>**| El sistema de signos utilizado para codificar el mensaje.
+| **<p class="text-bold ">Canal</p>**| El medio fisico a través del cual se transmite el mensaje.(Jakobson hace referencia también al definir el factor "contacto", a la conexión psicológica entre el emisor y el receptor que les permite establecer comunicación )
+
+
