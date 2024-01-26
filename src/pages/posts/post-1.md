@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Apuntes de Lectura comprensiva
 author: Felipe Arce
-description: "Apuntes de  Lectura comprensiva"
+description: "Apunte Lectura comprensiva"
 
 image:
   url: "/ApunteLecturaComprensiva.avif"

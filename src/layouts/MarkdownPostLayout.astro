@@ -46,9 +46,9 @@ import { Image } from "astro:assets";
       <div class="flex hover:bg-blue-100 text-center">
         <a
           href={frontmatter.downloadUrl}
-          download="PlanDeEstudio.pdf"
+          download={`${frontmatter.title.replace(/ /g, '_')}.pdf`}
           class=" bg-black hover:bg-zinc-800 text-white hover:text-zinc-200 p-2 "
-        >Descargar Apunte</a>
+        >Descargar {frontmatter.title}</a>
       </div>
     </div>
   </div>
