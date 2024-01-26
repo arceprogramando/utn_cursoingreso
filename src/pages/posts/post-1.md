@@ -15,7 +15,7 @@ totalExam: 4
 totalTime: 20
 ---
 
-# Lectura Comprensiva
+## Lectura Comprensiva
 
 <img src="/ChicoLeyendo.avif" alt="Imagen de chico leyendo">
 
@@ -56,8 +56,7 @@ Se trabajará con el presente cuadernillo de material teórico y de textos para 
 
 - Nota : Las citas bibliográficas se completaran oportunamente en las clases.
 
-<h2 class="text-center underline ">El texto y el discurso</h2>
-
+<h3 class="text-center underline uppercase">El texto y el discurso</h3>
 <img src="/AnimeLeyendo.avif" alt="Personaje de anime leyendo">
 
 ### TEXTO
@@ -104,11 +103,11 @@ Como podemos observar, los discursos reales se clasifican bajo varios criterios,
 Debemos señalar también que, según se analice el momento de producción o uno de los momentos de recepción de un discurso, cambiará su clasificación. Por ejemplo, las crónicas de la conquista de América, en el momento de su producción, eran en general diarios de viajeros. Hoy en día se las considera dentro del corpus de la literatura. Otro caso similar es el de los cantares de gesta medievales: en su contexto de producción se consideraban discursos históricos; hoy en día se los clasifica como literarios.
 
 <h3 class="text-center underline mb-0 uppercase">El proceso de la comunicación</h3>
-<h4 class="text-block text-center ">(Circuito comunicacional)</h4>
+<h4 class="text-center ">(Circuito comunicacional)</h4>
+<img src="/EsquemaRomanJakobson.avif" alt="Esquema Roman Jakobson">
 
 Para comprender cómo es este proceso, partiremos del esquema planteado por Roman Jakobson (en 1960), que muestra que en todo proceso comunicativo intervienen seis factores, a saber:
 
-<img src="/EsquemaRomanJakobson.avif" alt="Esquema Roman Jakobson">
 
 | Via                                    | Descripción                                                                                                                                                                                                                    |
 | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -133,8 +132,7 @@ Por último, es necesario señalar que el factor "referente" juega un papel muy 
 
 Vemos así que el proceso de la comunicación es un fenómeno muy complejo. De ahí que estudios más recientes sobre el tema, como los de Catherine Kerbrat-Orecchioni, hayan reformulado el clásico esquema. Se ha avanzado más allá del marco establecido por Jakobson, considerando el proceso comunicativo y admitiendo que el mismo sigue siendo un simple esquema que solo amplía el anterior.
 
-<h3 class="text-center underline mb-0 uppercase">La reformulación del esquema de la comunicación</h3>
-
+<h3 class="text-center underline  uppercase">La reformulación del esquema de la comunicación</h3>
 <img src="/esquemadelacomunicacion.avif" alt="Esquema de la comunicacion , codificación y decodificación">
 
 **Competencia:** conjunto de conocimientos implícitos que un individuo tiene para la ejecución de algo.
@@ -150,20 +148,20 @@ Vemos así que el proceso de la comunicación es un fenómeno muy complejo. De a
 **Restricciones del universo del discurso:** filtros que limitan las posibilidades de elección y que dependen de:
 
 1. condiciones concretas de la comunicación (situación comunicativa).
-2. características temáticas y retóricas del discurso, es decir, en términos generales, las restricciones del género. (limitaciones estilístico-tematicas).
+2. características temáticas y retóricas del discurso, es decir, en términos generales, las restricciones del género. (limitaciones estilístico-temáticas).
 
 “Por ejemplo, para analizar al discurso de un profesor de lingüística, hay que tener en cuenta":
 
 1. La naturaleza particular del locutor (donde entran en juego numerosos parametros}; la naturaleza de los alocutarios (su número , su edad, su “nivel”, su comportamiento); la organización material, politica y social del espacio en que se instala la relacin didactica, etc.
-2. El hecho de que se trata de un discurso que obedece a las siguientes restricciones: discurso didáctico(restricción de género) que se refiere al lenguaje (restricción tematica).
+2. El hecho de que se trata de un discurso que obedece a las siguientes restricciones: discurso didáctico(restricción de género) que se refiere al lenguaje (restricción temática).
 
 **Determinaciones Psicológicas:** están constituidas por todo el universo afectivo que entre en juego en la situación comunicativa concreta, tanto en la codificación como en la decodificación del mensaje , es decir , en las instancies emisora y receptora del circuito comunicacional. Ellas pueden tener incidencia, por ejemplo, en las competencias de los sujetes intervinientes en un acto comunicativo concreto. Pensemos en una situación de examen, en la que factores psicológicos como la inseguridad, el temor , el excesivo respeto hacia el receptor (de un alumno, un entrevistado) pueden determinar la desaprobación del mismo respecto de las instancias emisora y receptora podemos destacar su complejidad viendo cómo el emisor puede ser simple (un solo sujeto enunciador) o complejo (mensajes institucionales, la publicidad, el hecho teatral).
 
 En cuanto al receptor, éste puede ser alocutario (o destinatario directo) o no alocutario, que a su vez puede Clasificarse en destinatario indirecto (previsto por el alocutor) y en receptor adicional (no previsto por el alocutor). El receptor puede ser también real, virtual o ficcional. (El lector virtual se convierte en ficcional cuando le son otorgados los poderes de un ser “real”, como el don de Ia palabra, y dialoga con el emisor).
 
-<h3 class="text-center underline mb-0 uppercase">El resumen y la síntesis</h3>
+<h3 class="text-center underline  uppercase">El resumen y la síntesis</h3>
 <div class="flex justify-center">
-  <img src="/articulosubrayado.avif" alt="Imagen de un libro siendo subrayado" > 
+  <img src="/articuloconmarcador.avif" alt="Imagen de un libro siendo subrayado con un marcador" > 
 </div>
 
 Es muy común la utilización de los vocablos resumen y síntesis como sinónimos, en realidad , no lo son.
@@ -180,8 +178,8 @@ En estas operaciones se ven involucradas tanto la lectura, como la escritura, ya
 
 En cuanto a la síntesis, se trata de construir el significado global del texto y luego reeelaborarlo en forma personal y valorativa. EL trabajo que se realiza involucra la argumentación, ya que se trata de dar una opinión propia sobre el tema.
 
-<h4 class="text-center underline mb-0 uppercase">El subrayado</h4>
-
+<h3 class="text-center underline  uppercase">El subrayado</h3>
+<img src="/articulosubrayado.avif" alt="Imagen de un texto siendo subrayado con un marcador rojo" > 
 
 Un texto puede subrayarse para destacar las frases o párrafos que llaman la atención a medida que se lee, o bien para resumir lo que se considera útil o importante para incorporar en la investigación o trabajo que
 se estuviera realizando.
@@ -192,7 +190,8 @@ Como en el caso de la toma de apuntes, se trata de jerarquizar y seleccionar las
 
 A veces, puede resultar útil hacer anotaciones en los márgenes acerca de lo que se lee o resumir las propias ideas sobre el tema. No olvidemos que una parte del significado del texto no está explícitado, dicho, sino que debe inferirse, es decir, ser descubierto.
 
-<h4 class="text-center underline mb-0 uppercase">La toma de Apuntes</h4>
+<h3 class="text-center underline  uppercase">La toma de Apuntes</h3>
+<img src="/tomarapuntes.avif" alt="Persona tomando apuntes" > 
 
 Tanto en una clase o en una conferencia como frente a una película o una emisión televisiva, puede resultar útil tomar nota de aquellas ideas o datos que respondan a algún tema que nos interese. 
 Las tendencias habituales al realizar esta tarea son dos:
@@ -204,13 +203,13 @@ Para ir más allá de estas dos posibilidades y para que la toma de apuntes resu
 
 Por último, puede agregarse que en la toma de apuntes muchos estudiantes desarrollan un código propio para abreviar las palabras más frecuentes. Es preciso aclarar que estas abreviaturas, válidas en los textos de uso personal como los apuntes o las notas, no deben ser incorporadas a otros textos formales y de circulación social como cartas, informes, etc.
 
-<h4 class="text-center underline mb-0 uppercase">La bibliografia</h4>
+<h3 class="text-center underline uppercase">La bibliografia</h3>
 
 La bibliografía está compuesta por la referencia bibliográfica de los libros, artículos, documentos, etc., consultados al elaborar un trabajo de investigación, hayan sido citados a lo largo del texto o no. Si no es muy extensa, puede ubicarse al final del trabajo. Cuando se trata de una monografía de gran envergadura, suele consignarse, además, la bibliografía correspondiente al final de cada capítulo.
 
 La forma de organizarla varía según las necesidades: puede hacerse por orden alfabético, ordenando de esta manera los apellidos de los autores, dividiéndola por temas, determinando cuáles son los fundamentales y agrupando por orden alfabético a los autores de cada uno, o bien clasificarla por tipos de documentos: libros, leyes, cartas, etc.
 
-<h4 class="text-center underline mb-0 uppercase">Citas y notas AL Pie</h4>
+<h3 class="text-center underline  uppercase">Citas y notas AL Pie</h3>
 
 Una monografía se nutre de una gran variedad de materiales escritos que deben ser citados según las normas en uso. En líneas generales, los textos consultados se pueden parafrasear, es decir, explicar o ampliar. También en este caso debe citarse la fuente.
 
@@ -225,7 +224,7 @@ En cuanto al uso de las notas, conviene recordar los más frecuentes:
 
 En todos los casos, las notas no deberán ser extensas porque de otra manera se constituirían en apéndices, es decir, textos que, en forma de anexos relacionados con el tema central, se desarrollan al final de un capítulo.
 
-<h4 class="text-center underline mb-0 uppercase">Macroestuctura</h4>
+<h3 class="text-center underline  uppercase">Macroestuctura</h3>
 
 Al usar términos como 'asunto', 'resultado', e 'idea general' de lo que se 'dijo', nos enfrentamos a alguna propiedad del significado o del contenido del discurso. La macroestructura, según la definiera Van Dijk, da cuenta del contenido global de un discurso y puede encontrarse explícita o implícita en un texto. La microestructura, por otra parte y según el mismo autor, denota la estructura global de un discurso, es decir, la estructura de las oraciones y las relaciones de cohesión y de coherencia entre ellas.
 
@@ -235,7 +234,7 @@ Así es que el vínculo entre microestructura y macroestructura debe ser una rel
 
 Nuestro conocimiento del uso de la lengua nos dice también que un discurso no tiene un solo tema o asunto sino más bien una secuencia de tomas o acuntes que se expresan también en un resumen del discurso. Esto hace que sea posible reconocer temas aún más globales, de manera que se obtienen varios niveles de macroestructura, cada uno derivado del nivel inmediatamente inferior, por las mismas macrorreglas. De hecho, entonces, es posible tener un tema de un párrafo, de una página o de un capítulo, así como de un libro entero, según el nivel de globalidad que se escoja para caracterizar el contenido del discurso.
 
-<h4 class="text-center underline mb-0 uppercase">macrorreglas</h4>
+<h3 class="text-center underline uppercase">macrorreglas</h3>
 
 Las macrorreglas son las reglas que permiten la proyección semántica que vincule las proposiciones de la macroestructura con las proposiciones de la microestructura. Se llaman macrorreglas porque son las que en sí mismas producen las macroestructuras textuales. De alguna manera tienen que reducir la información semántica: reducen una secuencia de varias proposiciones a unas pocas o, incluso, a una sola. Esta clase de reducción de información es necesaria para poder comprender, almacenar y reproducir discursos. También es característica de las macrorreglas su naturaleza organizadora (así como la progresión temática constituye la red de orientación de un discurso).
 
@@ -265,11 +264,11 @@ Una macroestructura derivada por medio de macrorreglas es una secuencia de propo
 
 En cuanto al orden en la aplicación de las macrorreglas, deben considerarse los siguientes aspectos. Para la construcción, se requieren todos los detalles para obtener una macroproposición, por ello, tal vez, se debiera aplicar esta regla primero. Después la supresión, para eliminar aquellos detalles que ya no son pertinentes para el resto del discurso, pero que pueden ser incluidos en una proposición generalizada. Y si se requiere resumir aún más, se aplicará la regla de la generalización. Van Dijk
 
-<h4 class="text-center underline mb-0 uppercase">Macroestuctura y progresión tematica</h4>
+<h3 class="text-center underline  uppercase">Macrorreglas y progresión temática</h3>
 
-La macroestructura de un texto debe necesariamente construirse sobre cualquiera de los tipos de progre- sidn tematica a excepcién de la de salto tematico. 
+La macroestructura de un texto debe necesariamente construirse sobre cualquiera de los tipos de progresión temática a excepcién de la de salto tematico. 
 
-<h5 class="uppercase font-semibold">Resumen de textos explicativos <h5/>
+<h4 class="uppercase font-semibold">Resumen de textos explicativos </h4>
 
 El resumen puede ser concebido como una operación particular que efectúa el receptor sobre un texto fuente y que da por resultado un texto de menor extensión que respeta el orden macroproposicional del primero. Es decir, el resumen es la exposición de la macroestructura de un texto primero en un texto segundo más breve que no altera el ordenamiento conceptual del primero. Pero cabe destacar que distintos tipos de texto exigen diferentes operaciones para hallar la macroestructura, es decir, no siempre las mismas estrategias de resumen sirven para cualquier tipo de texto.
 
@@ -277,8 +276,8 @@ En el caso de los textos expositivos o explicativos, existen estrategias precisa
 
 Podemos decir entonces que un resumen de este tipo de texto implicará ejercer sobre los mismos una operación inversa a la utilizada para su construcción. Para ello, deberán jerarquizarse las formas explicativas, ya que si diferentes formas explicativas en un texto expositivo están al servicio de la explicación del mismo obstáculo, es obvio que podrán seleccionarse algunas de esas formas como expresión macroproposicional explícita de otras formas.
 Una Primera jerarquización posible es:
-<div class="flex justify-center">
-  <ol>
+<div class="flex justify-center m-0 p-0 leading-none ">
+  <ol class="m-0 p-0 leading-none">
     <li>Definición.</li>
     <li>Descripción.</li>
     <li>Enumeración.</li>
@@ -290,12 +289,204 @@ Esta jerarquización no es arbitraria, sino que se funda en las macrorreglas def
 
 En este caso, el comienzo de oración con minúscula no se debe a un error tipográfico o a un desconocimiento de la convención, sino a que hemos optado por respetar la norma relativa a los nombres propios encabezados por proposición en minúscula.
 Otra jerarquización posible es:
-<div class="flex justify-center">
-  <ol>
+<div class="flex justify-center m-0 p-0 leading-none">
+  <ol class="m-0 p-0 leading-none">
     <li>Establecimiento de relaciones de causa-efecto.</li>
     <li>Establacimiento de relaciones analógicas. </li>
   </ol>
 </div>
 
 En este caso, podemos sostener que el establecimiento de relaciones causa-efecto es el resultado de aplicar las macrorreglas de generalización y de construcción sobre las ralaciones analógicas fijadas. Estas jerarquizaciones nos permiten seleccionar, entre dos formas explicativas usadas en un texto, una de ellas, siempre que la seleccionada constituya el resultado de una macro-operacin presente en el texto fuente.
-Por otra parte, ya que en los textos expositivos las macroproposiciones estan explicitas, la escritura per- sonal del autor del resumen, en este caso, tiene poca incidencia. 
+Por otra parte, ya que en los textos expositivos las macroproposiciones estan explicitas, la escritura personal del autor del resumen, en este caso, tiene poca incidencia. 
+
+
+<h3 class="text-center underline  uppercase" >bases textuales </h3>
+
+Las bases textuales son unidades estructurales elegibles como inicio de texto, parte de un léxico potencial que tiene la extensión de un grupo de palabras (sobre todo en títulos manifestados concretamente) o de oraciones o unidades más amplias (párrafos, secciones como la Introducción, etc.) y que pueden ser desplegados en textos a través de secuencias sucesivas. En tanto estas bases textuales estructurales se realizan en textos concretos con palabras que tienen referencia y que, por lo tanto, se refieren a determinados aspectos del modelo de realidad común del hablante y oyente, representan bases temáticas.
+
+Las bases textuales de los textos pueden reducirse a cinco modelos básicos: **descriptiva**, **narrativa**, **expositiva**, **argumentativa** y **directiva**. Pero debe tenerse en cuenta que un texto no necesariamente se construye sobre una sola base textual, sino que existe una base textual dominante, la cual prevalece sobre las otras. Una estructuración textual es dominante cuando es el resultado de una formación secuencial que despliega o desarrolla un iniciador textual (fundamentalmente título e introducción).
+
+<h4 class="uppercase">Base descriptiva</h4>
+
+La base temática textual denominada "descriptiva" es aquella que los hablantes eligen para expresar ocurrencias y cambios en el espacio, sin manifestar cambios temporales. En castellano, en general, se utilizan oraciones unimembres con verbos que no indican un cambio temporal, junto con adverbios de lugar o construcciones locativas. A la oración típica de esta base temática textual se la llamará "oración registradora de fenómenos". **Ejemplo:**
+- "Habia miles de vasos sobre la mesa".
+
+Las textos descriptivos serán aquellos cuya base textual dominante sea la descriptiva.
+
+<h4 class="uppercase">Base Narrativa</h4>
+
+La base textual temática narrativa es la seleccionada por los hablantes para expresar textos sobre la ocurrencia y cambios en el tiempo. Se establece un marco referencial temporal en el que los objetos, agentes y fenómenos referidos por el sujeto gramatical de la oración son presentados como cambiantes y activos.
+
+A la oración típica de esta base textual temática se la denominará oración denotadora de cambios o acciones. **Ejemplo:**
+- "Los pasajeros aterrizaron en Buenos Aires en medio de la noche."
+
+Los textos narrativos serán aquellos cuya base textual dominante sea la narrativa.
+
+<h4 class="uppercase">Base expositiva (O Explicativa)</h4>
+
+La base textual temática expositiva se elige para expresiones textuales sobre la descomposición (expresión analítica) o composición (exposición sintética) de representaciones conceptuales del hablante. En las exposiciones analíticas suelen utilizarse formas típicas como "x consiste en y", "x contiene a y", "x comprende a y". A la oración típica de este tipo de exposición se la denomina oración identificadora de fenómenos. **Ejemplo:** 
+- El cerebro tiene diez millones de neuronas (exposición analítica).
+
+Por otra parte, en las exposiciones sintéticas suelen aparecer verbos que se refieren al concepto de 'definición', como "ser", "llamarse", "definirse", "referirse a". A la oración típica de este segundo tipo de exposición se la llama oración enlazadora de fenómenos. **Ejemplo:**
+
+- Una parte del cerebro es la corteza (exposición sintética).
+
+Nos referiremos como texto expositivo a aquel que presenta una base textual expositiva dominante.
+
+<h4 class="uppercase">Base argumentativa</h4>
+
+La base textual temática argumentativa es la que se elige para expresiones textuales que crean relaciones entre conceptos o afirmaciones del hablante. En general, se presenta una atribución de cualidades a un concepto o afirmación. Es por eso que la oración tipica de esta base temática textual se la denomina oración atributiva de cualidad(opinión). **Ejemplo:**
+- No es lógico que aún subsistan ciertas formas de discriminación de la mujer.
+Un texto argumentativo será aquel que se estructure a partir de una base argumentativa, es decir aquel que presente una base textual argumentativa dominante.
+
+<h4 class="uppercase">Base Directiva(o Instructiva)</h4>
+
+La base textual temática directiva se elige para expresiones textuales que deben valer como indicaciones de acciones para el comportamiento futuro del hablante o del destinatario. En general se utilizan verbos en imperativo o verbos modales del tipo deber, tener que , etc. A la oración tipica de esta base temática textual se la llama oración exigidora de acción. **Ejemplo:**
+- "Detenerse, tenemos que ir."
+Un texto directivo será aquel que presente una base textual directiva dominante
+
+<h3 class="text-center underline  uppercase" >La explicación-Exposición </h3>
+
+Existe una serie de parámetros de la situación comunicativa que permite caracterizar al discurso explicativo-expositivo, los cuales pueden ser abordados a partir de las siguientes preguntas:
+
+1. ¿Quién explica y a quién?
+2. ¿Cómo se presenta lo que ofrece la explicación? ¿Qué autoriza su explicación?
+3. ¿Qué es lo que provoca la explicación?
+4. ¿Cuál es el referente de la explicación y qué es lo explicado de él?
+5. ¿Hay un pedido de explicación o se trata de una explicación autoformulada?
+6. ¿Cuál es la finalidad específica de la explicación?
+7. ¿Hay marcas lingüísticas que señalen el pasaje de la mención del referente a la explicación sobre el mismo?
+8. ¿Aparecen términos técnicos? ¿El discurso se vuelve más objetivo?
+9. ¿Se explica por medio de una narración, de una descripción, del despliegue de un razonamiento o de alguna otra forma?
+
+Estos parámetros comunicacionales nos aportan criterios que nos permiten intentar una definición del discurso explicativo o expositivo. Según el criterio que se tenga en cuenta, el discurso explicativo-expositivo se puede definir de distintas formas, a saber:
+
+1. Según las funciones del lenguaje, se trata de un discurso en el que predomina la función informativa del lenguaje, ya que comunica conocimientos.
+2. Si se tiene en cuenta su finalidad, todo discurso explicativo-expositivo es un discurso dirigido a la comprensión de un tema específico, intentando aclararlo.
+3. Teniendo en consideración la relación establecida entre emisor - referente - receptor, el discurso explicativo-expositivo es un discurso producido por un emisor que posee un caudal de conocimientos sobre el referente que sabe o supone que el receptor no posee. (Es por eso que el emisor se propone explicar.) Así, se parte de una relación asimétrica entre emisor y receptor en cuanto al saber sobre un determinado referente, con la pretensión de establecer una relación de simetría respecto del referente.
+4. Según la actitud asumida por el receptor en la evaluación del discurso, el discurso explicativo-expositivo es un discurso que se legitima en función del reconocimiento del saber del emisor a partir de su eficacia explicativa.
+5. Asimismo, si tenemos en cuenta el referente del mensaje, todo discurso explicativo-expositivo toma como objeto temático aquello que se constituye como obstáculo para la interacción comunicacional.
+6. Según la estructura interna del texto, es un discurso de base textual expositiva dominante. Por otra parte, la explicación asumirá formas diferentes según el tipo de discurso en el cual se realice. Aunque se construya en relación al mismo referente, la explicación adoptará estrategias distintas según forme parte de un discurso religioso, literario o científico, según el destinatario de la explicación, según las restricciones de la situación comunicativa.
+
+Cabe destacar que el discurso explicativo constituye un paréntesis en la interacción en curso dentro de un discurso mayor.
+
+<h4 class="uppercase">Formas explicativas</h4>
+
+En todo texto explicativo aparecen algunas de las siguientes formas:
+
+1. **Enumeración:** Inventario de hechos, datos, objetos o rasgos, estilístico-temáticas).
+2. **Descripción:** Enumeración organizada, según un orden determinado(de mayor a menor, de arriba hacia abajo , de afuera hacia adentro, etc.), de los rasgos de un objeto que permiten distinguirlo de otros.
+3. **Definición:** Enunciado usado para indentificar los rasgos esenciales de un objeto, hecho , fenómeno, concepto,proceso,estilístico-temáticas).
+4. **Clasificicación O taxonomía:** agrupamiento de objetos, hechos, datos o conceptos, etc; En tipos según criterios determinados.
+5. **Compración:** Relajación entre dos o más objetos , datos , hechos o conceptos, etc; Que permite identificar semejanzas y/o diferencias y que se establece a través de sus componentes.
+6. **Establecimiento de relaciones analógicas:** Operación que se fluida en las semejanzas entre dos o más objetos, datos, hechos, conceptos o fenómenos por la que se concluye que los elementos semejantes tienen las mismas causas o las mismas consecuencias.
+7. **Establecimiento de relaciones causa-efecto:** Operación por la que se pone de manifiesto las causas o consecuencias de un fenómeno o hecho.
+
+<h4 class="uppercase">La definición</h4>
+
+En cuanto a la definición, podemos hacer una clasificación, siguiendo a Copi, según dos criterios; El de tener en cuenta a los propósitos por los que se formula , y el de tener en cuenta las técnicas empleadas para su formulación
+
+A) Si tenemos en cuenta los propósitos, obtendremos los siguientes tipos de definiciones, a saber:
+
+1. Estipulativas: se formulan con el fin de introducir términos nuevos.
+2. Lexicográficas: se formulan con el fin de eliminar la ambigüedad de un término o de enriquecer el vocabulario de la persona para la cual se la formula.
+3. Aclaratorias: se formulan con el fin de eliminar la vaguedad de un término dado.
+4. Teóricas: se formulan con el fin de dar una caracterización teóricamente adecuada o científicamente útil del objeto al cual deberá aplicarsele.
+5. Persuasivas: se formulan con el fin de influir en la actitud de los receptores de determinada manera, apelando al universo emotivo o valorativo de los mismos.
+
+B) Si tenemos en cuenta las técnicas empleadas para su formulación, podemos clasificarlas en dos grandes grupos:
+
+1. Definiciones denotativas: se formulan teniendo en cuenta los objetos señalados por el término a definir (su extensión). Estas pueden ser de dos tipos:
+   1. Por enumeración de ejemplos.
+   2. Ostensivas o demostrativas (se define un término mostrando el objeto denotado por el mismo).
+
+2. Definiciones connotativas: se formulan teniendo en cuenta el significado del término a definir (su intención). Estas pueden ser de tres tipos:
+   1. Por sinonimia: consisten en definir palabras aisladas dando otra palabra aislada que tenga el mismo significado (se usan en los diccionarios elementales en general y en los diccionarios destinados a explicar el significado de palabras extranjeras).
+   2. Operacionales: consisten en definir un término aludiendo a las operaciones a las que puede aplicarse.
+   3. Por género y diferencia: consisten en definir un término designando el género del cual sea una subclase la especie designada por el mismo e indicando la diferencia que la distingue de otras especies del mismo género.
+
+<h3 class="text-center underline uppercase">La argumentación</h3>
+
+Cotidianamente, en cualquier ámbito de actuación, se argumenta. Esta actividad comunicativa implica, en términos generales, una negociación: cada uno de los participantes debe colaborar para llegar a un término, aunque esto no siempre se logre. Casi siempre se argumenta para convencer al otro sobre un determinado punto de vista; esto establece roles específicos: un argumentador y un argumentario, agente y paciente respectivamente de esta actividad.
+
+Se presume que existen condiciones innatas para la argumentación, pero la realidad muestra que no siempre esto es así. Lo argumentativo forma parte de numerosos discursos (la publicidad, artículos de fondo, monografías) y, aun cuando se dé como argumentación pura, no parece responder a modelos rígidos y muy pautados. También es cierto que es fundamental conocer la superestructura argumentativa, así como también algunos recursos habituales en este tipo de discurso, como la ejemplificación, la cita de autoridad, la generalización, etc.
+
+<h4 class="uppercase">Superestructura argumentativa</h3>
+
+  La organización secuencial de la argumentación es la más sencilla: establecida la proposición a partir de un problema o situación que se actualiza, se acumulan las pruebas (argumentos) para validarla. Por ello, cada secuencia argumentativa aparece marcada en la superficie textual por los conectores que señalan este avance: "en primer lugar", "en segundo lugar", "luego", "después", "por último", "para concluir", etc.
+
+  La argumentación dialéctica, también llamada argumentación por razonamiento, posee una estructura más rica y, por lo tanto, más complicada para la producción. En este tipo de argumentación, se advierten posiciones encontradas: el argumentador se opone a una tesis (tesis adversa) mediante su propia tesis. A lo largo de la argumentación, se exponen los argumentos de ambos puntos de vista; los razonamientos que son contrarios a su tesis (refutaciones) serán discutidos mediante las contra-refutaciones. Esto obliga al argumentador a buscar con justeza los argumentos que le permitirán discutir las pruebas de la posición adversa y demostrarlas. Toda argumentación parte de una proposición: declaración que puede ser creída, puesta en duda o refutada. La primera tarea del argumentador es lograr la formulación exacta de la proposición; hay que informar al interlocutor acerca del objeto de la argumentación. Normalmente, se aborda un problema a raíz de un suceso que lo actualiza o de una opinión común cuya validez se pone en duda. Para lograr una buena argumentación es necesario extraer el problema más general que plantea esa situación.
+  
+  La segunda tarea que se debe imponer el argumentador es la de la organización de las ideas. Se debe prestar atención a las palabras o frases que guían al interlocutor en la elección propuesta por el emisor. Los procedimientos argumentativos más comunes son:
+
+  - **Desmentir:** se descarta la validez de los argumentos contrarios, por ejemplo: "no se puede dar crédito a lo afirmado por...", "contrariamente a lo expresado por...".
+
+- **Hacer concesiones:** a veces, es más efectivo que rechazar de plano un argumento contrario, es reconocer en él alguna razón y objetar luego, por ejemplo: "si bien no le falta razón a...", "sin embargo", "aun admitiendo que...", "no es menos cierto que...".
+
+- **Clarificar:** se advierte un error en un argumento adverso, por ejemplo: "en cuanto al punto...", "es razonable lo que se sostiene, pero no así en cuanto a su derivación...".
+
+- **Dar ejemplos:** se pasa de las reflexiones generales a casos y situaciones particulares, por ejemplo: "veamos, por ejemplo, qué pasa en las instituciones...".
+
+- **Hesitar:** el proyecto presenta ventajas y desventajas, se formulan las reservas y se llega a la conclusión, por ejemplo: "seguramente, otro ejemplo...", "por cierto que...", "bajo otro punto de vista... en definitiva", "en resumen...".
+
+- **Cita de autoridad:** consiste en sostener la hipótesis utilizando la palabra de alguien idóneo en la materia, por ejemplo: "según el sociólogo...".
+
+En la argumentación, existe generalmente un orden que determina su estructura. Las cuatro partes que deben disponerse en orden son las siguientes: 
+
+<h4 class="uppercase">Sintesís de textos argumentativos</h3>
+
+Los textos argumentativos presentan una dificultad particular para ser tomados como objeto de resumen. Respetar el orden expositivo del texto, que es una de las características definitorias del resumen, generalmente implica no poder reducir considerablemente su extensión.
+
+Es por eso que, en el caso de textos argumentativos, resulta conveniente llevar a cabo otro tipo de operación: la síntesis. La síntesis consiste en exponer la estructura lógica de un texto original en un segundo texto sin necesidad de respetar el orden original de las macroproposiciones. En otras palabras, realizar una síntesis de un texto argumentativo implica explicar el razonamiento macroestructural de ese texto fuente en un segundo texto más breve.
+  
+Es importante recordar que las macroestructuras no tienen que estar explícitas en los textos, por lo que en la operación de síntesis a menudo es necesario recurrir a la construcción personal de enunciados que funcionen como macroestructuras.
+  
+En cuanto a la aplicación de las macrorreglas, es crucial tener en cuenta que, con el objetivo de reunir los argumentos macroproposicionales, la macrorregla de construcción será de mayor utilidad. Esta última permitirá agrupar los argumentos expuestos en la demostración y los datos de la exposición en una menor cantidad de argumentos.
+
+<section class="[&>*]:mb-4 [&>*]:p-2 [&>*]:bg-neutral-300 ">
+  <article class="bg-neutral-300">
+<h3 class="text-center underline uppercase mb-0">Wells Chapel</h3>
+<h4 class="text-center underline uppercase">(Capilla Wells)</h4>
+En cierta ocasión, en la que una familia inglesa pasaba unas vacaciones en Escocia, en uno de sus paseos observaron una casita de campo que, de inmediato, les pareció cautivadora para su próximo veraneo. Indagaron quién era el dueño y resultó ser un pastor protestante, al que se dirigieron para pedirle que les mostrara la pequeña finca. El propietario les mostró la casita que tanto por su comodidad como por su estado, fue del agrado de la familia. Así, quedaron comprometidos para alquilarla en su próximo veraneo.
+
+De regreso a Inglaterra, comenzaron a repasar detalle por detalle cada habitación, advirtiendo la esposa que no recordaba haber visto el W.C. (water closet - baño). Dada la practicidad de los ingleses, la señora decidió preguntarle por este servicio en los siguientes términos. “Estimado Pastor: Soy de la familia que hace unos pocos días visitó su finca, con deseos de alquilarla para nuestras próximas vacaciones, y como omitimos preguntarle un pequeño detalle, desearía que nos respondiera indicándonos donde queda el W.C."
+
+Finalizó la carta con las consideraciones correspondientes y la remitió al pastor escocés. Al abrir la carta y leerla, el pastor desconoció la abreviatura “W.C.”, pero creyendo que se trataba de la capilla en la que él predicaba, le envió como respuesta una carta del siguiente tenor:
+
+“Estimada señora: Tengo el agrado de informarle que el lugar al que usted se refiere queda solo a 12 km. de la casa, lo cual es molesto, sobre todo si se tiene la costumbre de ir con frecuencia, pero algunas personas viajan a pie y otras en colectivo o automóvil.
+
+Las comodidades con las que cuenta son las siguientes:
+
+- Hay lugar para 400 personas sentadas y 100 de pie.
+- Los asientos están forrados en terciopelo rojo.
+- Se dispone de aire acondicionado para evitar sofocaciones.
+
+Se recomienda llegar temprano para obtener un lugar, ya que mi mujer, hace unos años, por llegar tarde, tuvo que soportar todo el acto de pie, razón por la cual dejé de utilizar este servicio.
+
+Los niños se sientan todos juntos y cantan conformando un hermoso coro.
+
+A la entrada se les entrega un papel a cada uno de los asistentes, y las personas que no llegan a la entrega pueden usar el de su compañero de asiento, pero al salir deben devolverlo para continuar dándole uso durante todo el mes.
+
+Debo resaltar que todo lo depositado allí por los concurrentes será utilizado para alimentar a los pobres huérfanos del hospicio.
+
+Hay también fotógrafos especialmente contratados para tomar fotografías de los concurrentes en grupo o en poses individuales, las cuales serán publicadas en la página social del diario local, así el público podrá conocer a las altas personalidades en actos tan humanos como este.
+
+También el pastor se despidió cortésmente. La señora, al leer, estuvo a punto de desmayarse, pero comprendiendo el error, consideró de todas formas cambiar el lugar de veraneo.
+<p class="text-center font-bold uppercase leading-none">No sea protagonista de un hecho como este,<span class="block">Asegurese de un lenguaje preciso<span></p>
+</article>
+
+<article>
+
+<h3 class="text-center underline uppercase">Disputa por señas</h3>
+<div class="flex justify-center">
+<img src="/romanos.avif" alt="Romanos Caminando">
+</div>
+  Sucedió una vez que los romanos, quienes carecían de leyes para su gobierno, fueron a pedirlas a los griegos, que sí las tenían. Estos les respondieron que no merecían poseerlas, ni las podrían entender, puesto que su saber era tan escaso. Pero si insistían en conocer y usar estas leyes, antes les convenía disputar con sus sabios para ver si las entendían y merecían llevarlas. Dieron como excusa esta gentil respuesta. Respondieron los romanos que aceptaban de buen grado y firmaron un convenio para la controversia. Como no entendían sus respectivos lenguajes, acordaron que disputaran por señas y fijaron públicamente un día para su realización.
+
+  Los romanos quedaron muy preocupados, sin saber qué hacer, porque no eran letrados y temían el vasto saber de los doctores griegos. Así cavilaban cuando un ciudadano dijo que eligieran a un rústico y que hiciera con la mano las señas que Dios le diera a entender: fue un sabio consejo. Buscaron un rústico muy astuto y le dijeron: "Tenemos un convenio con los griegos para disputar por señas: pide lo que quieras y te lo daremos, socórrenos en esta lid". Lo vistieron con muy ricos paños de gran valor, como si fuera doctor en filosofía. Subió a una alta cátedra y dijo con fanfarronería: "De hoy en más vengan los griegos con toda su porfía".
+
+  Llegó allí un griego, doctor sobresaliente, alabado y escogido entre todos los griegos. Subió a otra cátedra, ante todo el pueblo reunido. Comenzaron sus señas como se había acordado. Se levantó el griego, sosegado, con calma, y mostró un dedo, el que está cerca del pulgar; luego se sentó en su mismo sitio. Se levantó el rústico, bravucón y con malas pulgas, mostró tres dedos tendidos hacia el griego, el pulgar y otros dos retenidos en forma de arpón y los otros encogidos. Se sentó el necio mirando sus vestiduras. Se levantó el griego, tendió la palma llana y se sentó luego plácidamente. Se levantó el rústico con su vana fantasía y con porfía mostró el puño cerrado. A todos los de Grecia dijo el sabio: "Los romanos merecen las leyes, no se las niego". Se levantaron todos, en sosiego y paz. Gran honra proporcionó a Roma el rústico villano.
+
+  Preguntaron al griego qué fue lo que dijo por señas al romano y qué le respondió este. Dijo: "Yo dije que hay un Dios, el romano dijo que era uno en tres personas e hizo tal seña. Yo dije que todo estaba bajo su voluntad. Respondió que en su poder estábamos, y dijo verdad. Cuando vi que entendían y creían en la Trinidad, comprendí que merecían leyes certeras". Preguntaron al rústico cuáles habían sido sus ocurrencias: "Me dijo que con un dedo me quebraría el ojo: tuve gran pesar e ira. Le respondí con saña, con cólera y con indignación que yo le quebraría, ante toda la gente, los ojos con dos dedos y los dientes con el pulgar. Me dijo después de esto que le prestara atención, que me daría tal palmada que los oídos me vibrarían. Yo le respondí que le daría tal puñetazo que en toda su vida no lograría vengarse. Cuando vio la pelea tan despareja dejé de amenazar a quien no le temía". Por esto, dice la fábula de la sabia vieja: "No hay mala palabra si no es tomada a mal. Verdaderamente es bien dicha si fue bien entendida".
+</section>
+</article>
