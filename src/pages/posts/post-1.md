@@ -108,7 +108,6 @@ Debemos señalar también que, según se analice el momento de producción o uno
 
 Para comprender cómo es este proceso, partiremos del esquema planteado por Roman Jakobson (en 1960), que muestra que en todo proceso comunicativo intervienen seis factores, a saber:
 
-
 | Via                                    | Descripción                                                                                                                                                                                                                    |
 | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **<p class="text-bold ">Emisor</p>**   | Individuo o institución que inicia el proceso codificando un mensaje                                                                                                                                                           |
@@ -168,7 +167,8 @@ Es muy común la utilización de los vocablos resumen y síntesis como sinónimo
 El resumen consiste en la reconstrucción y reelaboración del significado de un texto en forma breve que el original.
 
 Se emplea como modalidad de estudio para registrar lo esencial de un texto o de un artículo, también, en las solapas de los libros o en el copete de una noticia. En este caso, su función consiste en anticipar el contenido e invitar a la lectura, guiar la interpretación y organizar la información compleja.
-Como estrategia de estudio - lo mismo que en la toma de apuntes o el subrayado- será necesaria la comprensión global del texto para luego poner en juego las operaciones que el resumen supone. Estas son: 
+Como estrategia de estudio - lo mismo que en la toma de apuntes o el subrayado- será necesaria la comprensión global del texto para luego poner en juego las operaciones que el resumen supone. Estas son:
+
 1. **Supresión:** Se suprimen los elementos redundantes o irrelevantes.
 2. **Selección:** Se jerarquizan las ideas y se evalúa cuáles son las indispensables
 3. **Generalización:** Se sustituyen varios elementos por un concepto más general o mas abstracto.
@@ -179,7 +179,7 @@ En estas operaciones se ven involucradas tanto la lectura, como la escritura, ya
 En cuanto a la síntesis, se trata de construir el significado global del texto y luego reeelaborarlo en forma personal y valorativa. EL trabajo que se realiza involucra la argumentación, ya que se trata de dar una opinión propia sobre el tema.
 
 <h3 class="text-center underline  uppercase">El subrayado</h3>
-<img src="/articulosubrayado.avif" alt="Imagen de un texto siendo subrayado con un marcador rojo" > 
+<img src="/articulosubrayado.avif" alt="Imagen de un texto siendo subrayado con un marcador rojo" >
 
 Un texto puede subrayarse para destacar las frases o párrafos que llaman la atención a medida que se lee, o bien para resumir lo que se considera útil o importante para incorporar en la investigación o trabajo que
 se estuviera realizando.
@@ -191,10 +191,11 @@ Como en el caso de la toma de apuntes, se trata de jerarquizar y seleccionar las
 A veces, puede resultar útil hacer anotaciones en los márgenes acerca de lo que se lee o resumir las propias ideas sobre el tema. No olvidemos que una parte del significado del texto no está explícitado, dicho, sino que debe inferirse, es decir, ser descubierto.
 
 <h3 class="text-center underline  uppercase">La toma de Apuntes</h3>
-<img src="/tomarapuntes.avif" alt="Persona tomando apuntes" > 
+<img src="/tomarapuntes.avif" alt="Persona tomando apuntes" >
 
-Tanto en una clase o en una conferencia como frente a una película o una emisión televisiva, puede resultar útil tomar nota de aquellas ideas o datos que respondan a algún tema que nos interese. 
+Tanto en una clase o en una conferencia como frente a una película o una emisión televisiva, puede resultar útil tomar nota de aquellas ideas o datos que respondan a algún tema que nos interese.
 Las tendencias habituales al realizar esta tarea son dos:
+
 1. Tratar de apuntar todo lo que el orador dice: Sin duda, esta modalidad provoca que se pierda el hilo de la exposición, las frases quedan inconclusas y resulta difícil reconstruir el significado del texto.
 
 2. Anotar sólo los títulos y subtítulos que son el eje de la coherencia del texto. Con este procedimiento se pierde la información central que haría posible comprender la exposición.
@@ -241,15 +242,18 @@ Las macrorreglas son las reglas que permiten la proyección semántica que vincu
 Las diversas macrorreglas que establece Van Dijk son las siguientes:
 
 **Supresión:** Dada una secuencia de proposiciones, las que no sean proposiciones derivadas de las proposiciones subsiguientes de la secuencia se suprimen.
-*Ejemplos:*
+_Ejemplos:_
+
 - San Nicolás es una ciudad pequeña. San Nicolás es una ciudad (en este caso, la información suprimida se pierde).
 
 - Buenos Aires es una ciudad que tiene tiendas. B.A. tiene fábricas. Buenos Aires es una ciudad (en este caso, la información suprimida podría recuperarse inductivamente).
 
-**Generalización:** Dada una secuencia de proposiciones, se hace una proposición que contenga un concepto derivado de los conceptos de la secuencia de proposiciones y la proposición así obtenida sustituye a la secuencia original. *Ejemplo:*
+**Generalización:** Dada una secuencia de proposiciones, se hace una proposición que contenga un concepto derivado de los conceptos de la secuencia de proposiciones y la proposición así obtenida sustituye a la secuencia original. _Ejemplo:_
+
 - Compré una pelota. Luego compré una muñeca. Compré juguetes.
 
-**Construcción:** Dada una secuencia de proposiciones, se hace una proposición que denote el mismo hecho denotado por la totalidad de la secuencia de proposiciones y se sustituye la secuencia original por la nueva proposición. *Ejemplo:* 
+**Construcción:** Dada una secuencia de proposiciones, se hace una proposición que denote el mismo hecho denotado por la totalidad de la secuencia de proposiciones y se sustituye la secuencia original por la nueva proposición. _Ejemplo:_
+
 - Compré ladrillos y cemento; coloqué los cimientos; erigí muros. Construí una casa.
 
 La primera regla nos dice que solo las proposiciones que son textualmente pertinentes, en el sentido que desempeñan un papel en la interpretación de otras oraciones, deben figurar en la descripción de la macroestructura. Las proposiciones suprimidas denotan lo que se llama los detalles del cuanto. Estos detalles no son importantes semánticamente para el sentido global o para el tema del discurso. Por otra parte, el tipo de discurso determina la aplicación de las macrorreglas.
@@ -266,7 +270,7 @@ En cuanto al orden en la aplicación de las macrorreglas, deben considerarse los
 
 <h3 class="text-center underline  uppercase">Macrorreglas y progresión temática</h3>
 
-La macroestructura de un texto debe necesariamente construirse sobre cualquiera de los tipos de progresión temática a excepcién de la de salto tematico. 
+La macroestructura de un texto debe necesariamente construirse sobre cualquiera de los tipos de progresión temática a excepcién de la de salto tematico.
 
 <h4 class="uppercase font-semibold">Resumen de textos explicativos </h4>
 
@@ -276,6 +280,7 @@ En el caso de los textos expositivos o explicativos, existen estrategias precisa
 
 Podemos decir entonces que un resumen de este tipo de texto implicará ejercer sobre los mismos una operación inversa a la utilizada para su construcción. Para ello, deberán jerarquizarse las formas explicativas, ya que si diferentes formas explicativas en un texto expositivo están al servicio de la explicación del mismo obstáculo, es obvio que podrán seleccionarse algunas de esas formas como expresión macroproposicional explícita de otras formas.
 Una Primera jerarquización posible es:
+
 <div class="flex justify-center m-0 p-0 leading-none ">
   <ol class="m-0 p-0 leading-none">
     <li>Definición.</li>
@@ -289,6 +294,7 @@ Esta jerarquización no es arbitraria, sino que se funda en las macrorreglas def
 
 En este caso, el comienzo de oración con minúscula no se debe a un error tipográfico o a un desconocimiento de la convención, sino a que hemos optado por respetar la norma relativa a los nombres propios encabezados por proposición en minúscula.
 Otra jerarquización posible es:
+
 <div class="flex justify-center m-0 p-0 leading-none">
   <ol class="m-0 p-0 leading-none">
     <li>Establecimiento de relaciones de causa-efecto.</li>
@@ -297,8 +303,7 @@ Otra jerarquización posible es:
 </div>
 
 En este caso, podemos sostener que el establecimiento de relaciones causa-efecto es el resultado de aplicar las macrorreglas de generalización y de construcción sobre las ralaciones analógicas fijadas. Estas jerarquizaciones nos permiten seleccionar, entre dos formas explicativas usadas en un texto, una de ellas, siempre que la seleccionada constituya el resultado de una macro-operacin presente en el texto fuente.
-Por otra parte, ya que en los textos expositivos las macroproposiciones estan explicitas, la escritura personal del autor del resumen, en este caso, tiene poca incidencia. 
-
+Por otra parte, ya que en los textos expositivos las macroproposiciones estan explicitas, la escritura personal del autor del resumen, en este caso, tiene poca incidencia.
 
 <h3 class="text-center underline  uppercase" >bases textuales </h3>
 
@@ -309,6 +314,7 @@ Las bases textuales de los textos pueden reducirse a cinco modelos básicos: **d
 <h4 class="uppercase">Base descriptiva</h4>
 
 La base temática textual denominada "descriptiva" es aquella que los hablantes eligen para expresar ocurrencias y cambios en el espacio, sin manifestar cambios temporales. En castellano, en general, se utilizan oraciones unimembres con verbos que no indican un cambio temporal, junto con adverbios de lugar o construcciones locativas. A la oración típica de esta base temática textual se la llamará "oración registradora de fenómenos". **Ejemplo:**
+
 - "Habia miles de vasos sobre la mesa".
 
 Las textos descriptivos serán aquellos cuya base textual dominante sea la descriptiva.
@@ -318,13 +324,15 @@ Las textos descriptivos serán aquellos cuya base textual dominante sea la descr
 La base textual temática narrativa es la seleccionada por los hablantes para expresar textos sobre la ocurrencia y cambios en el tiempo. Se establece un marco referencial temporal en el que los objetos, agentes y fenómenos referidos por el sujeto gramatical de la oración son presentados como cambiantes y activos.
 
 A la oración típica de esta base textual temática se la denominará oración denotadora de cambios o acciones. **Ejemplo:**
+
 - "Los pasajeros aterrizaron en Buenos Aires en medio de la noche."
 
 Los textos narrativos serán aquellos cuya base textual dominante sea la narrativa.
 
 <h4 class="uppercase">Base expositiva (O Explicativa)</h4>
 
-La base textual temática expositiva se elige para expresiones textuales sobre la descomposición (expresión analítica) o composición (exposición sintética) de representaciones conceptuales del hablante. En las exposiciones analíticas suelen utilizarse formas típicas como "x consiste en y", "x contiene a y", "x comprende a y". A la oración típica de este tipo de exposición se la denomina oración identificadora de fenómenos. **Ejemplo:** 
+La base textual temática expositiva se elige para expresiones textuales sobre la descomposición (expresión analítica) o composición (exposición sintética) de representaciones conceptuales del hablante. En las exposiciones analíticas suelen utilizarse formas típicas como "x consiste en y", "x contiene a y", "x comprende a y". A la oración típica de este tipo de exposición se la denomina oración identificadora de fenómenos. **Ejemplo:**
+
 - El cerebro tiene diez millones de neuronas (exposición analítica).
 
 Por otra parte, en las exposiciones sintéticas suelen aparecer verbos que se refieren al concepto de 'definición', como "ser", "llamarse", "definirse", "referirse a". A la oración típica de este segundo tipo de exposición se la llama oración enlazadora de fenómenos. **Ejemplo:**
@@ -336,14 +344,16 @@ Nos referiremos como texto expositivo a aquel que presenta una base textual expo
 <h4 class="uppercase">Base argumentativa</h4>
 
 La base textual temática argumentativa es la que se elige para expresiones textuales que crean relaciones entre conceptos o afirmaciones del hablante. En general, se presenta una atribución de cualidades a un concepto o afirmación. Es por eso que la oración tipica de esta base temática textual se la denomina oración atributiva de cualidad(opinión). **Ejemplo:**
+
 - No es lógico que aún subsistan ciertas formas de discriminación de la mujer.
-Un texto argumentativo será aquel que se estructure a partir de una base argumentativa, es decir aquel que presente una base textual argumentativa dominante.
+  Un texto argumentativo será aquel que se estructure a partir de una base argumentativa, es decir aquel que presente una base textual argumentativa dominante.
 
 <h4 class="uppercase">Base Directiva(o Instructiva)</h4>
 
 La base textual temática directiva se elige para expresiones textuales que deben valer como indicaciones de acciones para el comportamiento futuro del hablante o del destinatario. En general se utilizan verbos en imperativo o verbos modales del tipo deber, tener que , etc. A la oración tipica de esta base temática textual se la llama oración exigidora de acción. **Ejemplo:**
+
 - "Detenerse, tenemos que ir."
-Un texto directivo será aquel que presente una base textual directiva dominante
+  Un texto directivo será aquel que presente una base textual directiva dominante
 
 <h3 class="text-center underline  uppercase" >La explicación-Exposición </h3>
 
@@ -397,6 +407,7 @@ A) Si tenemos en cuenta los propósitos, obtendremos los siguientes tipos de def
 B) Si tenemos en cuenta las técnicas empleadas para su formulación, podemos clasificarlas en dos grandes grupos:
 
 1. Definiciones denotativas: se formulan teniendo en cuenta los objetos señalados por el término a definir (su extensión). Estas pueden ser de dos tipos:
+
    1. Por enumeración de ejemplos.
    2. Ostensivas o demostrativas (se define un término mostrando el objeto denotado por el mismo).
 
@@ -413,13 +424,13 @@ Se presume que existen condiciones innatas para la argumentación, pero la reali
 
 <h4 class="uppercase">Superestructura argumentativa</h3>
 
-  La organización secuencial de la argumentación es la más sencilla: establecida la proposición a partir de un problema o situación que se actualiza, se acumulan las pruebas (argumentos) para validarla. Por ello, cada secuencia argumentativa aparece marcada en la superficie textual por los conectores que señalan este avance: "en primer lugar", "en segundo lugar", "luego", "después", "por último", "para concluir", etc.
+La organización secuencial de la argumentación es la más sencilla: establecida la proposición a partir de un problema o situación que se actualiza, se acumulan las pruebas (argumentos) para validarla. Por ello, cada secuencia argumentativa aparece marcada en la superficie textual por los conectores que señalan este avance: "en primer lugar", "en segundo lugar", "luego", "después", "por último", "para concluir", etc.
 
-  La argumentación dialéctica, también llamada argumentación por razonamiento, posee una estructura más rica y, por lo tanto, más complicada para la producción. En este tipo de argumentación, se advierten posiciones encontradas: el argumentador se opone a una tesis (tesis adversa) mediante su propia tesis. A lo largo de la argumentación, se exponen los argumentos de ambos puntos de vista; los razonamientos que son contrarios a su tesis (refutaciones) serán discutidos mediante las contra-refutaciones. Esto obliga al argumentador a buscar con justeza los argumentos que le permitirán discutir las pruebas de la posición adversa y demostrarlas. Toda argumentación parte de una proposición: declaración que puede ser creída, puesta en duda o refutada. La primera tarea del argumentador es lograr la formulación exacta de la proposición; hay que informar al interlocutor acerca del objeto de la argumentación. Normalmente, se aborda un problema a raíz de un suceso que lo actualiza o de una opinión común cuya validez se pone en duda. Para lograr una buena argumentación es necesario extraer el problema más general que plantea esa situación.
-  
-  La segunda tarea que se debe imponer el argumentador es la de la organización de las ideas. Se debe prestar atención a las palabras o frases que guían al interlocutor en la elección propuesta por el emisor. Los procedimientos argumentativos más comunes son:
+La argumentación dialéctica, también llamada argumentación por razonamiento, posee una estructura más rica y, por lo tanto, más complicada para la producción. En este tipo de argumentación, se advierten posiciones encontradas: el argumentador se opone a una tesis (tesis adversa) mediante su propia tesis. A lo largo de la argumentación, se exponen los argumentos de ambos puntos de vista; los razonamientos que son contrarios a su tesis (refutaciones) serán discutidos mediante las contra-refutaciones. Esto obliga al argumentador a buscar con justeza los argumentos que le permitirán discutir las pruebas de la posición adversa y demostrarlas. Toda argumentación parte de una proposición: declaración que puede ser creída, puesta en duda o refutada. La primera tarea del argumentador es lograr la formulación exacta de la proposición; hay que informar al interlocutor acerca del objeto de la argumentación. Normalmente, se aborda un problema a raíz de un suceso que lo actualiza o de una opinión común cuya validez se pone en duda. Para lograr una buena argumentación es necesario extraer el problema más general que plantea esa situación.
 
-  - **Desmentir:** se descarta la validez de los argumentos contrarios, por ejemplo: "no se puede dar crédito a lo afirmado por...", "contrariamente a lo expresado por...".
+La segunda tarea que se debe imponer el argumentador es la de la organización de las ideas. Se debe prestar atención a las palabras o frases que guían al interlocutor en la elección propuesta por el emisor. Los procedimientos argumentativos más comunes son:
+
+- **Desmentir:** se descarta la validez de los argumentos contrarios, por ejemplo: "no se puede dar crédito a lo afirmado por...", "contrariamente a lo expresado por...".
 
 - **Hacer concesiones:** a veces, es más efectivo que rechazar de plano un argumento contrario, es reconocer en él alguna razón y objetar luego, por ejemplo: "si bien no le falta razón a...", "sin embargo", "aun admitiendo que...", "no es menos cierto que...".
 
@@ -431,16 +442,16 @@ Se presume que existen condiciones innatas para la argumentación, pero la reali
 
 - **Cita de autoridad:** consiste en sostener la hipótesis utilizando la palabra de alguien idóneo en la materia, por ejemplo: "según el sociólogo...".
 
-En la argumentación, existe generalmente un orden que determina su estructura. Las cuatro partes que deben disponerse en orden son las siguientes: 
+En la argumentación, existe generalmente un orden que determina su estructura. Las cuatro partes que deben disponerse en orden son las siguientes:
 
 <h4 class="uppercase">Sintesís de textos argumentativos</h3>
 
 Los textos argumentativos presentan una dificultad particular para ser tomados como objeto de resumen. Respetar el orden expositivo del texto, que es una de las características definitorias del resumen, generalmente implica no poder reducir considerablemente su extensión.
 
 Es por eso que, en el caso de textos argumentativos, resulta conveniente llevar a cabo otro tipo de operación: la síntesis. La síntesis consiste en exponer la estructura lógica de un texto original en un segundo texto sin necesidad de respetar el orden original de las macroproposiciones. En otras palabras, realizar una síntesis de un texto argumentativo implica explicar el razonamiento macroestructural de ese texto fuente en un segundo texto más breve.
-  
+
 Es importante recordar que las macroestructuras no tienen que estar explícitas en los textos, por lo que en la operación de síntesis a menudo es necesario recurrir a la construcción personal de enunciados que funcionen como macroestructuras.
-  
+
 En cuanto a la aplicación de las macrorreglas, es crucial tener en cuenta que, con el objetivo de reunir los argumentos macroproposicionales, la macrorregla de construcción será de mayor utilidad. Esta última permitirá agrupar los argumentos expuestos en la demostración y los datos de la exposición en una menor cantidad de argumentos.
 
 <section class="[&>*]:mb-4 [&>*]:p-2 [&>*]:bg-neutral-300 ">
@@ -472,6 +483,7 @@ Debo resaltar que todo lo depositado allí por los concurrentes será utilizado 
 Hay también fotógrafos especialmente contratados para tomar fotografías de los concurrentes en grupo o en poses individuales, las cuales serán publicadas en la página social del diario local, así el público podrá conocer a las altas personalidades en actos tan humanos como este.
 
 También el pastor se despidió cortésmente. La señora, al leer, estuvo a punto de desmayarse, pero comprendiendo el error, consideró de todas formas cambiar el lugar de veraneo.
+
 <p class="text-center font-bold uppercase leading-none">No sea protagonista de un hecho como este,<span class="block">Asegurese de un lenguaje preciso<span></p>
 </article>
 
@@ -483,10 +495,79 @@ También el pastor se despidió cortésmente. La señora, al leer, estuvo a punt
 </div>
   Sucedió una vez que los romanos, quienes carecían de leyes para su gobierno, fueron a pedirlas a los griegos, que sí las tenían. Estos les respondieron que no merecían poseerlas, ni las podrían entender, puesto que su saber era tan escaso. Pero si insistían en conocer y usar estas leyes, antes les convenía disputar con sus sabios para ver si las entendían y merecían llevarlas. Dieron como excusa esta gentil respuesta. Respondieron los romanos que aceptaban de buen grado y firmaron un convenio para la controversia. Como no entendían sus respectivos lenguajes, acordaron que disputaran por señas y fijaron públicamente un día para su realización.
 
-  Los romanos quedaron muy preocupados, sin saber qué hacer, porque no eran letrados y temían el vasto saber de los doctores griegos. Así cavilaban cuando un ciudadano dijo que eligieran a un rústico y que hiciera con la mano las señas que Dios le diera a entender: fue un sabio consejo. Buscaron un rústico muy astuto y le dijeron: "Tenemos un convenio con los griegos para disputar por señas: pide lo que quieras y te lo daremos, socórrenos en esta lid". Lo vistieron con muy ricos paños de gran valor, como si fuera doctor en filosofía. Subió a una alta cátedra y dijo con fanfarronería: "De hoy en más vengan los griegos con toda su porfía".
+Los romanos quedaron muy preocupados, sin saber qué hacer, porque no eran letrados y temían el vasto saber de los doctores griegos. Así cavilaban cuando un ciudadano dijo que eligieran a un rústico y que hiciera con la mano las señas que Dios le diera a entender: fue un sabio consejo. Buscaron un rústico muy astuto y le dijeron: "Tenemos un convenio con los griegos para disputar por señas: pide lo que quieras y te lo daremos, socórrenos en esta lid". Lo vistieron con muy ricos paños de gran valor, como si fuera doctor en filosofía. Subió a una alta cátedra y dijo con fanfarronería: "De hoy en más vengan los griegos con toda su porfía".
 
-  Llegó allí un griego, doctor sobresaliente, alabado y escogido entre todos los griegos. Subió a otra cátedra, ante todo el pueblo reunido. Comenzaron sus señas como se había acordado. Se levantó el griego, sosegado, con calma, y mostró un dedo, el que está cerca del pulgar; luego se sentó en su mismo sitio. Se levantó el rústico, bravucón y con malas pulgas, mostró tres dedos tendidos hacia el griego, el pulgar y otros dos retenidos en forma de arpón y los otros encogidos. Se sentó el necio mirando sus vestiduras. Se levantó el griego, tendió la palma llana y se sentó luego plácidamente. Se levantó el rústico con su vana fantasía y con porfía mostró el puño cerrado. A todos los de Grecia dijo el sabio: "Los romanos merecen las leyes, no se las niego". Se levantaron todos, en sosiego y paz. Gran honra proporcionó a Roma el rústico villano.
+Llegó allí un griego, doctor sobresaliente, alabado y escogido entre todos los griegos. Subió a otra cátedra, ante todo el pueblo reunido. Comenzaron sus señas como se había acordado. Se levantó el griego, sosegado, con calma, y mostró un dedo, el que está cerca del pulgar; luego se sentó en su mismo sitio. Se levantó el rústico, bravucón y con malas pulgas, mostró tres dedos tendidos hacia el griego, el pulgar y otros dos retenidos en forma de arpón y los otros encogidos. Se sentó el necio mirando sus vestiduras. Se levantó el griego, tendió la palma llana y se sentó luego plácidamente. Se levantó el rústico con su vana fantasía y con porfía mostró el puño cerrado. A todos los de Grecia dijo el sabio: "Los romanos merecen las leyes, no se las niego". Se levantaron todos, en sosiego y paz. Gran honra proporcionó a Roma el rústico villano.
 
-  Preguntaron al griego qué fue lo que dijo por señas al romano y qué le respondió este. Dijo: "Yo dije que hay un Dios, el romano dijo que era uno en tres personas e hizo tal seña. Yo dije que todo estaba bajo su voluntad. Respondió que en su poder estábamos, y dijo verdad. Cuando vi que entendían y creían en la Trinidad, comprendí que merecían leyes certeras". Preguntaron al rústico cuáles habían sido sus ocurrencias: "Me dijo que con un dedo me quebraría el ojo: tuve gran pesar e ira. Le respondí con saña, con cólera y con indignación que yo le quebraría, ante toda la gente, los ojos con dos dedos y los dientes con el pulgar. Me dijo después de esto que le prestara atención, que me daría tal palmada que los oídos me vibrarían. Yo le respondí que le daría tal puñetazo que en toda su vida no lograría vengarse. Cuando vio la pelea tan despareja dejé de amenazar a quien no le temía". Por esto, dice la fábula de la sabia vieja: "No hay mala palabra si no es tomada a mal. Verdaderamente es bien dicha si fue bien entendida".
-</section>
+Preguntaron al griego qué fue lo que dijo por señas al romano y qué le respondió este. Dijo: "Yo dije que hay un Dios, el romano dijo que era uno en tres personas e hizo tal seña. Yo dije que todo estaba bajo su voluntad. Respondió que en su poder estábamos, y dijo verdad. Cuando vi que entendían y creían en la Trinidad, comprendí que merecían leyes certeras". Preguntaron al rústico cuáles habían sido sus ocurrencias: "Me dijo que con un dedo me quebraría el ojo: tuve gran pesar e ira. Le respondí con saña, con cólera y con indignación que yo le quebraría, ante toda la gente, los ojos con dos dedos y los dientes con el pulgar. Me dijo después de esto que le prestara atención, que me daría tal palmada que los oídos me vibrarían. Yo le respondí que le daría tal puñetazo que en toda su vida no lograría vengarse. Cuando vio la pelea tan despareja dejé de amenazar a quien no le temía". Por esto, dice la fábula de la sabia vieja: "No hay mala palabra si no es tomada a mal. Verdaderamente es bien dicha si fue bien entendida".
+
+  </article>
+  <article>
+    <h3 class="underline">El cautivo</h3>
+En Junín o Tapaiqué refieren la historia. Un chico desapareció después de un malón; se dijo que habían robado los indios. Sus padres lo buscaron incansablemente; al cabo de los años, un hombre que venía de tierras lejanas habló de un niño de ojos celestes que bien podía ser su hijo.
+
+Dieron por fin con él. La crónica ha perdido las circunstancias, y no quiero inventar lo que no sé, pero creyeron reconocerlo. El hombre, trabajando por el desierto y por la vida bárbara, ya no sabía oír las palabras de la lengua natal, pero se dejó conducir, indiferente y dócil, hasta la casa. Allí se detuvo, tal vez porque los otros se detuvieron. Miró la puerta, como sin entenderla. De pronto bajó la cabeza, gritó, atravesó corriendo el zaguán y los dos largos patios, y se metió en la cocina. Sin vacilar, hundió el brazo en la ennegrecida campana y sacó el cuchillito de mango que había escondido ahí cuando era niño. Los ojos le brillaron de alegría y los padres lloraron porque habían encontrado al hijo.
+
+Acaso a este recuerdo siguieron otros, pero el indio no podía vivir entre paredes y un día fue a buscar su destino. Yo quisiera saber qué sintió en aquel instante de vértigo en el que el pasado y el presente se confundieron: yo quisiera saber si el hijo perdido renació y murió en aquel éxtasis o si alcanzó a reconocer, siquiera como una criatura o un perro, a los padres y a la casa.
+
+<p class ="font-bold">Jorge Luis Borges</p>
+
+  </article>
+  <article>
+<h3 class="text-center uppercase">¿Se puede orientar la tecnologia?</h3>
+<h4 class="uppercase">Por Pablo Capanna</h4>
+
+<div class="flex flex-col-reverse md:flex-row items-start">
+  <div>
+    <p>
+  Al principio, no todas las locomotoras andaban sobre rieles. Entre 1820 y 1840, circuló por los caminos ingleses toda una variedad de locomotoras ruteras que transportaban carga y pasajeros. En la carretera París- Ruán, de 1884, el último ómnibus de vapor todavía compitio sin éxito con los motores de explosión, aunque se siguieron fabricando autos de vapor hasta 1926.
+
+  Alarmados por la presencia de esas humeantes aplanadoras que espantaban a los caballos y destrozaban los caminos, los legisladores británicos pensaron en frenar su difusión y no encontraron nada mejor que limitar su velocidad.
+ 
+  Votaron entonces la "Locomotive Act" de 1865, que restringía la circulación de locomotoras en las carreteras. La ley establecía que cada máquina a vapor debía tener por lo menos tres tripulantes, uno de los cuales debía adelantarse a pie agitando una bandera roja.
+
+  La intención de los legisladores era favorecer el ferrocarril, que prometía un tránsito más ordenado, aunque cabe pensar que más de uno tendría pensado invertir en el negocio ferroviario.
+    </p>
+  </div>
+  <div class="max-w-80 px-2 leading-2 flex flex-col  justify-center ">
+    <p  class="p-2 border-black border-double border-4 text-center bg-white">Los grandes avances tecnológicos que se vienen produciendo desde los últimos años han generado, en muchos casos, ambivalencia e incertidumbre en la sociedad. Preocupa la velocidad y la imprevisibilidad del cambio, especialmente cuando no se visualiza su dirección ni su intensidad. En esta entrega de Futuro, el filósofo argentino Pablo Capanna reflexiona sobre la tecnología y el poder: "¿Se puede controlar, o por lo menos orientar, la innovación tecnológica?" Reivindicando los aspectos positivos de la tecnología, propone discutir de forma crítica su relación con la sociedad.
+    </p>
+  </div>
+</div>
+</div>
+
+</div>
 </article>
+<article>
+<h3 class="uppercase">La bandera roja </h3>
+
+La ley de locomotoras logró frenar durante tres décadas el desarrollo del auto a vapor. Pero no solo favoreció el ferrocarril. También le dio un decisivo impulso al desarrollo del motor de explosión, que resultó más eficiente y más barato, de manera que los límites de velocidad se fueron extendiendo.
+
+A fines del siglo 19, Benz, Daimer, y Peugeot ya fabricaban autos en pequeña escala. Una novela utópica de 1883 (The Diothas, de John Macnee) predecía el triunfo del auto en el siglo 20 e imaginaba los caminos señalizados de hoy , aunque solo se atrevía a pronosticar una velocidad de 30 Km/h.
+
+En 1886, mientras un empleado de Edison llamado Henry Ford armaba su prototipo y comenzaba a soñar con la fabricación masiva, los legisladores británicos, procedieron a derogar la ley de la bandera roja. Quizá lo habrán hecho para evitar equívocos libertarios, lo cierto es que ya nadie la respetaba
+
+</article>
+<article>
+<h3 class="uppercase">El polvo del camino </h3>
+
+Para 1908 cuando Ford ya estaba produciendo 10.000 autos por año, la Real Comisión del Automotor presentó un informe a la Corona británica donde señalaba como el principal problema planteado por los carruajes sin caballos el polvo que levantaban al rodar por los caminos.
+
+Los expertos de la comisión, que sin duda, serían profesionales competentes, planteaban un problema que hoy nos parece irrisorio aunque en el contexto , del momento era bien concreto. Para superarlo surgieron nuevas tecnologías, como el neumático y los caminos asfaltados, que , a su vez, permitieron desarrollar mayores velocidades. Pero todavía no se pensaba en el monóxido de carbono.
+
+Ford, el hombre que puso el auto al ancance de las masas, escribió que su propósito había sido permitirle a la gente que fuera al campo a disfrutar la vida al aire libre. Pero al ponera  Norteamérica sobre ruedas, generó infernales problemas de tránsito, y a la carga, acabó por darnos, las autopistas, los moteles, las estaciones de servicio y otros engendros que colonoziaron el campo hasta volverlo irreconocible.
+
+Cortázar lo comprobaría medio siglo más tarde, cuando hizo la experiencia de volverse "astronauta", recorriendo a paso de tortuga un paso de autopista.
+
+Los leyes de tránsito y las tecnologoías de seguridad surgieron a la saga de innovación. Al principio, no habia sido posible prever que el auto llegaría a ser la principal causa de mortalidad, que reformaría la planta de las ciudades y del estilo de vida de sus habitantes, incluyendo, por supuesto su salud.
+
+Se diría que las leyes habían resultado inútiles, al intentar ponerle freno a un progreso inevitable. A lo sumo , lo habían desviado para acabar desviando las cosas.
+
+Al fin y al cabo, lo que estaba en curso era nada menos que la primera revolución industrial y toda la experiencia del pasado se había vuelto inútil.
+
+</article>
+<article>
+<h3 class="uppercase">El alud del cambio</h3>
+
+</article>
+</section>
