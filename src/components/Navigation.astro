@@ -1,13 +1,12 @@
 ---
 const navigationTags = [
-  { href: "/", tag: "Inicio" },
-  { href: "/blog/", tag: "Apuntes" },
-  { href: "/tags/", tag: "Tags" },
+  { href: '/', tag: 'Inicio' },
+  { href: '/blog/', tag: 'Apuntes' },
+  { href: '/tags/', tag: 'Tags' },
 ];
 ---
 
 <ul class="flex gap-6">
-    
   {
     navigationTags.map((item) => (
       <li class="relative cursor-pointer group">

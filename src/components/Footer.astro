@@ -1,14 +1,16 @@
 ---
-import Social from "./Social.astro";
+import Social from './Social.astro';
 const socialMedias = [
-  { red: "instagram", perfil: "https://www.instagram.com/arceprog/" },
-  { red: "twitter", perfil: "https://twitter.com/Felipe_skt1" },
+  { red: 'instagram', perfil: 'https://www.instagram.com/arceprog/' },
+  { red: 'twitter', perfil: 'https://twitter.com/Felipe_skt1' },
 ];
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 ---
 
-<footer class="bg-opacity-90   mx-auto ">
-  <p class="text-center">creado por <span class="font-bold">Felipe Arce</span></p>
+<footer class="bg-opacity-90 mx-auto">
+  <p class="text-center">
+    creado por <span class="font-bold">Felipe Arce</span>
+  </p>
   <div class="border-t-2 pt-2 md:px-20">
     <nav class="p-2 flex justify-center">
       <ul class="flex justify-center items-center gap-2">
@@ -21,7 +23,12 @@ import { Image } from "astro:assets";
         }
         <li>
           <a href="https://www.cudi.ar" target="_blank">
-            <Image width={50} height={25}   src="/cudilogo.avif" alt="Logo CUDI" />
+            <Image
+              width={50}
+              height={25}
+              src="/cudilogo.avif"
+              alt="Logo CUDI"
+            />
           </a>
         </li>
       </ul>

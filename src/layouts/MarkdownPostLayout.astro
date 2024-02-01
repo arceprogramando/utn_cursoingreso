@@ -1,8 +1,8 @@
 ---
-import BaseLayout from "./BaseLayout.astro";
+import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
-import Prose from "../components/Prose.astro";
-import { Image } from "astro:assets";
+import Prose from '../components/Prose.astro';
+import { Image } from 'astro:assets';
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
@@ -14,7 +14,6 @@ import { Image } from "astro:assets";
       class="m-2 z-10 w-36 md:w-52"
       alt={frontmatter.image.alt}
     />
-
     <div class="flex flex-col justify-around p-4 md:items-center">
       <div class="flex flex-col gap-2">
         <div class="flex md:gap-8 justify-around">
@@ -22,7 +21,7 @@ import { Image } from "astro:assets";
             class="font-semibold text-xs md:text-base px-2 text-black text-center shadow-md z-10"
           >
             Cursada:
-            <span class="block  uppercase">
+            <span class="block uppercase">
               {frontmatter.totalTimeClass} hs
             </span>
           </p>
@@ -34,7 +33,9 @@ import { Image } from "astro:assets";
             >
           </p>
         </div>
-        <p class="font-semibold text-xs md:text-base text-black text-center shadow-md z-10">
+        <p
+          class="font-semibold text-xs md:text-base text-black text-center shadow-md z-10"
+        >
           Total: <span class="block uppercase">{frontmatter.totalTime} hs</span>
         </p>
       </div>
@@ -47,8 +48,9 @@ import { Image } from "astro:assets";
         <a
           href={frontmatter.downloadUrl}
           download={`${frontmatter.title.replace(/ /g, '_')}.pdf`}
-          class=" bg-black hover:bg-zinc-800 text-white hover:text-zinc-200 p-2 "
-        >Descargar {frontmatter.title}</a>
+          class="bg-black hover:bg-zinc-800 text-white hover:text-zinc-200 p-2"
+          >Descargar {frontmatter.title}</a
+        >
       </div>
     </div>
   </div>
@@ -74,6 +76,7 @@ import { Image } from "astro:assets";
     </ul>
   </div>
 </BaseLayout>
+
 <style>
   .tags a {
     color: #00539f;
