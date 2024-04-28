@@ -8,7 +8,7 @@ image:
   url: '/ApunteLecturaComprensiva.avif'
   alt: 'ApunteLecturaComprensiva'
 pubDate: 2024-01-10
-tags: ['Apuntes', 'Lectura Comprensiva', 'learning in public']
+tags: ['apuntes', 'lectura comprensiva']
 downloadUrl: '/Lectura_Comprensiva.pdf'
 totalTimeClass: 16
 totalExam: 4

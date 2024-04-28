@@ -8,7 +8,7 @@ image:
   url: '/ApunteOrganizacionEmpresarial.avif'
   alt: 'Organizacion Empresarial'
 pubDate: 2024-04-28
-tags: ['Apuntes', 'Organizacion Empresarial', 'learning in public']
+tags: ['apuntes', 'organizacion Empresarial']
 totalTimeClass: 56
 totalExam: 8
 totalTime: 64

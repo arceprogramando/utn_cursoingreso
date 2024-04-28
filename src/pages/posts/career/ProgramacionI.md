@@ -8,7 +8,7 @@ image:
   url: '/ApunteProgramacionI.avif'
   alt: 'Apunte de Programacion I'
 pubDate: 2024-04-28
-tags: ['Apuntes', 'Programacion', 'Lenguaje C']
+tags: ['apuntes', 'programacion', 'lenguaje c']
 totalTimeClass: 120
 totalExam: 8
 totalTime: 128
