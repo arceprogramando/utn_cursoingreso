@@ -1161,5 +1161,39 @@ revolución industrial y toda la experiencia del pasado se había vuelto inútil
 <article>
 <h3 class="uppercase">El alud del cambio</h3>
 
+Según se cuenta, un oficial que presenciaba la primera prueba nuclear en Alamogordo (1945) habría
+exclamado: "¡Dios Mío!" !Estos melenudos(los fisicos) han perdido control! De hecho, las primeras impresiones
+de uno de los físicos responsables (OppenHeimer) tambien fueron bastante apocalípticas.
+
+La energía nuclear fue, durante medio siglo, el mejor ejemplo de una tecnología temida, tanto por sus 
+aplicaciones bélicas , que nos pusieron al borde del suicidio, como por las pacificas, que tampoco resultaron
+ser la penacea que prometían ser (en los años 50, el presidente norteamericano Eisenhower anunció que 
+gracias a la generacion nuclear "la electricidad iba a ser tan barata que no valdria la pena cobrarla").
+
+Mejor recibidas fueron las telecomunicaciones, aunque nos dieron la globalización, que transformó
+dramáticamente la vida de muchos, y el auto particular, que provocó grandes entusiasmados, hasta que
+comenzamos a ver sus consecuencias indirectas.
+
+En general, lo que provoca sentimientos ambivalentes no es la tecnología en sí, que nunca deja de ofrecer
+aspectos positivos. Lo que más preocupa es la velocidad y la imprevisibilidad del cambio, especialmente en
+cuanto nos vemos su dirección ni percibimos su intensidad. Y sobre todo, el temor a que se vuelva incontrolable.
+
+Al tradicional "¿Que inventarán mañana?" de los Picapiedras, fiel expresiión, de ese asombro optimista propio de 
+los años sesenta, han sucedido las agorerias provocadas por el descontrol de los sistemas 
+técnicos y sus efectos no deseados: Chernobyl, los derrames de petróleo, los apagones, el agujero de ozono.
+
+La actitud más generalizada combina tanto la inavitabilidad del cambio tecnológico, destinado fatalmente
+a transformar nuestras vidas, como la incertidumbre respecto de su confiabilidad últim. Parece
+inevitable que una innovación engrendre la siguiente, sin que nadie pueda controlar su aplicación.
+
+De hecho, confiamos en que cualquier medicamente debe afrontar rigurosos controles experimentales
+antes de ser habilitado para la venta; El desastre de la taliomida en los sesenta nos ha enseñado mucho al respecto.
+Pero nadie ha testeado los efectos psicológicos de los videojuegos (hasta que los Pokémon provocaran algunos ataques epilépticos)
+ni los de la exposición al chateo o a la cibernavegación prolongada.
+¿Qué decir de la clonación, o de los proyectos, por ahora utópicos, como la nanotecnología?
+</article>
+
+<article>
+Hola me serviria si quisieran aportar con un pr... aun me queda mas de la mitad del contenido jeje, osino gracias por leer 
 </article>
 </section>
