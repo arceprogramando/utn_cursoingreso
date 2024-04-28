@@ -5,17 +5,12 @@ import { Image } from 'astro:assets';
 const pageTitle = 'Inicio';
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle=`UTN Curso de Ingreso - ${pageTitle}`>
   <h1 class="text-center uppercase">{pageTitle}</h1>
 
   <Greeting client:load messages={['📚', '📔', '🥸', '👋']} />
   <div class="flex justify-center">
-    <Image
-      src="/centrouniversitariodeinnovacion.avif"
-      alt="centro universitario de innovacion"
-      width={320}
-      height={180}
-    />
+    <Image src="/centrouniversitariodeinnovacion.avif" alt="centro universitario de innovacion" width={320} height={180} />
   </div>
   <div class="flex justify-center mt-4">
     <a

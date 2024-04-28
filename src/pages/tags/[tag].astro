@@ -1,18 +1,14 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import TagPost from "../../components/TagPost.astro";
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TagPost from '../../components/TagPost.astro';
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob("../posts/*.md");
+  const allPosts = await Astro.glob('../posts/*.md');
 
-  const uniqueTags = [
-    ...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
-  ];
+  const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 
   return uniqueTags.map((tag) => {
-    const filteredPosts = allPosts.filter((post) =>
-      post.frontmatter.tags.includes(tag)
-    );
+    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
     return {
       params: { tag },
       props: {
@@ -26,16 +22,12 @@ export async function getStaticPaths() {
 }
 
 const { tag } = Astro.params;
-const { posts} = Astro.props;
+const { posts } = Astro.props;
 ---
 
-<BaseLayout pageTitle={tag}>
-  <h2>Apuntes Taggeados con <span class="text-sky-800 uppercase ">"{tag}"</span></h2>
-    <ul class="flex gap-2  justify-center ">
-      {
-        posts.map((post) => (
-          <TagPost url={post.url} title={post.frontmatter.title}  image={post.image.url} alt={post.image.alt}/>
-        ))
-      }
-    </ul>
+<BaseLayout pageTitle=`UTN Curso de Ingreso - ${tag}`>
+  <h2>Apuntes Taggeados con <span class="text-sky-800 uppercase">"{tag}"</span></h2>
+  <ul class="flex gap-2 justify-center">
+    {posts.map((post) => <TagPost url={post.url} title={post.frontmatter.title} image={post.image.url} alt={post.image.alt} />)}
+  </ul>
 </BaseLayout>
