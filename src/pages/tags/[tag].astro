@@ -3,16 +3,24 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import TagPost from '../../components/TagPost.astro';
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob('../posts/*.md');
+  const blogPosts = await Astro.glob('../posts/*.md');
+  const careerPosts = await Astro.glob('../../pages/posts/career/*.md');
 
-  const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+  const allPosts = [...blogPosts, ...careerPosts];
+  const allTags = new Set(allPosts.flatMap((post) => post.frontmatter.tags));
 
-  return uniqueTags.map((tag) => {
-    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+  const blogTags = Array.from(allTags).filter((tag) => blogPosts.some((post) => post.frontmatter.tags.includes(tag)));
+
+  return blogTags.map((tag) => {
+    const filteredBlogPosts = blogPosts.filter((post) => post.frontmatter.tags.includes(tag));
+    const filteredCareerPosts = careerPosts.filter((post) => post.frontmatter.tags.includes(tag));
+
+    const combinedPosts = [...filteredBlogPosts, ...filteredCareerPosts];
+
     return {
       params: { tag },
       props: {
-        posts: filteredPosts.map((post) => ({
+        posts: combinedPosts.map((post) => ({
           ...post,
           image: post.frontmatter.image,
         })),
