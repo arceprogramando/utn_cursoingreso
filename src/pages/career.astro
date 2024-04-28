@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+const allPosts = await Astro.glob('../pages/posts/career/*.md');
+const pageTitle = 'Carrera';
+---
+
+<BaseLayout pageTitle=`UTN - Carrera - ${pageTitle}`>
+  <div class="flex flex-col justify-center items-center container mx-auto text-center">
+    <h2 class="text-center uppercase">{pageTitle}</h2>
+
+    <p class="p-4">En la carrera tuvimos un cambio de plan en el cual nos dio un nuevo plan de estudio</p>
+    <div class="flex justify-center m-4">
+      <a
+        href="/NuevoPlanDeEstudio2024.pdf"
+        download="NuevoPlanDeEstudio2024.pdf"
+        class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
+      >
+        Descargar Nuevo Plan de estudio 2024
+      </a>
+    </div>
+    <ul class="flex justify-center gap-2 flex-wrap">
+      {allPosts.map((post) => <BlogPost url={post.url} tag={post.frontmatter.image.url} alt={post.frontmatter.image.alt} />)}
+    </ul>
+  </div>
+</BaseLayout>
