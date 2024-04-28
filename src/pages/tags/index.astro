@@ -14,7 +14,7 @@ const pageTitle = 'Índice de Tags';
   <div class="tags flex justify-center max-w-3xl">
     {
       Array.from(allTags).map((tag) => (
-        <p class="tag uppercase" key={tag}>
+        <p class="tag uppercase">
           <a href={`/tags/${tag}`}>{tag}</a>
         </p>
       ))
