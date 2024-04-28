@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Programacion I
 author: Felipe Arce
 description: 'Programacion I'

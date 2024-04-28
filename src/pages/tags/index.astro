@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const blogPosts = await Astro.glob('../posts/*.md');
-const careerPosts = await Astro.glob('../../pages/posts/career/*.md');
+const admissionPosts = await Astro.glob('../admission/*.md');
+const careerPosts = await Astro.glob('../career/*.md');
 
-const allTags = new Set([...blogPosts.flatMap((post) => post.frontmatter.tags), ...careerPosts.flatMap((post) => post.frontmatter.tags)]);
+const allTags = new Set([...admissionPosts.flatMap((post) => post.frontmatter.tags), ...careerPosts.flatMap((post) => post.frontmatter.tags)]);
 
 const pageTitle = 'Índice de Tags';
 ---

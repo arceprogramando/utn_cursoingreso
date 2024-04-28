@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import BlogPost from '../components/BlogPost.astro';
-const allPosts = await Astro.glob('../pages/posts/career/*.md');
+import AdmissionPost from '../components/AdmissionPost.astro';
+const allPosts = await Astro.glob('./career/*.md');
+
 const pageTitle = 'Carrera';
 ---
 
@@ -20,7 +21,7 @@ const pageTitle = 'Carrera';
       </a>
     </div>
     <ul class="flex justify-center gap-2 flex-wrap">
-      {allPosts.map((post) => <BlogPost url={post.url} tag={post.frontmatter.image.url} alt={post.frontmatter.image.alt} />)}
+      {allPosts.map((post) => <AdmissionPost url={post.url} tag={post.frontmatter.image.url} alt={post.frontmatter.image.alt} />)}
     </ul>
   </div>
 </BaseLayout>

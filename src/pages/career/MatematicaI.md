@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Matematica
 author: Felipe Arce
 description: 'Matematica I'

@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Arquitectura y sistemas operativos
 author: Felipe Arce
 description: 'Arquitectura y sistemas operativos'

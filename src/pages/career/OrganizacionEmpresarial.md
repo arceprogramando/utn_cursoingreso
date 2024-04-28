@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Organización Empresarial
 author: Felipe Arce
 description: 'Organizacion Empresarial'
