@@ -7,11 +7,10 @@ export async function getStaticPaths() {
   const careerPosts = await Astro.glob('../career/*.md');
 
   const allPosts = [...admissionPosts, ...careerPosts];
-  const allTags = new Set(allPosts.flatMap((post: any) => post.frontmatter.tags));
 
-  const admissionTags = Array.from(allTags).filter((tag) => admissionPosts.some((post: any) => post.frontmatter.tags.includes(tag)));
+  const allTags = Array.from(new Set(allPosts.flatMap((post) => post.frontmatter.tags)));
 
-  return admissionTags.map((tag) => {
+  return allTags.map((tag) => {
     const filteredAdmissionPosts = admissionPosts.filter((post) => post.frontmatter.tags.includes(tag));
     const filteredCareerPosts = careerPosts.filter((post) => post.frontmatter.tags.includes(tag));
 
