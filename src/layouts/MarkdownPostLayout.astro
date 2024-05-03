@@ -30,13 +30,27 @@ import { Image } from 'astro:assets';
         <p class="max-w-40 md:max-w-80"><em>{frontmatter.description}</em></p>
       </div>
 
-      <div class="flex hover:bg-blue-100 text-center">
-        <a
-          href={frontmatter.downloadUrl}
-          download={`${frontmatter.title.replace(/ /g, '_')}.pdf`}
-          class="bg-black hover:bg-zinc-800 text-white hover:text-zinc-200 p-2">Descargar {frontmatter.title}</a
-        >
-      </div>
+      {
+        frontmatter.professor && (
+          <div>
+            <p class="text-bold">profesor/a: {frontmatter.professor}</p>
+          </div>
+        )
+      }
+
+      {
+        frontmatter.downloadUrl && (
+          <div class="flex hover:bg-blue-100 text-center">
+            <a
+              href={frontmatter.downloadUrl}
+              download={`${frontmatter.title.replace(/ /g, '_')}.pdf`}
+              class="bg-black hover:bg-zinc-800 text-white hover:text-zinc-200 p-2"
+            >
+              Descargar {frontmatter.title}
+            </a>
+          </div>
+        )
+      }
     </div>
   </div>
   <div class="flex-col p-2 md:max-w-3xl mx-auto gap-4">

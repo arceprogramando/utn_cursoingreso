@@ -3,6 +3,8 @@ import Social from './Social.astro';
 const socialMedias = [
   { red: 'instagram', perfil: 'https://www.instagram.com/arceprog/' },
   { red: 'twitter', perfil: 'https://twitter.com/Felipe_skt1' },
+  { red: 'github', perfil: 'https://github.com/arceprogramando' },
+  { red: 'portfolio', perfil: 'https://arceprog.dev' },
 ];
 import { Image } from 'astro:assets';
 ---
@@ -23,12 +25,7 @@ import { Image } from 'astro:assets';
         }
         <li>
           <a href="https://www.cudi.ar" target="_blank">
-            <Image
-              width={50}
-              height={25}
-              src="/cudilogo.avif"
-              alt="Logo CUDI"
-            />
+            <Image width={50} height={25} src="/cudilogo.avif" alt="Logo CUDI" />
           </a>
         </li>
       </ul>

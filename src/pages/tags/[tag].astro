@@ -3,16 +3,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import TagPost from '../../components/TagPost.astro';
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob('../posts/*.md');
+  const admissionPosts = await Astro.glob('../admission/*.md');
+  const careerPosts = await Astro.glob('../career/*.md');
 
-  const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+  const allPosts = [...admissionPosts, ...careerPosts];
 
-  return uniqueTags.map((tag) => {
-    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+  const allTags = Array.from(new Set(allPosts.flatMap((post) => post.frontmatter.tags)));
+
+  return allTags.map((tag) => {
+    const filteredAdmissionPosts = admissionPosts.filter((post) => post.frontmatter.tags.includes(tag));
+    const filteredCareerPosts = careerPosts.filter((post) => post.frontmatter.tags.includes(tag));
+
+    const combinedPosts = [...filteredAdmissionPosts, ...filteredCareerPosts];
+
     return {
       params: { tag },
       props: {
-        posts: filteredPosts.map((post) => ({
+        posts: combinedPosts.map((post) => ({
           ...post,
           image: post.frontmatter.image,
         })),
@@ -28,6 +35,6 @@ const { posts } = Astro.props;
 <BaseLayout pageTitle=`UTN Curso de Ingreso - ${tag}`>
   <h2>Apuntes Taggeados con <span class="text-sky-800 uppercase">"{tag}"</span></h2>
   <ul class="flex gap-2 justify-center">
-    {posts.map((post) => <TagPost url={post.url} title={post.frontmatter.title} image={post.image.url} alt={post.image.alt} />)}
+    {posts.map((post: any) => <TagPost url={post.url} title={post.frontmatter.title} image={post.image.url} alt={post.image.alt} />)}
   </ul>
 </BaseLayout>

@@ -1,15 +1,19 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const allPosts = await Astro.glob('../posts/*.md');
-const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+
+const admissionPosts = await Astro.glob('../admission/*.md');
+const careerPosts = await Astro.glob('../career/*.md');
+
+const allTags = new Set([...admissionPosts.flatMap((post) => post.frontmatter.tags), ...careerPosts.flatMap((post) => post.frontmatter.tags)]);
+
 const pageTitle = 'Índice de Tags';
 ---
 
-<BaseLayout pageTitle=`UTN Curso de Ingreso - ${pageTitle}`>
+<BaseLayout pageTitle={`UTN Curso de Ingreso - ${pageTitle}`}>
   <h1 class="text-center uppercase">Tags</h1>
   <div class="tags flex justify-center max-w-3xl">
     {
-      tags.map((tag) => (
+      Array.from(allTags).map((tag) => (
         <p class="tag uppercase">
           <a href={`/tags/${tag}`}>{tag}</a>
         </p>

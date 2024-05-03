@@ -7,7 +7,7 @@ image:
   url: '/ApunteMatematicainicial.avif'
   alt: 'Apunte Matematica inicial'
 pubDate: 2024-01-10
-tags: ['Apuntes', 'matematica', 'calculos', 'aricmetica']
+tags: ['apuntes', 'matematica']
 downloadUrl: '/Matematica_Inicial.pdf'
 totalTimeClass: 32
 totalExam: 4
