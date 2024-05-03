@@ -16,3 +16,7 @@ professor: Giselle Bottazzi
 ---
 
 ## Matematica I
+
+<div>
+  <span>$$x = \frac{{-b \pm \sqrt{{b^2 - 4ac}}}}{{2a}}$$<span>
+<div>

@@ -16,10 +16,7 @@ const { pageTitle } = Astro.props;
       content="Descubre apuntes y recursos para la Tecnicatura Universitaria en Programación. Incluye temas de matemática, programación y lectura comprensiva para el año 2024."
     />
     <meta name="twitter:creator" content="@Felipe_skt1" />
-    <meta
-      property="og:image"
-      content="https://res.cloudinary.com/dyanh7yda/image/upload/v1705374365/c77n6krmnazj9yaafrxh.jpg"
-    />
+    <meta property="og:image" content="https://res.cloudinary.com/dyanh7yda/image/upload/v1705374365/c77n6krmnazj9yaafrxh.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -30,10 +27,7 @@ const { pageTitle } = Astro.props;
       content="Descubre apuntes y recursos para la Tecnicatura Universitaria en Programación. Incluye temas de matemática, programación y lectura comprensiva para el año 2024."
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:image"
-      content="https://res.cloudinary.com/dyanh7yda/image/upload/v1705374365/c77n6krmnazj9yaafrxh.jpg"
-    />
+    <meta name="twitter:image" content="https://res.cloudinary.com/dyanh7yda/image/upload/v1705374365/c77n6krmnazj9yaafrxh.jpg" />
     <meta
       name="keywords"
       content="Tecnicatura en Programación, UTN, CUDI, La Matanza, González Catán, Estudiar Programación, Apuntes de Programación"
@@ -50,15 +44,16 @@ const { pageTitle } = Astro.props;
     <meta name="googlebot" content="index,follow" />
     <meta name="google" content="nositelinkssearchbox" />
     <meta name="google" content="notranslate" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
     <title>{pageTitle}</title>
   </head>
 
   <body class="min-h-screen flex flex-col justify-between bg-white">
     <div>
       <Header />
-      <main
-        class="flex flex-col items-center max-w-5xl bg-opacity-80 mx-auto bg-slate-100"
-      >
+      <main class="flex flex-col items-center max-w-5xl bg-opacity-80 mx-auto bg-slate-100">
         <slot />
       </main>
     </div>
@@ -70,3 +65,9 @@ const { pageTitle } = Astro.props;
     </div>
   </body>
 </html>
+
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    renderMathInElement(document.body);
+  });
+</script>
