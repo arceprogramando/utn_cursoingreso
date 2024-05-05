@@ -107,10 +107,10 @@ professor: Giselle Bottazzi
           conjunto</span>
 </p>
 
-<div class="flex justify-center border-b-2 pb-4">
-  <div class="border border-green-600 p-2">
-      <p>\( A = \{ \text{Números naturales menores
-            o iguales a 5} \} \)</p>
+<div class="flex justify-center border-b-2 pb-4 ">
+  <div class="border border-green-600 p-2 ">
+      <p>\( A = \{ \text{Números naturales menores <br> 
+            o iguales a 5} } \)</p>
       <p>\( A = \{ x \in \mathbb{N} \mid x \leq 5
             \} \)</p>
       <img src="/expresion.webp"
