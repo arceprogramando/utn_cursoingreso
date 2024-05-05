@@ -1,19 +1,19 @@
 ---
 const navigationTags = [
   { href: '/', tag: 'Inicio' },
-  { href: '/admission/', tag: 'Curso de Ingreso' },
+  { href: '/admission/', tag: 'Ingreso' },
   { href: '/career', tag: 'Carrera' },
   { href: '/tags/', tag: 'Tags' },
 ];
 ---
 
-<ul class="flex gap-6">
+<ul class="flex md:gap6">
   {
     navigationTags.map((item) => (
       <li class="relative cursor-pointer group">
         <a
           href={item.href}
-          class="block relative z-10 border bg-[#3DD1E7] border-[#24365a] text-black border-solid py-1 px-2 uppercase text-sm font-bold leading-7"
+          class="block relative z-10 border bg-[#3DD1E7] border-[#24365a] text-black border-solid p-1  md:px-2 uppercase text-sm font-bold leading-7"
         >
           {item.tag}
         </a>
