@@ -191,6 +191,21 @@ Dos Conjuntos A Y B son iguales ucando poseen los mismos elementos
 
 <p>\( A = B \) = \( A \subset B \) \( \land \) \( B \subset A \)</p>
 
-<div class="flex items-center justify-center">
+<div class="flex items-center justify-center  border-b-2 pb-4">
       <img src="/explicacionigualdadconjuntos.avif" alt="Expresion Matematica Universal 2" class="p-0 m-0">
 </div>
+
+<h4 class="text-center">Complemento entre Conjuntos</h4>
+
+<h5 class="text-orange-600 underline uppercase">Complemento</h5>
+
+LLamamos Complemento de A a los elementos del universo que no pertenecen a A
+
+
+<div class="flex flex-col md:flex-row items-center justify-around">
+        <div>
+            <p>Se denota con <span class="text-orange-600">\( A^c \)</span> o <span class="text-orange-600">\( \overline{A} \)</span></p>
+            <p><span class="text-orange-600">\( A^c = \{ x \in \mathbb{N} \mid x \notin A \} \)</span></p>
+        </div>
+        <img src="/DiagramaDeVenn4.webp" alt="Diagrama de Venn 4" class="m-0 p-0">
+    </div>
