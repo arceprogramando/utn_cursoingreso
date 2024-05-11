@@ -11,10 +11,11 @@ const pageTitle = 'Índice de Tags';
 
 <BaseLayout pageTitle={`UTN Curso de Ingreso - ${pageTitle}`}>
   <h1 class="text-center uppercase">Tags</h1>
-  <div class="tags flex justify-center max-w-3xl">
+
+  <div class="flex flex-wrap max-w-xs md:max-w-md justify-center gap-2 ">
     {
       Array.from(allTags).map((tag) => (
-        <p class="tag uppercase">
+        <p class="m-1 outline rounded-sm px-2 py-4 text-xs hover:bg-gray-400  uppercase">
           <a href={`/tags/${tag}`}>{tag}</a>
         </p>
       ))
@@ -27,17 +28,12 @@ const pageTitle = 'Índice de Tags';
     color: #00539f;
   }
 
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tag {
+  /* .tag {
     margin: 0.25em;
     border: dotted 1px #a1a1a1;
     border-radius: 0.5em;
     padding: 0.5em 1em;
     font-size: 1.15em;
     background-color: #f8fcfd;
-  }
+  } */
 </style>
