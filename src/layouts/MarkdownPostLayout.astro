@@ -5,7 +5,7 @@ import Prose from '../components/Prose.astro';
 import { Image } from 'astro:assets';
 ---
 
-<BaseLayout pageTitle=`UTN Curso de Ingreso - ${frontmatter.title}`>
+<BaseLayout pageTitle=`${frontmatter.title}`>
   <div class="flex justify-around border-b-2 mb-8">
     <Image src={frontmatter.image.url} width={175} height={75} class="m-2 z-10 w-36 md:w-52" alt={frontmatter.image.alt} />
     <div class="flex flex-col justify-around p-4 md:items-center">

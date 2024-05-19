@@ -5,8 +5,7 @@ import { Image } from 'astro:assets';
 const pageTitle = 'Inicio';
 ---
 
-<BaseLayout pageTitle=`UTN Curso de Ingreso - ${pageTitle}`>
-  <h1 class="text-center uppercase">{pageTitle}</h1>
+<BaseLayout pageTitle=`${pageTitle}`>
 
   <Greeting client:load messages={['📚', '📔', '🥸', '👋']} />
   <div class="flex justify-center">

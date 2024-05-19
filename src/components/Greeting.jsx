@@ -16,7 +16,7 @@ export default function Greeting({ messages }) {
   return (
     <div className="mx-auto">
       <div class="flex flex-col justify-center text-center ">
-        <p class="p-2">
+        <p class="">
           Pueden aportar o dejar sus estrellitas en{' '}
           <span>
             <a

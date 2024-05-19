@@ -9,8 +9,7 @@ const allTags = new Set([...admissionPosts.flatMap((post) => post.frontmatter.ta
 const pageTitle = 'Índice de Tags';
 ---
 
-<BaseLayout pageTitle={`UTN Curso de Ingreso - ${pageTitle}`}>
-  <h1 class="text-center uppercase">Tags</h1>
+<BaseLayout pageTitle={`${pageTitle}`}>
 
   <div class="flex flex-wrap max-w-xs md:max-w-md justify-center gap-2 ">
     {
