@@ -17,7 +17,7 @@ professor: Rosalía Insaurralde
 
 ## Arquitectura y sistemas operativos
 
-Fueron unas clases muy interesante, especialmente gracias a la profesora Rosalía Insaurralde. Aprendimos mucho sobre la instalación de sistemas operativos y la arquitectura de los mismos.
+Fueron unas clases muy interesantes, especialmente gracias a la profesora Rosalía Insaurralde. Aprendimos mucho sobre la instalación de sistemas operativos y la arquitectura de los mismos.
 
 Sus clases eran muy dinámicas y entretenidas. Siempre se aprendía algo nuevo, y era evidente que ella disfrutaba enseñando. Se notaba que dominaba los temas que explicaba. Me hubiera gustado que la materia fuera presencial para poder aprender más de ella.
 
