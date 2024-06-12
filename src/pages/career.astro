@@ -6,10 +6,8 @@ const allPosts = await Astro.glob('./career/*.md');
 const pageTitle = 'Carrera';
 ---
 
-<BaseLayout pageTitle=`UTN - Carrera - ${pageTitle}`>
+<BaseLayout pageTitle=`${pageTitle}`>
   <div class="flex flex-col justify-center items-center container mx-auto text-center">
-
-
     <ul class="flex justify-center gap-2 flex-wrap">
       {allPosts.map((post) => <AdmissionPost url={post.url} tag={post.frontmatter.image.url} alt={post.frontmatter.image.alt} />)}
     </ul>
