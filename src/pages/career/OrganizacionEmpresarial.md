@@ -16,3 +16,15 @@ professor: Adriana Marina Kravacek
 ---
 
 ## Organizacion Empresarial
+
+Organización Empresarial es una materia que se encarga de estudiar la estructura de las organizaciones, su funcionamiento y la relación entre sus miembros. En este sentido, se puede decir que la organización es un sistema de actividades coordinadas que se llevan a cabo para alcanzar un objetivo común. La organización es un elemento fundamental en cualquier empresa, ya que permite coordinar las actividades de los miembros de la organización y lograr los objetivos de la empresa de manera eficiente y eficaz.
+
+La profesora de esta materia es Adriana Marina Kravacek, quien es una experta en organización empresarial y ha trabajado en diversas empresas en el área de recursos humanos. En sus clases, la profesora Kravacek aborda temas como la estructura organizativa, la cultura organizacional, el liderazgo, la comunicación, la toma de decisiones y la motivación de los empleados. Además, la profesora Kravacek utiliza una metodología participativa que fomenta la participación activa de los estudiantes y el trabajo en equipo.
+
+Las clases fueron un estudio de las diferentes escuelas de la administración, la teoría de la contingencia, la estructura organizativa, la cultura organizacional, el liderazgo, la comunicación, la toma de decisiones y la motivación de los empleados. Además, se realizaron trabajos en grupo y se llevaron a cabo debates y discusiones sobre los temas tratados en clase.
+
+Aprendimos acerca de cosas pequeñas como debe y haber, y cosas más grandes como la estructura de una empresa, la importancia de la comunicación y la toma de decisiones. La profesora Kravacek siempre estaba dispuesta a ayudar y a explicar los temas de la mejor manera posible. Además, nos proporcionó material adicional para profundizar en los temas tratados en clase.
+
+Aunque las clases tampoco fueron presenciales, la profesora Kravacek siempre estuvo disponible para resolver nuestras dudas y ayudarnos en lo que necesitáramos. En resumen, Organización Empresarial fue una materia muy interesante y enriquecedora, que me permitió aprender mucho sobre la estructura y el funcionamiento de las organizaciones y su importancia en el mundo empresarial.
+
+Al principio la verdad pensaba que la materia no me iba a gustar ni me iba  a servir para nada , pero la verdad un dia sin querer me puse a escuchar atentamente a la profesora y me di cuenta de que la materia era muy interesante y que me iba a servir mucho en el futuro. tanto en como montar un negocio , como analizar si va a ser rentable o no.
