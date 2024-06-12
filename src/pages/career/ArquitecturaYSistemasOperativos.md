@@ -16,3 +16,17 @@ professor: Rosalía Insaurralde
 ---
 
 ## Arquitectura y sistemas operativos
+
+Fueron unas clases muy interesante, especialmente gracias a la profesora Rosalía Insaurralde. Aprendimos mucho sobre la instalación de sistemas operativos y la arquitectura de los mismos.
+
+Sus clases eran muy dinámicas y entretenidas. Siempre se aprendía algo nuevo, y era evidente que ella disfrutaba enseñando. Se notaba que dominaba los temas que explicaba. Me hubiera gustado que la materia fuera presencial para poder aprender más de ella.
+
+Espero que en los próximos años pueda tenerla nuevamente como profesora. Entre los temas más interesantes se encontraba la instalación de diferentes distribuciones de Linux, como Ubuntu y Fedora, y la comprensión de los distintos sistemas de archivos que existen.
+
+Además, manejamos sistemas de usuarios y permisos, así como la instalación y configuración de programas. Aunque consideraba la clase un poco complicada debido a la necesidad de la profesora de explicar a cada alumno por separado según el sistema que utilizaban, ella siempre estaba dispuesta a ayudar y a explicar de la mejor manera posible.
+
+Crear usuarios y permisos en Linux fue algo que me pareció muy interesante, ya que es un tema que no se ve en la mayoría de las clases. Considero que es uno de los aspectos más valiosos que me llevo de esa materia.
+
+En resumen, Arquitectura y Sistemas Operativos fue una clase muy interesante y enriquecedora. Aprendí mucho y me gustaría seguir profundizando en el tema en el futuro.
+
+Para las personas que no tenian una buena computadora la profesora proporciono informacion acerca de paginas como distrosea para que puedan seguir las clases sin problemas
