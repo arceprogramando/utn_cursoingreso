@@ -2,6 +2,7 @@
   "conventionalCommits.scopes": [
     "docs",
     "frontend",
-    "improve seo search robots and sitemap"
+    "improve seo search robots and sitemap",
+    "seo"
   ]
 }
