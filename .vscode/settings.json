@@ -1,3 +1,7 @@
 {
-  "conventionalCommits.scopes": ["docs", "frontend"]
+  "conventionalCommits.scopes": [
+    "docs",
+    "frontend",
+    "improve seo search robots and sitemap"
+  ]
 }
