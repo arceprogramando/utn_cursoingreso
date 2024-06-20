@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://utn-cursoingreso.vercel.app/sitemap.xml
+Sitemap: https://utn-cursoingreso.vercel.app/sitemap-index.xml
