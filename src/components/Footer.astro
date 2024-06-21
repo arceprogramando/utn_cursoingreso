@@ -14,7 +14,7 @@ import { Image } from 'astro:assets';
     creado por <span class="font-bold">Felipe Arce</span>
   </p>
   <div class="border-t-2 pt-2 md:px-20">
-    <nav class="md:p-2 flex justify-center">
+    <nav class="md:p-2 ">
       <ul class="flex justify-center items-center gap-2">
         {
           socialMedias.map((media) => (
@@ -23,11 +23,6 @@ import { Image } from 'astro:assets';
             </li>
           ))
         }
-        <li>
-          <a href="https://www.cudi.ar" target="_blank">
-            <Image width={50} height={60} src="/cudilogo.avif" loading='lazy' alt="Logo CUDI" />
-          </a>
-        </li>
       </ul>
     </nav>
   </div>
