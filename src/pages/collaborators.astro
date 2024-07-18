@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const allPosts = await Astro.glob('./career/*.md');
+
+const pageTitle = 'Colaboradores';
+---
+
+<BaseLayout pageTitle=`${pageTitle}`>
+  <div class="flex flex-col justify-center items-center container mx-auto text-center">
+    <h2>Correlatividad</h2>
+  </div>
+</BaseLayout>

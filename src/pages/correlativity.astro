@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = 'Correlatividad';
+---
+
+<BaseLayout pageTitle={`${pageTitle}`}>
+  <div class="flex flex-col justify-center items-center container mx-auto text-center">
+    <table class="min-w-full divide-y divide-gray-200 shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+      <thead class="bg-gray-50">
+        <tr>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> NIVEL </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Nº </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> ASIGNATURA </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> PARA CURSAR Y RENDIR </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Cursadas </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Aprobadas </th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        <tr>
+          <td rowspan="8">I</td>
+          <td class="bg-green-300">1</td>
+          <td class="bg-green-300">Programación I</td>
+          <td class="bg-green-300">No requiere</td>
+          <td class="bg-green-300">Cursada </td>
+          <td class="bg-green-300">Aprobada ✅ </td>
+        </tr>
+        <tr class="[&>*]:bg-green-300">
+          <td>2</td>
+          <td>Arquitectura y Sistemas operativos</td>
+          <td>No requiere</td>
+          <td>Cursada </td>
+          <td>Aprobada ✅ </td>
+        </tr>
+        <tr class="[&>*]:bg-green-300">
+          <td>3</td>
+          <td>Matemática</td>
+          <td>No requiere</td>
+          <td>Cursada </td>
+          <td>Aprobada ✅ </td>
+        </tr>
+        <tr class="[&>*]:bg-green-300">
+          <td>4</td>
+          <td>Organización empresarial</td>
+          <td>No requiere</td>
+          <td>Cursada </td>
+          <td>Aprobada ✅ </td>
+        </tr>
+        <tr class="[&>*]:bg-yellow-300">
+          <td>5</td>
+          <td>Programación II</td>
+          <td>1, 2</td>
+          <td>-</td>
+        </tr>
+        <tr class="[&>*]:bg-yellow-300">
+          <td>6</td>
+          <td>Probabilidad y Estadística</td>
+          <td>3</td>
+          <td>-</td>
+        </tr>
+        <tr class="[&>*]:bg-yellow-300">
+          <td>7</td>
+          <td>Base de Datos I</td>
+          <td>1, 3</td>
+          <td>-</td>
+        </tr>
+        <tr class="[&>*]:bg-yellow-300">
+          <td>8</td>
+          <td>Inglés I</td>
+          <td>No requiere</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td rowspan="9">II</td>
+          <td>9</td>
+          <td>Programación III</td>
+          <td>5, 7</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Base de Datos II</td>
+          <td>7</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Metodología de Sistemas I</td>
+          <td>5, 7</td>
+          <td>1, 4</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Inglés II</td>
+          <td>8</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Programación IV</td>
+          <td>9, 10, 11</td>
+          <td>5, 7</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Metodología de Sistemas II</td>
+          <td>11</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Introducción al análisis de datos</td>
+          <td>10</td>
+          <td>6, 7</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Legislación</td>
+          <td>7</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>Gestión de desarrollo de software</td>
+          <td>9, 10</td>
+          <td>5, 7</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</BaseLayout>
