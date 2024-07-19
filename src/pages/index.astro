@@ -1,13 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting';
-import { Image } from 'astro:assets';
 const pageTitle = 'Inicio';
 ---
 
 <BaseLayout pageTitle=`${pageTitle}`>
-  <Greeting client:load messages={['📚', '📔', '🥸', '👋']} />
-
   <main class="flex flex-col items-center justify-center relative w-full md:max-w-2xl h-full md:h-auto">
     <div class="flex justify-center relative w-full">
       <img src="/centrouniversitariodeinnovacion.avif" alt="University Building" class="object-cover relative" />

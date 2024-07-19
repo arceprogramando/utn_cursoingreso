@@ -1,4 +1,5 @@
 ---
+import Greeting from './Greeting';
 import Social from './Social.astro';
 const socialMedias = [
   { red: 'instagram', perfil: 'https://www.instagram.com/arceprog/' },
@@ -13,6 +14,7 @@ import { Image } from 'astro:assets';
   <p class="text-center">
     creado por <span class="font-bold">Felipe Arce</span>
   </p>
+  <Greeting client:load messages={['📚', '📔', '🥸', '👋']} />
   <div class="border-t-2 pt-2 md:px-20">
     <nav class="md:p-2">
       <ul class="flex justify-center items-center gap-2">
