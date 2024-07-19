@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { linksData } from '../../data/layouts/links';
-// import Link from './Link.astro';
+import Link from './Link.astro';
 ---
 
 <header class="md:hidden z-[9999]">
@@ -14,16 +14,9 @@ import { linksData } from '../../data/layouts/links';
       </button>
       <ul class="flex flex-col md:flex-row gap-4 pl-8">
         {
-          linksData.map((item) => (
+          linksData.map((link) => (
             <li class="relative cursor-pointer group max-w-48">
-              {/* <Link {...Link} /> */}
-              <a
-                href={item.href}
-                class="p-1 px-2 block relative max-w-48  border bg-black border-[#24365a] z-[99] text-white border-solid   uppercase text-sm font-bold leading-7"
-              >
-                {item.title}
-              </a>
-              <div class="absolute border border-black transform origin-top-right transition-all duration-300 -top-1 right-1 w-full h-full  group-hover:top-0 group-hover:right-0" />
+              <Link {...link} />
             </li>
           ))
         }

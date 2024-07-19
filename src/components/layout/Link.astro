@@ -3,6 +3,13 @@ import type { Link } from '../../data/layouts/links';
 const { href, title } = Astro.props as Link;
 ---
 
-<a href={href} class="block relative border bg-[#3DD1E7] border-[#24365a] text-black border-solid p-1 md:px-2 uppercase text-sm font-bold leading-7">
+<a
+  href={href}
+  class="p-1 px-2 block relative max-w-48 border bg-black border-[#24365a] z-[99] text-white border-solid uppercase text-sm font-bold leading-7"
+>
   {title}
 </a>
+<div
+  class="absolute border border-black transform origin-top-right transition-all duration-300 -top-1 right-1 w-full h-full group-hover:top-0 group-hover:right-0"
+>
+</div>
