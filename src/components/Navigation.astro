@@ -7,15 +7,15 @@ import { Icon } from 'astro-icon/components';
 <ul class="hidden md:flex md:gap-4">
   {
     linksData.map((item) => (
-      <li class="relative cursor-pointer group">
+      <li class="relative cursor-pointer group z-10 ">
         {/* <Link {...Link} /> */}
         <a
           href={item.href}
-          class="block relative  border bg-[#3DD1E7] border-[#24365a] text-black border-solid p-1  md:px-2 uppercase text-sm font-bold leading-7"
+          class="block relative  border bg-[#3DD1E7] z-[11] border-[#24365a] text-black border-solid p-1  md:px-2 uppercase text-sm font-bold leading-7"
         >
           {item.title}
         </a>
-        <div class="absolute border border-black transform origin-top-right transition-all duration-300 -top-1 right-1 w-full h-full  group-hover:top-0 group-hover:right-0" />
+        <div class=" absolute border border-black transform origin-top-right transition-all duration-300 -top-1 right-1 w-full h-full  group-hover:top-0 group-hover:right-0" />
       </li>
     ))
   }
