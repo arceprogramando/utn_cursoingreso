@@ -1,0 +1,58 @@
+---
+import { Icon } from 'astro-icon/components';
+import { linksData } from '../../data/layouts/links';
+import Link from './Link.astro';
+---
+
+<header class="md:hidden">
+  <div class="bg-black w-screen h-full fixed top-0 right-0 opacity-30" id="side_Menu_bg"></div>
+
+  <div class="bg-blue-800 fixed top-0 -right-[500px] transition-all h-auto pb-20 w-[290px] md:w-[350px] lg:[420px]" id="side_Menu">
+    <nav>
+      <ul class="flex flex-col md:flex-row gap-2 p-4">
+        <button class="self-end hover:bg-blue-600" id="side_menu_cross" aria-label="boton para cerrar el menu">
+          <Icon name="cross" size={60} />
+        </button>
+        {
+          linksData.map((item) => (
+            <li class="relative cursor-pointer group max-w-60">
+              <Link {...Link} />
+              <a
+                href={item.href}
+                class="block relative z-10 border bg-[#3DD1E7] border-[#24365a] text-black border-solid p-1  uppercase text-sm font-bold leading-7"
+              >
+                {item.title}
+              </a>
+              <div class="absolute border border-black transform origin-top-right transition-all duration-300 -top-1 right-1 w-full h-full z-0 group-hover:top-0 group-hover:right-0" />
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  import { isSideMenuOpen } from '../../store.ts';
+  const sideMenu = document.getElementById('side_Menu');
+  const sideMenuBackground = document.getElementById('side_Menu_bg');
+  const sideMenuCross = document.getElementById('side_menu_cross');
+
+  const handleCloseSideMenu = () => {
+    isSideMenuOpen.set(false);
+  };
+
+  isSideMenuOpen.subscribe((open) => {
+    if (open) {
+      sideMenuBackground.classList.remove('hidden');
+      sideMenu.classList.remove('-right-[500px]');
+      sideMenu.classList.add('right-0');
+    } else {
+      sideMenuBackground.classList.add('hidden');
+      sideMenu.classList.remove('right-0');
+      sideMenu.classList.add('-right-[500px]');
+    }
+  });
+
+  sideMenuCross?.addEventListener('click', () => handleCloseSideMenu());
+</script>
