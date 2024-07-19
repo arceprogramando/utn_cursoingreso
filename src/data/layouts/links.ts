@@ -8,5 +8,5 @@ export const linksData: Link[] = [
   { href: '/career', title: 'Carrera' },
   { href: '/correlativity/', title: 'Correlatividad' },
   { href: '/tags', title: 'Tags' },
-  { href: '/collaborators', title: 'Colaboradores' },
+  // { href: '/collaborators', title: 'Colaboradores' },
 ];
