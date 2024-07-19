@@ -1,48 +1,51 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = 'Correlatividad';
+import type { Correlativity } from '../types/correlativity';
+const pageTitle = 'Correlatividades';
 ---
 
 <BaseLayout pageTitle={`${pageTitle}`}>
-  <div class="flex flex-col justify-center items-center container mx-auto text-center">
-    <table class="min-w-full divide-y divide-gray-200 shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+  <div class="flex flex-col justify-center items-center container mx-auto text-center p-2">
+    <table class="min-w-full divide-y divide-gray-200 shadow border-b border-gray-200 sm:rounded-lg">
       <thead class="bg-gray-50">
-        <tr>
-          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> NIVEL </th>
-          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Nº </th>
-          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> ASIGNATURA </th>
-          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> PARA CURSAR Y RENDIR </th>
-          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Cursadas </th>
-          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Aprobadas </th>
+        <tr class="[&>*]:w-4">
+          <th scope="col" class="md:px-6 md:py-3 text-left text-xs md:font-medium text-gray-500 uppercase md:tracking-wider"> Nº </th>
+          <th scope="col" class="md:px-6 md:py-3 text-left text-xs md:font-medium text-gray-500 uppercase md:tracking-wider md:w-auto">
+            ASIGNATURA
+          </th>
+          <th scope="col" class="md:px-6 md:py-3 text-left text-xs md:font-medium text-gray-500 uppercase md:tracking-wider">
+            PARA CURSAR Y RENDIR
+          </th>
+          <th scope="col" class="md:px-6 md:py-3 text-left text-xs md:font-medium text-gray-500 uppercase md:tracking-wider"> Cursadas </th>
+          <th scope="col" class="md:px-6 md:py-3 text-left text-xs md:font-medium text-gray-500 uppercase md:tracking-wider"> Aprobadas </th>
         </tr>
       </thead>
-      <tbody class="bg-white divide-y divide-gray-200">
+      <tbody class="bg-white divide-y divide-gray-200 text-xs">
         <tr>
-          <td rowspan="8">I</td>
           <td class="bg-green-300">1</td>
           <td class="bg-green-300">Programación I</td>
-          <td class="bg-green-300">No requiere</td>
+          <td class="bg-green-300">-</td>
           <td class="bg-green-300">Cursada </td>
           <td class="bg-green-300">Aprobada ✅ </td>
         </tr>
         <tr class="[&>*]:bg-green-300">
           <td>2</td>
           <td>Arquitectura y Sistemas operativos</td>
-          <td>No requiere</td>
+          <td>-</td>
           <td>Cursada </td>
           <td>Aprobada ✅ </td>
         </tr>
         <tr class="[&>*]:bg-green-300">
           <td>3</td>
           <td>Matemática</td>
-          <td>No requiere</td>
+          <td>-</td>
           <td>Cursada </td>
           <td>Aprobada ✅ </td>
         </tr>
         <tr class="[&>*]:bg-green-300">
           <td>4</td>
           <td>Organización empresarial</td>
-          <td>No requiere</td>
+          <td>-</td>
           <td>Cursada </td>
           <td>Aprobada ✅ </td>
         </tr>
@@ -67,11 +70,10 @@ const pageTitle = 'Correlatividad';
         <tr class="[&>*]:bg-yellow-300">
           <td>8</td>
           <td>Inglés I</td>
-          <td>No requiere</td>
+          <td>-</td>
           <td>-</td>
         </tr>
         <tr>
-          <td rowspan="9">II</td>
           <td>9</td>
           <td>Programación III</td>
           <td>5, 7</td>

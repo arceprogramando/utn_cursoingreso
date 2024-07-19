@@ -1,9 +1,10 @@
 ---
 // import Link from './layout/Link.astro';
 import { linksData } from '../data/layouts/links';
+import { Icon } from 'astro-icon/components';
 ---
 
-<ul class="flex md:gap-2">
+<ul class="hidden md:flex md:gap-2">
   {
     linksData.map((item) => (
       <li class="relative cursor-pointer group">
@@ -19,3 +20,21 @@ import { linksData } from '../data/layouts/links';
     ))
   }
 </ul>
+<button
+  class="block md:hidden relative border bg-[#3DD1E7] border-[#24365a] text-black border-solid p-1 uppercase text-sm font-bold leading-7"
+  id="nav_button"
+  aria-label="boton para abrir el menu"
+>
+  <Icon name="burger" width={28} height={28} />
+</button>
+
+<script>
+  import { isSideMenuOpen } from '../store.ts';
+  const button = document.getElementById('nav_button');
+
+  const handleOpenSideMenu = () => {
+    isSideMenuOpen.set(true);
+  };
+
+  button?.addEventListener('click', () => handleOpenSideMenu());
+</script>
