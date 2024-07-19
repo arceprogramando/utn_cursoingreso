@@ -9,12 +9,12 @@ const socialMedias = [
 import { Image } from 'astro:assets';
 ---
 
-<footer class="bg-opacity-90 mx-auto">
+<footer class="bg-opacity-90 mx-auto fixed bottom-0 w-full bg-slate-100">
   <p class="text-center">
     creado por <span class="font-bold">Felipe Arce</span>
   </p>
   <div class="border-t-2 pt-2 md:px-20">
-    <nav class="md:p-2 ">
+    <nav class="md:p-2">
       <ul class="flex justify-center items-center gap-2">
         {
           socialMedias.map((media) => (

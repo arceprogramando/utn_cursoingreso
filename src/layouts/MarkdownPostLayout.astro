@@ -7,21 +7,21 @@ import { Image } from 'astro:assets';
 
 <BaseLayout pageTitle=`${frontmatter.title}`>
   <div class="flex justify-around border-b-2 mb-8">
-    <Image src={frontmatter.image.url} width={175} height={75} class="m-2 z-10 w-36 md:w-52" alt={frontmatter.image.alt} />
+    <Image src={frontmatter.image.url} width={175} height={75} class="m-2 w-36 md:w-52" alt={frontmatter.image.alt} />
     <div class="flex flex-col justify-around p-4 md:items-center">
       <div class="flex flex-col gap-2">
         <div class="flex md:gap-8 justify-around">
-          <p class="font-semibold text-xs md:text-base px-2 text-black text-center shadow-md z-10">
+          <p class="font-semibold text-xs md:text-base px-2 text-black text-center shadow-md">
             Cursada:
             <span class="block uppercase">
               {frontmatter.totalTimeClass} hs
             </span>
           </p>
-          <p class="font-semibold text-xs md:text-base px-2 text-black text-center shadow-md z-10">
+          <p class="font-semibold text-xs md:text-base px-2 text-black text-center shadow-md">
             Examen: <span class="block uppercase">{frontmatter.totalExam} hs</span>
           </p>
         </div>
-        <p class="font-semibold text-xs md:text-base text-black text-center shadow-md z-10">
+        <p class="font-semibold text-xs md:text-base text-black text-center shadow-md">
           Total: <span class="block uppercase">{frontmatter.totalTime} hs</span>
         </p>
       </div>

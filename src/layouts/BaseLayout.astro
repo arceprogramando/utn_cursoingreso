@@ -73,9 +73,9 @@ const { pageTitle } = Astro.props;
   <body class="min-h-screen flex flex-col justify-between bg-white">
     <div>
       <Header />
-      <SideMenu/>
+      <SideMenu />
       <main class="flex flex-col items-center max-w-5xl bg-opacity-80 mx-auto bg-slate-100">
-        <h2 class="text-center uppercase p-2">{pageTitle}</h2>
+        <h2 class="text-center uppercase p-2 text-2xl font-bold">{pageTitle}</h2>
         <slot />
       </main>
     </div>
