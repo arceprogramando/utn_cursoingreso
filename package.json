@@ -6,9 +6,7 @@
     "dev": "astro dev --host 0.0.0.0",
     "start": "astro dev",
     "build": "astro check && astro build",
-    "preview": "astro build && astro preview",
-    "astro": "astro",
-    "lint": "astro check --watch"
+    "preview": "astro build && astro preview"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
