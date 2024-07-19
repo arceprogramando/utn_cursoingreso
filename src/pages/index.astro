@@ -1,14 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = 'Inicio';
-import { Image } from 'astro:assets';
-import centroUniversitariodeInnovacion from './public/centrouniversitariodeinnovacion.avif';
 ---
 
 <BaseLayout pageTitle=`${pageTitle}`>
   <main class="flex flex-col items-center justify-center relative w-full md:max-w-2xl h-full md:h-auto">
     <div class="flex justify-center relative w-full">
-      <Image src={centroUniversitariodeInnovacion} alt="Edificio del centro universitario CUDI" class="object-cover relative" />
+      <img src="/centrouniversitariodeinnovacion.avif" alt="University Building" class="object-cover relati
+ve" />
       <a
         href="NuevoPlanDeEstudio2024.pdf"
         download="NuevoPlanDeEstudio2024.pdf"
