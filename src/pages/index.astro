@@ -6,18 +6,18 @@ const pageTitle = 'Inicio';
 ---
 
 <BaseLayout pageTitle=`${pageTitle}`>
-
   <Greeting client:load messages={['📚', '📔', '🥸', '👋']} />
-  <div class="flex justify-center">
-    <Image src="/centrouniversitariodeinnovacion.avif" alt="centro universitario de innovacion" width={320} height={180} />
-  </div>
-  <div class="flex justify-center mt-4">
-    <a
-      href="NuevoPlanDeEstudio2024.pdf"
-      download="NuevoPlanDeEstudio2024.pdf"
-      class="bg-blue-600 hover:bg-blue-800 text-white font-bold my-4 py-3 px-6 rounded focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
-    >
-      Descargar Plan de Estudio 2024
-    </a>
-  </div>
+
+  <main class="flex flex-col items-center justify-center relative w-full h-full -z-10">
+    <div class="flex justify-center relative w-full">
+      <img src="/centrouniversitariodeinnovacion.avif" alt="University Building" class="object-cover absolute" />
+      <a
+        href="NuevoPlanDeEstudio2024.pdf"
+        download="NuevoPlanDeEstudio2024.pdf"
+        class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline-blue active:bg-blue-800 absolute mx-auto"
+      >
+        Descargar Nuevo Plan de Estudio
+      </a>
+    </div>
+  </main>
 </BaseLayout>
