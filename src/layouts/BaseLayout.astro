@@ -92,5 +92,15 @@ const { pageTitle } = Astro.props;
     background-image: linear-gradient(92deg, #635454 5%, #000000 90%, #635454);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: fade-in 1s ease-in-out;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 </style>
