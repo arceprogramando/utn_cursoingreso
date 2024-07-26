@@ -72,7 +72,7 @@ const { pageTitle } = Astro.props;
       <Header />
       <SideMenu />
       <main class="flex flex-col items-center max-w-5xl bg-opacity-80 mx-auto bg-slate-100 pb-40">
-        <h2 class="text-center max-w-2xl uppercase p-2 leading-none font-bold gradient">{pageTitle}</h2>
+        <h2 class="text-center max-w-2xl uppercase p-2 text-4xl leading-none md:text-5xl font-bold gradient">{pageTitle}</h2>
         <slot />
       </main>
     </div>
@@ -87,7 +87,6 @@ const { pageTitle } = Astro.props;
 
 <style>
   .gradient {
-    font-size: 3em;
     font-weight: bold;
     background-image: linear-gradient(92deg, #635454 5%, #000000 90%, #635454);
     -webkit-background-clip: text;
