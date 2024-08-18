@@ -8,7 +8,7 @@ image:
   url: '/ApunteArquitecturaYSistemasOperativos.avif'
   alt: 'Apunte de Arquitectura y Sistemas Operativos'
 pubDate: 2024-04-28
-tags: ['apuntes', 'arquitectura y sistemas operativos']
+tags: ['apuntes', 'arquitectura y sistemas operativos','Primer Cuatrimestre']
 totalTimeClass: 56
 totalExam: 8
 totalTime: 64

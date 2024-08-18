@@ -8,7 +8,7 @@ image:
   url: '/ApunteMatematicaI.avif'
   alt: 'Apunte de Matematica I'
 pubDate: 2024-04-28
-tags: ['apuntes', 'matematica']
+tags: ['apuntes', 'matematica','Primer Cuatrimestre']
 totalTimeClass: 56
 totalExam: 8
 totalTime: 64
