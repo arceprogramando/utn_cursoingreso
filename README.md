@@ -1,5 +1,6 @@
 # Tecnicatura Universitaria en programacion
 
+![](https://github.com/arceprogramando/utn_cursoingreso/blob/main/public/VideoPresentacion.gif)
 
 ## 🧞 Commands
 
