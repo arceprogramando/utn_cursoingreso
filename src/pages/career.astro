@@ -3,11 +3,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import AdmissionPost from '../components/AdmissionPost.astro';
 const allPosts = await Astro.glob('./career/*.md');
 
+allPosts.sort((a, b) => a.frontmatter.order - b.frontmatter.order);
+
 const pageTitle = 'Carrera';
 ---
 
 <BaseLayout pageTitle=`${pageTitle}`>
-  <div class="flex flex-col justify-center items-center container mx-auto text-center">
+  <div class="flex flex-col justify-center items-center container mx-auto max-w-3xl text-center">
     <ul class="flex justify-center gap-2 flex-wrap">
       {allPosts.map((post) => <AdmissionPost url={post.url} tag={post.frontmatter.image.url} alt={post.frontmatter.image.alt} />)}
     </ul>

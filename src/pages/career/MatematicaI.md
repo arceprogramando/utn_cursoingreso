@@ -13,6 +13,8 @@ totalTimeClass: 56
 totalExam: 8
 totalTime: 64
 professor: Giselle Bottazzi
+order: 2 
+
 ---
 
 ## Matematica I

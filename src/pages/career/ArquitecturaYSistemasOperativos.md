@@ -12,7 +12,8 @@ tags: ['apuntes', 'arquitectura y sistemas operativos','Primer Cuatrimestre']
 totalTimeClass: 56
 totalExam: 8
 totalTime: 64
-professor: Rosalía Insaurralde 
+professor: Rosalía Insaurralde
+order: 1 
 ---
 
 ## Arquitectura y sistemas operativos

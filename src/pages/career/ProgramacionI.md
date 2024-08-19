@@ -13,6 +13,7 @@ totalTimeClass: 120
 totalExam: 8
 totalTime: 128
 professor: -Prefiero no decirlo-
+order: 4
 ---
 
 ## Programación I

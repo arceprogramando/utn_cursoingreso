@@ -13,6 +13,8 @@ totalTimeClass: 56
 totalExam: 8
 totalTime: 64
 professor: Adriana Marina Kravacek 
+order: 3 
+
 ---
 
 ## Organizacion Empresarial

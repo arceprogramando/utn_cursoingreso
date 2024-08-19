@@ -12,6 +12,7 @@ totalTimeClass: 56
 totalExam: 8
 totalTime: 64
 professor: Paola Bica
+order: 6
 ---
 
 Antes de empezar la cursada hubo comentarios acerca de las faltas de la profesora , no tuvimos la primera clase del dia 15 de agosto de 2024 , debido a problemas de salud. Esperemos que se den de forma normal las clases siguientes
