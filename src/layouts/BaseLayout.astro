@@ -102,4 +102,30 @@ const { pageTitle } = Astro.props;
       opacity: 1;
     }
   }
+
+  body {
+    --sb-track-color: #e0e0e000;
+    --sb-thumb-color: #000000;
+    --sb-size: 10px;
+  }
+
+  body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 10px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+  }
 </style>
