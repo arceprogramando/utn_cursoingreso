@@ -15,10 +15,14 @@ export default function Greeting({ messages }) {
   return (
     <div className="mx-auto">
       <div class="flex flex-col justify-center text-center ">
-        <p>
+        <p class="text-sm text-gray-600">
           Pueden aportar o dejar sus estrellitas en{' '}
           <span>
-            <a href="https://github.com/arceprogramando/astro-practice" className="underline uppercase font-bold hover:text-teal-600" target="_blank">
+            <a
+              href="https://github.com/arceprogramando/astro-practice"
+              class="underline font-bold text-blue-600 uppercase  hover:text-teal-600"
+              target="_blank"
+            >
               Github
             </a>
             {greeting}
