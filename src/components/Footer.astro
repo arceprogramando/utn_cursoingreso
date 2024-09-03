@@ -3,14 +3,14 @@ import Greeting from './Greeting';
 import Social from './Social.astro';
 
 const socialMedias = [
-  { red: 'instagram', perfil: 'https://www.instagram.com/arceprog/' },
-  { red: 'twitter', perfil: 'https://x.com/arceprog' },
-  { red: 'github', perfil: 'https://github.com/arceprogramando' },
-  { red: 'portfolio', perfil: 'https://arceprog.dev' },
+  { red: 'instagram', perfil: 'https://www.instagram.com/arceprog/', color: 'bg-blue-500 text-white' },
+  { red: 'twitter', perfil: 'https://x.com/arceprog', color: 'bg-blue-400 text-white' },
+  { red: 'github', perfil: 'https://github.com/arceprogramando', color: 'bg-gray-800 text-white' },
+  { red: 'portfolio', perfil: 'https://arceprog.dev', color: 'bg-green-500 text-white' },
 ];
 ---
 
-<footer class="bg-opacity-90 mx-auto sticky bottom-0 w-full bg-slate-100">
+<footer class="p-2 bg-opacity-90 mx-auto sticky bottom-0 w-full bg-slate-100">
   <p class="text-center text-lg text-gray-600">
     creado por <span class="font-bold">Felipe Arce</span>
   </p>
@@ -22,7 +22,7 @@ const socialMedias = [
         {
           socialMedias.map((media) => (
             <li>
-              <Social platform={media.perfil} red={media.red} />
+              <Social platform={media.perfil} red={media.red} color={media.color} />
             </li>
           ))
         }
