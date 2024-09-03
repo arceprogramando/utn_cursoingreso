@@ -10,29 +10,13 @@ const pageTitle = 'Índice de Tags';
 ---
 
 <BaseLayout pageTitle={`${pageTitle}`}>
-
-  <div class="flex flex-wrap max-w-xs md:max-w-md justify-center gap-2 ">
+  <div class="flex flex-wrap justify-center gap-2 my-4">
     {
       Array.from(allTags).map((tag) => (
-        <p class="m-1 outline rounded-sm px-2 py-4 text-xs hover:bg-gray-400  uppercase">
+        <p class="px-4 py-2 text-lg font-bold uppercase  text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
           <a href={`/tags/${tag}`}>{tag}</a>
         </p>
       ))
     }
   </div>
 </BaseLayout>
-
-<style>
-  a {
-    color: #00539f;
-  }
-
-  /* .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    font-size: 1.15em;
-    background-color: #f8fcfd;
-  } */
-</style>
