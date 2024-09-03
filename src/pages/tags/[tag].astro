@@ -33,7 +33,7 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle=`${tag}`>
-  <ul class="flex gap-2 justify-center max-w-sm md:max-w-2xl flex-wrap">
+  <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
     {posts.map((post: any) => <TagPost url={post.url} title={post.frontmatter.title} image={post.image.url} alt={post.image.alt} />)}
   </ul>
 </BaseLayout>

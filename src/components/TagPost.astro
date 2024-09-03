@@ -1,14 +1,11 @@
 ---
 import { Image } from 'astro:assets';
 
-const { title, url, image, alt } = Astro.props;
+const { url, image, alt } = Astro.props;
 ---
 
 <div class="flex flex-col items-center">
   <a href={url}>
     <Image src={image} alt={alt} width={175} height={75} densities={[1.5, 2]} />
   </a>
-  <h2 class="max-w-40 text-center">
-    {title}
-  </h2>
 </div>
