@@ -2,12 +2,12 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Matematica
 author: Felipe Arce
-description: 'Probabilidad Y Estadistica'
+description: 'Probabilidad Y Estadística'
 image:
   url: '/ApunteProbabilidadYEstadistica.avif'
-  alt: 'Probabilidad Y Estadistica'
+  alt: 'Probabilidad Y Estadística'
 pubDate: 2024-08-13
-tags: ['apuntes', 'matematica','Probabilidad','Estadistica','Segundo Cuatrimestre']
+tags: ['apuntes', 'matematica','Probabilidad','Estadística','Segundo Cuatrimestre']
 totalTimeClass: 56
 totalExam: 8
 totalTime: 64
@@ -15,7 +15,7 @@ professor: Giselle Bottazzi
 order: 7
 ---
 
-## Matematica I
+## Probabilidad y Estadística
 
 ### Clase I - 13 de agosto de 2024
 
@@ -43,6 +43,9 @@ Por ejemplo lanzar un dado para ver que va a salir.
 
 **Experimento: 1** Se observan **tres** automóviles en una salida de la autopista para ver si dan vuelta a la izquierda o a la derecha al final de de la rampa de salida.
 
+Union  = U
+Intersección = ∩
+
 Todos los posibles resultados de dicho experimento son:
 
 U = {III;DII; IDI; IID; IDD; DID; DDI; DDD}
@@ -63,9 +66,72 @@ U = {1,2} Del experimento de lanzar una moneda.
 
 <h3 class="text-center uppercase">Partición de un Espacio Muestral</h3>
 
-Son todas aquellas divisiones **mutuamente excluyentes** y **colectivamente exhaustivas** que se pueden realizar sobre un **espacio muestral. Es por este motivo que puedo tener como máximo tantos particiones como eventos tenga el espacio muestral.
+Son todas aquellas divisiones **mutuamente excluyentes** y **colectivamente exhaustivas** que se pueden realizar sobre un **espacio muestral**. Es por este motivo que puedo tener como máximo tantos particiones como eventos tenga el espacio muestral.
 
 Dos eventos son **mutuamente excluyentes** cuando esos eventos son particiones de un mismo espacio muestral. En otras palabras, dos eventos A Y son mutuamente excluyentes si la ocurrencia de uno implica la no ocurrencia del otro.
 
 Dos eventos son **colectivamente excluyentes** cuando en conjunto involucran a la totalidad del espacio muestral. Es decir, la unión de los conjuntos que los representan conforman el espacio muestral. 
 
+Dos eventos son **colectivamente exhautivos** cuando en conjunto involucran a la totalidad del espacio muestral. Es decir, la unión de los conjuntos que los representan conforman el espacio muestral. 
+
+Ejemplo:
+
+Se arroja un dado  y se observa el número que sale.
+
+U = {1;2;3;4;5;6} del experimento lanzar un dado.
+
+Definimos los siguientes sucesos:
+
+A = sale un número par = {2;4;6}
+B = sale un número impar = {1;3;5}
+C = sale un multiplo de 3 = {3;6}
+
+Los sucesos A y B son particiones de U, Ya que son mutuamente excluyentes y colectivamente exhaustivos
+
+Mutuamente Excluyentes: Es uno o es el otro , se cumple que si es par no se cumple que es impar 
+
+Colectivamente exhaustivos: Porque si hago la union de todos los sucesos me da el total del universo
+
+A U B = {2;4;6;1;3;5} = U
+
+A union B = {2;4;6;1;3;5} = universo
+
+D = Que salga número par y multiplo de 3 = A ∩ C = {6}
+
+La conjunción de dos sucesos equivale a la intersección de los mismos 
+
+E = Que salga número impar y múltiplo de 3 = B ∩ C = {3}
+
+F = Que salga número par o múltiplo de 3 = A U C = {2; 3; 4; 6}
+
+El operador "o" equivale a la unión de los conjuntos.
+
+G = Que salga número impar o múltiplo de 3 = B U C = {1; 3; 5; 6}
+
+Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la intersección, la diferencia, la diferencia simétrica y el complemento.
+
+<h3 class="text-center uppercase">Representación grafica de los sucesos con diagramas de Venn.</h3>
+
+<div class="flex items-center justify-around">
+<img src="/DiagramaVennProbabilidad1.svg"
+     alt="Diagramae de Venn de los sucesos A Y B"
+     class="max-w-80">
+<p> Diagrama de Venn de los sucesos A y B</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Concepto de Probabilidad. Propiedades.
+### Definición clasica de la probabilidad.
+
+**Espacio muestral comprobable** "Todos los sucesos ele"
