@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Matematica
+title: Probabilidad Y Estadística
 author: Felipe Arce
 description: 'Probabilidad Y Estadística'
 image:
@@ -146,6 +146,7 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
      class="max-w-80">
 <p>La región sombreada es el complemento de A</p>
 </div>
+
 
 
 
