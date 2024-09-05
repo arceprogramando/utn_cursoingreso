@@ -114,11 +114,38 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 
 <div class="flex items-center justify-around">
 <img src="/DiagramaVennProbabilidad1.svg"
-     alt="Diagramae de Venn de los sucesos A Y B"
+     alt="Diagrama de Venn de los sucesos A Y B"
      class="max-w-80">
 <p> Diagrama de Venn de los sucesos A y B</p>
 </div>
 
+<div class="flex items-center justify-around">
+<p>La región sombreada es A ∩ B (intersección) representan a los elementos que pertenecen al suceso A y al suceso B</p>
+<img src="/DiagramaVennProbabilidad2.svg"
+     alt="Diagrama de Venn de los sucesos A intersección B"
+     class="max-w-80">
+</div>
+
+<div class="flex items-center justify-around">
+<img src="/DiagramaVennProbabilidad3.svg"
+     alt="Diagrama de Venn de los sucesos A intersección B"
+     class="max-w-80">
+<p>La región sombreada es A U B (unión) representan a los elementos que pertenecen al suceso A y al suceso B o a ambos</p>
+</div>
+
+<div class="flex items-center justify-around">
+<p><span class="font-bold">Sucesos A Y B mutuamente excluyentes</span>, Cuando ocurre uno de los sucesos, el otro no puede ocurrir.</p>
+<img src="/DiagramaVennProbabilidad4.svg"
+     alt="Diagrama de Venn de los sucesos A intersección B"
+     class="max-w-80">
+</div>
+
+<div class="flex items-center justify-around">
+<p><span class="font-bold">La región sombreada es el complemento de A</p>
+<img src="/DiagramaVennProbabilidad5.svg"
+     alt="Diagrama de Venn de los sucesos A intersección B"
+     class="max-w-80">
+</div>
 
 
 
