@@ -141,10 +141,10 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 </div>
 
 <div class="flex items-center justify-around">
-<p><span class="font-bold">La región sombreada es el complemento de A</p>
 <img src="/DiagramaVennProbabilidad5.svg"
      alt="Diagrama de Venn de los sucesos A intersección B"
      class="max-w-80">
+<p>La región sombreada es el complemento de A</p>
 </div>
 
 
