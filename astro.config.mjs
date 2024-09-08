@@ -8,12 +8,5 @@ import icon from 'astro-icon';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://utn-cursoingreso.vercel.app',
-  integrations: [
-    preact(),
-    tailwind(),
-    sitemap({
-      filter: (page) => page !== 'https://utn-cursoingreso.vercel.app/collaborators',
-    }),
-    icon(),
-  ],
+  integrations: [preact(), tailwind(), sitemap(), icon()],
 });

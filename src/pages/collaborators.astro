@@ -1,10 +1,67 @@
 ---
+import { Icon } from 'astro-icon/components';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = 'Colaboradores';
+
+const url = 'https://my-api-mocha-omega.vercel.app/api/contributors';
+
+let colaboradores = [];
+let errorMessage = '';
+
+try {
+  const response = await fetch(url);
+  if (response.ok) {
+    colaboradores = await response.json();
+
+    await Promise.all(
+      colaboradores.map(async (colaborador) => {
+        try {
+          const userResponse = await fetch(`https://api.github.com/users/${colaborador.login}`);
+          if (userResponse.ok) {
+            const userData = await userResponse.json();
+            colaborador.description = userData.bio || '';
+          } else {
+            colaborador.description = '';
+          }
+        } catch (error) {
+          colaborador.description = '';
+        }
+      }),
+    );
+  } else {
+    errorMessage = 'Respuesta de red OK pero respuesta HTTP no OK';
+  }
+} catch (error) {
+  errorMessage = 'Hubo un problema con la petición Fetch: ' + error.message;
+}
 ---
 
-<BaseLayout pageTitle=`${pageTitle}`>
+<BaseLayout pageTitle={pageTitle}>
   <div class="flex flex-col justify-center items-center container mx-auto text-center">
-    <h2>En progreso de creación</h2>
+    {
+      errorMessage ? (
+        <p class="text-red-500">{errorMessage}</p>
+      ) : (
+        <ul class="flex flex-wrap justify-center gap-6">
+          {colaboradores.map((colaborador) => (
+            <li class="p-6 bg-black text-white rounded-lg shadow-lg flex flex-col items-center gap-4 w-64">
+              <div class="flex flex-col items-center">
+                <div class="h-24 w-24 border-4 bg-white rounded-full overflow-hidden mb-4">
+                  <img src={colaborador.avatar_url} alt={colaborador.login} class="object-cover w-full h-full" />
+                </div>
+                <div class="text-center">
+                  <div class="font-bold text-xl">{colaborador.login}</div>
+                  <div class="text-gray-400 text-sm">{colaborador.description ? colaborador.description : 'Contributor'}</div>
+                </div>
+              </div>
+              {colaborador.contributions && <div class="text-center text-sm text-gray-400">{colaborador.contributions} Contribuciones</div>}
+              <a href={colaborador.html_url}>
+                <Icon name="github" width={20} height={20} />
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
   </div>
 </BaseLayout>
