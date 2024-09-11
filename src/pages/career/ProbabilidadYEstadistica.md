@@ -112,41 +112,47 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 
 <h3 class="text-center uppercase">Representación grafica de los sucesos con diagramas de Venn.</h3>
 
-<div class="flex items-center justify-around">
+<div class="flex gap-2 items-center justify-around">
 <img src="/DiagramaVennProbabilidad1.svg"
      alt="Diagrama de Venn de los sucesos A Y B"
-     class="max-w-80">
+     class="max-w-40 md:max-w-80 md:w-80">
 <p> Diagrama de Venn de los sucesos A y B</p>
 </div>
 
-<div class="flex items-center justify-around">
+<div class="flex gap-2 items-center justify-around">
 <p>La región sombreada es A ∩ B (intersección) representan a los elementos que pertenecen al suceso A y al suceso B</p>
 <img src="/DiagramaVennProbabilidad2.svg"
      alt="Diagrama de Venn de los sucesos A intersección B"
-     class="max-w-80">
+     class="max-w-40 md:max-w-80 md:w-80">
 </div>
 
-<div class="flex items-center justify-around">
+<div class="flex gap-2 items-center justify-around">
 <img src="/DiagramaVennProbabilidad3.svg"
      alt="Diagrama de Venn de los sucesos A intersección B"
-     class="max-w-80">
+     class="max-w-40 md:max-w-80 md:w-80">
 <p>La región sombreada es A U B (unión) representan a los elementos que pertenecen al suceso A y al suceso B o a ambos</p>
 </div>
 
-<div class="flex items-center justify-around">
+<div class="flex gap-2 items-center justify-around">
 <p><span class="font-bold">Sucesos A Y B mutuamente excluyentes</span>, Cuando ocurre uno de los sucesos, el otro no puede ocurrir.</p>
 <img src="/DiagramaVennProbabilidad4.svg"
      alt="Diagrama de Venn de los sucesos A intersección B"
-     class="max-w-80">
+     class="max-w-40 md:max-w-80 md:w-80">
 </div>
 
-<div class="flex items-center justify-around">
+<div class="flex gap-2 items-center justify-around">
 <img src="/DiagramaVennProbabilidad5.svg"
      alt="Diagrama de Venn de los sucesos A intersección B"
-     class="max-w-80">
+     class="max-w-40 md:max-w-80 md:w-80">
 <p>La región sombreada es el complemento de A</p>
 </div>
 
+<div class="flex gap-2 items-center justify-around">
+<p>Representa a los elementos  que pertenecen al suceso A o bien al suceso B pero no a Ambos , osea que la intersección no es agregada</p>
+<img src="/DiagramaVennProbabilidad6.svg"
+     alt="Pertenecen al suceso A o bien al suceso B pero no a Ambos"
+     class="max-w-40 md:max-w-80 md:w-80">
+</div>
 
 
 
