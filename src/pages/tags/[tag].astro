@@ -3,8 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import TagPost from '../../components/TagPost.astro';
 
 export async function getStaticPaths() {
-  const admissionPosts = await Astro.glob('../admission/*.md');
-  const careerPosts = await Astro.glob('../career/*.md');
+  const admissionPosts = await Astro.glob('../admission/*.mdx');
+  const careerPosts = await Astro.glob('../career/*.mdx');
 
   const allPosts = [...admissionPosts, ...careerPosts];
 

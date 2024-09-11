@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AdmissionPost from '../components/AdmissionPost.astro';
-const allPosts = await Astro.glob('./career/*.md');
+const allPosts = await Astro.glob('./career/*.mdx');
 
 allPosts.sort((a, b) => a.frontmatter.order - b.frontmatter.order);
 

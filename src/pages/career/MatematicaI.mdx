@@ -1,0 +1,199 @@
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: Matematica
+author: Felipe Arce
+description: 'Matematica I'
+
+image:
+  url: '/ApunteMatematicaI.avif'
+  alt: 'Apunte de Matematica I'
+pubDate: 2024-04-28
+tags: ['apuntes', 'matematica','Primer Cuatrimestre']
+totalTimeClass: 56
+totalExam: 8
+totalTime: 64
+professor: Giselle Bottazzi
+order: 2 
+
+---
+import Latex from '../../components/Latex.astro'
+
+## Matematica I
+
+### Clase I - 16 de abr de 2024
+
+#### Bibliografía de Consulta
+
+- Algebra I, Armando Rojo, Ed. El Ateneo
+- Algebra II, Armando Rojo, Ed. El Ateneo
+- Matemática Discreta, Grassmann. Ed. Prentice-Hall
+- Matemática Para la computación. José Murillo. Ed. Alfaomega
+
+## Unidad 1
+
+<div class="uppercase underline">
+  Conjuntos - Operaciones, leyes y propiedades - Problemas de Conteo- Traducción
+  a Notación Conjuntista.
+</div>
+### Conceptos Matemáticos: Conjuntos y Operaciones
+
+<p>En matemáticas, los conjuntos son colecciones bien definidas de objetos,
+  llamados elementos, que pueden ser números, letras, o cualquier otro tipo de
+  objeto.</p>
+
+#### Cardinal de un Conjunto
+
+<p>El cardinal de un conjunto es el número de elementos que contiene. Se lo
+  identifica con un #</p>
+
+<div class="flex flex-col md:flex-row justify-around items-center">
+  <img src="/DiagramaDeVenn1.webp" alt="Primer diagrama de Venn" class="max-w-full md:max-w-1/2" />
+
+  <div class="text-xs max-w-full md:max-w-1/2">
+    <ul class="list-none">
+      <li>
+        <Latex formula="A = \{ \text{Personas que les gusta el fútbol} \}" />
+      </li>
+      <li>
+        <Latex formula="B = \{ \text{Personas que les gusta la natación} \}" />
+      </li>
+      <li>
+        <Latex formula="A = \{ \text{Ana}, \text{Juan}, \text{José}, \text{María} \}" />
+      </li>
+      <li>
+        <Latex formula="B = \{ \text{María}, \text{Laura}, \text{Marcos} \}" />
+      </li>
+      <li>
+        <Latex formula="U = \{ \text{Ana}, \text{Juan}, \text{José}, \text{María}, \text{Laura}, \text{Marcos} \}" />
+      </li>
+      <li>
+        <Latex formula="\text{Cardinal } A = 4" />
+      </li>
+      <li>
+        <Latex formula="\text{Cardinal } B = 3" />
+      </li>
+    </ul>
+  </div>
+</div>
+  <p class="text-red-600">
+    <Latex formula="A \cap B = \{ \text{María} \}" />
+  </p>
+
+ <p>
+    <Latex formula="A \cup B" />
+  </p>
+  <p class="text-green-600">
+    <Latex formula="A \cup B = \{ \text{Ana}, \text{Juan}, \text{Jose}, \text{Maria}, \text{Marcos}, \text{Laura} \}" />
+  </p>
+
+ <p>A Intersección de B Complemento</p>
+  <p class="text-orange-600">
+    <Latex formula="A \cap \overline{B} = \{ \text{Ana}, \text{Juan}, \text{Jose} \}" />
+  </p>
+
+
+
+<p p class="text-green-600">
+    <Latex formula="\overline{B} = B^c" /> 
+    <span class="text-black"> Son decir lo mismo</span>
+  </p>
+
+  ### Conjunto
+
+<p>Un conjunto es una colección de elementos.
+    Normalmente están caracterizados por compartir una
+    propiedad</p>
+
+<p class=" text-orange-700">Definición Explícita o
+    por Extensión: <span class="text-black"> Citando
+      todos los elementos entre llaves</span></p>
+
+<p>Conjunto <Latex formula="A = \{ \text{Ana}, \text{Juan}, \text{Jose}, \text{Maria} \}" /></p>
+
+<p class="text-green-600">Definición Implícita o
+        por Comprension:<span class="text-black">Dando
+          una o varias Características que determinan
+          si el elemento pertenece o no Al
+          conjunto</span></p>
+
+<div class="flex justify-center border-b-2 pb-4 ">
+  <div class="border border-green-600 p-2">
+  <p><Latex formula="A = \{ \text{Números naturales menores o iguales a 5} \}" /></p>
+  <p><Latex formula="A = \{ x \in \mathbb{N} \mid x \leq 5 \}" /></p>
+  <img src="/expresion.webp" alt="Expresion Matematica Universal 1" class="p-0 m-0"/>
+  <p><Latex formula="\in \text{ representa ``pertenece a''}" /></p>
+</div>
+</div>
+
+### Igualdad De Conjuntos
+
+Dos Conjuntos A Y B son iguales ucando poseen los mismos elementos
+
+<p><Latex formula="x \in A \quad \Leftrightarrow \quad x \in B" /></p>
+
+<p class=" border-2 inline border-orange-600 p-2 uppercase">Conjuntos Especiales</p>
+
+<p>El <span class="text-orange-600">conjunto vacío <Latex formula="\emptyset" /></span> es aquel que carece de elementos <Latex formula="\emptyset = \{\}" /> o bien en ∀x, x ∉ A <Latex formula="\emptyset" /></p>
+
+
+<p>El <span class="text-orange-600">conjunto unitario</span> es cuando tiene un único elemento. Por ejemplo: <Latex formula="\{1\}, \{a\}, \{luis\}" /></p>
+
+<p><span class="text-green-600">Definición de Inclusión:</span> Subconjunto. Dados dos conjuntos A y B, decimos que A está contenido o incluido en B, o que A es un subconjunto de B, y lo denotamos como <Latex formula="A \subset B" /></p>
+
+
+<img src="/DiagramaDeVenn2.webp" alt="Primer diagrama de venn"/>
+
+<div class="flex flex-col md:flex-row justify-around items-center">
+  <ul class="list-none p-0 m-0">
+    <li>
+      <p><Latex formula="A = \{ x \in \mathbb{N} \mid x < 7 \}" /></p>
+      <img src="/expresion2.webp" alt="Expresión Matemática Universal 2" class="p-0 m-0"/>
+    </li>
+
+    <li><Latex formula="U = \{0, 1, 2, 3, 4, 5, 6\}" /></li>
+    <li><Latex formula="A = \{4, 2, 3\}" /></li>
+
+    <li>
+      <p><Latex formula="B = \{ x \mid x \in \mathbb{N} \land 2 \leq x < 6 \}" /></p>
+      <img src="/expresion3.avif" alt="Expresión Matemática Universal 3" class="p-0 m-0"/>
+    </li>
+    <li><Latex formula="B = \{2, 3, 4, 5\}" /></li>
+  </ul>
+  <div class="flex flex-col">
+    <img src="/DiagramaDeVenn3.webp" alt="Diagrama de Venn" class="m-0 p-0"/>
+    <div class="flex justify-center gap-8 ">
+      <p><Latex formula="A \subset B" /> ✔</p>
+      <p><Latex formula="A \subseteq B" /> ❌</p>
+    </div>
+  </div>
+</div>
+
+<div class="border-2 border-violet-600 p-2">
+  <p class="text-orange-600">Propiedad Reflexiva: Todo conjunto está incluido en sí mismo.</p>
+  <p class="text-center"><Latex formula="A \subset A" /></p>
+  <p class="text-orange-600">Propiedad Transitiva: <span class="text-black">Si <Latex formula="A \subset B \subset C" /> entonces <Latex formula="A \subset C" /></span></p>
+</div>
+
+
+#### Inclusión e Igualdad entre conjuntos
+
+<p><Latex formula="A = B \Leftrightarrow A \subset B \land B \subset A" /></p>
+
+<div class="flex items-center justify-center border-b-2 pb-4">
+  <img src="/explicacionigualdadconjuntos.avif" alt="Expresión Matemática Universal 2" class="p-0 m-0"/>
+</div>
+
+<h4 class="text-center">Complemento entre Conjuntos</h4>
+
+<h5 class="text-orange-600 underline uppercase">Complemento</h5>
+
+<p>LLamamos Complemento de A a los elementos del universo que no pertenecen a A</p>
+
+<div class="flex flex-col md:flex-row items-center justify-around">
+  <div>
+    <p>Se denota con <span class="text-orange-600"><Latex formula="A^c" /></span> o <span class="text-orange-600"><Latex formula="\overline{A}" /></span></p>
+    <p><span class="text-orange-600"><Latex formula="A^c = \{ x \in \mathbb{N} \mid x \notin A \}" /></span></p>
+  </div>
+  <img src="/DiagramaDeVenn4.webp" alt="Diagrama de Venn 4" class="m-0 p-0"/>
+</div>
+
