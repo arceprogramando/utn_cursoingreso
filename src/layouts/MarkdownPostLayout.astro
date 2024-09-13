@@ -64,10 +64,10 @@ import { Image } from 'astro:assets';
         <slot />
       </Prose>
     </div>
-    <ul class="tags">
+    <ul class="flex flex-wrap gap-2 items-center justify-center text-center">
       {
         frontmatter.tags.map((tag) => (
-          <li class="tag">
+          <li class="px-4 py-2 text-lg font-bold uppercase  text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
             <a href={`/tags/${tag}`}>{tag}</a>
           </li>
         ))
@@ -75,23 +75,3 @@ import { Image } from 'astro:assets';
     </ul>
   </div>
 </BaseLayout>
-
-<style>
-  .tags a {
-    color: #00539f;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    font-size: 1.15em;
-    background-color: #f8fcfd;
-  }
-</style>
