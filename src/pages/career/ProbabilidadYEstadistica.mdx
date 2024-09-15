@@ -374,7 +374,7 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 </ul>
 <p>Espacio muestral:</p>
 <ul>
-  <li class="overflow-x-auto "><Latex formula="\{ (1, \text{rojo}), (1, \text{verde}), (1, \text{azul}), (2, \text{rojo}), (2, \text{verde}), (2, \text{azul}), (3, \text{rojo}), (3, \text{verde}), (3, \text{azul}), (4, \text{rojo}), (4, \text{verde}), (4, \text{azul}), (5, \text{rojo}), (5, \text{verde}), (5, \text{azul}) \}" /></li>
+  <li class="overflow-x-auto"><Latex formula="\{ (1, \text{rojo}), (1, \text{verde}), (1, \text{azul}), (2, \text{rojo}), (2, \text{verde}), (2, \text{azul}), (3, \text{rojo}), (3, \text{verde}), (3, \text{azul}), (4, \text{rojo}), (4, \text{verde}), (4, \text{azul}), (5, \text{rojo}), (5, \text{verde}), (5, \text{azul}) \}" /></li>
 </ul>
 
 <p>Se le puede decir de dos formas diferentes:</p>
@@ -415,6 +415,73 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
       <li>Asignar una probabilidad a cada punto. ¿Se trata de un espacio de equiprobabilidad? </li>
       <li>Sea A el evento de observar exactamente una sola vez cara, y B, el evento de observar al menos una cara. Obtener los espacios muestrales de A y de B. </li>
       <li>A partir de las respuestas del ítem anterior, calcular: P(A), P(B). </li>
+    </ol>
+  </ol>
+</div>
+
+### Clase II - 20 de agosto de 2024
+
+Se inicia la clase Resolviendo los Ejercicios de la clase anterior
+
+<div class="w-full md:w-[600px] min-h-80 border bg-gray-100 p-4">
+  <h6 class="text-xl font-bold text-center mb-4">Ejercicios Resueltos</h6>
+
+  <ol class="list-decimal list-inside space-y-2">
+    <li>Para cada uno de los siguientes experimentos, se pide definir el espacio muestral:</li>
+    <ol class="list-[lower-alpha] list-inside ml-6 space-y-1">
+      <li>Se analiza un tubo de ensayo con una muestra para detectar la presencia o ausencia de una molécula contaminante.</li>
+      <div class="overflow-x-auto">
+        <span><Latex formula="\#E = \{\text{PRESENCIA}, \text{AUSENCIA}\}" /></span>
+      </div>
+      <li>Se seleccionaron sucesivamente dos artículos de una producción y se clasifica cada uno en NORMAL o DEFECTUOSO.</li>
+      <div class="overflow-x-auto">
+        <span><Latex formula="\#E = \{\text{NN}, \text{ND}, \text{DD}, \text{DN}\}" /></span>
+      </div>
+      <li>Se arroja una moneda.</li>
+      <div class="overflow-x-auto">
+        <span><Latex formula="\#E = \{\text{Cara}, \text{Cruz}\}" /></span>
+      </div>
+      <li>Se seleccionaron dos billetes de una billetera que contiene: un billete de \$10, uno de \$50 y uno de \$20. Considerar al experimento con y sin reposición.</li>
+      <p>Sin reposición:</p>
+      <div class="overflow-x-auto overflow-y-hidden">
+        <span><Latex formula="\#E = \left\{\begin{array}{ll}
+        \text{\$10, \$20} \\
+        \text{\$10, \$50} \\
+        \text{\$50, \$10} \\
+        \text{\$50, \$20} \\
+        \text{\$20, \$50}
+        \end{array}\right\}" /></span>
+      </div>
+       <p>Con reposición:</p>
+      <div class="overflow-x-auto overflow-y-hidden">
+        <span><Latex formula="\#E = \left\{\begin{array}{ll}
+        \text{\$10, \$10} \\
+        \text{\$10, \$20} \\
+        \text{\$10, \$50} \\
+        \text{\$20, \$10} \\
+        \text{\$20, \$20} \\
+        \text{\$20, \$50} \\
+        \text{\$50, \$10} \\
+        \text{\$50, \$20} \\
+        \text{\$50, \$50}
+        \end{array}\right\}" /></span>
+      </div>
+      <li>De una caja que contiene bolillas blancas y negras, se extraen sucesivamente hasta obtener dos bolillas blancas o cuatro bolillas cualesquiera.</li>
+      <div class="overflow-x-auto overflow-y-hidden">
+        <span><Latex formula="\#E = \left\{\begin{array}{ll}
+        \text{BB} \\
+        \text{NBB} \\
+        \text{BNB} \\
+        \text{NBNB} \\
+        \text{BNNB} \\
+        \text{NNNB} \\
+        \text{NNBB} \\
+        \text{NBNN} \\
+        \text{NNNN} \\
+        \text{NNBN} \\
+        \text{BNNN} \\
+        \end{array}\right\}" /></span>
+      </div>
     </ol>
   </ol>
 </div>
