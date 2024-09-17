@@ -18,11 +18,7 @@ export default function Greeting({ messages }) {
         <p class="text-sm text-gray-600">
           Pueden aportar o dejar sus estrellitas en{' '}
           <span>
-            <a
-              href="https://github.com/arceprogramando/astro-practice"
-              class="underline font-bold text-blue-600 uppercase  hover:text-teal-600"
-              target="_blank"
-            >
+            <a href="https://github.com/arceprogramando/astro-practice" class="underline font-bold  uppercase  hover:text-teal-600" target="_blank">
               Github
             </a>
             {greeting}

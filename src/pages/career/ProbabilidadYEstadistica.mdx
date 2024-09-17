@@ -13,40 +13,43 @@ totalExam: 8
 totalTime: 64
 professor: Giselle Bottazzi
 order: 7
-
 ---
-import Latex from '../../components/Latex.astro'
+
+import Latex from '../../components/Latex.astro';
 
 ## Probabilidad y Estadística
 
 ### Clase I - 13 de agosto de 2024
 
-La primera clase volvimos a tener con la profesora que tuvimos en Matematica I, Por suerte su forma de enseñar fue genial y considero que fue la materia que mas aprendi el cuatrimestre anterior, lastimosamente este cuatrimestre no es presencial , Esperemos que La Desenvoltura de forma online sea la misma.
+La primera clase volvimos a tener con la profesora que tuvimos en Matematica I, Por suerte su forma de enseñar fue genial y considero que fue la
+materia que mas aprendi el cuatrimestre anterior, lastimosamente este cuatrimestre no es presencial , Esperemos que La Desenvoltura de forma online
+sea la misma.
 
 #### Unidad 1:
 
-Probabilidad. Espacio muestral. Sucesos. Sucesos mutuamente excluyentes. Partición de un espacio muestral .Sucesos complementarios. Definición clásica de probabilidad.
+Probabilidad. Espacio muestral. Sucesos. Sucesos mutuamente excluyentes. Partición de un espacio muestral .Sucesos complementarios. Definición clásica
+de probabilidad.
 
 ##### ¿Qué es la PROBABILIDAD?
 
-La probabilidad es un número, que va del cero al uno y que mide el riesgo de ocurrencia. Ese número me indica el grado de riesgo que existe acerca de la ocurrencia de un suceso o evento, donde el valor cero indica imposibilidad de ocurrencia y el número uno indica absoluta certeza acerca de la ocurrencia de ese suceso o evento.
+La probabilidad es un número, que va del cero al uno y que mide el riesgo de ocurrencia. Ese número me indica el grado de riesgo que existe acerca de
+la ocurrencia de un suceso o evento, donde el valor cero indica imposibilidad de ocurrencia y el número uno indica absoluta certeza acerca de la
+ocurrencia de ese suceso o evento.
 
-Tenemos que ver que suceso o evento se le puede calcular 
+Tenemos que ver que suceso o evento se le puede calcular
 
 ###### Conceptos Basicos A tener en cuenta
 
-**Fenomeno Deterministico:** Se sabe  con toda certeza cual será su comportamiento.
+**Fenomeno Deterministico:** Se sabe con toda certeza cual será su comportamiento.
 
 **Fenomeno Aleatorio o Probabilístico:** No se puede afirmar con certeza cuál será su comportamiento.
 
-**Experimento :** Proceso por medio del cual se obtiene una observación ,
-Por ejemplo lanzar un dado para ver que va a salir.
+**Experimento :** Proceso por medio del cual se obtiene una observación , Por ejemplo lanzar un dado para ver que va a salir.
 
+**Experimento: 1** Se observan **tres** automóviles en una salida de la autopista para ver si dan vuelta a la izquierda o a la derecha al final de de
+la rampa de salida.
 
-**Experimento: 1** Se observan **tres** automóviles en una salida de la autopista para ver si dan vuelta a la izquierda o a la derecha al final de de la rampa de salida.
-
-Union  = U
-Intersección = ∩
+Union = U Intersección = ∩
 
 Todos los posibles resultados de dicho experimento son:
 
@@ -54,10 +57,10 @@ Todos los posibles resultados de dicho experimento son:
 
 Donde D Representa hacia la derecha e "I" hacia la izquierda
 
-**Suceso Elemental o evento Simple:** Cada uno de los posibles resultados, que no se pueden descomponer en otros más simples, da un experimento aleatorio.
+**Suceso Elemental o evento Simple:** Cada uno de los posibles resultados, que no se pueden descomponer en otros más simples, da un experimento
+aleatorio.
 
 **Espacio Muestral:** Es el conjunto que consta de todos los posibles sucesos elementales. Por lo general se denota con la letra U o S.
-
 
 <Latex formula="U = \{1,2,3,4,5,6\} \text{ del experimento de lanzar una dado}" />
 
@@ -69,20 +72,23 @@ Donde D Representa hacia la derecha e "I" hacia la izquierda
 
 <h3 class="text-center uppercase">Partición de un Espacio Muestral</h3>
 
-Son todas aquellas divisiones **mutuamente excluyentes** y **colectivamente exhaustivas** que se pueden realizar sobre un **espacio muestral**. Es por este motivo que puedo tener como máximo tantos particiones como eventos tenga el espacio muestral.
+Son todas aquellas divisiones **mutuamente excluyentes** y **colectivamente exhaustivas** que se pueden realizar sobre un **espacio muestral**. Es por
+este motivo que puedo tener como máximo tantos particiones como eventos tenga el espacio muestral.
 
-Dos eventos son **mutuamente excluyentes** cuando esos eventos son particiones de un mismo espacio muestral. En otras palabras, dos eventos A Y son mutuamente excluyentes si la ocurrencia de uno implica la no ocurrencia del otro.
+Dos eventos son **mutuamente excluyentes** cuando esos eventos son particiones de un mismo espacio muestral. En otras palabras, dos eventos A Y son
+mutuamente excluyentes si la ocurrencia de uno implica la no ocurrencia del otro.
 
-Dos eventos son **colectivamente excluyentes** cuando en conjunto involucran a la totalidad del espacio muestral. Es decir, la unión de los conjuntos que los representan conforman el espacio muestral. 
+Dos eventos son **colectivamente excluyentes** cuando en conjunto involucran a la totalidad del espacio muestral. Es decir, la unión de los conjuntos
+que los representan conforman el espacio muestral.
 
-Dos eventos son **colectivamente exhautivos** cuando en conjunto involucran a la totalidad del espacio muestral. Es decir, la unión de los conjuntos que los representan conforman el espacio muestral. 
+Dos eventos son **colectivamente exhautivos** cuando en conjunto involucran a la totalidad del espacio muestral. Es decir, la unión de los conjuntos
+que los representan conforman el espacio muestral.
 
 Ejemplo:
 
-Se arroja un dado  y se observa el número que sale.
+Se arroja un dado y se observa el número que sale.
 
 <Latex formula="U = \{1,2,3,4,5,6\} \text{ del experimento de lanzar una dado}" />
-
 
 Definimos los siguientes sucesos:
 
@@ -94,10 +100,9 @@ Definimos los siguientes sucesos:
 
 Los sucesos A y B son particiones de U, Ya que son **mutuamente excluyentes** y **colectivamente exhaustivos**
 
-**Mutuamente Excluyentes:** Es uno o es el otro , se cumple que si es par no se cumple que es impar 
+**Mutuamente Excluyentes:** Es uno o es el otro , se cumple que si es par no se cumple que es impar
 
 **Colectivamente exhaustivos:** Porque si hago la union de todos los sucesos me da el total del universo
-
 
 <Latex formula="A \cup B = \{2, 4, 6, 1, 3, 5\} = U" />
 
@@ -105,10 +110,9 @@ Los sucesos A y B son particiones de U, Ya que son **mutuamente excluyentes** y 
 
 <Latex formula="D = \text{Que salga número par y múltiplo de 3} = A \cap C = \{6\}" />
 
-La conjunción de dos sucesos equivale a la intersección de los mismos 
+La conjunción de dos sucesos equivale a la intersección de los mismos
 
 <Latex formula="E = \text{Que salga número impar y múltiplo de 3} = B \cap C = \{3\}" />
-
 
 <Latex formula="F = \text{Que salga número par o múltiplo de 3} = A \cup C = \{2, 3, 4, 6\}" />
 
@@ -121,45 +125,35 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 <h3 class="text-center uppercase">Representación grafica con diagramas de Venn.</h3>
 
 <div class="flex  md:flex-row gap-2 items-center justify-around">
-<img src="/DiagramaVennProbabilidad1.svg"
-     alt="Diagrama de Venn de los sucesos A Y B"
-     class="max-w-40 md:max-w-80 md:w-80"/>
-<p> Diagrama de Venn de los sucesos A y B</p>
+  <img src="/DiagramaVennProbabilidad1.svg" alt="Diagrama de Venn de los sucesos A Y B" class="max-w-40 md:max-w-80 md:w-80" />
+  <p> Diagrama de Venn de los sucesos A y B</p>
 </div>
 
 <div class="flex md:flex-row gap-2 items-center justify-around">
-<p>La región sombreada es A ∩ B (intersección) representan a los elementos que pertenecen al suceso A y al suceso B</p>
-<img src="/DiagramaVennProbabilidad2.svg"
-     alt="Diagrama de Venn de los sucesos A intersección B"
-     class="max-w-40 md:max-w-80 md:w-80"/>
+  <p>La región sombreada es A ∩ B (intersección) representan a los elementos que pertenecen al suceso A y al suceso B</p>
+  <img src="/DiagramaVennProbabilidad2.svg" alt="Diagrama de Venn de los sucesos A intersección B" class="max-w-40 md:max-w-80 md:w-80" />
 </div>
 
 <div class="flex  md:flex-row gap-2 items-center justify-around">
-<img src="/DiagramaVennProbabilidad3.svg"
-     alt="Diagrama de Venn de los sucesos A intersección B"
-     class="max-w-40 md:max-w-80 md:w-80"/>
-<p>La región sombreada es A U B (unión) representan a los elementos que pertenecen al suceso A y al suceso B o a ambos</p>
+  <img src="/DiagramaVennProbabilidad3.svg" alt="Diagrama de Venn de los sucesos A intersección B" class="max-w-40 md:max-w-80 md:w-80" />
+  <p>La región sombreada es A U B (unión) representan a los elementos que pertenecen al suceso A y al suceso B o a ambos</p>
 </div>
 
 <div class="flex  gap-2 items-center justify-around">
-<p><span class="font-bold">Sucesos A Y B mutuamente excluyentes</span>, Cuando ocurre uno de los sucesos, el otro no puede ocurrir.</p>
-<img src="/DiagramaVennProbabilidad4.svg"
-     alt="Diagrama de Venn de los sucesos A intersección B"
-     class="max-w-40 md:max-w-80 md:w-80"/>
+  <p>
+    <span class="font-bold">Sucesos A Y B mutuamente excluyentes</span>, Cuando ocurre uno de los sucesos, el otro no puede ocurrir.
+  </p>
+  <img src="/DiagramaVennProbabilidad4.svg" alt="Diagrama de Venn de los sucesos A intersección B" class="max-w-40 md:max-w-80 md:w-80" />
 </div>
 
 <div class="flex gap-2 items-center justify-around">
-<img src="/DiagramaVennProbabilidad5.svg"
-     alt="Diagrama de Venn de los sucesos A intersección B"
-     class="max-w-40 md:max-w-80 md:w-80"/>
-<p>La región sombreada es el complemento de A</p>
+  <img src="/DiagramaVennProbabilidad5.svg" alt="Diagrama de Venn de los sucesos A intersección B" class="max-w-40 md:max-w-80 md:w-80" />
+  <p>La región sombreada es el complemento de A</p>
 </div>
 
 <div class="flex gap-2 items-center justify-around">
-<p>Representa a los elementos  que pertenecen al suceso A o bien al suceso B pero no a Ambos , osea que la intersección no es agregada</p>
-<img src="/DiagramaVennProbabilidad6.svg"
-     alt="Pertenecen al suceso A o bien al suceso B pero no a Ambos"
-     class="max-w-40 md:max-w-80 md:w-80"/>
+  <p>Representa a los elementos que pertenecen al suceso A o bien al suceso B pero no a Ambos , osea que la intersección no es agregada</p>
+  <img src="/DiagramaVennProbabilidad6.svg" alt="Pertenecen al suceso A o bien al suceso B pero no a Ambos" class="max-w-40 md:max-w-80 md:w-80" />
 </div>
 
 <h3 class="text-xl text-blue-700">Concepto de Probabilidad. Propiedades.</h3>
@@ -168,12 +162,18 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 **Espacio muestral comprobable** "Todos los sucesos elementales tienen igual probabilidad de ocurrir"
 
 <div class="w-80 md:w-[400px] min-h-80 border bg-blue-400 p-4">
+
 <h5 class="text-xl font-bold text-center">Definición clásica de probabilidad</h5>
+
 <p>Sea un suceso <span class="font-bold">aleatorio \( S \) </span> definido en un espacio muestral <span class="font-bold">\( U \)</span> . La probabilidad de ocurrencia de <span class="font-bold">\( S \)</span> se define como el <span class="font-bold">cociente</span> entre los <span class="font-bold">casos favorables</span> al suceso aleatorio <span class="font-bold">\( S \)</span> y los casos posibles del experimento aleatorio.</p>
 
-<p class="font-bold text-2xl"><Latex formula="P(S) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}}" /></p>
+<p class="font-bold text-2xl">
+  <Latex formula="P(S) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}}" />
+</p>
 
-<p><Latex formula="P(S) = \frac{CF}{CP}" /></p>
+<p>
+  <Latex formula="P(S) = \frac{CF}{CP}" />
+</p>
 
 </div>
 
@@ -223,25 +223,31 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 <div class="w-full md:w-[600px] min-h-80 border bg-blue-100 p-4">
   <h5 class="text-xl font-bold text-center">Axiomas de la probabilidad</h5>
 
-  <p>
-    La probabilidad se basa en tres axiomas fundamentales establecidos por el matemático Andrey Kolmogorov:
-  </p>
 
-  <p>
-    <strong>Axioma 1:</strong> La probabilidad de cualquier evento es un número no negativo.
-    <Latex formula="P(A) \geq 0" />
-  </p>
 
-  <p>
-    <strong>Axioma 2:</strong> La probabilidad del espacio muestral completo es 1.
-    <Latex formula="P(U) = 1" />
-  </p>
+<p>La probabilidad se basa en tres axiomas fundamentales establecidos por el matemático Andrey Kolmogorov:</p>
 
-  <p>
-    <strong>Axioma 3:</strong> La probabilidad de la unión de eventos mutuamente excluyentes es la suma de sus probabilidades.
-    <Latex formula="P(A \cup B) = P(A) + P(B)" />
-    <span class="text-gray-700">(si \(A\) y \(B\) son eventos mutuamente excluyentes)</span>
-  </p>
+
+
+<p>
+  <strong>Axioma 1:</strong> La probabilidad de cualquier evento es un número no negativo.
+  <Latex formula="P(A) \geq 0" />
+</p>
+
+
+
+<p>
+  <strong>Axioma 2:</strong> La probabilidad del espacio muestral completo es 1.
+  <Latex formula="P(U) = 1" />
+</p>
+
+
+
+<p>
+  <strong>Axioma 3:</strong> La probabilidad de la unión de eventos mutuamente excluyentes es la suma de sus probabilidades.
+  <Latex formula="P(A \cup B) = P(A) + P(B)" />
+  <span class="text-gray-700">(si \(A\) y \(B\) son eventos mutuamente excluyentes)</span>
+</p>
 
   <p>
     Estos axiomas forman la base para el cálculo de probabilidades y para el desarrollo de modelos estadísticos y probabilísticos.
@@ -251,120 +257,175 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 <div class="w-full md:w-[600px] min-h-80 border bg-green-100 p-4">
   <h6 class="text-xl font-bold text-center">Ejemplo</h6>
 
-  <p>
-    En una pareja, cada uno de sus miembros posee genes para ojos castaños y para ojos azules. Teniendo en cuenta que cada uno tiene la misma probabilidad de aportar un gen para ojos castaños que para ojos azules y que el gen para ojos castaños es dominante, se desea obtener la probabilidad de que un hijo nacido de esta pareja tenga los ojos castaños.
-  </p>
 
-  <p>
-    Espacio muestral:
-    <Latex formula="E = \text{Genes que aporta cada padre}" />
-  </p>
 
-  <p>
-    Supongamos que los genes están representados como:
-    <Latex formula="C = \text{gen para ojos castaños}" />
-    <Latex formula="A = \text{gen para ojos azules}" />
-  </p>
+<p>
+  En una pareja, cada uno de sus miembros posee genes para ojos castaños y para ojos azules. Teniendo en cuenta que cada uno tiene la misma
+  probabilidad de aportar un gen para ojos castaños que para ojos azules y que el gen para ojos castaños es dominante, se desea obtener la
+  probabilidad de que un hijo nacido de esta pareja tenga los ojos castaños.
+</p>
 
-  <p>
-    Dado que cada padre puede aportar uno de los dos genes con igual probabilidad, y el gen para ojos castaños (C) es dominante sobre el gen para ojos azules (A), tenemos los siguientes posibles pares de genes para el hijo:
-  </p>
 
-  <ul class="list-disc pl-5">
-    <li>
-      <Latex formula="CC" />
-    </li>
-    <li>
-      <Latex formula="CA" />
-    </li>
-    <li>
-      <Latex formula="AC" />
-    </li>
-    <li>
-      <Latex formula="AA" />
-    </li>
-  </ul>
 
-  <p>
-    Los pares de genes que resultan en ojos castaños son:
+<p>
+  Espacio muestral:
+  <Latex formula="E = \text{Genes que aporta cada padre}" />
+</p>
+
+
+
+<p>
+  Supongamos que los genes están representados como:
+  <Latex formula="C = \text{gen para ojos castaños}" />
+  <Latex formula="A = \text{gen para ojos azules}" />
+</p>
+
+
+
+<p>
+  Dado que cada padre puede aportar uno de los dos genes con igual probabilidad, y el gen para ojos castaños (C) es dominante sobre el gen para ojos
+  azules (A), tenemos los siguientes posibles pares de genes para el hijo:
+</p>
+
+
+
+<ul class="list-disc pl-5">
+  <li>
     <Latex formula="CC" />
+  </li>
+  <li>
     <Latex formula="CA" />
+  </li>
+  <li>
     <Latex formula="AC" />
-  </p>
+  </li>
+  <li>
+    <Latex formula="AA" />
+  </li>
+</ul>
 
-  <p>
-    Como el gen para ojos castaños (C) es dominante, cualquier combinación que tenga al menos un gen para ojos castaños resultará en ojos castaños. Por lo tanto, las combinaciones que dan como resultado ojos castaños son:
-    <Latex formula="CC, CA, AC" />
-  </p>
 
-  <p>
-    La probabilidad de que el hijo tenga ojos castaños es:
-    <Latex formula="P(\text{Ojos castaños}) = \frac{\text{Número de combinaciones favorables}}{\text{Número total de combinaciones}}" />
-  </p>
 
-  <p>
-    Existen 3 combinaciones favorables (CC, CA, AC) y 4 combinaciones posibles en total (CC, CA, AC, AA). Por lo tanto:
-    <Latex formula="P(\text{Ojos castaños}) = \frac{3}{4} = 0.75" />
-  </p>
+<p>
+  Los pares de genes que resultan en ojos castaños son:
+  <Latex formula="CC" />
+  <Latex formula="CA" />
+  <Latex formula="AC" />
+</p>
+
+
+
+<p>
+  Como el gen para ojos castaños (C) es dominante, cualquier combinación que tenga al menos un gen para ojos castaños resultará en ojos castaños. Por
+  lo tanto, las combinaciones que dan como resultado ojos castaños son:
+  <Latex formula="CC, CA, AC" />
+</p>
+
+
+
+<p>
+  La probabilidad de que el hijo tenga ojos castaños es:
+  <Latex formula="P(\text{Ojos castaños}) = \frac{\text{Número de combinaciones favorables}}{\text{Número total de combinaciones}}" />
+</p>
+
+
+
+<p>
+  Existen 3 combinaciones favorables (CC, CA, AC) y 4 combinaciones posibles en total (CC, CA, AC, AA). Por lo tanto:
+  <Latex formula="P(\text{Ojos castaños}) = \frac{3}{4} = 0.75" />
+</p>
 
   <p>
     Así, la probabilidad de que un hijo nacido de esta pareja tenga ojos castaños es 0.75 o 75%.
   </p>
 </div>
 
-
 <div class="w-full md:w-[600px] min-h-80 border bg-blue-100 p-4">
   <h6 class="text-xl font-bold text-center">Otro Ejemplo</h6>
 
-  <p>
-    Una mujer es portadora de hemofilia. Aunque la mujer no tenga la enfermedad, puede transmitirla a los hijos. Suponiendo que es igualmente probable que se transmita o no la enfermedad, obtendremos las probabilidades de los siguientes sucesos en tres hijos:
-  </p>
 
-  <h6 class="text-lg font-bold">1. Ninguno tenga la enfermedad (Suceso A)</h6>
-  <p>
-    La probabilidad de que un hijo no tenga la enfermedad es <Latex formula="P(\text{No enfermedad}) = \frac{1}{2}" />. 
-    Si consideramos tres hijos, la probabilidad de que ninguno de ellos tenga la enfermedad se puede calcular como:
-  </p>
 
-  <p>
-    <Latex formula="P(\text{Ninguno tenga la enfermedad(Suceso A)o (A)}) = \frac{CF}{CP} = \frac{1}{8} = 0.125" />
-  </p>
+<p>
+  Una mujer es portadora de hemofilia. Aunque la mujer no tenga la enfermedad, puede transmitirla a los hijos. Suponiendo que es igualmente probable
+  que se transmita o no la enfermedad, obtendremos las probabilidades de los siguientes sucesos en tres hijos:
+</p>
 
-  <p> Donde: CF (Casos Favorables) = 1 (solo la trayectoria NNN corresponde a que ninguno tenga la enfermedad).</p>
-  <p/>CP (Casos Posibles) = 8 las trayectorias posibles en total, ya que hay 2 posibilidades por hijo y 3 hijos:<Latex formula="2^3" /><p/>
 
-  <h6 class="text-lg font-bold">2. Dos hijos tengan la enfermedad (Suceso B)</h6>
-  <p>La probabilidad de que un hijo tenga la enfermedad es <Latex formula="P(\text{Enfermedad}) = \frac{1}{2}" /></p>
-  <p> Las trayectorias posibles en las que exactamente dos hijos tengan la enfermedad son tres, por lo que la probabilidad es:</p>
 
-  <p>
-    <Latex formula="P(\text{Dos hijos tengan la enfermedad(Suceso B)o (B)}) = \frac{CF}{CP} = \frac{3}{8} = 0.375" />
-  </p>
+<h6 class="text-lg font-bold">1. Ninguno tenga la enfermedad (Suceso A)</h6>
+<p>
+  La probabilidad de que un hijo no tenga la enfermedad es <Latex formula="P(\text{No enfermedad}) = \frac{1}{2}" />. Si consideramos tres hijos, la
+  probabilidad de que ninguno de ellos tenga la enfermedad se puede calcular como:
+</p>
 
-  <p>Donde:</p>
-  <p> CF (Casos Favorables) = 3 (las trayectorias SSN, SNS, y NSS corresponden a dos hijos con la enfermedad).</p> 
-  <p>CP (Casos Posibles) = 8 (las trayectorias posibles en total).</p>
 
-  <h6 class="text-lg font-bold">3. Obtener las trayectorias para este experimento mediante un diagrama de árbol</h6>
-  <p>
-    Podemos representar este problema utilizando un diagrama de árbol para visualizar todas las posibles trayectorias del experimento. El diagrama de árbol para este experimento se puede construir de la siguiente manera:
-  </p>
 
-  <div class="flex flex-col items-center">
-    <img src="/diagrama-arbol-hemofilia.avif" alt="Diagrama de árbol de hemofilia" class="w-full md:w-[400px] border border-gray-300 p-2" />
-  </div>
+<p>
+  <Latex formula="P(\text{Ninguno tenga la enfermedad(Suceso A)o (A)}) = \frac{CF}{CP} = \frac{1}{8} = 0.125" />
+</p>
 
-  <p>
-    En el diagrama de árbol, cada rama representa la probabilidad de que un hijo tenga o no tenga la enfermedad. Las trayectorias posibles son:
-  </p>
-  <ul class="list-disc list-inside">
-    <li class="inline"><Latex formula="\text{SSS : Todos los hijos tienen la enfermedad.}" /></li>
-    <li class="inline"><Latex formula="\text{SSN, SNS, NSS : Dos hijos tienen la enfermedad.}" /></li>
-    <li class="inline"><Latex formula="\text{SNN, NSN, NNS : Un hijo tiene la enfermedad.}" /></li>
-    <li class="inline"><Latex formula="\text{NNN : Ningún hijo tiene la enfermedad.}" /></li>
-  </ul>
+
+
+<p> Donde: CF (Casos Favorables) = 1 (solo la trayectoria NNN corresponde a que ninguno tenga la enfermedad).</p>
+<p />
+CP (Casos Posibles) = 8 las trayectorias posibles en total, ya que hay 2 posibilidades por hijo y 3 hijos:
+<Latex formula="2^3" />
+<p />
+
+
+
+<h6 class="text-lg font-bold">2. Dos hijos tengan la enfermedad (Suceso B)</h6>
+<p>
+  La probabilidad de que un hijo tenga la enfermedad es <Latex formula="P(\text{Enfermedad}) = \frac{1}{2}" />
+</p>
+<p> Las trayectorias posibles en las que exactamente dos hijos tengan la enfermedad son tres, por lo que la probabilidad es:</p>
+
+
+
+<p>
+  <Latex formula="P(\text{Dos hijos tengan la enfermedad(Suceso B)o (B)}) = \frac{CF}{CP} = \frac{3}{8} = 0.375" />
+</p>
+
+
+
+<p>Donde:</p>
+<p> CF (Casos Favorables) = 3 (las trayectorias SSN, SNS, y NSS corresponden a dos hijos con la enfermedad).</p>
+<p>CP (Casos Posibles) = 8 (las trayectorias posibles en total).</p>
+
+
+
+<h6 class="text-lg font-bold">3. Obtener las trayectorias para este experimento mediante un diagrama de árbol</h6>
+<p>
+  Podemos representar este problema utilizando un diagrama de árbol para visualizar todas las posibles trayectorias del experimento. El diagrama de
+  árbol para este experimento se puede construir de la siguiente manera:
+</p>
+
+
+
+<div class="flex flex-col items-center">
+  <img src="/diagrama-arbol-hemofilia.avif" alt="Diagrama de árbol de hemofilia" class="w-full md:w-[400px] border border-gray-300 p-2" />
+</div>
+
+
+
+<p>En el diagrama de árbol, cada rama representa la probabilidad de que un hijo tenga o no tenga la enfermedad. Las trayectorias posibles son:</p>
+<ul class="list-disc list-inside">
+  <li class="inline">
+    <Latex formula="\text{SSS : Todos los hijos tienen la enfermedad.}" />
+  </li>
+  <li class="inline">
+    <Latex formula="\text{SSN, SNS, NSS : Dos hijos tienen la enfermedad.}" />
+  </li>
+  <li class="inline">
+    <Latex formula="\text{SNN, NSN, NNS : Un hijo tiene la enfermedad.}" />
+  </li>
+  <li class="inline">
+    <Latex formula="\text{NNN : Ningún hijo tiene la enfermedad.}" />
+  </li>
+</ul>
 
     <p>El espacio muestral total es: <Latex formula="2^3 = 8" /> trayectorias. </p>
+
 </div>
 
 <p>Considerando el siguiente experimento, escribe su espacio muestral.</p>
@@ -374,14 +435,16 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 </ul>
 <p>Espacio muestral:</p>
 <ul>
-  <li class="overflow-x-auto"><Latex formula="\{ (1, \text{rojo}), (1, \text{verde}), (1, \text{azul}), (2, \text{rojo}), (2, \text{verde}), (2, \text{azul}), (3, \text{rojo}), (3, \text{verde}), (3, \text{azul}), (4, \text{rojo}), (4, \text{verde}), (4, \text{azul}), (5, \text{rojo}), (5, \text{verde}), (5, \text{azul}) \}" /></li>
+  <li class="overflow-x-auto">
+    <Latex formula="\{ (1, \text{rojo}), (1, \text{verde}), (1, \text{azul}), (2, \text{rojo}), (2, \text{verde}), (2, \text{azul}), (3, \text{rojo}), (3, \text{verde}), (3, \text{azul}), (4, \text{rojo}), (4, \text{verde}), (4, \text{azul}), (5, \text{rojo}), (5, \text{verde}), (5, \text{azul}) \}" />
+  </li>
 </ul>
 
 <p>Se le puede decir de dos formas diferentes:</p>
 <Latex formula="\text{\#E = espacio muestral/universo}" />
 <Latex formula="\text{\#U = espacio muestral/universo}" />
-<Latex formula="\text{\#E = 15}"/>
-<Latex formula="\text{\#U = 15}"/>
+<Latex formula="\text{\#E = 15}" />
+<Latex formula="\text{\#U = 15}" />
 
 <div class="w-full md:w-[600px] min-h-80 border bg-gray-100 p-4">
   <h6 class="text-xl font-bold text-center mb-4">Ejercicios</h6>
@@ -416,6 +479,11 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
       <li>Sea A el evento de observar exactamente una sola vez cara, y B, el evento de observar al menos una cara. Obtener los espacios muestrales de A y de B. </li>
       <li>A partir de las respuestas del ítem anterior, calcular: P(A), P(B). </li>
     </ol>
+    <li>Describir por extensión los siguientes sucesos correspondientes a los experimentos aleatorios descriptos en el ítem b del ejercicio anterior.</li>
+    <p>A = el primer artículo es defectuoso.</p>
+    <p>B = al menos uno de los artículos es defectuoso.</p>
+    <p>C = ambos artículos son defectuosos.</p>
+
   </ol>
 </div>
 
@@ -483,5 +551,280 @@ Se inicia la clase Resolviendo los Ejercicios de la clase anterior
         \end{array}\right\}" /></span>
       </div>
     </ol>
+    <li>Describir por extensión los siguientes sucesos correspondientes a los experimentos aleatorios descriptos en el ítem b del ejercicio anterior.</li>
+    <p>A = el primer artículo es defectuoso.</p>
+    <div class="overflow-x-auto overflow-y-hidden">
+        <span>
+        <Latex formula="\#A = \left\{\begin{array}{ll}
+        \text{DD} \\
+        \text{DN} \\
+        \end{array}\right\}" />
+        </span>
+    </div>
+    <p>B = al menos uno de los artículos es defectuoso.</p>
+    <div class="overflow-x-auto overflow-y-hidden">
+        <span>
+        <Latex formula="\#B = \left\{\begin{array}{ll}
+        \text{DD} \\
+        \text{DN} \\
+        \text{ND} \\
+        \end{array}\right\}" />
+        </span>
+    </div>
+    <p>C = ambos artículos son defectuosos.</p>
+    <div class="overflow-x-auto overflow-y-hidden">
+        <span>
+        <Latex formula="\#C = \left\{\begin{array}{ll}
+        \text{DD} \\
+        \end{array}\right\}" />
+        </span>
+    </div>
+    <li>Considerando el ítem 2, indicar el valor de verdad de las siguientes preposiciones:</li>
+    <ol class="list-[lower-alpha] list-inside ml-6 space-y-2 p-0 m-0 ">
+      <li>A ⊂ B (incluido) ____________ V ___________ </li>
+      <li>C ⊂ A (incluido) ____________ V __________</li>
+      <li>A ∩ C es un evento imposible ____________ F ___________</li>
+      <li>El complemento de un evento imposible es verdadero ____________ V ___________</li>
+    </ol>
+    <li>Supongamos que se lanza una moneda tres veces y se observan  las caras superiores registrando cara o cruz según corresponda.</li>
+    <ol class="list-[lower-alpha] list-inside ml-6 space-y-2 p-0 m-0 ">
+      <li>Establecer el espacio muestral de este experimento. </li>
+      <div class="overflow-x-auto overflow-y-hidden">
+      <Latex formula="2^3" />
+        <span>
+        <Latex formula="\#E = \left\{\begin{array}{ll}
+        \text{SSS} \\
+        \text{CSS} \\
+        \text{CCS} \\
+        \text{CCC} \\
+        \text{SCS} \\
+        \text{CSC} \\
+        \text{SCC} \\
+        \text{SSC} \\
+        \end{array}\right\}" />
+        </span>
+      </div>
+      <li class="font-semibold text-lg mb-2">Asignar una probabilidad a cada punto. ¿Se trata de un espacio de equiprobabilidad?</li>
+
+<div class="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-md">
+  <p class="text-base leading-6 mb-4">
+    <strong>Equiprobabilidad</strong> es un concepto en probabilidad que significa que todos los resultados posibles de un experimento tienen la
+    <strong>misma probabilidad</strong> de ocurrir.
+  </p>
+  <p class="text-base leading-6 mb-4">
+    Por ejemplo, si lanzas una moneda justa, hay dos resultados posibles (cara o cruz), y ambos tienen la misma probabilidad de ocurrir, es decir,
+    <strong>50%</strong> o <strong>0.5</strong> para cada uno.
+  </p>
+  <p class="text-base leading-6 mb-4">
+    De manera similar, al lanzar un dado justo de seis caras, cada número (1, 2, 3, 4, 5, 6) tiene una probabilidad de <strong>1/6</strong> de salir.
+    En estos casos, se dice que los eventos son <strong>equiprobables</strong>.
+  </p>
+  <p class="text-base leading-6">
+    En resumen, la equiprobabilidad implica que ningún resultado tiene ventaja sobre los demás, y cada uno es igualmente probable. A lo que "Si", se
+    trata de un estado de equiprobabilidad.
+  </p>
+</div>
+
+      <li>Sea A el evento de observar exactamente una sola vez cara, y B, el evento de observar al menos una cara. Obtener los espacios muestrales de A y de B. </li>
+      <div class="overflow-x-auto overflow-y-hidden">
+
+  <span>
+    <Latex formula="\#A = \left\{\begin{array}{ll}
+    \text{CSS} \\
+    \text{SCS} \\
+    \text{SSC} \\
+    \end{array}\right\} \quad \text{(Cantidad de elementos: } |A| = 3\text{)}" />
+  </span>
+  <p class="mt-4">
+    <Latex formula="P(A) = \frac{\text{Cantidad de Favorables}}{\text{Cantidad de Posibles}} = \frac{|A|}{\text{Total}} = \frac{3}{\text{8}}" />
+  </p>
+</div>
+
+<div class="overflow-x-auto overflow-y-hidden mt-6">
+  <span>
+    <Latex
+      formula="\#B = \left\{\begin{array}{ll}
+    \text{CSS} \\
+    \text{CCS} \\
+    \text{CCC} \\
+    \text{SCS} \\
+    \text{CSC} \\
+    \text{SCC} \\
+    \text{SSC} \\
+    \end{array}\right\} \quad \text{(Cantidad de elementos: } |B| = 7\text{)}"
+    />
+  </span>
+  <p class="mt-4">
+    <Latex formula="P(B) = \frac{\text{Cantidad de Favorables}}{\text{Cantidad de Posibles}} = \frac{|B|}{\text{Total}} = \frac{7}{\text{8}}" />
+  </p>
+</div>
+
+      <li>A partir de las respuestas del ítem anterior, calcular: P(A), P(B). </li>
+      <div class="overflow-x-auto overflow-y-hidden mt-6">
+
+  <span>
+    <Latex formula="\#A = \left\{\begin{array}{ll}
+    \text{CSS} \\
+    \text{SCS} \\
+    \text{SSC} \\
+    \end{array}\right\} \quad \text{(Cantidad de elementos: } |A| = 3\text{)}" />
+  </span>
+  <p class="mt-4">
+    <Latex formula="P(A) = \frac{|A|}{\text{Total}} = \frac{3}{8}" />
+    <span class="text-sm text-gray-600">Nota: Asumiendo que el total de elementos posibles es 8.</span>
+  </p>
+</div>
+
+<div class="overflow-x-auto overflow-y-hidden mt-6">
+  <span>
+    <Latex formula="\#B = \left\{\begin{array}{ll}
+    \text{CSS} \\
+    \text{CCS} \\
+    \text{CCC} \\
+    \text{SCS} \\
+    \text{CSC} \\
+    \text{SCC} \\
+    \text{SSC} \\
+    \end{array}\right\} \quad \text{(Cantidad de elementos: } |B| = 7\text{)}" />
+  </span>
+  <p class="mt-4"><Latex formula="P(B) = \frac{|B|}{\text{Total}} = \frac{7}{8}" /><span class="text-sm text-gray-600">Nota: Asumiendo que el total de elementos posibles es 8.</span></p>
+</div>
+    </ol>
   </ol>
 </div>
+
+##### Unidad 2 y 3:
+
+#### Unidad 2
+
+<div class="w-full md:w-[800px] min-h-80 border bg-gray-100 p-6">
+  <h2 class="text-2xl font-bold text-center mb-6">Definición Axiomática de Probabilidad</h2>
+
+
+
+<p class="mb-4">
+  La probabilidad es una medida que cuantifica la certeza o posibilidad de que ocurra un evento. La definición axiomática de probabilidad está basada
+  en tres axiomas fundamentales propuestos por Andrey Kolmogorov. Estos axiomas establecen las propiedades básicas que debe cumplir una función de
+  probabilidad:
+</p>
+<ol class="mb-6">
+  <li>
+    <strong>Axioma de No Negatividad:</strong> Para cualquier evento \( A \), la probabilidad de \( A \) es mayor o igual a 0, es decir:
+    <Latex formula="P(A) \geq 0" />
+  </li>
+  <li>
+    <strong>Axioma de Normalización:</strong> La probabilidad del espacio muestral completo es 1, es decir:
+    <Latex formula="P(\Omega) = 1" />
+  </li>
+  <li>
+    <strong>Axioma de Adición:</strong> Para cualquier par de eventos mutuamente excluyentes \( A \) y \( B \), la probabilidad de la unión de \( A \)
+    y \( B \) es la suma de sus probabilidades, es decir:
+    <Latex formula="P(A \cup B) = P(A) + P(B)" /> si <Latex formula="A \cap B = \emptyset" />
+  </li>
+</ol>
+
+
+
+<h3 class="text-xl font-semibold mb-4">Consecuencias de la Definición</h3>
+<ul class=" mb-6">
+  <li>
+    <strong>Probabilidad de la Intersección:</strong> La probabilidad de la intersección de dos eventos \( A \) y \( B \) puede ser calculada como
+    <Latex formula="P(A \cap B) = P(A) + P(B) - P(A \cup B)" />
+  </li>
+  <li>
+    <strong>Probabilidad del Complemento:</strong> La probabilidad del complemento de un evento \( A \) se define como
+    <Latex formula="P(A^c) = 1 - P(A)" />
+  </li>
+  <li>
+    <strong>Probabilidad Condicional:</strong> La probabilidad condicional de \( A \) dado \( B \) se define como
+    <Latex formula="P(A|B) = \frac{P(A \cap B)}{P(B)}" />, siempre que \( P(B) > 0 \).
+  </li>
+</ul>
+
+
+
+<h3 class="text-xl font-semibold mb-4">Probabilidad Condicional</h3>
+<p class="mb-4">
+  La probabilidad condicional se utiliza para calcular la probabilidad de un evento dado que otro evento ha ocurrido. Se denota como \( P(A|B) \) y se
+  calcula utilizando la fórmula:
+</p>
+<p class="mb-4">
+  <Latex formula="P(A|B) = \frac{P(A \cap B)}{P(B)}" />
+</p>
+<p class="text-sm text-gray-600 mb-6">(Nota: Este tema se abordará en detalle en la Unidad 3).</p>
+
+
+
+<h3 class="text-xl font-semibold mb-4">Teorema de la Probabilidad Total</h3>
+<div class="overflow-x-auto overflow-y-hidden mt-6">
+<p><strong><Latex formula="\sum"/> </strong> es el símbolo de la sumatoria.</p>
+  <p class="mb-4">
+    El símbolo <Latex formula="\sum"/> representa la <strong>sumatoria</strong> en matemáticas, que es una operación que consiste en sumar una secuencia de números o términos. Es una forma compacta de expresar la suma de muchos términos, y es especialmente útil en matemáticas, estadísticas, y muchas otras disciplinas.
+  </p>
+
+  <h2 class="text-lg font-semibold">Notación</h2>
+  <p>
+    En su forma más general, la notación de la sumatoria es:
+  </p>
+  <p>
+    <Latex formula="\sum_{i=m}^{n} a_i"/>
+  </p>
+  <ul class="list-disc list-inside ml-6">
+    <li><strong><Latex formula="\sum"/> </strong> es el símbolo de la sumatoria.</li>
+    <li><strong>i</strong> es el <strong>índice de suma</strong>, que indica la variable sobre la cual se suman los términos.</li>
+    <li><strong>m</strong> es el <strong>índice inferior</strong>, que indica el valor inicial del índice de suma.</li>
+    <li><strong>n</strong> es el <strong>índice superior</strong>, que indica el valor final del índice de suma.</li>
+    <li><strong>a_i</strong> es la <strong>expresión</strong> que se suma para cada valor del índice <strong>i</strong>.</li>
+  </ul>
+
+  <h2 class="text-lg font-semibold">Ejemplo</h2>
+  <p>
+    Si queremos sumar los números del 1 al 5, podemos escribirlo como:
+  </p>
+  <p>
+    <Latex formula="\sum_{i=1}^{5} i"/>
+  </p>
+  <p>
+    Esto significa que debemos sumar <Latex formula="i"/> desde <Latex formula="i=1"/> hasta <Latex formula="i=5"/>, lo cual es igual a:
+  </p>
+  <p>
+    <Latex formula="1 + 2 + 3 + 4 + 5 = 15"/>
+  </p>
+
+  <h2 class="text-lg font-semibold">Uso en Fórmulas</h2>
+  <p>
+    En el contexto de la probabilidad, la sumatoria se usa para sumar probabilidades condicionales, esperanzas matemáticas, y otros cálculos que involucran una serie de eventos o valores. Por ejemplo, el Teorema de la Probabilidad Total utiliza la sumatoria para calcular la probabilidad total de un evento <Latex formula="A"/> basado en una partición del espacio muestral:
+  </p>
+  <p>
+    <Latex formula="P(A) = \sum_{i=1}^{n} P(A \mid B_i) \cdot P(B_i)"/>
+  </p>
+  <p>
+    Aquí, se suman las probabilidades de <Latex formula="A"/> dado cada <Latex formula="B_i"/> multiplicadas por la probabilidad de <Latex formula="B_i"/>, para obtener la probabilidad total de <Latex formula="A"/>.
+  </p>
+</div>
+
+<p class="mb-4">
+  El Teorema de la Probabilidad Total permite calcular la probabilidad de un evento considerando una partición del espacio muestral en eventos
+  disjuntos. Si
+  <Latex formula="B_1, B_2, \ldots, B_n" /> son eventos que forman una partición del espacio muestral, entonces:
+</p>
+<p>
+  <Latex formula="P(A) = \sum_{i=1}^{n} P(A \mid B_i) \cdot P(B_i)" />
+</p>
+<p class="mb-4">
+  <Latex formula="P(A) = \sum_{i=1}^{n} P(A|B_i) \cdot P(B_i)" />
+</p>
+<p class="text-sm text-gray-600 mb-6">(Nota: Este tema se abordará en detalle en la Unidad 3).</p>
+
+  <h3 class="text-xl font-semibold mb-4">Teorema de Bayes</h3>
+  <p class="mb-4">
+    El Teorema de Bayes es una aplicación de la probabilidad condicional que permite actualizar la probabilidad de un evento basado en nueva evidencia. Se expresa como:
+  </p>
+  <p class="mb-4">
+    <Latex formula="P(B_i|A) = \frac{P(A|B_i) \cdot P(B_i)}{\sum_{j=1}^{n} P(A|B_j) \cdot P(B_j)}" />
+  </p>
+  <p class="text-sm text-gray-600 mb-6">
+    (Nota: Este tema se abordará en detalle en la Unidad 3).
+  </p>
+</div>
+

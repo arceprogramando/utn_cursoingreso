@@ -3,10 +3,10 @@ import Greeting from './Greeting';
 import Social from './Social.astro';
 
 const socialMedias = [
-  { red: 'instagram', perfil: 'https://www.instagram.com/arceprog/', color: 'bg-blue-500 text-white' },
-  { red: 'twitter', perfil: 'https://x.com/arceprog', color: 'bg-blue-400 text-white' },
-  { red: 'github', perfil: 'https://github.com/arceprogramando', color: 'bg-gray-800 text-white' },
-  { red: 'portfolio', perfil: 'https://arceprog.dev', color: 'bg-green-500 text-white' },
+  { red: 'instagram', perfil: 'https://www.instagram.com/arceprog/' },
+  { red: 'x', perfil: 'https://x.com/arceprog' },
+  { red: 'github', perfil: 'https://github.com/arceprogramando' },
+  { red: 'portfolio', perfil: 'https://arceprog.dev' },
 ];
 ---
 
@@ -16,17 +16,15 @@ const socialMedias = [
   </p>
 
   <Greeting client:load messages={['📚', '📔', '🥸', '👋']} />
-  <div class="border-t-2 pt-2 md:px-20">
-    <nav class="md:p-2">
-      <ul class="flex justify-center items-center gap-2 font-bold">
-        {
-          socialMedias.map((media) => (
-            <li>
-              <Social platform={media.perfil} red={media.red} color={media.color} />
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
-  </div>
+  <nav>
+    <ul class="flex gap-4 justify-center items-center font-bold">
+      {
+        socialMedias.map((media) => (
+          <li class="px-4 ">
+            <Social platform={media.perfil} red={media.red} icon={media.red} />
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
 </footer>
