@@ -16,11 +16,12 @@ import { Image } from 'astro:assets';
       <div class="w-full border shadow-xl rounded-xl relative">
         <Image
           src="/cudi.avif"
-          alt=" Centro Universitario de Innovación La Matanza"
-          width="300"
-          height="300"
-          loading="eager"
+          alt="Centro Universitario de Innovación La Matanza"
+          width={600}
+          height={400}
           class="w-full h-auto rounded-xl hover:-mt-4 transition-all hover:bg-black transform duration-1000 ease-in-out"
+          loading="eager"
+          decoding="async"
         />
         <a
           href="https://www.google.com/maps/place/CUDI.+Centro+Universitario+de+la+Innovaci%C3%B3n.+Gonz%C3%A1lez+Cat%C3%A1n/@-34.7922353,-58.6309352,16.93z/data=!4m6!3m5!1s0x95bcc5925425fb9b:0xb6680e29203b8739!8m2!3d-34.7916041!4d-58.6286761!16s%2Fg%2F11p3f49zt8?hl=es-419&entry=ttu"
@@ -29,7 +30,15 @@ import { Image } from 'astro:assets';
           <div
             class="opacity-0 hover:opacity-95 hover:cursor-pointer transition-opacity duration-1000 z-10 top-5 right-20 max-w-[300px] absolute mx-auto bg-white shadow-md rounded-lg overflow-hidden"
           >
-            <Image src="/centrouniversitariodeinnovacion.avif" width="35" height="35" class="w-full h-40 object-cover" alt="CUDI" />
+            <Image
+              src="/centrouniversitariodeinnovacion.avif"
+              alt="CUDI"
+              width={100}
+              height={40}
+              class="w-full h-40 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
             <div class="p-4">
               <h2 class="text-lg font-semibold text-gray-800">CUDI. Centro Universitario de la Innovación. González...</h2>
               <div class="flex items-center mt-2">
