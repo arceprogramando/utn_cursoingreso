@@ -1,12 +1,19 @@
 ---
 import Navigation from './Navigation.astro';
-import { Image } from 'astro:assets'; // Importa el componente Image
+import { Icon } from 'astro-icon/components';
 ---
 
 <header class="sticky top-0 right-0 md:static z-50 md:block py-2 mb-1 bg-white shadow-md">
   <nav class="flex justify-around md:justify-between items-center max-w-3xl mx-auto m-4">
     <a href="/">
-      <Image src="/logoutn.avif" alt="Logo Universidad Tecnológica Nacional" class="w-20 md:w-32 p-0 z-10" width={100} height={40} />
+      <Icon
+        name="utncudi"
+        width={100}
+        height={40}
+        class="hover:underline font-bold uppercase hover:text-green-900"
+        title="Logo Universidad Tecnológica Nacional"
+        aria-label="Logo Universidad Tecnológica Nacional"
+      />
 
       <h1 class="sr-only">Universidad Tecnológica Nacional</h1>
     </a>
