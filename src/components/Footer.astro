@@ -2,10 +2,10 @@
 import Social from './Social.astro';
 
 const socialMedias = [
-  { red: 'instagram', perfil: 'https://www.instagram.com/arceprog/' },
-  { red: 'x', perfil: 'https://x.com/arceprog' },
-  { red: 'github', perfil: 'https://github.com/arceprogramando' },
-  // { red: 'portfolio', perfil: 'https://arceprog.dev' }, * TODO: Buscar un mejor icono para mostrar el portfolio
+  { red: 'instagram', perfil: 'https://www.instagram.com/arceprog/', alt: 'Síguenos en Instagram' },
+  { red: 'x', perfil: 'https://x.com/arceprog', alt: 'Síguenos en X' },
+  { red: 'github', perfil: 'https://github.com/arceprogramando', alt: 'Ver perfil de GitHub' },
+  // { red: 'portfolio', perfil: 'https://arceprog.dev', alt: 'Ver nuestro portfolio' }, * TODO: Buscar un mejor icono para mostrar el portfolio
 ];
 ---
 
@@ -15,7 +15,7 @@ const socialMedias = [
       {
         socialMedias.map((media) => (
           <li>
-            <Social platform={media.perfil} red={media.red} icon={media.red} />
+            <Social platform={media.perfil} red={media.red} icon={media.red} alt={media.alt} />
           </li>
         ))
       }
