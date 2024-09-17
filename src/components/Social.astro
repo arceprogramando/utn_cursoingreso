@@ -1,8 +1,8 @@
 ---
-const { platform, red, color, icon } = Astro.props;
+const { platform, icon } = Astro.props;
 import { Icon } from 'astro-icon/components';
 ---
 
-<a href={platform} class={`border${color} rounded-lg `} target="_blank">
-  {icon ? <Icon name={icon} width={24} height={24} class={color} /> : 'no tiene'}
+<a href={platform} target="_blank" class="text-black">
+  {icon ? <Icon name={icon} width={24} height={24} class="hover:underline font-bold uppercase hover:text-green-900 " /> : 'no tiene'}
 </a>

@@ -6,17 +6,17 @@ const socialMedias = [
   { red: 'instagram', perfil: 'https://www.instagram.com/arceprog/' },
   { red: 'x', perfil: 'https://x.com/arceprog' },
   { red: 'github', perfil: 'https://github.com/arceprogramando' },
-  { red: 'portfolio', perfil: 'https://arceprog.dev' },
+  // { red: 'portfolio', perfil: 'https://arceprog.dev' }, * TODO: Buscar un mejor icono para mostrar el portfolio
 ];
 ---
 
 <footer class="py-2 bg-opacity-90 mx-auto sticky bottom-0 w-full bg-slate-100">
   <p class="text-center text-lg text-gray-600">
-    creado por <span class="font-bold">Felipe Arce</span>
+    creado por <a href="https://arceprog.dev" class="font-bold hover:underline" target="_blank">Felipe Arce</a>
   </p>
 
   <Greeting client:load messages={['📚', '📔', '🥸', '👋']} />
-  <nav>
+  <nav class="p-2">
     <ul class="flex gap-4 justify-center items-center font-bold">
       {
         socialMedias.map((media) => (
