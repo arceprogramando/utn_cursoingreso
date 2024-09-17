@@ -1,0 +1,19 @@
+# Bloquea todos los robots de todas las páginas (no recomendado)
+# User-agent: *
+# Disallow: /
+
+# Permite a todos los robots acceder a todo el contenido
+User-agent: *
+Disallow:
+
+# Permite el acceso solo a robots específicos (por ejemplo, Googlebot)
+User-agent: Googlebot
+Disallow:
+
+# Bloquea el acceso a robots específicos (por ejemplo, BadBot)
+User-agent: BadBot
+Disallow: /
+
+# Permite el acceso a la carpeta /public/ 
+User-agent: *
+Allow: /public/
