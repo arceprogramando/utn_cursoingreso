@@ -71,7 +71,7 @@ const { pageTitle } = Astro.props;
     <div>
       <Header />
       <SideMenu />
-      <main class="flex flex-col items-center max-w-5xl bg-opacity-80 mx-auto bg-slate-100 pb-40">
+      <main class="flex flex-col items-center max-w-5xl bg-opacity-80 mx-auto bg-slate-100 pb-40 reset">
         <h2 class="text-center max-w-2xl uppercase p-2 text-4xl leading-none md:text-5xl font-bold gradient">{pageTitle}</h2>
         <slot />
       </main>
@@ -128,5 +128,11 @@ const { pageTitle } = Astro.props;
     body {
       scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
     }
+  }
+
+  .reset {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
   }
 </style>
