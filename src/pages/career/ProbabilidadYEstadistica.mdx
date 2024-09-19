@@ -163,17 +163,17 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 
 <div class="w-80 md:w-[400px] min-h-80 border bg-blue-400 p-4">
 
-<h5 class="text-xl font-bold text-center">Definición clásica de probabilidad</h5>
+  <h5 class="text-xl font-bold text-center">Definición clásica de probabilidad</h5>
 
-<p>Sea un suceso <span class="font-bold">aleatorio \( S \) </span> definido en un espacio muestral <span class="font-bold">\( U \)</span> . La probabilidad de ocurrencia de <span class="font-bold">\( S \)</span> se define como el <span class="font-bold">cociente</span> entre los <span class="font-bold">casos favorables</span> al suceso aleatorio <span class="font-bold">\( S \)</span> y los casos posibles del experimento aleatorio.</p>
+  <p>Sea un suceso <span class="font-bold">aleatorio \( S \) </span> definido en un espacio muestral <span class="font-bold">\( U \)</span> . La probabilidad de ocurrencia de <span class="font-bold">\( S \)</span> se define como el <span class="font-bold">cociente</span> entre los <span class="font-bold">casos favorables</span> al suceso aleatorio <span class="font-bold">\( S \)</span> y los casos posibles del experimento aleatorio.</p>
 
-<p class="font-bold text-2xl">
-  <Latex formula="P(S) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}}" />
-</p>
+  <p class="font-bold text-2xl">
+    <Latex formula="P(S) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}}" />
+  </p>
 
-<p>
-  <Latex formula="P(S) = \frac{CF}{CP}" />
-</p>
+  <p>
+    <Latex formula="P(S) = \frac{CF}{CP}" />
+  </p>
 
 </div>
 
@@ -186,25 +186,25 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
   <p><Latex formula="A = \{\text{sale número impar}\} = \{1,3,5\}" /></p>
   <p><Latex formula="A = \{\text{sale múltiplo de 3}\} = \{3,6\}" /></p>
 
-<p>Para calcular la probabilidad de que salga un numero par hacemos:</p>
+  <p>Para calcular la probabilidad de que salga un numero par hacemos:</p>
 
-<p class="font-bold text-2xl">
-  <Latex formula="P(A) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} = 0.5" />
-</p>
+  <p class="font-bold text-2xl">
+    <Latex formula="P(A) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} = 0.5" />
+  </p>
 
-<p> Para calcular la probabilidad de que salga un número impar </p>
-<p class="font-bold text-2xl">
-  <Latex formula="P(A) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} = 0.5" />
-</p>
+  <p> Para calcular la probabilidad de que salga un número impar </p>
+  <p class="font-bold text-2xl">
+    <Latex formula="P(A) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} = 0.5" />
+  </p>
 
-<p> Para calcular la probabilidad de que salga un múltiplo de 3 </p>
-<p class="font-bold text-2xl">
+  <p> Para calcular la probabilidad de que salga un múltiplo de 3 </p>
+  <p class="font-bold text-2xl">
   <Latex formula="P(A) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{2}{6} = \frac{1}{3}" />
-</p>
-<p>Para calcular la probabilidad de que no salga un número par:</p>
-<p class="font-bold text-2xl">
-  <Latex formula="P(A^c) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} = 0.5" />
-</p>
+  </p>
+  <p>Para calcular la probabilidad de que no salga un número par:</p>
+  <p class="font-bold text-2xl">
+    <Latex formula="P(A^c) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} = 0.5" />
+  </p>
 
 <p>Para calcular la probabilidad de que no salga un múltiplo de 3:</p>
 <p class="font-bold text-2xl">
@@ -223,31 +223,23 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 <div class="w-full md:w-[600px] min-h-80 border bg-blue-100 p-4">
   <h5 class="text-xl font-bold text-center">Axiomas de la probabilidad</h5>
 
+  <p>La probabilidad se basa en tres axiomas fundamentales establecidos por el matemático Andrey Kolmogorov:</p>
 
+  <p>
+    <strong>Axioma 1:</strong> La probabilidad de cualquier evento es un número no negativo.
+    <Latex formula="P(A) \geq 0" />
+  </p>
 
-<p>La probabilidad se basa en tres axiomas fundamentales establecidos por el matemático Andrey Kolmogorov:</p>
+  <p>
+    <strong>Axioma 2:</strong> La probabilidad del espacio muestral completo es 1.
+    <Latex formula="P(U) = 1" />
+  </p>
 
-
-
-<p>
-  <strong>Axioma 1:</strong> La probabilidad de cualquier evento es un número no negativo.
-  <Latex formula="P(A) \geq 0" />
-</p>
-
-
-
-<p>
-  <strong>Axioma 2:</strong> La probabilidad del espacio muestral completo es 1.
-  <Latex formula="P(U) = 1" />
-</p>
-
-
-
-<p>
-  <strong>Axioma 3:</strong> La probabilidad de la unión de eventos mutuamente excluyentes es la suma de sus probabilidades.
-  <Latex formula="P(A \cup B) = P(A) + P(B)" />
-  <span class="text-gray-700">(si \(A\) y \(B\) son eventos mutuamente excluyentes)</span>
-</p>
+  <p>
+    <strong>Axioma 3:</strong> La probabilidad de la unión de eventos mutuamente excluyentes es la suma de sus probabilidades.
+    <Latex formula="P(A \cup B) = P(A) + P(B)" />
+    <span class="text-gray-700">(si \(A\) y \(B\) son eventos mutuamente excluyentes)</span>
+  </p>
 
   <p>
     Estos axiomas forman la base para el cálculo de probabilidades y para el desarrollo de modelos estadísticos y probabilísticos.
@@ -257,83 +249,79 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 <div class="w-full md:w-[600px] min-h-80 border bg-green-100 p-4">
   <h6 class="text-xl font-bold text-center">Ejemplo</h6>
 
+  <p>
+    En una pareja, cada uno de sus miembros posee genes para ojos castaños y para ojos azules. Teniendo en cuenta que cada uno tiene la misma
+    probabilidad de aportar un gen para ojos castaños que para ojos azules y que el gen para ojos castaños es dominante, se desea obtener la
+    probabilidad de que un hijo nacido de esta pareja tenga los ojos castaños.
+  </p>
 
-
-<p>
-  En una pareja, cada uno de sus miembros posee genes para ojos castaños y para ojos azules. Teniendo en cuenta que cada uno tiene la misma
-  probabilidad de aportar un gen para ojos castaños que para ojos azules y que el gen para ojos castaños es dominante, se desea obtener la
-  probabilidad de que un hijo nacido de esta pareja tenga los ojos castaños.
-</p>
-
-
-
-<p>
-  Espacio muestral:
-  <Latex formula="E = \text{Genes que aporta cada padre}" />
-</p>
+  <p>
+    Espacio muestral:
+    <Latex formula="E = \text{Genes que aporta cada padre}" />
+  </p>
 
 
 
-<p>
-  Supongamos que los genes están representados como:
-  <Latex formula="C = \text{gen para ojos castaños}" />
-  <Latex formula="A = \text{gen para ojos azules}" />
-</p>
+  <p>
+    Supongamos que los genes están representados como:
+    <Latex formula="C = \text{gen para ojos castaños}" />
+   <Latex formula="A = \text{gen para ojos azules}" />
+  </p>
 
 
 
-<p>
-  Dado que cada padre puede aportar uno de los dos genes con igual probabilidad, y el gen para ojos castaños (C) es dominante sobre el gen para ojos
-  azules (A), tenemos los siguientes posibles pares de genes para el hijo:
-</p>
+  <p>
+    Dado que cada padre puede aportar uno de los dos genes con igual probabilidad, y el gen para ojos castaños (C) es dominante sobre el gen para ojos
+    azules (A), tenemos los siguientes posibles pares de genes para el hijo:
+  </p>
 
 
 
-<ul class="list-disc pl-5">
-  <li>
+  <ul class="list-disc pl-5">
+    <li>
+      <Latex formula="CC" />
+    </li>
+    <li>
+      <Latex formula="CA" />
+    </li>
+    <li>
+      <Latex formula="AC" />
+    </li>
+    <li>
+      <Latex formula="AA" />
+    </li>
+  </ul>
+
+
+
+  <p>
+    Los pares de genes que resultan en ojos castaños son:
     <Latex formula="CC" />
-  </li>
-  <li>
     <Latex formula="CA" />
-  </li>
-  <li>
     <Latex formula="AC" />
-  </li>
-  <li>
-    <Latex formula="AA" />
-  </li>
-</ul>
+  </p>
 
 
 
-<p>
-  Los pares de genes que resultan en ojos castaños son:
-  <Latex formula="CC" />
-  <Latex formula="CA" />
-  <Latex formula="AC" />
-</p>
+  <p>
+    Como el gen para ojos castaños (C) es dominante, cualquier combinación que tenga al menos un gen para ojos castaños resultará en ojos castaños. Por
+    lo tanto, las combinaciones que dan como resultado ojos castaños son:
+    <Latex formula="CC, CA, AC" />
+  </p>
 
 
 
-<p>
-  Como el gen para ojos castaños (C) es dominante, cualquier combinación que tenga al menos un gen para ojos castaños resultará en ojos castaños. Por
-  lo tanto, las combinaciones que dan como resultado ojos castaños son:
-  <Latex formula="CC, CA, AC" />
-</p>
+  <p>
+    La probabilidad de que el hijo tenga ojos castaños es:
+    <Latex formula="P(\text{Ojos castaños}) = \frac{\text{Número de combinaciones favorables}}{\text{Número total de combinaciones}}" />
+  </p>
 
 
 
-<p>
-  La probabilidad de que el hijo tenga ojos castaños es:
-  <Latex formula="P(\text{Ojos castaños}) = \frac{\text{Número de combinaciones favorables}}{\text{Número total de combinaciones}}" />
-</p>
-
-
-
-<p>
-  Existen 3 combinaciones favorables (CC, CA, AC) y 4 combinaciones posibles en total (CC, CA, AC, AA). Por lo tanto:
-  <Latex formula="P(\text{Ojos castaños}) = \frac{3}{4} = 0.75" />
-</p>
+  <p>
+    Existen 3 combinaciones favorables (CC, CA, AC) y 4 combinaciones posibles en total (CC, CA, AC, AA). Por lo tanto:
+    <Latex formula="P(\text{Ojos castaños}) = \frac{3}{4} = 0.75" />
+  </p>
 
   <p>
     Así, la probabilidad de que un hijo nacido de esta pareja tenga ojos castaños es 0.75 o 75%.
@@ -345,106 +333,102 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 
 
 
-<p>
-  Una mujer es portadora de hemofilia. Aunque la mujer no tenga la enfermedad, puede transmitirla a los hijos. Suponiendo que es igualmente probable
-  que se transmita o no la enfermedad, obtendremos las probabilidades de los siguientes sucesos en tres hijos:
-</p>
+  <p>
+    Una mujer es portadora de hemofilia. Aunque la mujer no tenga la enfermedad, puede transmitirla a los hijos. Suponiendo que es igualmente probable
+    que se transmita o no la enfermedad, obtendremos las probabilidades de los siguientes sucesos en tres hijos:
+  </p>
+
+  <h6 class="text-lg font-bold">1. Ninguno tenga la enfermedad (Suceso A)</h6>
+  <p>
+    La probabilidad de que un hijo no tenga la enfermedad es <Latex formula="P(\text{No enfermedad}) = \frac{1}{2}" />. Si consideramos tres hijos, la
+    probabilidad de que ninguno de ellos tenga la enfermedad se puede calcular como:
+  </p>
+
+  <p>
+    <Latex formula="P(\text{Ninguno tenga la enfermedad(Suceso A)o (A)}) = \frac{CF}{CP} = \frac{1}{8} = 0.125" />
+  </p>
 
 
 
-<h6 class="text-lg font-bold">1. Ninguno tenga la enfermedad (Suceso A)</h6>
-<p>
-  La probabilidad de que un hijo no tenga la enfermedad es <Latex formula="P(\text{No enfermedad}) = \frac{1}{2}" />. Si consideramos tres hijos, la
-  probabilidad de que ninguno de ellos tenga la enfermedad se puede calcular como:
-</p>
+  <p> Donde: CF (Casos Favorables) = 1 (solo la trayectoria NNN corresponde a que ninguno tenga la enfermedad).</p>
+  <p/>
+  CP (Casos Posibles) = 8 las trayectorias posibles en total, ya que hay 2 posibilidades por hijo y 3 hijos:
+  <Latex formula="2^3" />
+  <p/>
+
+  <h6 class="text-lg font-bold">2. Dos hijos tengan la enfermedad (Suceso B)</h6>
+  <p>
+    La probabilidad de que un hijo tenga la enfermedad es <Latex formula="P(\text{Enfermedad}) = \frac{1}{2}" />
+  </p>
+  <p> 
+  Las trayectorias posibles en las que exactamente dos hijos tengan la enfermedad son tres, por lo que la probabilidad es:
+  </p>
 
 
 
-<p>
-  <Latex formula="P(\text{Ninguno tenga la enfermedad(Suceso A)o (A)}) = \frac{CF}{CP} = \frac{1}{8} = 0.125" />
-</p>
+  <p>
+    <Latex formula="P(\text{Dos hijos tengan la enfermedad(Suceso B)o (B)}) = \frac{CF}{CP} = \frac{3}{8} = 0.375" />
+  </p>
 
 
 
-<p> Donde: CF (Casos Favorables) = 1 (solo la trayectoria NNN corresponde a que ninguno tenga la enfermedad).</p>
-<p />
-CP (Casos Posibles) = 8 las trayectorias posibles en total, ya que hay 2 posibilidades por hijo y 3 hijos:
-<Latex formula="2^3" />
-<p />
+  <p>Donde:</p>
+  <p> CF (Casos Favorables) = 3 (las trayectorias SSN, SNS, y NSS corresponden a dos hijos con la enfermedad).</p>
+  <p>CP (Casos Posibles) = 8 (las trayectorias posibles en total).</p>
 
+  <h6 class="text-lg font-bold">3. Obtener las trayectorias para este experimento mediante un diagrama de árbol</h6>
+  <p>
+    Podemos representar este problema utilizando un diagrama de árbol para visualizar todas las posibles trayectorias del     experimento. El diagrama de árbol para este experimento se puede construir de la siguiente manera:
+  </p>
 
+  <div class="flex flex-col items-center">
+    <img src="/diagrama-arbol-hemofilia.avif" alt="Diagrama de árbol de hemofilia" class="w-full md:w-[400px] border border-gray-300 p-2" />
+  </div>
 
-<h6 class="text-lg font-bold">2. Dos hijos tengan la enfermedad (Suceso B)</h6>
-<p>
-  La probabilidad de que un hijo tenga la enfermedad es <Latex formula="P(\text{Enfermedad}) = \frac{1}{2}" />
-</p>
-<p> Las trayectorias posibles en las que exactamente dos hijos tengan la enfermedad son tres, por lo que la probabilidad es:</p>
-
-
-
-<p>
-  <Latex formula="P(\text{Dos hijos tengan la enfermedad(Suceso B)o (B)}) = \frac{CF}{CP} = \frac{3}{8} = 0.375" />
-</p>
-
-
-
-<p>Donde:</p>
-<p> CF (Casos Favorables) = 3 (las trayectorias SSN, SNS, y NSS corresponden a dos hijos con la enfermedad).</p>
-<p>CP (Casos Posibles) = 8 (las trayectorias posibles en total).</p>
-
-
-
-<h6 class="text-lg font-bold">3. Obtener las trayectorias para este experimento mediante un diagrama de árbol</h6>
-<p>
-  Podemos representar este problema utilizando un diagrama de árbol para visualizar todas las posibles trayectorias del experimento. El diagrama de
-  árbol para este experimento se puede construir de la siguiente manera:
-</p>
-
-
-
-<div class="flex flex-col items-center">
-  <img src="/diagrama-arbol-hemofilia.avif" alt="Diagrama de árbol de hemofilia" class="w-full md:w-[400px] border border-gray-300 p-2" />
-</div>
-
-
-
-<p>En el diagrama de árbol, cada rama representa la probabilidad de que un hijo tenga o no tenga la enfermedad. Las trayectorias posibles son:</p>
-<ul class="list-disc list-inside">
-  <li class="inline">
-    <Latex formula="\text{SSS : Todos los hijos tienen la enfermedad.}" />
-  </li>
-  <li class="inline">
-    <Latex formula="\text{SSN, SNS, NSS : Dos hijos tienen la enfermedad.}" />
-  </li>
-  <li class="inline">
-    <Latex formula="\text{SNN, NSN, NNS : Un hijo tiene la enfermedad.}" />
-  </li>
-  <li class="inline">
-    <Latex formula="\text{NNN : Ningún hijo tiene la enfermedad.}" />
-  </li>
-</ul>
-
-    <p>El espacio muestral total es: <Latex formula="2^3 = 8" /> trayectorias. </p>
+  <p>En el diagrama de árbol, cada rama representa la probabilidad de que un hijo tenga o no tenga la enfermedad. Las trayectorias posibles son:</p>
+  <ul class="list-disc list-inside">
+    <li class="inline">
+      <Latex formula="\text{SSS : Todos los hijos tienen la enfermedad.}" />
+    </li>
+    <li class="inline">
+      <Latex formula="\text{SSN, SNS, NSS : Dos hijos tienen la enfermedad.}" />
+    </li>
+    <li class="inline">
+      <Latex formula="\text{SNN, NSN, NNS : Un hijo tiene la enfermedad.}" />
+    </li>
+    <li class="inline">
+      <Latex formula="\text{NNN : Ningún hijo tiene la enfermedad.}" />
+    </li>
+  </ul>
+  <p>El espacio muestral total es: <Latex formula="2^3 = 8" /> trayectorias. </p>
 
 </div>
 
+<div class="w-full md:w-[600px] min-h-80 border bg-blue-300 p-4">
 <p>Considerando el siguiente experimento, escribe su espacio muestral.</p>
 <p>Experimento:</p>
 <ul>
   <li>Se elige un número natural al azar entre 1 y 5 al mismo tiempo que se elige un color entre rojo, verde, azul.</li>
 </ul>
 <p>Espacio muestral:</p>
-<ul>
-  <li class="overflow-x-auto">
-    <Latex formula="\{ (1, \text{rojo}), (1, \text{verde}), (1, \text{azul}), (2, \text{rojo}), (2, \text{verde}), (2, \text{azul}), (3, \text{rojo}), (3, \text{verde}), (3, \text{azul}), (4, \text{rojo}), (4, \text{verde}), (4, \text{azul}), (5, \text{rojo}), (5, \text{verde}), (5, \text{azul}) \}" />
-  </li>
-</ul>
+
+
+<div class="max-w-[200px]overflow-x-auto">
+  <ul class="w-max">
+    <li class="max-w-[200px]">
+      <Latex formula="\{ (1, \text{rojo}), (1, \text{verde}), (1, \text{azul}), (2, \text{rojo}), (2, \text{verde}), (2, \text{azul}), (3, \text{rojo}), (3, \text{verde}), (3, \text{azul}), (4, \text{rojo}), (4, \text{verde}), (4, \text{azul}), (5, \text{rojo}), (5, \text{verde}), (5, \text{azul}) \}" />
+    </li>
+  </ul>
+</div>
 
 <p>Se le puede decir de dos formas diferentes:</p>
 <Latex formula="\text{\#E = espacio muestral/universo}" />
 <Latex formula="\text{\#U = espacio muestral/universo}" />
 <Latex formula="\text{\#E = 15}" />
 <Latex formula="\text{\#U = 15}" />
+
+</div>
+
 
 <div class="w-full md:w-[600px] min-h-80 border bg-gray-100 p-4">
   <h6 class="text-xl font-bold text-center mb-4">Ejercicios</h6>
@@ -827,4 +811,3 @@ Se inicia la clase Resolviendo los Ejercicios de la clase anterior
     (Nota: Este tema se abordará en detalle en la Unidad 3).
   </p>
 </div>
-
