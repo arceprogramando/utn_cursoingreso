@@ -1,13 +1,14 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
+const { platform, icon, alt } = Astro.props;
 import Prose from '../components/Prose.astro';
 import { Image } from 'astro:assets';
 ---
 
 <BaseLayout pageTitle=`${frontmatter.title}`>
   <div class="flex justify-around border-b-2 mb-8">
-    <Image src={frontmatter.image.url} width={175} height={75} class="m-2 w-36 md:w-52" alt={frontmatter.image.alt} />
+    <Image src={frontmatter.image.url} width={175} height={75} class="m-2 w-36 md:w-52" alt={frontmatter.image.alt} title={`Imagen de ${frontmatter.image.alt}`} transition:name={frontmatter.image.alt} />
     <div class="flex flex-col justify-around p-4 md:items-center">
       <div class="flex flex-col gap-2">
         <div class="flex md:gap-8 justify-around">
@@ -68,10 +69,11 @@ import { Image } from 'astro:assets';
       {
         frontmatter.tags.map((tag) => (
           <li class="px-4 py-2 text-lg font-bold uppercase  text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
-            <a href={`/tags/${tag}`}>{tag}</a>
+            <a href={`/tags/${tag}`} title={`Ver todos los contenidos con el tag ${tag}`} aria-label={tag}>{tag}</a>            
           </li>
         ))
       }
+
     </ul>
   </div>
 </BaseLayout>

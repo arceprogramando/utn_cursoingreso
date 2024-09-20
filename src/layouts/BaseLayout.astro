@@ -3,6 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import SideMenu from '../components/layout/SideMenu.astro';
 const { pageTitle } = Astro.props;
+
 ---
 
 <html lang="es">
@@ -69,7 +70,7 @@ const { pageTitle } = Astro.props;
 
   <body class="flex flex-col justify-between bg-white">
     <div>
-      <Header />
+      <Header/>
       <SideMenu />
       <main class="flex flex-col items-center max-w-5xl bg-opacity-80 mx-auto bg-slate-100 pb-40 reset">
         <h2 class="text-center max-w-2xl uppercase p-2 text-4xl leading-none md:text-5xl font-bold gradient">{pageTitle}</h2>

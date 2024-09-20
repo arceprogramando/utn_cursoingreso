@@ -5,7 +5,7 @@ const { href, title } = Astro.props as Link;
 
 <a
   href={href}
-  class="p-1 px-2 block relative max-w-48 border bg-black border-[#24365a] z-[99] text-white border-solid uppercase text-sm font-bold leading-7"
+  class="buttons p-1 px-2 block relative max-w-48 border bg-black border-[#24365a] z-[99] text-white border-solid uppercase text-sm font-bold leading-7"
 >
   {title}
 </a>
@@ -13,3 +13,18 @@ const { href, title } = Astro.props as Link;
   class="absolute border border-black transform origin-top-right transition-all duration-300 -top-1 right-1 w-full h-full group-hover:top-0 group-hover:right-0"
 >
 </div>
+
+
+<script>
+  import { isSideMenuOpen } from '../../store.ts';
+
+  const buttons = document.getElementsByClassName('buttons');
+
+  const handleOpenSideMenu = () => {
+    isSideMenuOpen.set(!isSideMenuOpen.get());
+  };
+
+  Array.from(buttons).forEach(button => {
+    button.addEventListener('click', handleOpenSideMenu);
+  });
+</script>
