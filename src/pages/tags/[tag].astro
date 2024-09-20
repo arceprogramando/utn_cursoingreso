@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import TagPost from '../../components/TagPost.astro';
-
+import CardPostImage from '../../components/CardPostImage.astro'
 export async function getStaticPaths() {
   const admissionPosts = await Astro.glob('../admission/*.mdx');
   const careerPosts = await Astro.glob('../career/*.mdx');
@@ -34,6 +33,6 @@ const { posts } = Astro.props;
 
 <BaseLayout pageTitle=`${tag}`>
   <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
-    {posts.map((post: any) => <TagPost url={post.url} title={post.frontmatter.title} image={post.image.url} alt={post.image.alt} />)}
+    {posts.map((post: any) => <CardPostImage url={post.url} tag={post.frontmatter.image.url} alt={post.frontmatter.image.alt} />)}
   </ul>
 </BaseLayout>
