@@ -14,7 +14,7 @@ const pageTitle = 'Índice de Tags';
     {
       Array.from(allTags).map((tag) => (
         <p class="px-4 py-2 text-lg font-bold uppercase  text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
-          <a href={`/tags/${tag}`}>{tag}</a>
+          <a href={`/tags/${tag}`} title={`Ver elementos con el tag ${tag}`}>{tag}</a>
         </p>
       ))
     }
