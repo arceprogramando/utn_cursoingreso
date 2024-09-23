@@ -2,10 +2,10 @@ import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 
 export async function GET(context) {
   return rss({
-    title: 'Alumno de Astro | Blog',
-    description: 'Mi viaje de aprendizaje de Astro',
+    title: 'Centro Universitario de Innovación | Blog', 
+    description: 'Información sobre la Tecnicatura Universitaria en Programación y otros cursos.', 
     site: context.site,
     items: await pagesGlobToRssItems(import.meta.glob('./**/*.mdx')),
-    customData: `<language>en-us</language>`,
-  });
+    customData: `<language>es-ES</language>`,
+  })
 }
