@@ -322,14 +322,65 @@ Despues de las hermosas clases de Arquitectura y Sistemas Operativos , volvimos 
     <p>Ej: teléfono</p>
   </div>
 
-  <div>
-    <p class="font-semibold">Compuestos:</p>
-    <p>Definición: Atributos que pueden ser descompuestos en otros atributos pertenecientes a distintos dominios.</p>
-    <div class="border-4 border-black rounded-full flex items-center justify-center px-4 max-w-40">Compuestos</div>
-    <p>Ej: fecha (Día, Mes, Año)</p>
+    <div>
+      <p class="font-semibold">Compuestos:</p>
+      <p>Definición: Atributos que pueden ser descompuestos en otros atributos pertenecientes a distintos dominios.</p>
+      <div class="border-4 border-black rounded-full flex items-center justify-center px-4 max-w-40">Compuestos</div>
+      <p>Ej: fecha (Día, Mes, Año)</p>
+    </div>
   </div>
-</div>
+  <div class="bg-white shadow-2xl px-2 py-4 rounded-lg">
+    <h3 class="text-2xl font-bold text-gray-800">Ejemplo de una Entidad de Base de Datos</h3>
+    <p>
+      Supongamos que estamos creando la base de datos para una tienda de televisores. El dueño de la tienda desea un sistema que le permita conocer todos los <strong>televisores</strong> que ha vendido a cada cliente. Para esto, es importante identificar la información clave.
+    </p>
 
+    <h4 class="text-xl font-semibold text-gray-700">Entidades Principales:</h4>
+    <ul class="list-disc list-inside">
+      <li class="font-semibold text-gray-600">Televisores</li>
+      <li class="font-semibold text-gray-600">Clientes</li>
+    </ul>
+    <div class="flex flex-col md:flex-row justify-around">
+      <div>
+        <h4 class="text-xl font-semibold text-gray-700 text-center">Características de los Clientes:</h4>
+        <ul class="list-disc list-inside">
+          <li class="text-gray-600">ID</li>
+          <li class="text-gray-600">Nombres</li>
+          <li class="text-gray-600">Apellidos</li>
+        </ul>
+      </div>
+      <div>
+          <h4 class="text-xl font-semibold text-gray-700 text-center">Características de los Televisores:</h4>
+          <ul class="list-disc list-inside">
+            <li class="text-gray-600">Seriales</li>
+            <li class="text-gray-600">Modelo</li>
+            <li class="text-gray-600">Marca</li>
+            <li class="text-gray-600">Dimensiones</li>
+            <li class="text-gray-600">Precios</li>
+          </ul>
+      </div>
+    </div>
+
+
+    <div>
+    
+    </div>
+    <div class="flex flex-col md:flex-row justify-around">
+      <figure class="flex flex-col items-center">
+        <img src="/BaseDeDatosDiagramaCliente.avif" alt="Imagen Diagrama Cliente" title="Imagen de Diagrama Cliente" class="max-w-80 md:max-w-[500px]" />
+        <figcaption class="text-center text-sm text-gray-600 mt-2">
+        Aunque atributos como <strong>ID</strong> y <strong>Nombre</strong> en la entidad de "Clientes" podrían subrayarse para indicar su importancia, en esta fase del diagrama aún no se realiza esa diferenciación.
+        </figcaption>
+      </figure>
+
+      <figure class="flex flex-col items-center">
+        <img src="/BaseDeDatosDiagramaTelevisores.avif" alt="Imagen Diagrama Televisores" title="Imagen de Diagrama Televisores" class="max-w-80 md:max-w-[500px]" />
+        <figcaption class="text-center text-sm text-gray-600 mt-2">
+        La misma consideración aplica para los atributos del diagrama de "Televisores," donde aún no se hace distinción con subrayados en esta etapa del diseño.
+        </figcaption>
+      </figure>
+    </div>
+  </div>
 
 </div>
 
