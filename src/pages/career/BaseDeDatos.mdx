@@ -382,5 +382,100 @@ Despues de las hermosas clases de Arquitectura y Sistemas Operativos , volvimos 
     </div>
   </div>
 
+  <div>
+    <h4 class="text-xl font-semibold">Relaciones</h4>
+    <p>
+     Una <strong>relación</strong> es la asociación que existe entre dos o más <strong>entidades</strong>. Cada relación tiene un nombre que describe su función. Las relaciones se representan gráficamente mediante <strong>rombos</strong> y su nombre aparece en el interior.
+    </p>
+    <p>
+      Las entidades que están involucradas en una determinada relación se denominan <strong>entidades participantes</strong>. El número de participantes en una relación es lo que se denomina <strong>grado de la relación</strong>.
+    </p>
+
+    <p>
+      Por ejemplo, La relación Película-Actor es de grado 2 o binaria, ya que intervienen dos entidades: <strong>Pelicula </strong>y <strong>Actor</strong>
+    </p>
+    <figure class="flex flex-col items-center">
+        <img src="/BaseDeDatosDiagramaBinario.avif" alt="Imagen Diagrama Binario" title="Imagen de un Diagrama De Binario" class="max-w-80 md:max-w-[500px]" />
+        <figcaption class="text-center text-sm text-gray-600 mt-2">
+        Un diagrama Binario.
+        </figcaption>
+      </figure>
+      <p>
+       La relación PUBLICAR es de grado 3 ya que involucra las entidades:
+       <strong>Libro </strong>, <strong>Editorial</strong>y <strong>Autor</strong>
+      </p>
+    <figure class="flex flex-col items-center">
+        <img src="/BaseDeDatosDiagramaGradoTres.avif" alt="Imagen Diagrama Grado Tres" title="Imagen de un Diagrama De Grado Tres" class="max-w-80 md:max-w-[500px]" />
+        <figcaption class="text-center text-sm text-gray-600 mt-2">
+        Un diagrama Grado Tres.
+        </figcaption>
+      </figure>
+    <p>
+      Cuando una entidad esta relacionada consigo misma, es una relación reflexiva, ya que involucra dos entidades reflexivas 
+       <strong>Empleado </strong>es a la misma vez <strong>Jefe</strong>
+
+    </p>
+  </div>
+
+      <figure class="flex flex-col items-center">
+        <img src="/BaseDeDatosDiagramaReflexivo.avif" alt="Imagen Diagrama Reflexivo" title="Imagen de un Diagrama Reflexivo" class="max-w-80 md:max-w-[500px]" />
+        <figcaption class="text-center text-sm text-gray-600 mt-2">
+        Un diagrama reflexivo.
+        </figcaption>
+      </figure>
+
+  <div>
+    <h4 class="text-xl font-semibold">Cardinalidad</h4>
+    <p>
+      La <strong>correspondencia de cardinalidades</strong>, o razón de cardinalidad, expresa el número de entidades a las que otra entidad puede estar asociada vía un conjunto de relaciones. Para un conjunto de relaciones binarias R entre los conjuntos de entidades A y B, la correspondencia de cardinalidades debe ser una de las siguientes:
+    </p>
+    <ul class="list-disc list-inside mt-2">
+      <li>
+        <strong>Uno a uno:</strong> Una entidad en A se asocia con a lo sumo una entidad en B, y una entidad en B se asocia con a lo sumo una entidad en A.
+      </li>
+    </ul>
+  <figure class="flex flex-col items-center">
+    <img src="/BaseDeDatosUnoAUno.avif" alt="Imagen Diagrama Uno A uno" title="Imagen de un Diagrama Uno a Uno" class="max-w-80 md:max-w-[500px]" />
+    <figcaption class="text-center text-sm text-gray-600 mt-2">
+    Un diagrama Uno a Uno.
+    </figcaption>
+  </figure>
+
+  <ul class="list-disc list-inside mt-2">
+    <li>
+      <strong>Uno a varios:</strong> Una entidad en A se asocia con cualquier número de entidades en B (ninguna o varias). Una entidad en B, sin embargo, se puede asociar con a lo sumo una entidad en A.
+   </li>
+  </ul>
+  <figure class="flex flex-col items-center">
+    <img src="/BaseDeDatosUnoAVarios.avif" alt="Imagen Diagrama Uno a Varios" title="Imagen de un Diagrama Uno a Varios" class="max-w-80 md:max-w-[500px]" />
+    <figcaption class="text-center text-sm text-gray-600 mt-2">
+      Un diagrama de Uno a Varios / Uno a Muchos
+    </figcaption>
+  </figure>
+
+  <ul class="list-disc list-inside mt-2">
+    <li>
+      <strong>Varios a uno:</strong> Una entidad en A se asocia con a lo sumo una entidad en B. Una entidad en B, sin embargo, se puede asociar con cualquier número de entidades (ninguna o varias) en A.
+    </li>
+  </ul>
+  <figure class="flex flex-col items-center">
+    <img src="/BaseDeDatosVariosAUno.avif" alt="Imagen Diagrama Varios A uno" title="Imagen de un Diagrama Varios a Uno" class="max-w-80 md:max-w-[500px]" />
+    <figcaption class="text-center text-sm text-gray-600 mt-2">
+    Un diagrama de Varios A Uno / Muchos a Uno
+    </figcaption>
+  </figure>
+
+    <ul class="list-disc list-inside mt-2">
+    <li>
+      <strong>Varios a varios:</strong> Una entidad en A se asocia con cualquier número de entidades (ninguna o varias) en B, y una entidad en B se asocia con cualquier número de entidades (ninguna o varias) en A.
+    </li>
+  </ul>
+  <figure class="flex flex-col items-center">
+    <img src="/BaseDeDatosVariosAVarios.avif" alt="Imagen Diagrama Varios A Varios" title="Imagen de un Diagrama Varios a Varios" class="max-w-80 md:max-w-[500px]" />
+    <figcaption class="text-center text-sm text-gray-600 mt-2">
+      Un diagrama de Varios A Varios / Muchos a Muchos
+    </figcaption>
+  </figure>
+  </div>
 </div>
 
