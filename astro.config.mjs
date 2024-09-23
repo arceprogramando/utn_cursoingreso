@@ -17,6 +17,7 @@ export default defineConfig({
       },
       changefreq: (page) => {
         if (page === 'https://utn-cursoingreso.vercel.app') return 'monthly';
+        if (page === 'https://utn-cursoingreso.vercel.app/career') return 'weekly';
         if (
           [
             'https://utn-cursoingreso.vercel.app/career/ProgramacionI',
@@ -29,6 +30,7 @@ export default defineConfig({
       },
       priority: (page) => {
         if (page === 'https://utn-cursoingreso.vercel.app') return 1.0;
+        if (page === 'https://utn-cursoingreso.vercel.app/career') return 0.9; 
         if (
           [
             'https://utn-cursoingreso.vercel.app/career/ProgramacionI',
