@@ -224,6 +224,112 @@ Despues de las hermosas clases de Arquitectura y Sistemas Operativos , volvimos 
   <p class="text-gray-700">
       La etapa final donde la base de datos es creada y puesta en funcionamiento basada en los diseños conceptual, lógico y físico.
   </p>
+
+  <div class="bg-yellow-50 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-4">
+    <h4 class="text-xl font-semibold">Diseño de Bases de Datos</h4>
+    <p class="mt-2">
+      <strong>Fase de Análisis: Especificación de Requisitos Software (E.R.S.)</strong> Antes de pasar a diseñar una base de datos (BD), es crucial tener claro qué se quiere lograr. Para ello, los informáticos se reúnen con los futuros usuarios del sistema para recopilar la información que necesitan y entender las expectativas de dichos usuarios.
+    </p>
+    <p class="mt-2">
+      Normalmente, se realiza una reunión inicial y, a partir de ella, se elabora una batería de preguntas para entrevistar a los usuarios finales en una segunda reunión. Esta segunda entrevista permite obtener información detallada sobre lo que se espera de la base de datos.
+    </p>
+    <p class="mt-2">
+      De estas entrevistas, se extrae el documento más importante del análisis, el <strong>documento de Especificación de Requisitos Software (E.R.S.)</strong>. A partir de este documento, se obtiene toda la información necesaria para la modelización de datos.
+    </p>
+  </div>
+  
+  <h5 class="font-semibold">Fase 1 del Diseño: Diseño Conceptual - Modelo Entidad/Relación (E/R)</h5>
+  <p>
+    El objetivo de esta fase es representar la información obtenida del usuario final y concretada en el E.R.S., utilizando estándares para que el resto de la comunidad informática pueda entender el modelo. El modelo que se utiliza en esta primera fase tiene un gran poder expresivo para comunicarse con usuarios no expertos en informática y se denomina <strong>Modelo Conceptual</strong>. En esta fase, empleamos el <strong>Modelo Entidad/Relación</strong>.
+  </p>
+
+  <h5 class="font-semibold">Fase 2 del Diseño: Diseño Lógico - Modelo Relacional</h5>
+  <p>
+    Este modelo es más técnico y está orientado al personal informático, con traducción directa al modelo físico que entiende el SGBD. Se obtiene a partir del modelo conceptual y dependerá de la implementación de la base de datos. La implementación varía según el tipo de BD: jerárquica, orientada a objetos o relacional.
+  </p>
+  <p class="font-semibold">Ejemplos:</p>
+  <p>Productos, Inventario, Inventario, Categorías, Relaciones entre estas entidades que reflejan cómo los datos se interconectan y se organizan.</p>
+
+  <h5 class="font-semibold">Fase 3 del Diseño: Diseño Físico - Modelo Físico</h5>
+  <p>
+    Es el resultado de aplicar el modelo lógico a un SGBD específico. Generalmente, se expresa en un lenguaje de programación de bases de datos como SQL. En esta etapa, transformaremos el <strong>Modelo Relacional</strong> en el modelo físico utilizando el sublenguaje DDL de SQL.
+  </p>
+
 </div>
 
+### Clase I - Parte 2 - 16 de agosto de 2024
+
+<div class="w-full md:w-[800px] min-h-80 border bg-white shadow-lg p-4  mx-auto my-4 rounded-lg">
+  <h3 class="text-3xl font-bold text-center mb-6 text-blue-600">Modelo Entidad-Relación</h3>
+  <p>
+    El <span class="font-semibold">modelo Entidad-Relación </span>
+    es el modelo más utilizado para el diseño conceptual de bases de datos. Fue introducido por Peter Chen en 1976 y se basa en la existencia de objetos a los que se les da el nombre de entidades, y asociaciones entre ellos, llamadas relaciones.
+  </p>
+  <img src="/PeterCheen.avif" alt="Introductor de El modelo Entidad Relación" title="Imagen de Peter Cheen" class="max-w-80 md:max-w-[500px] mx-auto" />
+  <figcaption class="text-center text-gray-600 italic">Creado por Peter Chen en 1976</figcaption>
+
+  <p>Sus símbolos principales se representan en el cuadro siguiente:</p>
+  <img src="/BaseDeDatosSimbolosEntidadRelacion.avif" alt="Simbolos Entidad Relación" title="Imagen de Simbolos Entidad Relación" class="max-w-80 md:max-w-[500px] mx-auto" />
+
+  <h4 class="text-xl font-semibold">Entidades</h4>
+  <p>
+    Una <strong>entidad</strong> es cualquier objeto o elemento acerca del cual se puede almacenar información en la <strong>base de datos</strong>. Las entidades pueden ser <strong>concretas</strong>, como personas y vehículos, o <strong>abstractas</strong>, como materias en una institución o cuentas bancarias.
+  </p>
+  <p>
+    Gráficamente, las entidades se representan mediante <strong>rectángulos</strong>, con su nombre escrito en el interior. Es importante destacar que un nombre de entidad solo puede aparecer una vez en el <strong>esquema conceptual</strong>, asegurando la claridad y la unicidad de la información.
+  </p>
+  <p>
+    Existen dos tipos de entidades: las entidades <strong>fuertes</strong>, que pueden existir de manera independiente, y las entidades <strong>débil</strong>, cuya existencia depende de la existencia de otra entidad. Este concepto es crucial para entender la <strong>estructura</strong> y las <strong>relaciones</strong> dentro de una base de datos.
+  </p>
+
+  <h4 class="text-xl font-semibold">Atributos</h4>
+  <p>
+    Una entidad se caracteriza y distingue de otra por los <strong>atributos</strong>, también llamados propiedades o campos, que representan las características de una entidad.
+  </p>
+  <p>
+    Los atributos de una entidad pueden tomar un conjunto de valores permitidos al que se le conoce como <strong>dominio del atributo</strong>. Dando valores a estos atributos, se obtienen las diferentes ocurrencias de una entidad.
+  </p>
+
+   <h5 class="font-semibold mt-4">Tipos de Atributos:</h5>
+
+  
+<div class="flex flex-col space-y-4">
+  <div>
+    <p class="font-semibold">Identificadores:</p>
+    <p>Definición: Son atributos cuyos valores no se repiten dentro de una misma entidad o relación. Actúan como clave principal o primaria.</p>
+    <div class="border-4 border-black rounded-full flex items-center justify-center px-4 max-w-40">Identificadores</div>
+    <p>Ej: dni</p>
+  </div>
+  
+  <div>
+    <p class="font-semibold">Descriptores:</p>
+    <p>Definición: Atributos que describen diversas propiedades de una entidad o relación. Son los más frecuentes.</p>
+    <div class="border-4 border-black rounded-full flex items-center justify-center px-4 max-w-40">Descriptores</div>
+    <p>Ej: nombre</p>
+  </div>
+
+  <div>
+    <p class="font-semibold">Derivados:</p>
+    <p>Definición: Atributos cuyos valores se calculan a partir de los valores de otros atributos.</p>
+    <div class="border-4 border-black border-dashed rounded-full flex items-center justify-center px-4 max-w-40">Derivados</div>
+    <p>Ej: edad</p>
+  </div>
+
+  <div>
+    <p class="font-semibold">Multivaluados:</p>
+    <p>Definición: Atributos descriptores que poseen varios valores de un mismo dominio, utilizados para almacenar múltiples datos.</p>
+    <div class="border-4 border-black border-double rounded-full flex items-center justify-center px-4 max-w-40">Multivaluados</div>
+    <p>Ej: teléfono</p>
+  </div>
+
+  <div>
+    <p class="font-semibold">Compuestos:</p>
+    <p>Definición: Atributos que pueden ser descompuestos en otros atributos pertenecientes a distintos dominios.</p>
+    <div class="border-4 border-black rounded-full flex items-center justify-center px-4 max-w-40">Compuestos</div>
+    <p>Ej: fecha (Día, Mes, Año)</p>
+  </div>
+</div>
+
+
+</div>
 
