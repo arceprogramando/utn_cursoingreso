@@ -1,17 +1,23 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import CardPostImage from '../../components/CardPostImage.astro'
+import CardPostImage from '../../components/CardPostImage.astro';
+
+import type { Post } from '../../types/post';
+
 export async function getStaticPaths() {
-  const admissionPosts = await Astro.glob('../admission/*.mdx');
-  const careerPosts = await Astro.glob('../career/*.mdx');
+  const matchedAdmissionPosts = import.meta.glob('../admission/*.mdx', { eager: true });
+  const matchedCareerPosts = import.meta.glob('../career/*.mdx', { eager: true });
+
+  const admissionPosts = Object.values(matchedAdmissionPosts) as Post[];
+  const careerPosts = Object.values(matchedCareerPosts) as Post[];
 
   const allPosts = [...admissionPosts, ...careerPosts];
 
-  const allTags = Array.from(new Set(allPosts.flatMap((post) => post.frontmatter.tags)));
+  const allTags = Array.from(new Set(allPosts.flatMap((post) => post.frontmatter?.tags || [])));
 
   return allTags.map((tag) => {
-    const filteredAdmissionPosts = admissionPosts.filter((post) => post.frontmatter.tags.includes(tag));
-    const filteredCareerPosts = careerPosts.filter((post) => post.frontmatter.tags.includes(tag));
+    const filteredAdmissionPosts = admissionPosts.filter((post) => post.frontmatter?.tags?.includes(tag));
+    const filteredCareerPosts = careerPosts.filter((post) => post.frontmatter?.tags?.includes(tag));
 
     const combinedPosts = [...filteredAdmissionPosts, ...filteredCareerPosts];
 
@@ -20,7 +26,7 @@ export async function getStaticPaths() {
       props: {
         posts: combinedPosts.map((post) => ({
           ...post,
-          image: post.frontmatter.image,
+          image: post.frontmatter?.image,
         })),
       },
     };
@@ -31,8 +37,8 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<BaseLayout pageTitle=`${tag}`>
+<BaseLayout pageTitle={`${tag}`}>
   <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
-    {posts.map((post: any) => <CardPostImage url={post.url} tag={post.frontmatter.image.url} alt={post.frontmatter.image.alt} />)}
+    {posts.map((post) => <CardPostImage url={post.url} tag={post.frontmatter?.image?.url || ''} alt={post.frontmatter?.image?.alt || ''} />)}
   </ul>
 </BaseLayout>
