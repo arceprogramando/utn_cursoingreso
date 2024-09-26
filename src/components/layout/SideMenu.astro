@@ -27,6 +27,7 @@ import Link from './Link.astro';
 
 <script>
   import { isSideMenuOpen } from '../../store.ts';
+
   const sideMenu = document.getElementById('side_Menu');
   const sideMenuBackground = document.getElementById('side_Menu_bg');
   const sideMenuCross = document.getElementById('side_menu_cross');
@@ -37,16 +38,21 @@ import Link from './Link.astro';
 
   isSideMenuOpen.subscribe((open) => {
     if (open) {
-      sideMenuBackground.classList.remove('hidden');
-      sideMenu.classList.remove('-right-[500px]');
-      sideMenu.classList.add('right-0');
+      sideMenuBackground?.classList.remove('hidden');
+      sideMenu?.classList.remove('-right-[500px]');
+      sideMenu?.classList.add('right-0');
     } else {
-      sideMenuBackground.classList.add('hidden');
-      sideMenu.classList.remove('right-0');
-      sideMenu.classList.add('-right-[500px]');
+      sideMenuBackground?.classList.add('hidden');
+      sideMenu?.classList.remove('right-0');
+      sideMenu?.classList.add('-right-[500px]');
     }
   });
 
-  sideMenuCross?.addEventListener('click', () => handleCloseSideMenu());
-  sideMenuBackground?.addEventListener('click', () => handleCloseSideMenu());
+  if (sideMenuCross) {
+    sideMenuCross.addEventListener('click', handleCloseSideMenu);
+  }
+
+  if (sideMenuBackground) {
+    sideMenuBackground.addEventListener('click', handleCloseSideMenu);
+  }
 </script>
