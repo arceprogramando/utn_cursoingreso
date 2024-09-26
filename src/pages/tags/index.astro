@@ -1,10 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getStaticPaths } from '../../components/utils/getTags';
 
-const admissionPosts = await Astro.glob('../admission/*.mdx');
-const careerPosts = await Astro.glob('../career/*.mdx');
-
-const allTags = new Set([...admissionPosts.flatMap((post) => post.frontmatter.tags), ...careerPosts.flatMap((post) => post.frontmatter.tags)]);
+const { allTags } = await getStaticPaths();
 
 const pageTitle = 'Índice de Tags';
 ---
@@ -12,11 +10,17 @@ const pageTitle = 'Índice de Tags';
 <BaseLayout pageTitle={`${pageTitle}`}>
   <div class="flex flex-wrap justify-center gap-2 my-4">
     {
-      Array.from(allTags).map((tag) => (
-        <p class="px-4 py-2 text-lg font-bold uppercase  text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
-          <a href={`/tags/${tag}`} title={`Ver elementos con el tag ${tag}`}>{tag}</a>
-        </p>
-      ))
+      allTags.length > 0 ? (
+        allTags.map((tag) => (
+          <p class="px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
+            <a href={`/tags/${tag}`} title={`Ver elementos con el tag ${tag}`}>
+              {tag}
+            </a>
+          </p>
+        ))
+      ) : (
+        <p class="text-lg font-bold text-gray-500">No hay tags disponibles.</p>
+      )
     }
   </div>
 </BaseLayout>

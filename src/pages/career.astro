@@ -1,18 +1,28 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CardPostImage from '../components/CardPostImage.astro';
-const allPosts = await Astro.glob('./career/*.mdx');
+import type { Post } from '../types/post';
 
-allPosts.sort((a, b) => a.frontmatter.order - b.frontmatter.order);
+const careerPosts = Object.values(import.meta.glob('./career/*.mdx', { eager: true })) as Post[];
+
+careerPosts.sort((a, b) => (a.frontmatter.order || 0) - (b.frontmatter.order || 0));
 
 const pageTitle = 'Carrera';
 ---
-<!-- Este BaseLayout solo afecta a los titulos de career TODO: Unir tanto el componente de admision con el de career  -->
 
-<BaseLayout pageTitle=`${pageTitle}`>
+<BaseLayout pageTitle={`${pageTitle}`}>
   <div class="flex flex-col justify-center items-center container mx-auto max-w-3xl text-center">
     <ul class="flex justify-center gap-2 flex-wrap">
-      {allPosts.map((post) => <CardPostImage url={post.url} tag={post.frontmatter.image.url} alt={post.frontmatter.image.alt} />)}
+      {
+        careerPosts.map((post) => (
+          <CardPostImage
+            key={post.url}
+            url={post.url}
+            tag={post.frontmatter?.image?.url || ''}
+            alt={post.frontmatter?.image?.alt || 'Imagen sin descripción'}
+          />
+        ))
+      }
     </ul>
   </div>
 </BaseLayout>

@@ -1,13 +1,8 @@
----
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import CardPostImage from '../../components/CardPostImage.astro';
-
 import type { Post } from '../../types/post';
 
-
 export async function getStaticPaths() {
-  const matchedAdmissionPosts = import.meta.glob('../admission/*.mdx', { eager: true });
-  const matchedCareerPosts = import.meta.glob('../career/*.mdx', { eager: true });
+  const matchedAdmissionPosts = import.meta.glob('../../pages/admission/*.mdx', { eager: true });
+  const matchedCareerPosts = import.meta.glob('../../pages/career/*.mdx', { eager: true });
 
   const admissionPosts = Object.values(matchedAdmissionPosts) as Post[];
   const careerPosts = Object.values(matchedCareerPosts) as Post[];
@@ -16,7 +11,7 @@ export async function getStaticPaths() {
 
   const allTags = Array.from(new Set(allPosts.flatMap((post) => post.frontmatter?.tags || [])));
 
-  return allTags.map((tag) => {
+  const paths = allTags.map((tag) => {
     const filteredAdmissionPosts = admissionPosts.filter((post) => post.frontmatter?.tags?.includes(tag));
     const filteredCareerPosts = careerPosts.filter((post) => post.frontmatter?.tags?.includes(tag));
 
@@ -32,14 +27,9 @@ export async function getStaticPaths() {
       },
     };
   });
+  console.log(allTags);
+  return {
+    paths,
+    allTags,
+  };
 }
-
-const { tag } = Astro.params;
-const { posts } = Astro.props;
----
-
-<BaseLayout pageTitle={`${tag}`}>
-  <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
-    {posts.map((post) => <CardPostImage url={post.url} tag={post.frontmatter?.image?.url || ''} alt={post.frontmatter?.image?.alt || ''} />)}
-  </ul>
-</BaseLayout>
