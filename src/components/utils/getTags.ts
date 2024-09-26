@@ -27,7 +27,6 @@ export async function getStaticPaths() {
       },
     };
   });
-  console.log(allTags);
   return {
     paths,
     allTags,
