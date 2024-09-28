@@ -2,8 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import SideMenu from '../components/layout/SideMenu.astro';
-const { pageTitle } = Astro.props;
-
+const { title } = Astro.props;
 ---
 
 <html lang="es">
@@ -65,7 +64,7 @@ const { pageTitle } = Astro.props;
     />
     <meta name="twitter:image" content="https://res.cloudinary.com/dyanh7yda/image/upload/v1705374365/c77n6krmnazj9yaafrxh.jpg" />
 
-    <title>{pageTitle}</title>
+    <title>{title}</title>
   </head>
 
   <body class="flex flex-col justify-between bg-white">
@@ -73,7 +72,7 @@ const { pageTitle } = Astro.props;
       <Header/>
       <SideMenu />
       <main class="flex flex-col items-center max-w-5xl bg-opacity-80 mx-auto bg-slate-100 pb-40 reset">
-        <h2 class="text-center max-w-2xl uppercase p-2 text-4xl leading-none md:text-5xl font-bold gradient">{pageTitle}</h2>
+        <h2 class="text-center max-w-2xl uppercase p-2 text-4xl leading-none md:text-5xl font-bold gradient">{title}</h2>
         <slot />
       </main>
     </div>
