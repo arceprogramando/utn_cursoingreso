@@ -38,7 +38,7 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<BaseLayout pageTitle={`${tag}`}>
+<BaseLayout title={`${tag}`}>
   <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
     {posts.map((post) => <CardPostImage url={post.url} tag={post.frontmatter?.image?.url || ''} alt={post.frontmatter?.image?.alt || ''} />)}
   </ul>

@@ -10,18 +10,17 @@ careerPosts.sort((a, b) => (a.frontmatter.order || 0) - (b.frontmatter.order || 
 const title = 'Carrera';
 ---
 
-<BaseLayout title={`${title}`}>
+<BaseLayout title={title}>
   <div class="flex flex-col justify-center items-center container mx-auto max-w-3xl text-center">
     <ul class="flex justify-center gap-2 flex-wrap">
       {
-        careerPosts.map((post) => (
-          <CardPostImage
-            key={post.url}
-            url={post.url}
-            tag={post.frontmatter?.image?.url || ''}
-            alt={post.frontmatter?.image?.alt || 'Imagen sin descripción'}
-          />
-        ))
+        careerPosts.map(({ url, frontmatter }) => {
+          const { image } = frontmatter || {};
+          const imageUrl = image?.url || '';
+          const imageAlt = image?.alt || 'Imagen sin descripción';
+
+          return <CardPostImage url={url} tag={imageUrl} alt={imageAlt} transition:name={imageAlt} />;
+        })
       }
     </ul>
   </div>

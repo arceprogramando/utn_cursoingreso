@@ -16,6 +16,7 @@ const title = 'Curso De ingreso';
             url={post.url}
             tag={post.frontmatter?.image?.url || ''}
             alt={post.frontmatter?.image?.alt || 'Imagen sin descripción'}
+            transition:name={post.frontmatter?.title}
           />
         ))
       }

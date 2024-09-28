@@ -4,10 +4,10 @@ import { getStaticPaths } from '../../components/utils/getTags';
 
 const { allTags } = await getStaticPaths();
 
-const pageTitle = 'Índice de Tags';
+const title = 'Índice de Tags';
 ---
 
-<BaseLayout pageTitle={`${pageTitle}`}>
+<BaseLayout title={`${title}`}>
   <div class="flex flex-wrap justify-center gap-2 my-4">
     {
       allTags.length > 0 ? (
