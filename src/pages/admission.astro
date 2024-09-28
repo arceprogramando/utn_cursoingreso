@@ -4,10 +4,10 @@ import CardPostImage from '../components/CardPostImage.astro';
 import type { Post } from '../types/post';
 
 const admissionPosts = Object.values(import.meta.glob('./admission/*.mdx', { eager: true })) as Post[];
-const pageTitle = 'Curso De ingreso';
+const title = 'Curso De ingreso';
 ---
 
-<BaseLayout pageTitle={`${pageTitle}`}>
+<BaseLayout title={`${title}`}>
   <div class="flex flex-col justify-center container mx-auto">
     <ul class="flex justify-center gap-2 flex-wrap">
       {

@@ -26,6 +26,8 @@ import Link from './Link.astro';
 </header>
 
 <script>
+
+  
   import { isSideMenuOpen } from '../../store.ts';
 
   const sideMenu = document.getElementById('side_Menu');
@@ -38,7 +40,7 @@ import Link from './Link.astro';
 
   isSideMenuOpen.subscribe((open) => {
     if (open) {
-      sideMenuBackground?.classList.remove('hidden');
+      sideMenuBackground?.classList.add('hidden');
       sideMenu?.classList.remove('-right-[500px]');
       sideMenu?.classList.add('right-0');
     } else {

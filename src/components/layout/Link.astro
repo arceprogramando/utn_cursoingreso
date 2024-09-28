@@ -14,17 +14,35 @@ const { href, title } = Astro.props as Link;
 >
 </div>
 
-
 <script>
   import { isSideMenuOpen } from '../../store.ts';
+  document.addEventListener('astro:page-load', () => {
+    const sideMenuBackground = document.getElementById('side_Menu_bg');
 
-  const buttons = document.getElementsByClassName('buttons');
+    const handleOpenSideMenu = (event) => {
+      const target = event.target as HTMLElement;
 
-  const handleOpenSideMenu = () => {
-    isSideMenuOpen.set(!isSideMenuOpen.get());
-  };
+      // Verifica si el target es un elemento de enlace
+      if (target.tagName === 'A') {
+        console.log(`Clicked on: ${target.textContent}`);
+      }
 
-  Array.from(buttons).forEach(button => {
-    button.addEventListener('click', handleOpenSideMenu);
+      isSideMenuOpen.set(!isSideMenuOpen.get());
+    };
+
+    document.addEventListener('astro:page-load', () => {
+      const buttons = document.getElementsByTagName('a');
+      isSideMenuOpen.set(false);
+      sideMenuBackground?.classList.add('hidden');
+
+      Array.from(buttons).forEach((button) => {
+        button.addEventListener('click', handleOpenSideMenu);
+      });
+
+      setInterval(() => {
+        const openState = isSideMenuOpen.get();
+        console.log(`isSideMenuOpen: ${openState}`);
+      }, 2000);
+    });
   });
 </script>

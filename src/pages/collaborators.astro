@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = 'Colaboradores';
+const title = 'Colaboradores';
 
 const url = 'https://my-api-mocha-omega.vercel.app/api/contributors';
 
@@ -36,7 +36,7 @@ try {
 }
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout title={title}>
   <div class="flex flex-col justify-center items-center container mx-auto text-center">
     {
       errorMessage ? (
