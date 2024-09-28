@@ -4,7 +4,6 @@ import CardPostImage from '../../components/CardPostImage.astro';
 
 import type { Post } from '../../types/post';
 
-
 export async function getStaticPaths() {
   const matchedAdmissionPosts = import.meta.glob('../admission/*.mdx', { eager: true });
   const matchedCareerPosts = import.meta.glob('../career/*.mdx', { eager: true });
@@ -38,8 +37,16 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<BaseLayout title={`${tag}`}>
+<BaseLayout title={tag}>
   <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
-    {posts.map((post) => <CardPostImage url={post.url} tag={post.frontmatter?.image?.url || ''} alt={post.frontmatter?.image?.alt || ''} />)}
+    {
+      posts.map((post) => {
+        const { url } = post;
+        const imageUrl = post.frontmatter?.image?.url || '';
+        const imageAlt = post.frontmatter?.image?.alt || '';
+
+        return <CardPostImage url={url} tag={imageUrl} alt={imageAlt} />;
+      })
+    }
   </ul>
 </BaseLayout>
