@@ -1,0 +1,99 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import Prose from '../../components/Prose.astro';
+
+export async function getStaticPaths() {
+  const career = await getCollection('career');
+
+  return career.map((career) => ({
+    params: { id: career.slug },
+    props: { career },
+  }));
+}
+
+const { career } = Astro.props;
+const { data, slug } = career;
+const { image, title } = data;
+
+const { Content } = await render(career);
+
+export const prerender = true;
+---
+
+<BaseLayout title={title}>
+  <div class="flex justify-around border-b-2 mb-8">
+    <Image src={image.url} width={175} height={75} class="m-2 w-36 md:w-52" alt={image.alt} title={`Imagen de ${title}`} transition:name={title} />
+    <div class="flex flex-col justify-around p-4 md:items-center">
+      <div class="flex flex-col gap-2">
+        <div class="flex md:gap-8 justify-around">
+          <p class="font-semibold text-xs md:text-base px-2 text-black text-center shadow-md">
+            Cursada:
+            <span class="block uppercase">{data.totalTimeClass} hs</span>
+          </p>
+          <p class="font-semibold text-xs md:text-base px-2 text-black text-center shadow-md">
+            Examen: <span class="block uppercase">{data.totalExam} hs</span>
+          </p>
+        </div>
+        <p class="font-semibold text-xs md:text-base text-black text-center shadow-md">
+          Total: <span class="block uppercase">{data.totalTime} hs</span>
+        </p>
+      </div>
+
+      <div>
+        <p class="max-w-40 md:max-w-80"><em>{data.description}</em></p>
+      </div>
+
+      {
+        data.professor && (
+          <div>
+            <p class="font-bold">Profesor/a: {data.professor}</p>
+          </div>
+        )
+      }
+
+      {
+        data.downloadUrl && (
+          <div class="flex hover:bg-blue-100 text-center">
+            <a
+              href={data.downloadUrl}
+              download={`${title.replace(/ /g, '_')}.pdf`}
+              class="bg-black hover:bg-zinc-800 text-white hover:text-zinc-200 p-2"
+            >
+              Descargar {title}
+            </a>
+          </div>
+        )
+      }
+    </div>
+  </div>
+
+  <div class="flex-col md:p-2 md:max-w-3xl mx-auto gap-4">
+    <div class="flex gap-4 pl-2 md:p-0">
+      <p class="font-bold">
+        {new Date(data.pubDate).toLocaleDateString('es-AR')}
+      </p>
+      <p class="font-light">Escrito por: {data.author}</p>
+    </div>
+
+    <div class="p-2">
+        <Prose>
+
+            <Content />
+        </Prose>
+    </div>
+
+    <!-- <ul class="flex flex-wrap gap-3 items-center justify-center text-center pt-4">
+      {
+        tags.map((tag) => (
+          <li class="px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
+            <a href={`/tags/${tag}`} title={`Ver todos los contenidos con el tag ${tag}`} aria-label={tag}>
+              {tag}
+            </a>
+          </li>
+        ))
+      }
+    </ul> -->
+  </div>
+</BaseLayout>

@@ -1,26 +1,24 @@
 import { defineCollection, z } from "astro:content";
 
-const posts = defineCollection({
+const career = defineCollection({
   schema: z.object({
-    frontmatter: z.object({
-      layout: z.string(),
+      layout: z.string().optional(),
       title: z.string(),
       author: z.string(),
       description: z.string(),
       image: z.object({
-        url: z.string().url(),
+        url: z.string().optional(),  
         alt: z.string().optional(),
       }).optional(),
-      pubDate: z.string(),
+      pubDate: z.date(),
       tags: z.array(z.string()),
       totalTimeClass: z.number(),
       totalExam: z.number(),
       totalTime: z.number(),
       professor: z.string(),
-      order: z.number(),
+    order: z.number(),
+      downloadUrl:z.string().optional(),
     }),
-    url: z.string(),
-  })
 });
 
-export const collections = { posts };
+export const collections = { career };

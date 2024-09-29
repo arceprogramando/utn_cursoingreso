@@ -1,25 +1,32 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CardPostImage from '../components/CardPostImage.astro';
-import type { Post } from '../types/post';
+import { getCollection } from 'astro:content';
 
-const careerPosts = Object.values(import.meta.glob('./career/*.mdx', { eager: true })) as Post[];
+const careerEntries = await getCollection('career');
 
-careerPosts.sort((a, b) => (a.frontmatter.order || 0) - (b.frontmatter.order || 0));
+// Ordena las entradas según el campo 'order'
+careerEntries.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
 
-const title = 'Carrera';
+// Accede al primer elemento del array
+const firstEntry = careerEntries[0];
+const { data, slug } = firstEntry; // Desestructura 'data' y 'slug'
+const { image, title } = data; // Desestructura 'image' y 'title'
+const { url, alt } = image || {}; // Desestructura 'url' y 'alt'
+
+const pageTitle = 'Carrera'; // Cambié el nombre de la variable para evitar conflictos
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={pageTitle}>
   <div class="flex flex-col justify-center items-center container mx-auto max-w-3xl text-center">
     <ul class="flex justify-center gap-2 flex-wrap">
       {
-        careerPosts.map(({ url, frontmatter }) => {
-          const { image } = frontmatter || {};
+        careerEntries.map(({ data, slug }) => {
+          const { image } = data || {};
           const imageUrl = image?.url || '';
           const imageAlt = image?.alt || 'Imagen sin descripción';
 
-          return <CardPostImage url={url} tag={imageUrl} alt={imageAlt} transition:name={imageAlt} />;
+          return <CardPostImage url={`/career/${slug}`} tag={imageUrl} alt={imageAlt} transition:name={imageAlt} />;
         })
       }
     </ul>
