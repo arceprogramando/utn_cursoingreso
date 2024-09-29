@@ -3,14 +3,14 @@ import Navigation from './Navigation.astro';
 import { Icon } from 'astro-icon/components';
 ---
 
-<header class="sticky top-0 right-0 md:static z-50 md:block py-2 mb-1 bg-white shadow-md">
-  <nav class="flex justify-around md:justify-between items-center max-w-3xl mx-auto m-4">
+<header class="flex flex-col gap-4 py-2 mb-1 bg-white shadow-md overflow-hidden">
+  <nav class="flex flex-col gap-8 flex-wrap md:flex-row justify-around md:justify-between items-center max-w-3xl mx-auto m-4">
     <a href="/">
       <Icon
         name="utncudi"
         width={100}
         height={40}
-        class="hover:underline font-bold uppercase hover:text-green-900"
+        class="hover:underline md:font-bold uppercase hover:text-green-900"
         title="Logo Universidad Tecnológica Nacional"
         aria-label="Logo Universidad Tecnológica Nacional"
       />
