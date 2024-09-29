@@ -26,7 +26,8 @@ const pageTitle = 'Carrera'; // Cambié el nombre de la variable para evitar con
           const imageUrl = image?.url || '';
           const imageAlt = image?.alt || 'Imagen sin descripción';
 
-          return <CardPostImage url={`/career/${slug}`} tag={imageUrl} alt={imageAlt} transition:name={imageAlt} />;
+          return <CardPostImage url={`/career/${slug}`} tag={imageUrl} alt={imageAlt} transition:name={imageUrl} />;
+          <p>{alt}</p>;
         })
       }
     </ul>

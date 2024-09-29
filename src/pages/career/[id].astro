@@ -24,7 +24,7 @@ export const prerender = true;
 
 <BaseLayout title={title}>
   <div class="flex justify-around border-b-2 mb-8">
-    <Image src={image.url} width={175} height={75} class="m-2 w-36 md:w-52" alt={image.alt} title={`Imagen de ${title}`} transition:name={title} />
+    <Image src={image.url} width={175} height={75} class="m-2 w-36 md:w-52" alt={image.alt} title={`Imagen de ${title}`} transition:name={image.url} />
     <div class="flex flex-col justify-around p-4 md:items-center">
       <div class="flex flex-col gap-2">
         <div class="flex md:gap-8 justify-around">
