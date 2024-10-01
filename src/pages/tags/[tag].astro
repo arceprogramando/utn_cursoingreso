@@ -1,29 +1,27 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CardPostImage from '../../components/CardPostImage.astro';
-
-import type { Post } from '../../types/post';
+import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const matchedCareerPosts = import.meta.glob('../career/*.mdx', { eager: true });
+  const career = await getCollection('career');
 
-  const careerPosts = Object.values(matchedCareerPosts) as Post[];
+  if (!career || career.length === 0) {
+    return [];
+  }
 
-  const allPosts = [ ...careerPosts];
-
-  const allTags = Array.from(new Set(allPosts.flatMap((post) => post.frontmatter?.tags || [])));
+  const allPosts = career;
+  const allTags = Array.from(new Set(allPosts.flatMap((post) => post.data.tags || [])));
 
   return allTags.map((tag) => {
-    const filteredCareerPosts = careerPosts.filter((post) => post.frontmatter?.tags?.includes(tag));
-
-    const combinedPosts = [ ...filteredCareerPosts];
+    const filteredCareerPosts = career.filter((post) => post.data.tags?.includes(tag));
 
     return {
       params: { tag },
       props: {
-        posts: combinedPosts.map((post) => ({
+        posts: filteredCareerPosts.map((post) => ({
           ...post,
-          image: post.frontmatter?.image,
+          image: post.data.image, // Asegúrate que esto esté definido
         })),
       },
     };
@@ -38,11 +36,11 @@ const { posts } = Astro.props;
   <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
     {
       posts.map((post) => {
-        const { url } = post;
-        const imageUrl = post.frontmatter?.image?.url || '';
-        const imageAlt = post.frontmatter?.image?.alt || '';
+        const url = post.slug; // Aquí podría estar el error si 'url' no está definido
+        const imageUrl = post.data?.image?.url || ''; // Acceso seguro a image.url
+        const imageAlt = post.data?.image?.alt || ''; // Acceso seguro a image.alt
 
-        return <CardPostImage url={url} tag={imageUrl} alt={imageAlt} />;
+        return <CardPostImage url={`/career/${url}`} tag={imageUrl} alt={imageAlt} />;
       })
     }
   </ul>
