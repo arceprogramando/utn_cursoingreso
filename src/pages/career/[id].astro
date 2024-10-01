@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 
 const { career } = Astro.props;
 const { data, slug } = career;
-const { image, title } = data;
+const { image, title, totalTimeClass, totalExam, totalTime, description, professor, downloadUrl } = data;
 
 const { Content } = await render(career);
 
@@ -40,34 +40,34 @@ export const prerender = true;
         <div class="flex md:gap-8 justify-around">
           <p class="font-semibold text-xs md:text-base px-2 text-black text-center shadow-md">
             Cursada:
-            <span class="block uppercase">{data.totalTimeClass} hs</span>
+            <span class="block uppercase">{totalTimeClass} hs</span>
           </p>
           <p class="font-semibold text-xs md:text-base px-2 text-black text-center shadow-md">
-            Examen: <span class="block uppercase">{data.totalExam} hs</span>
+            Examen: <span class="block uppercase">{totalExam} hs</span>
           </p>
         </div>
         <p class="font-semibold text-xs md:text-base text-black text-center shadow-md">
-          Total: <span class="block uppercase">{data.totalTime} hs</span>
+          Total: <span class="block uppercase">{totalTime} hs</span>
         </p>
       </div>
 
       <div>
-        <p class="max-w-40 md:max-w-80"><em>{data.description}</em></p>
+        <p class="max-w-40 md:max-w-80"><em>{description}</em></p>
       </div>
 
       {
-        data.professor && (
+        professor && (
           <div>
-            <p class="font-bold">Profesor/a: {data.professor}</p>
+            <p class="font-bold">Profesor/a: {professor}</p>
           </div>
         )
       }
 
       {
-        data.downloadUrl && (
+        downloadUrl && (
           <div class="flex hover:bg-blue-100 text-center ">
             <a
-              href={data.downloadUrl}
+              href={downloadUrl}
               download={`${title.replace(/ /g, '_')}.pdf`}
               class="bg-black hover:bg-zinc-800 text-white hover:text-zinc-200 max-w-40 p-2"
             >
