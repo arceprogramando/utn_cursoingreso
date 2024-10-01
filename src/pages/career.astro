@@ -34,9 +34,8 @@ const sectionTitles = [
                 const imageAlt = image?.alt || 'Imagen sin descripción';
 
                 return (
-                  <li >
+
                     <CardPostImage url={`/career/${slug}`} tag={imageUrl} alt={imageAlt} transition:name={imageUrl} />
-                  </li>
                 );
               })}
             </>
