@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 
 const { career } = Astro.props;
 const { data, slug } = career;
-const { image, title, totalTimeClass, totalExam, totalTime, description, professor, downloadUrl, pubDate, author } = data;
+const { image, title, totalTimeClass, totalExam, totalTime, description, professor, downloadUrl, pubDate, author, tags } = data;
 
 const { Content } = await render(career);
 
@@ -93,7 +93,7 @@ export const prerender = true;
       </Prose>
     </div>
 
-    <!-- <ul class="flex flex-wrap gap-3 items-center justify-center text-center pt-4">
+    <ul class="flex flex-wrap gap-3 items-center justify-center text-center pt-4">
       {
         tags.map((tag) => (
           <li class="px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
@@ -103,6 +103,6 @@ export const prerender = true;
           </li>
         ))
       }
-    </ul> -->
+    </ul>
   </div>
 </BaseLayout>
