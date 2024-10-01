@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 
 const { career } = Astro.props;
 const { data, slug } = career;
-const { image, title, totalTimeClass, totalExam, totalTime, description, professor, downloadUrl } = data;
+const { image, title, totalTimeClass, totalExam, totalTime, description, professor, downloadUrl, pubDate, author } = data;
 
 const { Content } = await render(career);
 
@@ -82,9 +82,9 @@ export const prerender = true;
   <div class="flex-col md:p-2 md:max-w-3xl mx-auto gap-4">
     <div class="flex gap-4 pl-2 md:p-0">
       <p class="font-bold">
-        {new Date(data.pubDate).toLocaleDateString('es-AR')}
+        {new Date(pubDate).toLocaleDateString('es-AR')}
       </p>
-      <p class="font-light">Escrito por: {data.author}</p>
+      <p class="font-light">Escrito por: {author}</p>
     </div>
 
     <div class="p-2">
