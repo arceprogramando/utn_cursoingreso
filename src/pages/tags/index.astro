@@ -1,6 +1,21 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getStaticPaths } from '../../components/utils/getTags';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const matchedCareerPosts = await getCollection('career');
+  const careerPosts = Object.values(matchedCareerPosts);
+
+  const allPosts = [...careerPosts];
+
+  const allTags = Array.from(new Set(allPosts.flatMap((post) => post.data?.tags || [])));
+
+  allTags.sort((a, b) => a.localeCompare(b));
+
+  return {
+    allTags
+  };
+}
 
 const { allTags } = await getStaticPaths();
 
@@ -12,7 +27,7 @@ const title = 'Índice de Tags';
     {
       allTags.length > 0 ? (
         allTags.map((tag) => (
-          <p class="px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
+          <p  class="px-2 md:px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
             <a href={`/tags/${tag}`} title={`Ver elementos con el tag ${tag}`}>
               {tag}
             </a>

@@ -5,10 +5,8 @@ import { getCollection } from 'astro:content';
 
 const careerEntries = await getCollection('career');
 
-// Ordenamos los elementos por el valor de 'order'
 careerEntries.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
 
-// Definimos los títulos de las secciones
 const sectionTitles = [
   { title: 'Curso de ingreso', minOrder: 0, maxOrder: 2 },
   { title: 'Primer cuatrimestre', minOrder: 3, maxOrder: 6 },

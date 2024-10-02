@@ -21,7 +21,7 @@ export async function getStaticPaths() {
       props: {
         posts: filteredCareerPosts.map((post) => ({
           ...post,
-          image: post.data.image, // Asegúrate que esto esté definido
+          image: post.data.image,
         })),
       },
     };
@@ -36,9 +36,9 @@ const { posts } = Astro.props;
   <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
     {
       posts.map((post) => {
-        const url = post.slug; // Aquí podría estar el error si 'url' no está definido
-        const imageUrl = post.data?.image?.url || ''; // Acceso seguro a image.url
-        const imageAlt = post.data?.image?.alt || ''; // Acceso seguro a image.alt
+        const url = post.slug;
+        const imageUrl = post.data?.image?.url || '';
+        const imageAlt = post.data?.image?.alt || '';
 
         return <CardPostImage url={`/career/${url}`} tag={imageUrl} alt={imageAlt} />;
       })
