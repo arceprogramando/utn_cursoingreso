@@ -1,0 +1,16 @@
+---
+import type { Link } from '../../data/layouts/links';
+const { href, title } = Astro.props as Link;
+---
+
+<a
+  href={href}
+  class="buttons p-1 px-2 block relative max-w-48 border bg-black border-[#24365a] z-[99] text-white border-solid uppercase text-sm font-bold leading-7"
+>
+  {title}
+</a>
+<div
+  class="absolute border border-black transform origin-top-right transition-all duration-300 -top-1 right-1 w-full h-full group-hover:top-0 group-hover:right-0"
+>
+</div>
+
