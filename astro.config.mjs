@@ -11,28 +11,49 @@ export default defineConfig({
     preact(),
     tailwind(),
     sitemap({
-  filter: (page) => {
-    const excludedPages = [
-      'https://utn-cursoingreso.vercel.app/tags/apuntes/',
-      'https://utn-cursoingreso.vercel.app/tags/arquitectura%20y%20sistemas%20operativos/',
-      'https://utn-cursoingreso.vercel.app/tags/Base%20De%20Datos/',
-      'https://utn-cursoingreso.vercel.app/tags/Estad%C3%ADstica/',
-      'https://utn-cursoingreso.vercel.app/tags/Ingles/',
-      'https://utn-cursoingreso.vercel.app/tags/lectura%20comprensiva/',
-      'https://utn-cursoingreso.vercel.app/tags/lenguaje%20c/',
-      'https://utn-cursoingreso.vercel.app/tags/Lenguaje%20Csharp/',
-      'https://utn-cursoingreso.vercel.app/tags/matematica/',
-      'https://utn-cursoingreso.vercel.app/tags/organizacion%20Empresarial/',
-      'https://utn-cursoingreso.vercel.app/tags/Primer%20Cuatrimestre/',
-      'https://utn-cursoingreso.vercel.app/tags/Probabilidad/',
-      'https://utn-cursoingreso.vercel.app/tags/programacion/',
-      'https://utn-cursoingreso.vercel.app/tags/python/',
-      'https://utn-cursoingreso.vercel.app/tags/Segundo%20Cuatrimestre/',
-    ];
-    const isExcluded = excludedPages.some((excluded) => page === excluded);
-    return !isExcluded;
-  },
-}),
+      serialize(item) {
+        const excludedPages = [
+          '/tags/',
+          '/tags/apuntes/',
+          '/tags/arquitectura y sistemas operativos/',
+          '/tags/Base De Datos/',
+          '/tags/Estadística/',
+          '/tags/Ingles/',
+          '/tags/lectura comprensiva/',
+          '/tags/lenguaje c/',
+          '/tags/Lenguaje Csharp/',
+          '/tags/matematica/',
+          '/tags/organizacion Empresarial/',
+          '/tags/Primer Cuatrimestre/',
+          '/tags/Probabilidad/',
+          '/tags/programacion/',
+          '/tags/python/',
+          '/tags/Segundo Cuatrimestre/',
+        ];
+
+        if (excludedPages.some(page => item.url.includes(page))) {
+          return undefined;
+        }
+
+        if (item.url === 'https://utn-cursoingreso.vercel.app/') {
+          item.changefreq = 'weekly';
+          item.priority = 1;
+        } else if (item.url === 'https://utn-cursoingreso.vercel.app/career/') {
+          item.changefreq = 'weekly';
+          item.priority = 0.9;
+        } else if (item.url === 'https://utn-cursoingreso.vercel.app/career/probabilidadyestadistica/') {
+          item.changefreq = 'monthly';
+          item.priority = 0.8;
+        } else if (/\/career\//.test(item.url)) {
+          item.changefreq = 'weekly';
+          item.priority = 0.5;
+        } else {
+          item.priority = 0.5;
+        }
+
+        return item;
+      },
+    }),
     icon(),
     mdx(),
   ],
