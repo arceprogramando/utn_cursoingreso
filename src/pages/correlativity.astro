@@ -2,131 +2,68 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import type { Correlativity } from '../types/correlativity';
 const title = 'Correlatividades';
+const subjects = [
+  { id: 0, name: 'Programación (Ingreso)', prerequisites: '-', passed: 'Aprobada ✅', bgColor: 'bg-green-300' },
+  { id: 0, name: 'Matemática Inicial (Ingreso)', prerequisites: '-', passed: 'Aprobada ✅', bgColor: 'bg-green-300' },
+  { id: 0, name: 'Lectura Comprensiva (Ingreso)', prerequisites: '-', passed: 'Aprobada ✅', bgColor: 'bg-green-300' },
+  { id: 1, name: 'Programación I', prerequisites: '-', passed: 'Aprobada ✅', bgColor: 'bg-green-300' },
+  { id: 2, name: 'Arquitectura y Sistemas operativos', prerequisites: '-', passed: 'Aprobada ✅', bgColor: 'bg-green-300' },
+  { id: 3, name: 'Matemática', prerequisites: '-', passed: 'Aprobada ✅', bgColor: 'bg-green-300' },
+  { id: 4, name: 'Organización empresarial', prerequisites: '-', passed: 'Aprobada ✅', bgColor: 'bg-green-300' },
+  { id: 5, name: 'Programación II', prerequisites: '1, 2', passed: '', bgColor: 'bg-yellow-300' },
+  { id: 6, name: 'Probabilidad y Estadística', prerequisites: '3', passed: '', bgColor: 'bg-yellow-300' },
+  { id: 7, name: 'Base de Datos I', prerequisites: '1, 3', passed: '', bgColor: 'bg-yellow-300' },
+  { id: 8, name: 'Inglés I', prerequisites: '-', passed: '', bgColor: 'bg-yellow-300' },
+  { id: 9, name: 'Programación III', prerequisites: '5, 7', passed: '', bgColor: '' },
+  { id: 10, name: 'Base de Datos II', prerequisites: '7', passed: '', bgColor: '' },
+  { id: 11, name: 'Metodología de Sistemas I', prerequisites: '5, 7', passed: '', bgColor: '' },
+  { id: 12, name: 'Inglés II', prerequisites: '8', passed: '', bgColor: '' },
+  { id: 13, name: 'Programación IV', prerequisites: '9, 10, 11', passed: '', bgColor: '' },
+  { id: 14, name: 'Metodología de Sistemas II', prerequisites: '11', passed: '', bgColor: '' },
+  { id: 15, name: 'Introducción al análisis de datos', prerequisites: '10', passed: '', bgColor: '' },
+  { id: 16, name: 'Legislación', prerequisites: '7', passed: '', bgColor: '' },
+  { id: 17, name: 'Gestión de desarrollo de software', prerequisites: '9, 10', passed: '', bgColor: '' },
+];
 ---
 
 <BaseLayout title={`${title}`}>
-  <div class="flex flex-col justify-center items-center container mx-auto text-center p-2">
+  <div class="flex flex-col gap-6 p-4 rounded-lg max-w-4xl mx-auto text-gray-700">
+    <p class="text-lg font-semibold leading-relaxed">
+      Este componente muestra las correlatividades de las materias en la <strong>Tecnicatura Universitaria en Programación</strong>. Cada materia en
+      la tabla se organiza con información sobre su número de identificación, nombre, correlativas necesarias para cursar, y el estado de aprobación.
+    </p>
+    <p class="text-lg leading-relaxed">
+      Las materias aprobadas se destacan en <span class="text-green-600 font-bold">color verde</span>, mientras que las que están en curso o
+      pendientes aparecen en <span class="text-yellow-500 font-bold">color amarillo</span>. Esto proporciona una visión clara del progreso académico
+      de los estudiantes y las materias que aún faltan por cursar o aprobar.
+    </p>
+  </div>
+
+  <div class="flex flex-col justify-center items-center container mx-auto text-center p-2 overflow-x-scroll md:overflow-hidden">
     <table class="min-w-full divide-y divide-gray-200 shadow border-b border-gray-200 sm:rounded-lg">
       <thead class="bg-gray-50">
         <tr class="[&>*]:w-4">
-          <th scope="col" class="md:px-6 md:py-3 text-left text-xs md:font-medium text-gray-500 uppercase md:tracking-wider"> Nº </th>
-          <th scope="col" class="md:px-6 md:py-3 text-left text-xs md:font-medium text-gray-500 uppercase md:tracking-wider md:w-auto">
+          <th scope="col" class="md:px-6 md:py-3 text-center text-xs md:font-medium text-gray-500 uppercase md:tracking-wider"> Nº </th>
+          <th scope="col" class="md:px-6 md:py-3 text-center text-xs md:font-medium text-gray-500 uppercase md:tracking-wider md:w-auto">
             ASIGNATURA
           </th>
-          <th scope="col" class="md:px-6 md:py-3 text-left text-xs md:font-medium text-gray-500 uppercase md:tracking-wider">
-            PARA CURSAR Y RENDIR
+          <th scope="col" class="md:px-6 md:py-3 text-center text-xs md:font-medium text-gray-500 uppercase md:tracking-wider">
+            NECESARIAS CURSADAS
           </th>
-          <th scope="col" class="md:px-6 md:py-3 text-left text-xs md:font-medium text-gray-500 uppercase md:tracking-wider"> Cursadas </th>
-          <th scope="col" class="md:px-6 md:py-3 text-left text-xs md:font-medium text-gray-500 uppercase md:tracking-wider"> Aprobadas </th>
+          <th scope="col" class="md:px-6 md:py-3 text-center text-xs md:font-medium text-gray-500 uppercase md:tracking-wider"> Aprobadas </th>
         </tr>
       </thead>
       <tbody class="bg-white divide-y divide-gray-200 text-xs">
-        <tr>
-          <td class="bg-green-300">1</td>
-          <td class="bg-green-300">Programación I</td>
-          <td class="bg-green-300">-</td>
-          <td class="bg-green-300">Cursada </td>
-          <td class="bg-green-300">Aprobada ✅ </td>
-        </tr>
-        <tr class="[&>*]:bg-green-300">
-          <td>2</td>
-          <td>Arquitectura y Sistemas operativos</td>
-          <td>-</td>
-          <td>Cursada </td>
-          <td>Aprobada ✅ </td>
-        </tr>
-        <tr class="[&>*]:bg-green-300">
-          <td>3</td>
-          <td>Matemática</td>
-          <td>-</td>
-          <td>Cursada </td>
-          <td>Aprobada ✅ </td>
-        </tr>
-        <tr class="[&>*]:bg-green-300">
-          <td>4</td>
-          <td>Organización empresarial</td>
-          <td>-</td>
-          <td>Cursada </td>
-          <td>Aprobada ✅ </td>
-        </tr>
-        <tr class="[&>*]:bg-yellow-300">
-          <td>5</td>
-          <td>Programación II</td>
-          <td>1, 2</td>
-          <td>-</td>
-        </tr>
-        <tr class="[&>*]:bg-yellow-300">
-          <td>6</td>
-          <td>Probabilidad y Estadística</td>
-          <td>3</td>
-          <td>-</td>
-        </tr>
-        <tr class="[&>*]:bg-yellow-300">
-          <td>7</td>
-          <td>Base de Datos I</td>
-          <td>1, 3</td>
-          <td>-</td>
-        </tr>
-        <tr class="[&>*]:bg-yellow-300">
-          <td>8</td>
-          <td>Inglés I</td>
-          <td>-</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>Programación III</td>
-          <td>5, 7</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>Base de Datos II</td>
-          <td>7</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>Metodología de Sistemas I</td>
-          <td>5, 7</td>
-          <td>1, 4</td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>Inglés II</td>
-          <td>8</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td>Programación IV</td>
-          <td>9, 10, 11</td>
-          <td>5, 7</td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td>Metodología de Sistemas II</td>
-          <td>11</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td>Introducción al análisis de datos</td>
-          <td>10</td>
-          <td>6, 7</td>
-        </tr>
-        <tr>
-          <td>16</td>
-          <td>Legislación</td>
-          <td>7</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>17</td>
-          <td>Gestión de desarrollo de software</td>
-          <td>9, 10</td>
-          <td>5, 7</td>
-        </tr>
+        {
+          subjects.map((subject) => (
+            <tr class={`${subject.bgColor} [&>*]:py-3 [&>*]:md:p-2`}>
+              <td>{subject.id}</td>
+              <td>{subject.name}</td>
+              <td>{subject.prerequisites}</td>
+              <td>{subject.passed}</td>
+            </tr>
+          ))
+        }
       </tbody>
     </table>
   </div>
