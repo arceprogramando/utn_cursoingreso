@@ -13,13 +13,17 @@ export async function getStaticPaths() {
   allTags.sort((a, b) => a.localeCompare(b));
 
   return {
-    allTags
+    allTags,
   };
 }
 
 const { allTags } = await getStaticPaths();
 
 const title = 'Índice de Tags';
+
+function addSpaceBeforeSecondUpperCase(str: string) {
+  return str.replace(/(?!^)([A-Z])/g, ' $1').trim();
+}
 ---
 
 <BaseLayout title={`${title}`}>
@@ -27,9 +31,9 @@ const title = 'Índice de Tags';
     {
       allTags.length > 0 ? (
         allTags.map((tag) => (
-          <p  class="px-2 md:px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
+          <p class="px-2 md:px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
             <a href={`/tags/${tag}`} title={`Ver elementos con el tag ${tag}`}>
-              {tag}
+              {addSpaceBeforeSecondUpperCase(tag)}
             </a>
           </p>
         ))

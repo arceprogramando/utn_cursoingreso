@@ -30,9 +30,13 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+
+function addSpaceBeforeSecondUpperCase(str: string) {
+  return str.replace(/(?!^)([A-Z])/g, ' $1').trim();
+}
 ---
 
-<BaseLayout title={tag}>
+<BaseLayout title={addSpaceBeforeSecondUpperCase(tag)}>
   <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
     {
       posts.map((post) => {

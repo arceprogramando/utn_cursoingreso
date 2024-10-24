@@ -20,9 +20,13 @@ const { image, title, totalTimeClass, totalExam, totalTime, description, profess
 const { Content } = await render(career);
 
 export const prerender = true;
+
+function addSpaceBeforeSecondUpperCase(str: string) {
+  return str.replace(/(?!^)([A-Z])/g, ' $1').trim();
+}
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={addSpaceBeforeSecondUpperCase(title)}>
   <a href="/career" class="hover:underline opacity-70">← Volver atrás</a>
 
   <div class="flex justify-around border-b-2 mb-8">
@@ -98,7 +102,7 @@ export const prerender = true;
         tags.map((tag) => (
           <li class="px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
             <a href={`/tags/${tag}`} title={`Ver todos los contenidos con el tag ${tag}`} aria-label={tag}>
-              {tag}
+              {addSpaceBeforeSecondUpperCase(tag)}
             </a>
           </li>
         ))
