@@ -1,31 +1,45 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
 const title = 'Centro Universitario de Innovación';
 import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import SideMenu from '../components/layout/SideMenu.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout title=`${title}`>
-  <main class="flex flex-col items-center justify-center relative w-full h-full md:h-auto">
+<Layout title={`${title}`}>
+  <Header />
+  <SideMenu />
+
+  <!-- <Image
+    src="/trabajoengrupo.jpeg"
+    alt="trabajoengrupo"
+    decoding="async"
+    width={1200}
+    height={1200}
+    densities={[1.5, 2]}
+    class="w-full h-lvh object-cover"
+  /> -->
+  <main class="z-10 flex flex-col items-center justify-center w-full h-full md:h-auto md:mt-30 mt-20">
     <div
-      class="flex flex-col md:flex-row justify-center items-center bg-white bg-opacity-90 p-8 rounded-md shadow-lg space-y-6 md:space-y-0 md:space-x-10"
+      class="flex flex-col md:flex-row justify-center items-center bg-white bg-opacity-40 p-8 rounded-md shadow-lg space-y-6 md:space-y-0 md:space-x-10"
     >
-      <div class="text-center md:text-left max-w-sm">
-        <h3 class="font-bold text-lg md:text-xl p-2">Infórmate sobre la Tecnicatura Universitaria en Programación.</h3>
-        <p class="p-2">Aprende conceptos básicos teórico-prácticos, lógica de programación, compromiso y habilidades esenciales para el año 2024.</p>
-      </div>
-      <div class="w-full border shadow-xl rounded-xl">
-        <a
-          href="https://www.google.com/maps/place/CUDI.+Centro+Universitario+de+la+Innovaci%C3%B3n.+Gonz%C3%A9lez+Cat%C3%A1n/@-34.7922353,-58.6309352,16.93z/data=!4m6!3m5!1s0x95bcc5925425fb9b:0xb6680e29203b8739!8m2!3d-34.7916041!4d-58.6286761!16s%2Fg%2F11p3f49zt8?hl=es-419&entry=ttu"
-          target="_blank"
-        >
-          <Image
-            src="/cudi.avif"
-            alt="Centro Universitario de Innovación La Matanza"
-            width={600}
-            height={400}
-            class="rounded-xl hover:bg-black transform"
-          />
-        </a>
+      <div class="text-center md:text-left max-w-2xl md:min-w-2xl md:w-2xl flex flex-col gap-20 md:gap-0">
+        <h2 class="font-serif font-semibold text-3xl md:text-4xl text-gray-800 md:text-gray-900 m-2 leading-snug tracking-wide md:text-center">
+          Infórmate sobre la Tecnicatura Universitaria en Programación
+        </h2>
+        <h3 class="font-serif font-semibold text-2xl md:text-3xl text-gray-800 md:text-gray-900 m-2 leading-snug tracking-wide md:text-center">
+          En La Universidad Técnica Nacional
+        </h3>
+
+        <div class="bg-black/90 p-2 rounded-md">
+          <p class="text-white opacity-100 md:text-center l">
+            Esta página web ha sido creada por Felipe Arce. Aunque no constituye apuntes oficiales, se alinea con la currícula de la UTN 2024. Me
+            esfuerzo por mantenerla actualizada y espero que le resulte útil. La web está desarrollada con Astro en su última versión 5.0, utilizando
+            transiciones de vista y aplicando prácticas de modularización. Además, se incorporan ejemplos como KaTeX en los apuntes de matemáticas y
+            probabilidad.
+          </p>
+        </div>
       </div>
     </div>
     <a
@@ -36,4 +50,5 @@ import { Image } from 'astro:assets';
       Descargar Nuevo Plan de Estudio
     </a>
   </main>
-</BaseLayout>
+  <Footer />
+</Layout>
