@@ -6,7 +6,7 @@ image:
   url: '/ApunteProbabilidadYEstadistica.avif'
   alt: 'Probabilidad Y Estadística'
 pubDate: 2024-08-13
-tags: ['Apuntes', 'Matematica', 'Probabilidad', 'Estadística', 'SegundoCuatrimestre']
+tags: ['Apuntes', 'Matematica', 'ProbabilidadYEstadistica', 'SegundoCuatrimestre']
 totalTimeClass: 56
 totalExam: 8
 totalTime: 64
@@ -160,7 +160,7 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 
 **Espacio muestral comprobable** "Todos los sucesos elementales tienen igual probabilidad de ocurrir"
 
-<div class="w-80 md:w-[400px] min-h-80 border bg-blue-400 p-4">
+<div class="w-80 md:w-full min-h-80 border bg-blue-400 p-4">
 
   <h5 class="text-xl font-bold text-center">Definición clásica de probabilidad</h5>
 
@@ -176,7 +176,7 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 
 </div>
 
-<div class="md:min-w-[520px] md:w-[400px] min-h-80 border bg-green-400 p-4">
+<div class="md:min-w-[520px] md:w-full min-h-80 border bg-green-400 p-4">
   <h6 class="text-xl font-bold text-center">Ejemplo</h6>
   
   <p>E4: Se arroja un dado y se observa el número que sale.</p>
@@ -205,21 +205,16 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
     <Latex formula="P(A^c) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} = 0.5" />
   </p>
 
-<p>Para calcular la probabilidad de que no salga un múltiplo de 3:</p>
-<p class="font-bold text-2xl">
-  <Latex formula="P(A^c) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{4}{6} = \frac{2}{3}" />
-</p>
-<p>Para calcular la probabilidad de que salga un número par o impar:</p>
-<p class="font-bold text-2xl">
-  <Latex formula="P(A \cup B) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} + \frac{3}{6} = \frac{6}{6} = 1" />
-</p>
-
-<p class="font-bold text-2xl">
-  <Latex formula="P(A \cap B) = \frac{\text{Casos favorables al suceso par y múltiplo de 3}}{\text{Casos posibles del experimento}} = \frac{1}{6}" />
-</p>
+  <p>Para calcular la probabilidad de que no salga un múltiplo de 3:</p>
+  <p class="font-bold text-2xl">
+  <Latex formula="P(A^c) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} =\frac{4}{6} = \frac{2}{3}" />
+  </p>
+  <p>Para calcular la probabilidad de que salga un número par o impar:</p>
+  <p class="font-bold text-2xl"><Latex formula="P(A \cup B) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} + \frac{3}{6} = \frac{6}{6} = 1" /></p>
+  <p class="font-bold text-2xl"><Latex formula="P(A \cap B) = \frac{\text{Casos favorables al suceso par y múltiplo de 3}}{\text{Casos posibles del experimento}} = \frac{1}{6}" /></p>
 </div>
 
-<div class="w-full md:w-[600px] min-h-80 border bg-blue-100 p-4">
+<div class="w-full md:w-full min-h-80 border bg-blue-100 p-4">
   <h5 class="text-xl font-bold text-center">Axiomas de la probabilidad</h5>
 
   <p>La probabilidad se basa en tres axiomas fundamentales establecidos por el matemático Andrey Kolmogorov:</p>
@@ -245,7 +240,7 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
   </p>
 </div>
 
-<div class="w-full md:w-[600px] min-h-80 border bg-green-100 p-4">
+<div class="w-full md:w-full  min-h-80 border bg-green-100 p-4">
   <h6 class="text-xl font-bold text-center">Ejemplo</h6>
 
   <p>
@@ -259,22 +254,16 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
     <Latex formula="E = \text{Genes que aporta cada padre}" />
   </p>
 
-
-
   <p>
     Supongamos que los genes están representados como:
     <Latex formula="C = \text{gen para ojos castaños}" />
    <Latex formula="A = \text{gen para ojos azules}" />
   </p>
 
-
-
   <p>
     Dado que cada padre puede aportar uno de los dos genes con igual probabilidad, y el gen para ojos castaños (C) es dominante sobre el gen para ojos
     azules (A), tenemos los siguientes posibles pares de genes para el hijo:
   </p>
-
-
 
   <ul class="list-disc pl-5">
     <li>
@@ -327,11 +316,8 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
   </p>
 </div>
 
-<div class="w-full md:w-[600px] min-h-80 border bg-blue-100 p-4">
+<div class="w-full md:w-full min-h-80 border bg-blue-100 p-4">
   <h6 class="text-xl font-bold text-center">Otro Ejemplo</h6>
-
-
-
   <p>
     Una mujer es portadora de hemofilia. Aunque la mujer no tenga la enfermedad, puede transmitirla a los hijos. Suponiendo que es igualmente probable
     que se transmita o no la enfermedad, obtendremos las probabilidades de los siguientes sucesos en tres hijos:
@@ -368,8 +354,6 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
   <p>
     <Latex formula="P(\text{Dos hijos tengan la enfermedad(Suceso B)o (B)}) = \frac{CF}{CP} = \frac{3}{8} = 0.375" />
   </p>
-
-
 
   <p>Donde:</p>
   <p> CF (Casos Favorables) = 3 (las trayectorias SSN, SNS, y NSS corresponden a dos hijos con la enfermedad).</p>
@@ -425,7 +409,7 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 </div>
 
 
-<div class="w-full md:w-[600px] min-h-80 border bg-gray-100 p-4">
+<div class="w-full items-center min-h-80  bg-gray-100 p-4">
   <h6 class="text-xl font-bold text-center mb-4">Ejercicios</h6>
 
   <ol class="list-decimal list-inside space-y-2">
@@ -463,6 +447,16 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
     <p>B = al menos uno de los artículos es defectuoso.</p>
     <p>C = ambos artículos son defectuosos.</p>
 
+    <li>Una bolsa contiene 10 bolas numeradas del 1 al 10. La experiencia consiste en extraer una bola al azar ¿Cuál es el espacio muestral? <br/>Considerando Los siguientes Sucesos:</li>
+    <p>A = obtener un número primo</p>
+    <p>B = obtener un múltiplo de 3</p>
+    <p>Escribe los sucesos A, B, AUB y A∩B</p>
+    <li>Lanzamos tres veces una moneda obteniendo un suceso elemental. Escribe el espacio muestral para el suceso anterior. </li>
+    <ol>
+      <li>¿Cuáles de dichos sucesos componen? : <Latex formula="S = \{\text{la primera vez salió cara}\}" /></li>
+      <li>Escribe otro suceso en el espacio muestral anterior y llámalo <Latex formula="K." /></li>
+      <li>Escribe <Latex formula="S \cup K" /> y <Latex formula="S \cap K" />.</li>
+    </ol>
   </ol>
 </div>
 
@@ -470,7 +464,7 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 
 Se inicia la clase Resolviendo los Ejercicios de la clase anterior
 
-<div class="w-full md:w-[600px] min-h-80 border bg-gray-100 p-4">
+<div class="w-full  min-h-80  p-4">
   <h6 class="text-xl font-bold text-center mb-4">Ejercicios Resueltos</h6>
 
   <ol class="list-decimal list-inside space-y-2">
@@ -482,7 +476,7 @@ Se inicia la clase Resolviendo los Ejercicios de la clase anterior
       </div>
       <li>Se seleccionaron sucesivamente dos artículos de una producción y se clasifica cada uno en NORMAL o DEFECTUOSO.</li>
       <div class="overflow-x-auto">
-        <span><Latex formula="\#E = \{\text{NN}, \text{ND}, \text{DD}, \text{DN}\}" /></span>
+        <span><Latex formula="\#E = \{\text{NN}, \text{ND}, \text{DD}, \text{DN}\}"  /></span>
       </div>
       <li>Se arroja una moneda.</li>
       <div class="overflow-x-auto">
@@ -662,28 +656,15 @@ Se inicia la clase Resolviendo los Ejercicios de la clase anterior
 <div class="w-full md:w-[800px] min-h-80 border bg-gray-100 p-6">
   <h2 class="text-2xl font-bold text-center mb-6">Definición Axiomática de Probabilidad</h2>
 
-
-
-<p class="mb-4">
-  La probabilidad es una medida que cuantifica la certeza o posibilidad de que ocurra un evento. La definición axiomática de probabilidad está basada
-  en tres axiomas fundamentales propuestos por Andrey Kolmogorov. Estos axiomas establecen las propiedades básicas que debe cumplir una función de
-  probabilidad:
-</p>
-<ol class="mb-6">
-  <li>
-    <strong>Axioma de No Negatividad:</strong> Para cualquier evento \( A \), la probabilidad de \( A \) es mayor o igual a 0, es decir:
-    <Latex formula="P(A) \geq 0" />
-  </li>
-  <li>
-    <strong>Axioma de Normalización:</strong> La probabilidad del espacio muestral completo es 1, es decir:
-    <Latex formula="P(\Omega) = 1" />
-  </li>
-  <li>
-    <strong>Axioma de Adición:</strong> Para cualquier par de eventos mutuamente excluyentes \( A \) y \( B \), la probabilidad de la unión de \( A \)
-    y \( B \) es la suma de sus probabilidades, es decir:
-    <Latex formula="P(A \cup B) = P(A) + P(B)" /> si <Latex formula="A \cap B = \emptyset" />
-  </li>
-</ol>
+  <p class="mb-4">
+    La probabilidad es una medida que cuantifica la certeza o posibilidad de que ocurra un evento. La definición axiomática de probabilidad está basadaen tres axiomas fundamentales propuestos por Andrey Kolmogorov. Estos axiomas establecen las propiedades básicas que debe cumplir una función de
+    probabilidad:
+  </p>
+  <ol class="mb-6">
+    <li><strong>Axioma de No Negatividad:</strong> Para cualquier evento \( A \), la probabilidad de \( A \) es mayor o igual a 0, es decir:<Latex formula="P(A) \geq 0" /></li>
+    <li><strong>Axioma de Normalización:</strong> La probabilidad del espacio muestral completo es 1, es decir:<Latex formula="P(\Omega) = 1" /></li>
+    <li><strong>Axioma de Adición:</strong> Para cualquier par de eventos mutuamente excluyentes \( A \) y \( B \), la probabilidad de la unión de \( A \) y \( B \) es la suma de sus probabilidades, es decir:<Latex formula="P(A \cup B) = P(A) + P(B)" /> si <Latex formula="A \cap B = \emptyset" /></li>
+  </ol>
 
 
 
@@ -810,10 +791,14 @@ Esta clase no la pude presenciar ni hay grabaciones solamente un Powerpoint
   <p><Latex formula="1 + 2 + 3 + 4 + 5 = 15"/></p>
 
   <h2 class="text-lg font-semibold">Uso en Fórmulas</h2>
-  <p>En el contexto de la probabilidad, la sumatoria se usa para sumar probabilidades condicionales, esperanzas matemáticas, y otros cálculos que involucran una serie de eventos o valores. Por ejemplo, el Teorema de la Probabilidad Total utiliza la sumatoria para calcular la probabilidad total de un evento <Latex formula="A"/> basado en una partición del espacio muestral:</p>
-  <p><Latex formula="P(A) = \sum_{i=1}^{n} P(A \mid B_i) \cdot P(B_i)"/></p>
-  <p> Aquí, se suman las probabilidades de <Latex formula="A"/> dado cada <Latex formula="B_i" class="overflow-x-hidden"/> multiplicadas por la probabilidad de <Latex formula="B_i"/>, para obtener la probabilidad total de <Latex formula="A"/>.</p>
-  </div>
+  <p>
+    En el contexto de la probabilidad, la sumatoria se usa para sumar probabilidades condicionales, esperanzas matemáticas, y otros cálculos que involucran una serie de eventos o valores. Por ejemplo, el Teorema de la Probabilidad Total utiliza la sumatoria para calcular la probabilidad total de un evento <Latex formula="A"/> basado en una partición del espacio muestral:
+  </p>
+  <p>
+    <Latex formula="P(A) = \sum_{i=1}^{n} P(A \mid B_i) \cdot P(B_i)"/>
+  </p>
+  <p>Aquí se suman las probabilidades de: <Latex formula="A"/> dado cada <Latex formula="B_i"/> multiplicadas por la probabilidad de <Latex formula="B_i" class="overflow-x-hidden"/>, para obtener la probabilidad total de <Latex formula="A"/>.</p>
+</div>
 
   <p class="mb-4">El Teorema de la Probabilidad Total permite calcular la probabilidad de un evento considerando una partición del espacio muestral en eventos
   disjuntos. Si<Latex formula="B_1, B_2, \ldots, B_n" /> son eventos que forman una partición del espacio muestral, entonces:</p>
