@@ -738,7 +738,7 @@ Se inicia la clase Resolviendo los Ejercicios de la clase anterior
 
 Esta clase no la pude presenciar ni hay grabaciones solamente un Powerpoint
 
-<div class="bg-indigo-100 p-6 rounded-lg shadow-md">
+<div class="bg-indigo-100 p-6 rounded-lg shadow-md ">
   <h2 class="text-2xl font-bold mb-4">Teorema de la Probabilidad Total</h2>
   <p>El <strong>Teorema de la Probabilidad Total</strong> es una herramienta que nos permite calcular la probabilidad de un evento cuando dicho evento puede suceder de varias formas distintas, es decir, a través de diferentes "caminos" o "escenarios". En esencia, este teorema nos permite desglosar la probabilidad de un evento en función de probabilidades individuales de escenarios mutuamente excluyentes que cubren todas las posibilidades del evento.</p>
   
@@ -749,6 +749,8 @@ Esta clase no la pude presenciar ni hay grabaciones solamente un Powerpoint
     <li>Queremos calcular la probabilidad de un evento que depende de distintas condiciones.</li>
     <li>Tenemos situaciones o subgrupos que cubren todas las alternativas posibles del evento.</li>
   </ul>
+
+  <img src="/TeoremaDeProbabilidadTotal.avif" alt="Teorema de Probabilidad Total" class="p-0 m-0 max-w-[500px] mx-auto"/>
 </div>
 
 <div class="bg-blue-100 p-6 rounded-lg shadow-md mt-6">
@@ -813,7 +815,265 @@ Esta clase no la pude presenciar ni hay grabaciones solamente un Powerpoint
   <p class="mb-4">
     <Latex formula="P(B_i|A) = \frac{P(A|B_i) \cdot P(B_i)}{\sum_{j=1}^{n} P(A|B_j) \cdot P(B_j)}" />
   </p>
-  <p class="text-sm text-gray-600 mb-6">
-    (Nota: Este tema se abordará en detalle en la Unidad 3).
+  <img src="/TeoremaDeBayes.avif" alt="Teorema de Bayes" class="p-0 m-0 max-w-[500px] mx-auto"/>
+  
+
+  
+</div>
+
+<div class="bg-blue-100 p-6 rounded-lg shadow-md">
+  <h2 class="text-2xl font-bold mb-4">Paso a Paso para Entender el Teorema de Bayes</h2>
+
+  <ol class="list-decimal ml-6">
+    <li>
+      <strong>Concepto de Probabilidades Iniciales:</strong> 
+      Antes de recibir nueva información, tenemos probabilidades iniciales (o a priori) sobre eventos. Por ejemplo, podríamos tener una idea de la prevalencia de una enfermedad en una población.
+    </li>
+    <li>
+      <strong>Nueva Información:</strong> 
+      Recibimos nueva evidencia o información que puede influir en nuestra percepción de la probabilidad del evento. Por ejemplo, un resultado positivo en una prueba médica.
+    </li>
+    <li>
+      <strong>Relación entre Eventos:</strong> 
+      Es crucial entender la relación entre el evento que estamos evaluando y la nueva información. Esto implica conocer:
+      <ul class="list-disc ml-6">
+        <li>La probabilidad de obtener el resultado dado que el evento es cierto (veracidad de la prueba).</li>
+        <li>La probabilidad del resultado dado que el evento es falso (falsedad de la prueba).</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Cálculo de Probabilidades Actualizadas:</strong> 
+      Usamos la información anterior para calcular la probabilidad actualizada del evento usando el Teorema de Bayes. La fórmula es:
+      <p class="my-4 text-xl font-semibold">
+        <Latex formula="P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}"/>
+      </p>
+    </li>
+    <li>
+      <strong>Interpretación de Resultados:</strong> 
+      Analizamos el resultado para tomar decisiones informadas. Por ejemplo, si la probabilidad de tener la enfermedad después de un resultado positivo es alta, podríamos considerar realizar más pruebas o iniciar un tratamiento.
+    </li>
+  </ol>
+</div>
+
+<div class="bg-green-100 p-6 rounded-lg shadow-md mt-6">
+  <h2 class="text-2xl font-bold mb-4">¿Cuándo Usar el Teorema de Bayes en Lugar de la Probabilidad Total?</h2>
+
+  <ul class="list-disc ml-6">
+    <li>
+      <strong>Condiciones de Interés:</strong> 
+      Usar el Teorema de Bayes es más apropiado cuando estamos interesados en <strong>actualizar</strong> una probabilidad en función de nueva información, mientras que el Teorema de la Probabilidad Total se utiliza para calcular probabilidades globales basadas en diferentes escenarios posibles.
+    </li>
+    <li>
+      <strong>Naturaleza de la Información:</strong> 
+      Si tenemos un evento que ocurre bajo condiciones inciertas y queremos adaptar nuestras creencias o probabilidades a la luz de nueva evidencia (por ejemplo, un diagnóstico médico), el Teorema de Bayes es más útil. 
+      El Teorema de la Probabilidad Total es útil cuando se desea calcular la probabilidad de un evento sin necesariamente actualizarla con nueva información.
+    </li>
+    <li>
+      <strong>Escenarios de Aplicación:</strong>
+      <ul class="list-disc ml-6">
+        <li>
+          <strong>Teorema de Bayes:</strong> Usado en medicina, inteligencia artificial y cualquier campo donde la información puede cambiar y se necesita ajustar la probabilidad.
+        </li>
+        <li>
+          <strong>Teorema de la Probabilidad Total:</strong> Usado cuando se quiere tener una visión general de todas las posibilidades y calcular una probabilidad total de un evento.
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+### Clase IV - Unidad 4 - 
+
+Variable Aleatoria: Definición y Clasificación
+
+Definición: Una **variable aleatoria** es una función que asigna valores numéricos a los posibles resultados de un experimento aleatorio. Formalmente, si <Latex formula="S" /> es el espacio muestral de un experimento aleatorio, una variable aleatoria <Latex formula="X" /> es una función que asocia cada elemento <Latex formula="s" /> en <Latex formula="S" /> con un número real, es decir:
+
+<Latex formula="X: S \rightarrow \mathbb{R}" />
+
+Clasificación:
+1. **Variable Aleatoria Discreta**: Puede tomar un número finito o infinito numerable de valores. Ejemplo: el número de veces que sale cara al lanzar una moneda tres veces.
+2. **Variable Aleatoria Continua**: Toma valores dentro de un intervalo continuo de números reales. Ejemplo: la altura de una persona en metros.
+
+Variable Aleatoria Discreta
+
+Una variable aleatoria discreta, <Latex formula="X" />, toma un conjunto contable de valores. Sus funciones asociadas son:
+
+• Función de Probabilidad <Latex formula="P(X = x)" />: Define la probabilidad de que <Latex formula="X" /> tome el valor específico <Latex formula="x" />.
+
+<Latex formula="P(X = x_i) = p_i \, \text{con} \, \sum_{i} p_i = 1" />
+
+• Función de Distribución Acumulada (FDA) <Latex formula="F(x)" />: Indica la probabilidad acumulada hasta un valor <Latex formula="x" />:
+
+<Latex formula="F(x) = P(X \leq x) = \sum_{x_i \leq x} p(x_i)" />
+
+Esperanza y Varianza
+
+La esperanza y la varianza son medidas fundamentales para describir el comportamiento de una variable aleatoria.
+
+• **Esperanza o Valor Esperado** <Latex formula="E(X)" />: Representa el valor promedio esperado de <Latex formula="X" />, definido como:
+
+<Latex formula="E(X) = \sum_{i} x_i \cdot p(x_i)" />
+
+• **Varianza** <Latex formula="\sigma^2" />: Mide la dispersión de los valores de <Latex formula="X" /> respecto a la esperanza. Se define como:
+
+<Latex formula="\sigma^2 = \sum_{i} (x_i - E(X))^2 \cdot p(x_i)" />
+
+Donde <Latex formula="\sigma" /> es la desviación estándar, que es la raíz cuadrada de la varianza:
+
+<Latex formula="\sigma = \sqrt{\sigma^2}" />
+
+actualizada
+
+**Variables Aleatorias**
+
+**Variable Aleatoria: Concepto**  
+Una variable aleatoria es una función que asocia un valor numérico a cada posible resultado de un experimento aleatorio.
+
+**Ejemplo:** Lanzar un dado una vez.  
+Sea la v.a. <Latex formula="X" /> = resultado de la tirada.
+
+1. **¿Cuántos sucesos elementales hay?**  
+   Al lanzar un dado, hay 6 posibles resultados (1, 2, 3, 4, 5, 6). Por lo tanto, hay 6 sucesos elementales.
+
+2. **¿Qué valores puede tomar <Latex formula="X" />?**  
+   La variable aleatoria <Latex formula="X" /> puede tomar los valores <Latex formula="\{1, 2, 3, 4, 5, 6\}" />.
+
+
+Las variables aleatorias se denotan con letras mayúsculas, y sus posibles valores con letras minúsculas. Por ejemplo, si <Latex formula="X" /> es la variable aleatoria asociada a lo que sale al tirar un dado, podemos decir que:
+
+<Latex formula="P(X = x) = \frac{1}{6} \, \forall \, x" />
+
+
+<div class="max-w-2xl mx-auto p-6 bg-white text-black rounded-lg shadow-lg space-y-8">
+  
+  <p>
+    Hasta el momento vimos que el espacio muestral es el conjunto de resultados del experimento aleatorio. Dado el sinfín de experimentos posibles, los resultados pueden ser cosas tan diversas como <Latex formula="{\text{cara}; \text{cruz}}" />, <Latex formula="{1, 2, 3, 4, 5, 6}" />, <Latex formula="{\text{ganar la lotería}, \text{no ganar la lotería}}" />. Es decir, el resultado de un experimento puede ser un número, un valor booleano (si/no), un texto, etc. Una variable aleatoria puede ser numérica, booleana, etc. Pero como con los números podemos medir magnitudes y hacer operaciones, por lo general podemos extraer de ellos mayor cantidad de información. Por eso concentraremos nuestro estudio en experimentos cuyo resultado es un número, es decir, variables aleatorias numéricas.
   </p>
+
+  <div>
+    <h2 class="text-2xl font-bold text-blue-600">Variables Aleatorias Discretas y Continuas</h2>
+    <p>
+      Comparemos el ejemplo del dado, donde llamamos <Latex formula="X" /> a los posibles resultados del experimento, con otro: elegimos una naranja al azar en una verdulería y llamamos <Latex formula="Y" /> al peso de la naranja elegida. Si pensamos en los valores posibles que puede tomar la variable aleatoria <Latex formula="Y" />, no solo son infinitos, sino que entre cualquier valor y el siguiente existen infinitos valores. Así:
+    </p>
+    <p>
+      <span class="font-semibold">La variable aleatoria <Latex formula="X" /> es discreta</span>, mientras que <span class="font-semibold">la variable aleatoria <Latex formula="Y" /> es continua</span>.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-blue-600">Definición de Variables Aleatorias</h2>
+    
+    <div class="space-y-2">
+      <h3 class="font-semibold">Variable aleatoria discreta:</h3>
+      <p>
+        Aquella tal que la cantidad de valores posibles que puede tomar es finita o infinita pero numerable. Dicho de otra forma, si tomamos dos valores posibles cualesquiera, entre ellos habrá una cantidad finita de valores posibles.
+      </p>
+    </div>
+
+    <div class="space-y-2">
+      <h3 class="font-semibold">Variable aleatoria continua:</h3>
+      <p>
+        Aquella tal que la cantidad de valores posibles es infinita y no numerable, como el intervalo de los números reales <Latex formula="R" />. Magnitudes como el tiempo, el peso en kilogramos y la altura son ejemplos típicos de variables continuas.
+      </p>
+    </div>
+  </div>
+  
+</div>
+
+<div class="max-w-2xl mx-auto p-6 bg-white text-black rounded-lg shadow-lg space-y-4">
+  <ol class="space-y-4 list-decimal list-inside">
+    <li>Indique para cada una de las siguientes variables aleatorias si son discretas o continuas. Haga las aclaraciones que considere necesarias.</li>
+      
+      <ol class="space-y-4 list-[lower-alpha] list-inside pl-6">
+        <li><span class="font-semibold">El número que sale al tirar un dado.</span><br/>
+          <span class="font-semibold">Tipo:</span> Discreta.<br/>
+          <span class="font-semibold">Explicación:</span> El dado tiene un número limitado de resultados posibles (1 a 6), lo cual es un conjunto finito de valores aislados.</li>
+        
+        <li><span class="font-semibold">La cantidad de caras que salen al tirar 5 monedas.</span><br/>
+          <span class="font-semibold">Tipo:</span> Discreta.<br/>
+          <span class="font-semibold">Explicación:</span> La cantidad de caras posibles es un número entero que va de 0 a 5, un conjunto numerable y finito de valores.</li>
+
+        <li><span class="font-semibold">La cantidad de accidentes por mes.</span><br/>
+          <span class="font-semibold">Tipo:</span> Discreta.<br/>
+          <span class="font-semibold">Explicación:</span> Los accidentes se cuentan en números enteros (0, 1, 2, ...), sin fraccionarios en este contexto.<br/></li>
+
+        <li><span class="font-semibold">Peso de una naranja.</span><br/>
+          <span class="font-semibold">Tipo:</span> Continua.<br/>
+          <span class="font-semibold">Explicación:</span> El peso puede tomar cualquier valor en un rango, incluyendo decimales, siendo un conjunto infinito y no numerable.<br/></li>
+
+        <li><span class="font-semibold">Diámetro de una arandela.</span><br/>
+          <span class="font-semibold">Tipo:</span> Continua.<br/>
+          <span class="font-semibold">Explicación:</span> El diámetro puede tomar infinitos valores dentro de un rango, formando un conjunto continuo y no numerable.<br/></li>
+
+        <li><span class="font-semibold">El país donde nació una persona.</span><br/>
+          <span class="font-semibold">Tipo:</span> Discreta.<br/>
+          <span class="font-semibold">Explicación:</span> Aunque no es numérica, la variable toma valores de un conjunto finito y numerable de países.<br/></li>
+
+        <li><span class="font-semibold">La edad de una persona.</span> <br/>
+          <span class="font-semibold">Tipo:</span> Continua (si se considera exacta).<br/>
+          <span class="font-semibold">Explicación:</span> La edad, si se mide en fracciones, es un valor continuo, pudiendo tomar cualquier valor dentro de un rango.<br/></li>
+      </ol>
+  </ol>
+</div>
+
+<div class="max-w-2xl mx-auto p-6 bg-white text-black rounded-lg shadow-lg space-y-4">
+    <h2 class="text-2xl font-bold text-blue-600">Distribución de Probabilidad</h2>
+    
+    <p>
+        La <span class="font-semibold">distribución de probabilidad</span> describe cómo se asignan probabilidades a los distintos valores posibles que puede tomar una variable aleatoria. 
+        En el caso más sencillo, cada valor tiene la misma probabilidad de ocurrir, como al lanzar un dado justo, donde cada cara tiene una probabilidad idéntica de aparecer.
+        Sin embargo, en la mayoría de las variables aleatorias, algunos valores pueden ser más probables que otros.
+    </p>
+    
+    <p>
+        El conjunto de todos los valores posibles de una variable, junto con sus probabilidades respectivas, define lo que llamamos su distribución de probabilidad. 
+        Esta distribución es fundamental para entender el comportamiento y las características de la variable aleatoria en diferentes contextos.
+    </p>
+
+    <div class="space-y-2">
+        <h3 class="text-lg font-semibold">Aspectos clave de la distribución de probabilidad:</h3>
+        
+        <ol class="list-decimal list-inside pl-4 space-y-2">
+            <li><span class="font-semibold">No-negatividad:</span> La probabilidad de cada valor debe ser igual o mayor que cero.</li>
+            <li><span class="font-semibold">Suma total de 1:</span> La suma de todas las probabilidades de los valores posibles debe ser igual a 1, porque al realizar el experimento, siempre se obtiene uno de los resultados posibles.</li>
+        </ol>
+    </div>
+
+    <p>
+        La distribución de probabilidad se puede representar de varias formas, dependiendo del tipo de variable aleatoria y el contexto. 
+        Generalmente, se usa una función llamada <span class="font-semibold">función de densidad de probabilidad</span> (en el caso de variables continuas) o una <span class="font-semibold">función de masa de probabilidad</span> (para variables discretas) 
+        para describir de manera matemática cómo se distribuyen las probabilidades entre los valores posibles.
+    </p>
+</div>
+
+<div class="space-y-2">
+      <h3 class="font-semibold">Función de probabilidad:</h3>
+      <p>
+        Esta función le asigna a cada valor posible de la variable aleatoria un número real que consiste en la probabilidad de que ocurra, y por supuesto debe cumplir con las 2 condiciones que enunciamos antes:
+      </p>
+      <ul>
+        <li>a) no puede ser negativa en ningún punto</li>
+        <li>b) la suma de las probabilidades de todos los valores da 1.</li>
+      </ul>
+      <p>
+        Dada una <em>variable aleatoria discreta</em> \( X \), se define su <strong>función de probabilidad</strong> como la función que a cada valor \( x \) le asigna su probabilidad de ocurrencia:
+      </p>
+      <p>
+        <Latex formula="f(x) = P(X = x)" />
+      </p>
+      <p>
+        Si llamamos \( M \) al conjunto de todos los valores que puede tomar \( X \), es evidente que esta función cumple las siguientes propiedades:
+      </p>
+      <ul>
+        <li><Latex formula="0 \leq f(x) \leq 1, \, \forall x" /></li>
+        <li><Latex formula="\sum_{x \in M} f(x) = 1" /></li>
+      </ul>
+
+      <p>Si llamamos \( M \) al conjunto de todos los valores que puede tomar la variable aleatoria \( X \), podemos analizar algunas propiedades fundamentales de la función de probabilidad \( f(x) \). Estas propiedades son esenciales para que \( f(x) \) se considere una función de probabilidad válida.</p>
+
+      <p>1. **Primera propiedad**: <Latex formula="0 \leq f(x) \leq 1, \, \forall x" />
+    Esta propiedad establece que la función de probabilidad \( f(x) \) debe ser siempre mayor o igual a cero y menor o igual a uno para todos los valores \( x \) en \( M \). Esto tiene sentido, ya que las probabilidades no pueden ser negativas ni pueden superar la certeza (que se representa como 1).</p>
+
+      <p>2. **Segunda propiedad**: <Latex formula="\sum_{x \in M} f(x) = 1" />
+    Esta propiedad indica que la suma de las probabilidades de todos los posibles valores que puede tomar \( X \) debe ser igual a 1. Esto es crucial porque significa que, si consideramos todos los eventos posibles, la certeza de que algo ocurra es del 100%. En otras palabras, si sumamos todas las probabilidades de los eventos en el conjunto \( M \), obtenemos la certeza de que uno de esos eventos sucederá.</p>
 </div>
