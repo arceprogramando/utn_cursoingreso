@@ -1,7 +1,7 @@
 export interface Correlativity {
-  number: number;
-  subject: string;
-  coursesRequiredToEnroll: number[] | 'No requiere';
-  coursesRequiredToTakeExam: number[] | 'No requiere';
-  aprovedCourses: boolean;
+  id: number;
+  name: string;
+  prerequisites: string;
+  isPassed: boolean;
+  hours: number;
 }
