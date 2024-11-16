@@ -59,7 +59,7 @@ const subjects = [
         {
           subjects.map((subject) => (
             <tr class={`${subject.bgColor} [&>*]:py-3 [&>*]:md:p-2`}>
-              <td>{subject.id}</td>
+              {subject.id !== 0 ? <td>{subject.id}</td> : <td></td>}
               <td>{subject.name}</td>
               <td>{subject.prerequisites}</td>
               <td>{subject.passed}</td>
