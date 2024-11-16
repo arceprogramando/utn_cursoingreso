@@ -1,0 +1,67 @@
+---
+const title = 'Proyectos UTN';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { Project } from '../types/project';
+
+const projects: Project[] = [
+  {
+    title: 'Tecnicatura Universitaria',
+    description: 'Web hecha para mejorar el acceso a la información de la Tecnicatura Universitaria en Programación.',
+    image: './AnimeLeyendo.avif',
+    link: 'https://utn-cursoingreso.vercel.app/',
+    tags: ['Astro.js', 'TailwindCSS', 'TypeScript'],
+    github: 'https://github.com/arceprogramando/utn_cursoingreso',
+    date: '2024',
+  },
+  {
+    title: 'Registro Profesores',
+    description: 'Aplicacion de escritorio en C# con WPF para registrar profesores y asignarlas a las materias que dictan.',
+    image: './ProyectoUniversidad1.png',
+    tags: ['C#', 'WPF', 'XAML', '.NET'],
+    github: 'https://github.com/r0minaflorencia/Registro-de-profesores',
+    date: '2024',
+  },
+];
+---
+
+<BaseLayout title={title}>
+  <div class="flex flex-col justify-center items-center container mx-auto text-center">
+    <h2 class="text-2xl font-bold">Recopilación de proyectos hechos por los estudiantes de la UTN</h2>
+  </div>
+  <p>Como aportar un proyecto:</p>
+
+  <div class="flex flex-col md:flex-row gap-4 justify-center items-stretch">
+    {
+      projects.map((project) => (
+        <div class="w-full max-w-[250px] bg-zinc-900 text-white rounded-lg shadow-lg overflow-hidden">
+          <div>
+            <div>
+              <img src={project.image} alt={`Imagen de ${project.title}`} class="w-full h-auto min-h-[135px]" />
+            </div>
+            <div class="px-4 pt-4   flex justify-center gap-4 ">
+              {project.link && (
+                <a href={project.link} target="_blank" class="text-blue-500 hover:text-blue-400">
+                  Ver Proyecto
+                </a>
+              )}
+              <a href={project.github} target="_blank" class="text-blue-500 hover:text-blue-400">
+                Ver en GitHub
+              </a>
+            </div>
+            <div class="px-4 py-2">
+              <h1 class="text-1xl font-bold tracking-tight">{project.title}</h1>
+              <p class="text-sm text-gray-400">
+                {project?.description ? (project.description.length > 100 ? `${project.description.slice(0, 100)}...` : project.description) : ''}
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap justify-center gap-2 px-1 py-4">
+            {project.tags.map((tag) => (
+              <span class="bg-zinc-700 text-white py-1 px-3 rounded-full text-xs">{tag}</span>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</BaseLayout>
