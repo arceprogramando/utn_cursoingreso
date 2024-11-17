@@ -1,5 +1,6 @@
 ---
 const title = 'Proyectos UTN';
+import Social from '../components/Social.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import type { Project } from '../types/project';
 
@@ -44,9 +45,7 @@ const projects: Project[] = [
                   Ver Proyecto
                 </a>
               )}
-              <a href={project.github} target="_blank" class="text-blue-500 hover:text-blue-400">
-                Ver en GitHub
-              </a>
+              <Social platform={project.github} red="github" icon="github" alt="Ver en Github" classValues="hover:underline font-bold uppercase hover:text-green-900 text-white" />
             </div>
             <div class="px-4 py-2">
               <h1 class="text-1xl font-bold tracking-tight">{project.title}</h1>

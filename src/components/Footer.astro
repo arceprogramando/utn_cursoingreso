@@ -15,7 +15,13 @@ const socialMedias = [
       {
         socialMedias.map((media) => (
           <li>
-            <Social platform={media.perfil} red={media.red} icon={media.red} alt={media.alt} />
+            <Social
+              platform={media.perfil}
+              red={media.red}
+              icon={media.red}
+              alt={media.alt}
+              classValues="hover:underline font-bold uppercase hover:text-green-900"
+            />
           </li>
         ))
       }
