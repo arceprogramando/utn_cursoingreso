@@ -30,15 +30,20 @@ function addSpaceBeforeSecondUpperCase(str: string) {
   <a href="/career" class="hover:underline opacity-70">← Volver atrás</a>
 
   <div class="flex justify-around border-b-2 mb-8">
-    <Image
-      src={image.url}
-      width={175}
-      height={75}
-      class="m-2 min-w-48 md:w-60"
-      alt={image.alt}
-      title={`Imagen de ${title}`}
-      transition:name={image.url}
-    />
+    {
+      image && image.url && image.alt && (
+        <Image
+          src={image.url}
+          width={175}
+          height={75}
+          class="m-2 min-w-48 md:w-60"
+          alt={image.alt}
+          title={`Imagen de ${title}`}
+          transition:name={image.url}
+        />
+      )
+    }
+
     <div class="flex flex-col justify-around p-2 md:p-4 md:items-center">
       <div class="flex flex-col gap-2">
         <div class="flex md:gap-8 justify-around">
