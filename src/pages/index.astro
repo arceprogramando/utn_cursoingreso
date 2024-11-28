@@ -1,6 +1,6 @@
 ---
 const title = 'Centro Universitario de Innovación';
-// import { Image } from 'astro:assets';
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import SideMenu from '../components/layout/SideMenu.astro';
@@ -11,100 +11,91 @@ import Footer from '../components/Footer.astro';
   <Header />
   <SideMenu />
 
-  <!-- <Image
-    src="/trabajoengrupo.jpeg"
-    alt="trabajoengrupo"
-    decoding="async"
-    width={1200}
-    height={1200}
-    densities={[1.5, 2]}
-    class="w-full h-lvh object-cover"
-  /> -->
-  <main class="z-10 flex flex-col items-center justify-center w-full h-full md:h-auto md:mt-30 mt-20">
-    <div
-      class="flex flex-col md:flex-row justify-center items-center bg-white bg-opacity-40 p-8 rounded-md shadow-lg space-y-6 md:space-y-0 md:space-x-10"
-    >
-      <div class="text-center md:text-left max-w-2xl md:min-w-2xl md:w-2xl flex flex-col gap-20 md:gap-0">
-        <h2 class="font-serif font-semibold text-3xl md:text-4xl text-gray-800 md:text-gray-900 m-2 leading-snug tracking-wide md:text-center">
-          Infórmate sobre la Tecnicatura Universitaria en Programación
-        </h2>
-        <h3 class="font-serif font-semibold text-2xl md:text-3xl text-gray-800 md:text-gray-900 m-2 leading-snug tracking-wide md:text-center">
-          En La Universidad Técnica Nacional
-        </h3>
+  <main class="md:h-auto ">
+    <h2 class="sr-only">
+      Tecnicatura Universitaria en Programación
+    </h2>
+    <Image
+      src="/Portada.avif"
+      alt="Portada de Inscripción a la Tecnicatura Universitaria en Programación"
+      decoding="async"
+      width={1920}
+      height={1080}
+      densities={[1.5, 2]}
+      class="w-full max-w-xl  md:max-w-2xl xl:max-w-5xl mx-auto md:-my-1"
+    />
 
-        <div class="p-6 rounded-lg shadow-lg max-w-4xl mx-auto text-gray-800">
-          <p class="text-lg md:text-center opacity-90 leading-relaxed">
-            Esta página web ha sido creada por <strong class="font-semibold">Felipe Arce</strong>, un estudiante que desea ayudar a aquellos
-            interesados en la <strong class="font-semibold">Tecnicatura Universitaria en Programación</strong> UTN 2025. Aunque no constituye apuntes oficiales,
-            esta web sigue de cerca la currícula oficial de la UTN y se mantiene constantemente actualizada para ser útil a los futuros estudiantes. La
-            web está desarrollada con <strong class="font-semibold">Astro 5.0</strong>, aprovechando las últimas tecnologías web, y emplea prácticas
-            avanzadas de modularización y transiciones de vista para una mejor experiencia de usuario. Además, incluye ejemplos prácticos de <strong
-              class="font-semibold">KaTeX</strong
-            > en los apuntes de <strong class="font-semibold">matemáticas</strong> y <strong class="font-semibold">probabilidad</strong>.
-          </p>
-
-          <h3 class="text-2xl font-semibold text-center mt-6">Periodo de Inscripción para la Tecnicatura Universitaria en Programación</h3>
-          <p class="text-lg md:text-center opacity-90 leading-relaxed mt-4">
-            Si deseas estudiar la <strong class="font-semibold">Tecnicatura Universitaria en Programación</strong> en 2025, debes saber que las <strong
-              class="font-semibold text-yellow-400">inscripciones estarán abiertas del 19 al 30 de noviembre de 2024</strong
-            >. Este curso técnico ofrece una formación integral en desarrollo de software, bases de datos, programación avanzada y más. Puedes obtener
-            más detalles sobre el proceso de inscripción y el examen de admisión en el <a href="https://www.utn.edu.ar" class="text-blue-500"
-              >sitio oficial de la UTN</a
-            >, o consultar la sede más cercana a tu ubicación.
-          </p>
-
-          <h3 class="text-2xl font-semibold text-center mt-6">Materias que Componen la Tecnicatura Universitaria en Programación</h3>
-          <p class="text-lg md:text-center opacity-90 leading-relaxed mt-4">
-            La carrera incluye asignaturas fundamentales como programación en diversos lenguajes, estructuras de datos, bases de datos, sistemas
-            operativos, matemáticas y más. Si deseas conocer el plan de estudios detallado, puedes consultar el <a
-              href="https://www.utn.edu.ar"
-              class="text-blue-500">sitio oficial</a
-            > o contactar con la sede más cercana.
-          </p>
-
-          <h3 class="text-2xl font-semibold text-center mt-6">Detalles del Examen de Admisión a la Tecnicatura Universitaria en Programación</h3>
-          <p class="text-lg md:text-center opacity-90 leading-relaxed mt-4">
-            El examen de admisión evalúa tus conocimientos previos en matemáticas, lógica y fundamentos básicos de programación. Es importante
-            prepararse bien, por lo que te recomendamos revisar los temas clave en el <a href="https://www.utn.edu.ar" class="text-blue-500"
-              >sitio oficial</a
-            > para más detalles sobre el contenido exacto.
-          </p>
-
-          <h3 class="text-2xl font-semibold text-center mt-6">Perfil del Egresado de la Tecnicatura Universitaria en Programación</h3>
-          <p class="text-lg md:text-center opacity-90 leading-relaxed mt-4">
-            El perfil del egresado de la Tecnicatura Universitaria en Programación se caracteriza por su capacidad para desarrollar software,
-            gestionar bases de datos y administrar sistemas tecnológicos. Los graduados están preparados para trabajar en equipos multidisciplinarios
-            y enfrentarse a desafíos en la industria tecnológica.
-          </p>
-
-          <h3 class="text-2xl font-semibold text-center mt-6">Modalidad y Requisitos de la Carrera a Distancia</h3>
-          <p class="text-lg md:text-center opacity-90 leading-relaxed mt-4">
-            Esta carrera tiene modalidad a distancia, lo que ofrece flexibilidad para estudiar desde cualquier lugar. La duración es de
-            aproximadamente tres años y está diseñada para aquellos que buscan una rápida inserción en el mercado laboral en el sector tecnológico.
-          </p>
-
-          <h3 class="text-2xl font-semibold text-center mt-6">Requisitos de Inscripción para la Tecnicatura Universitaria en Programación</h3>
-          <p class="text-lg md:text-center opacity-90 leading-relaxed mt-4">
-            Los requisitos de inscripción incluyen tener el secundario completo y cumplir con los criterios establecidos en el <a
-              href="https://www.utn.edu.ar"
-              class="text-blue-500">sitio oficial</a
-            >. Como estudiante de esta carrera, mi objetivo es asegurarme de que los futuros estudiantes estén mejor informados y preparados para
-            tomar decisiones acertadas al momento de ingresar a la UTN.
-          </p>
-
-          <p class="text-sm text-gray-600 mt-6">
-            ¡No dejes pasar esta oportunidad! Inscríbete y empieza tu camino hacia una exitosa carrera en programación.
-          </p>
-        </div>
-      </div>
-    </div>
     <a
       href="/NuevoPlanDeEstudio2025.pdf"
       download="NuevoPlanDeEstudio2025.pdf"
-      class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded m-8 mx-auto"
+      class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded text-center mx-auto uppercase my-10 block max-w-sm md:max-w-lg"
     >
       Descargar Nuevo Plan de Estudio
     </a>
+
+    <div class="p-6 rounded-lg shadow-lg max-w-4xl mx-auto text-gray-800">
+      <p class="text-lg md:text-center opacity-90 leading-relaxed">
+        Esta página web ha sido creada por <strong class="font-semibold">Felipe Arce</strong>, un estudiante que desea ayudar a aquellos interesados
+        en la <strong class="font-semibold">Tecnicatura Universitaria en Programación</strong> UTN 2025. Aunque no constituye apuntes oficiales, esta web
+        sigue de cerca la currícula oficial de la UTN y se mantiene constantemente actualizada para ser útil a los futuros estudiantes. La web está desarrollada
+        con <strong class="font-semibold">Astro 5.0</strong>, aprovechando las últimas tecnologías web, y emplea prácticas avanzadas de modularización
+        y transiciones de vista para una mejor experiencia de usuario. Además, incluye ejemplos prácticos de <strong class="font-semibold"
+          >KaTeX</strong
+        > en los apuntes de <strong class="font-semibold">matemáticas</strong> y <strong class="font-semibold">probabilidad</strong>.
+      </p>
+
+      <h3 class="text-2xl font-semibold text-center mt-6">Periodo de Inscripción para la Tecnicatura Universitaria en Programación</h3>
+      <p class="text-lg md:text-center opacity-90 leading-relaxed mt-4">
+        Si deseas estudiar la <strong class="font-semibold">Tecnicatura Universitaria en Programación</strong> en 2025, debes saber que las <strong
+          class="font-semibold text-yellow-400">inscripciones estarán abiertas del 19 al 30 de noviembre de 2024</strong
+        >. Este curso técnico ofrece una formación integral en desarrollo de software, bases de datos, programación avanzada y más. Puedes obtener más
+        detalles sobre el proceso de inscripción y el examen de admisión en el <a href="https://www.utn.edu.ar" class="text-blue-500"
+          >sitio oficial de la UTN</a
+        >, o consultar la sede más cercana a tu ubicación.
+      </p>
+
+      <h3 class="text-2xl font-semibold text-center mt-6">Materias que Componen la Tecnicatura Universitaria en Programación</h3>
+      <p class="text-lg md:text-center opacity-90 leading-relaxed mt-4">
+        La carrera incluye asignaturas fundamentales como programación en diversos lenguajes, estructuras de datos, bases de datos, sistemas
+        operativos, matemáticas y más. Si deseas conocer el plan de estudios detallado, puedes consultar el <a
+          href="https://www.utn.edu.ar"
+          class="text-blue-500">sitio oficial</a
+        > o contactar con la sede más cercana.
+      </p>
+
+      <h3 class="text-2xl font-semibold text-center mt-6">Detalles del Examen de Admisión a la Tecnicatura Universitaria en Programación</h3>
+      <p class="text-lg md:text-center opacity-90 leading-relaxed mt-4">
+        El examen de admisión evalúa tus conocimientos previos en matemáticas, lógica y fundamentos básicos de programación. Es importante prepararse
+        bien, por lo que te recomendamos revisar los temas clave en el <a href="https://www.utn.edu.ar" class="text-blue-500">sitio oficial</a> para más
+        detalles sobre el contenido exacto.
+      </p>
+
+      <h3 class="text-2xl font-semibold text-center mt-6">Perfil del Egresado de la Tecnicatura Universitaria en Programación</h3>
+      <p class="text-lg md:text-center opacity-90 leading-relaxed mt-4">
+        El perfil del egresado de la Tecnicatura Universitaria en Programación se caracteriza por su capacidad para desarrollar software, gestionar
+        bases de datos y administrar sistemas tecnológicos. Los graduados están preparados para trabajar en equipos multidisciplinarios y enfrentarse
+        a desafíos en la industria tecnológica.
+      </p>
+
+      <h3 class="text-2xl font-semibold text-center mt-6">Modalidad y Requisitos de la Carrera a Distancia</h3>
+      <p class="text-lg md:text-center opacity-90 leading-relaxed mt-4">
+        Esta carrera tiene modalidad a distancia, lo que ofrece flexibilidad para estudiar desde cualquier lugar. La duración es de aproximadamente
+        tres años y está diseñada para aquellos que buscan una rápida inserción en el mercado laboral en el sector tecnológico.
+      </p>
+
+      <h3 class="text-2xl font-semibold text-center mt-6">Requisitos de Inscripción para la Tecnicatura Universitaria en Programación</h3>
+      <p class="text-lg md:text-center opacity-90 leading-relaxed mt-4">
+        Los requisitos de inscripción incluyen tener el secundario completo y cumplir con los criterios establecidos en el <a
+          href="https://www.utn.edu.ar"
+          class="text-blue-500">sitio oficial</a
+        >. Como estudiante de esta carrera, mi objetivo es asegurarme de que los futuros estudiantes estén mejor informados y preparados para tomar
+        decisiones acertadas al momento de ingresar a la UTN.
+      </p>
+
+      <p class="text-sm text-gray-600 mt-6">
+        ¡No dejes pasar esta oportunidad! Inscríbete y empieza tu camino hacia una exitosa carrera en programación.
+      </p>
+    </div>
   </main>
-  <Footer />
 </Layout>
+<Footer />
