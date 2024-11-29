@@ -64,8 +64,19 @@ try {
                 </div>
               </div>
               {colaborador.contributions && <div class="text-center text-sm text-gray-400">{colaborador.contributions} Contribuciones</div>}
-              <a href={colaborador.html_url} title={`Ir a perfil de ${colaborador.login} en Github`} aria-label={`Ir a perfil de ${colaborador.login} en Github`}>
-                <Icon name="github" width={20} height={20}  />
+              <a
+                href={colaborador.html_url}
+                title={`Ir a perfil de ${colaborador.login} en Github`}
+                aria-label={`Ir a perfil de ${colaborador.login} en Github`}
+              >
+                <Icon
+                  name="github"
+                  width={24}
+                  height={24}
+                  title="github"
+                  aria-label="Ver en github"
+                  class="hover:underline font-bold uppercase hover:text-gray-500 text-white"
+                />
               </a>
             </li>
           ))}
