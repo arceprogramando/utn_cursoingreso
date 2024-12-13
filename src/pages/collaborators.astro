@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import type { Collaborator } from '../types/collaborator';
 
 const title = 'Colaboradores';
-const url = 'https://my-api-mocha-omega.vercel.app/api/contributors';
+const url = 'https://apicollaborator.vercel.app/';
 
 let colaboradores: Collaborator[] = [];
 let errorMessage: string = '';
@@ -34,7 +34,7 @@ try {
       }),
     );
   } else {
-    errorMessage = 'Respuesta de red OK pero respuesta HTTP no OK';
+    errorMessage = 'Respuesta de red OK pero respuesta HTTP no OK, Por favor revise la API';
   }
 } catch (error: unknown) {
   if (error instanceof Error) {
