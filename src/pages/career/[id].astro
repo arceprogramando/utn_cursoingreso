@@ -36,11 +36,11 @@ function addSpaceBeforeSecondUpperCase(str: string) {
           src={image.url}
           width={175}
           height={75}
+          decoding='async'
           class="m-2 min-w-48 md:w-60 rounded-lg"
           alt={image.alt}
           title={`Imagen de ${title}`}
           transition:name={image.url}
-          loading="lazy"
         />
       )
     }
