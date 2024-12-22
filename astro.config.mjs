@@ -29,31 +29,7 @@ export default defineConfig({
   integrations: [
     preact(),
     tailwind(),
-    sitemap({
-      serialize(item) {
-        if (excludedPages.some((page) => item.url.includes(page))) {
-          return undefined;
-        }
-
-        if (item.url === '/') {
-          item.changefreq = 'weekly';
-          item.priority = 1;
-        } else if (item.url === '/career/') {
-          item.changefreq = 'weekly';
-          item.priority = 0.9;
-        } else if (item.url === '/career/programacion2/') {
-          item.changefreq = 'monthly';
-          item.priority = 0.9;
-        } else if (/\/career\//.test(item.url)) {
-          item.changefreq = 'weekly';
-          item.priority = 0.5;
-        } else {
-          item.priority = 0.5;
-        }
-
-        return item;
-      },
-    }),
+    sitemap(),
     icon(),
     mdx(),
   ],
