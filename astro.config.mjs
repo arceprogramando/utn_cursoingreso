@@ -12,24 +12,19 @@ export default defineConfig({
     tailwind(),
     sitemap({
       serialize(item) {
-        if (item.url === '/') {
-          item.changefreq = 'daily';
-          item.lastmod = new Date('2024-12-22');
-          item.priority = 1.0;
-        } else if (item.url === '/career') {
-          item.changefreq = 'daily';
-          item.lastmod = new Date('2024-12-22');
-          item.priority = 0.9;
-        } else if (item.url === '/career/programacion1' || item.url === '/career/programacion2') {
-          item.changefreq = 'weekly';
-          item.lastmod = new Date('2024-12-22');
-          item.priority = 0.8;
-        } else {
-          item.changefreq = 'weekly';
-          item.lastmod = new Date('2024-12-22');
-          item.priority = 0.7;
-        }
-        return item;
+        const today = new Date('2024-12-22').toISOString();
+
+        const indexUrl = /^https?:\/\/[^/]+\/$/.test(item.url) || item.url === '/';
+        const isCareerUrl = /career/.test(item.url) && !/\/career\/programacion(1|2)(\/|$)/.test(item.url);
+        const isCareerProgramationUrl = /\/career\/programacion(1|2)(\/|$)/.test(item.url);
+
+        if (indexUrl) return { ...item, changefreq: 'daily', lastmod: today, priority: 1.0 };
+
+        if (isCareerUrl) return { ...item, changefreq: 'daily', lastmod: today, priority: 0.9 };
+
+        if (isCareerProgramationUrl) return { ...item, changefreq: 'daily', lastmod: today, priority: 0.8 };
+
+        return { ...item, changefreq: 'monthly', lastmod: today, priority: 0.6 };
       },
     }),
     icon(),
