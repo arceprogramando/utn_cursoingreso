@@ -26,15 +26,15 @@ const sectionTitles = [
           return (
             <>
               <h2 class="w-full text-center text-2xl font-bold">{title}</h2>
-              {sectionEntries.map(({ data, slug }) => {
-                const { image } = data || {};
-                const imageUrl = image?.url || '';
-                const imageAlt = image?.alt || 'Imagen sin descripción';
+              <ul>
+                {sectionEntries.map(({ data, slug }) => {
+                  const { image } = data || {};
+                  const imageUrl = image?.url || '';
+                  const imageAlt = image?.alt || 'Imsagen sin descripción';
 
-                return (
-                    <CardPostImage url={`/career/${slug}`} tag={imageUrl} alt={imageAlt} transition:name={imageUrl} />
-                );
-              })}
+                  return <CardPostImage url={`/career/${slug}`} tag={imageUrl} alt={imageAlt} transition:name={imageUrl} />;
+                })}
+              </ul>
             </>
           );
         })
