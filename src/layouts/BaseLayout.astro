@@ -7,18 +7,18 @@ import Layout from './Layout.astro';
 ---
 
 <Layout title={title}>
-  <div class="flex flex-col justify-between ">
-    <div>
-      <Header />
-      <SideMenu />
-      <main class="flex flex-col items-center max-w-5xl bg-opacity-80 mx-auto pb-40  mt-1">
-        <h2 class="text-center max-w-2xl uppercase p-2 text-4xl leading-none md:text-5xl font-bold gradient" transition:animate="slide">{title}</h2>
-        <slot />
-      </main>
-    </div>
+  <div class="flex flex-col justify-around">
+    <Header />
+    <SideMenu />
+    <main class="flex flex-col items-center max-w-5xl bg-opacity-80 mx-auto pb-40">
+      <h2 class="text-center max-w-2xl uppercase my-8 md:my-4 text-4xl leading-none md:text-5xl font-bold gradient" transition:animate="slide">
+        {title}
+      </h2>
+      <slot />
+    </main>
     <Footer />
     <div
-      class=" absolute bottom-0 opacity-60 left-0 right-0 top-[70px] shadow-sm -z-[999] bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"
+      class="absolute bottom-0 opacity-60 left-0 right-0 top-[70px] shadow-sm -z-[999] bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"
     >
     </div>
   </div>
