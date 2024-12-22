@@ -47,15 +47,15 @@ function addSpaceBeforeSecondUpperCase(str: string) {
     <div class="flex flex-col justify-around p-2 md:p-4 md:items-center">
       <div class="flex flex-col gap-2">
         <div class="flex md:gap-8 justify-around">
-          <p class="font-semibold text-xs md:text-base px-2 text-black text-center shadow-md">
+          <p class="font-semibold text-xs md:text-base px-2 text-black text-center">
             Cursada:
             <span class="block uppercase">{totalTimeClass} hs</span>
           </p>
-          <p class="font-semibold text-xs md:text-base px-2 text-black text-center shadow-md">
+          <p class="font-semibold text-xs md:text-base px-2 text-black text-center">
             Examen: <span class="block uppercase">{totalExam} hs</span>
           </p>
         </div>
-        <p class="font-semibold text-xs md:text-base text-black text-center shadow-md">
+        <p class="font-semibold text-xs md:text-base text-black text-center">
           Total: <span class="block uppercase">{totalTime} hs</span>
         </p>
       </div>
@@ -105,7 +105,7 @@ function addSpaceBeforeSecondUpperCase(str: string) {
     <ul class="flex flex-wrap gap-3 items-center justify-center text-center pt-4">
       {
         tags.map((tag) => (
-          <li class="px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
+          <li class="px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full  hover:bg-gray-800 hover:scale-105 transition-transform">
             <a href={`/tags/${tag}`} title={`Ver todos los contenidos con el tag ${tag}`} aria-label={tag}>
               {addSpaceBeforeSecondUpperCase(tag)}
             </a>
