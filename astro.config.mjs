@@ -43,7 +43,7 @@ export default defineConfig({
           item.priority = 0.9;
         } else if (item.url === 'https://utn-cursoingreso.vercel.app/career/programacion2/') {
           item.changefreq = 'monthly';
-          item.priority = 0.8;
+          item.priority = 0.9;
         } else if (/\/career\//.test(item.url)) {
           item.changefreq = 'weekly';
           item.priority = 0.5;
