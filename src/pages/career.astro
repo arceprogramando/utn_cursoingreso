@@ -26,12 +26,20 @@ const sectionTitles = [
             <>
               <h2 class="w-full text-center text-2xl font-bold">{title}</h2>
               <ul class="flex justify-center gap-2 flex-wrap">
-                {sectionEntries.map(({ data, slug }) => {
+                {sectionEntries.map(({ data, slug }, index) => {
                   const { image } = data || {};
                   const imageUrl = image?.url || '';
-                  const imageAlt = image?.alt || 'Imsagen sin descripción';
+                  const imageAlt = image?.alt || 'Imagen sin descripción';
 
-                  return <CardPostImage url={`/career/${slug}`} tag={imageUrl} alt={imageAlt} transition:name={imageUrl} />;
+                  return (
+                    <CardPostImage 
+                      url={`/career/${slug}`} 
+                      tag={imageUrl} 
+                      alt={imageAlt} 
+                      transition:name={imageUrl}
+                      loading={index < 3 ? "eager" : "lazy"} 
+                    />
+                  );
                 })}
               </ul>
             </>
