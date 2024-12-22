@@ -41,7 +41,7 @@ export default defineConfig({
         } else if (item.url === 'https://utn-cursoingreso.vercel.app/career/') {
           item.changefreq = 'weekly';
           item.priority = 0.9;
-        } else if (item.url === 'https://utn-cursoingreso.vercel.app/career/probabilidadyestadistica/') {
+        } else if (item.url === 'https://utn-cursoingreso.vercel.app/career/programacion2/') {
           item.changefreq = 'monthly';
           item.priority = 0.8;
         } else if (/\/career\//.test(item.url)) {
