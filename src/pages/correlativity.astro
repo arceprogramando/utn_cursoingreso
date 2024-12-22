@@ -30,8 +30,6 @@ const subjects: Correlativity[] = [
 ---
 
 <BaseLayout title={`${title}`}>
-
-
   <div class="flex flex-col justify-center items-center container mx-auto text-center p-2 overflow-x-scroll md:overflow-hidden">
     <table class="min-w-full divide-y divide-gray-200 shadow border-b border-gray-200 sm:rounded-lg">
       <thead class="bg-gray-50">
@@ -67,18 +65,15 @@ const subjects: Correlativity[] = [
   </div>
 
   <p class="text-lg font-semibold text-gray-800">
-    Conclusión: Las horas totales de cursada son de
+    Horas Totales:
     <span class="font-bold text-blue-600">
       {subjects.reduce((total, subject) => total + subject.hours, 0)}
     </span>
-    horas. Sin contar las materias de Ingreso.
   </p>
 
   <p class="text-lg font-semibold text-gray-800">
-    Las horas que faltan para completar la Tecnicatura son de
-    <span class="font-bold text-blue-600">
+    Horas Faltantes: <span class="font-bold text-blue-600">
       {subjects.reduce((total, subject) => (subject.isPassed ? total : total + subject.hours), 0)}
     </span>
-    horas.
   </p>
 </BaseLayout>
