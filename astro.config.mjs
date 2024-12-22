@@ -11,9 +11,26 @@ export default defineConfig({
     preact(),
     tailwind(),
     sitemap({
-      changefreq: 'weekly',
-      priority: 0.8,
-      lastmod: new Date().toISOString(),
+      serialize(item) {
+        if (item.url === '/') {
+          item.changefreq = 'daily';
+          item.lastmod = new Date('2024-12-22');
+          item.priority = 1.0;
+        } else if (item.url === '/career') {
+          item.changefreq = 'daily';
+          item.lastmod = new Date('2024-12-22');
+          item.priority = 0.9;
+        } else if (item.url === '/career/programacion1' || item.url === '/career/programacion2') {
+          item.changefreq = 'weekly';
+          item.lastmod = new Date('2024-12-22');
+          item.priority = 0.8;
+        } else {
+          item.changefreq = 'weekly';
+          item.lastmod = new Date('2024-12-22');
+          item.priority = 0.7;
+        }
+        return item;
+      },
     }),
     icon(),
     mdx(),
