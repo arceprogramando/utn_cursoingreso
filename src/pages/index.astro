@@ -1,6 +1,5 @@
 ---
 const title = 'Tecnicatura Universitaria en Programación - UTN 2025';
-import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import SideMenu from '../components/layout/SideMenu.astro';
@@ -15,6 +14,17 @@ import Footer from '../components/Footer.astro';
     <h2 class="text-4xl md:text-5xl font-bold text-center mt-8 md:mt-12">Tecnicatura Universitaria en Programación</h2>
     <h3 class="text-3xl md:text-4xl font-bold text-center mt-4 md:mt-2 text-gray-700">Construí el futuro que soñas.</h3>
 
+    <div class="w-full flex justify-center mt-4">
+      <a
+        href="/NuevoPlanDeEstudio2025.pdf"
+        download="NuevoPlanDeEstudio2025.pdf"
+        class="bg-black hover:bg-zinc-800 text-white hover:text-zinc-200 max-w-80 md:max-w-max p-2"
+        title="Descargar Nuevo Plan de Estudio 2025"
+        aria-label="Descargar Nuevo Plan de Estudio 2025"
+      >
+        Descargar Nuevo Plan de Estudio 2025
+      </a>
+    </div>
     <div class="my-4 md:my-8 max-w-4xl mx-auto text-gray-800 [&>*]:p-2">
       <p class="text-lg md:text-start opacity-90 leading-relaxed">
         Esta página está diseñada para ayudar a interesados en la
@@ -38,15 +48,6 @@ import Footer from '../components/Footer.astro';
 
       <p class="mt-6 text-sm text-gray-600">¡Inscríbete y comienza tu camino hacia una exitosa carrera en programación!</p>
     </div>
-    <a
-      href="/NuevoPlanDeEstudio2025.pdf"
-      download="NuevoPlanDeEstudio2025.pdf"
-      class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded text-center mx-auto uppercase my-10 block max-w-sm md:max-w-lg"
-      title="Descargar Nuevo Plan de Estudio 2025"
-      aria-label="Descargar Nuevo Plan de Estudio 2025"
-    >
-      Descargar Nuevo Plan de Estudio 2025
-    </a>
   </main>
 </Layout>
 <Footer />
