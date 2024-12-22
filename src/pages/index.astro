@@ -11,59 +11,42 @@ import Footer from '../components/Footer.astro';
   <Header />
   <SideMenu />
 
-  <main class="md:h-auto ">
-    <h2 class="sr-only">
-      Tecnicatura Universitaria en Programación
-    </h2>
-    <Image
-      src="/Portada.avif"
-      alt="Portada de Inscripción a la Tecnicatura Universitaria en Programación"
-      aria-label="Portada de Inscripción a la Tecnicatura Universitaria en Programación"
-      title="Portada de Inscripción a la Tecnicatura Universitaria en Programación"
-      decoding="async"
-      width={1920}
-      height={1080}
-      densities={[1.5, 2]}
-      class="w-full max-w-xl  md:max-w-2xl xl:max-w-5xl mx-auto md:-my-1"
-    />
+  <main class="max-w-3xl mx-auto md:h-auto">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mt-8 md:mt-12">Tecnicatura Universitaria en Programación</h2>
+    <h3 class="text-3xl md:text-4xl font-bold text-center mt-4 md:mt-2 text-gray-700">Construí el futuro que soñas.</h3>
 
+    <div class="my-4 md:my-8 max-w-4xl mx-auto text-gray-800 [&>*]:p-2">
+      <p class="text-lg md:text-start opacity-90 leading-relaxed">
+        Esta página está diseñada para ayudar a interesados en la
+        <strong class="font-semibold">Tecnicatura Universitaria en Programación</strong> UTN 2025. Aunque no es oficial, sigue la currícula de la UTN y
+        se actualiza constantemente para brindar apoyo a los estudiantes.
+      </p>
+
+      <p class="text-lg md:text-start opacity-90 leading-relaxed">
+        La carrera abarca materias fundamentales como programación en diferentes niveles, matemáticas, bases de datos, estadística, inglés y más.
+        Además, incluye asignaturas avanzadas como metodología de sistemas, gestión de desarrollo de software y análisis de datos, culminando con un
+        trabajo final integrador.
+      </p>
+
+      <h4 class="text-2xl font-semibold text-start mb-4">Perfil del Egresado</h4>
+      <p class="text-lg md:text-start opacity-90 leading-relaxed">
+        Los egresados de la Tecnicatura Universitaria en Programación están capacitados para desarrollar software en diversos lenguajes, gestionar
+        bases de datos y administrar sistemas operativos. Poseen sólidos conocimientos en matemáticas, estadísticas y metodologías de sistemas, lo que
+        les permite abordar problemas complejos en el análisis de datos y la gestión del desarrollo de software. Además, cuentan con habilidades en
+        trabajo en equipo y liderazgo, preparados para enfrentar desafíos en entornos multidisciplinarios y dinámicos.
+      </p>
+
+      <p class="mt-6 text-sm text-gray-600">¡Inscríbete y comienza tu camino hacia una exitosa carrera en programación!</p>
+    </div>
     <a
       href="/NuevoPlanDeEstudio2025.pdf"
       download="NuevoPlanDeEstudio2025.pdf"
       class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded text-center mx-auto uppercase my-10 block max-w-sm md:max-w-lg"
-      title="Descargar Nuevo Plan de Estudio"
-      aria-label="Descargar Nuevo Plan de Estudio"
+      title="Descargar Nuevo Plan de Estudio 2025"
+      aria-label="Descargar Nuevo Plan de Estudio 2025"
     >
-      Descargar Nuevo Plan de Estudio
+      Descargar Nuevo Plan de Estudio 2025
     </a>
-
-    <div class="p-6 border-2 my-4 md:my-8 max-w-4xl mx-auto text-gray-800">
-      <p class="text-lg md:text-start opacity-90 leading-relaxed">
-        Esta página web ha sido creada por <strong class="font-semibold">Felipe Arce</strong>, un estudiante que desea ayudar a aquellos interesados
-        en la <strong class="font-semibold">Tecnicatura Universitaria en Programación</strong> UTN 2025. Aunque no constituye apuntes oficiales, esta web
-        sigue de cerca la currícula oficial de la UTN y se mantiene constantemente actualizada para ser útil a los futuros estudiantes. La web está desarrollada
-        con <strong class="font-semibold">Astro 5.0</strong>, aprovechando las últimas tecnologías web, y emplea prácticas avanzadas de modularización
-        y transiciones de vista para una mejor experiencia de usuario. Además, incluye ejemplos prácticos de <strong class="font-semibold"
-          >KaTeX</strong
-        > en los apuntes de <strong class="font-semibold">matemáticas</strong> y <strong class="font-semibold">probabilidad</strong>.
-      </p>
-
-      <p class="text-lg md:text-start opacity-90 leading-relaxed mt-4">
-        Las materias que componen a la carrera incluye asignaturas fundamentales como programación en diversos lenguajes, estructuras de datos, bases de datos, sistemas
-        operativos, matemáticas y más
-      </p>
-      
-      <h3 class="text-2xl font-semibold text-start mt-6">Perfil del Egresado:</h3>
-      <p class="text-lg md:text-start opacity-90 leading-relaxed mt-4">
-        El perfil del egresado de la Tecnicatura Universitaria en Programación se caracteriza por su capacidad para desarrollar software, gestionar
-        bases de datos y administrar sistemas tecnológicos. Los graduados están preparados para trabajar en equipos multidisciplinarios y enfrentarse
-        a desafíos en la industria tecnológica.
-      </p>
-
-      <p class="text-sm text-gray-600 mt-6">
-        ¡No dejes pasar esta oportunidad! Inscríbete y empieza tu camino hacia una exitosa carrera en programación.
-      </p>
-    </div>
   </main>
 </Layout>
 <Footer />
