@@ -74,422 +74,247 @@ Concidiendo con la evolución histórica de las bases de datos, estas han utiliz
 - Multidimensionales
 - De objetos
 
-<div class="w-full md:w-[800px] min-h-80    mx-auto my-4 rounded-lg">
-
-  <h4 class="text-2xl font-bold mb-6 text-blue-400 text-center">Base De Datos Estructura Jerárquica</h4>
+<h5 class="text-2xl font-bold mb-6 text-blue-400 text-center">Base De Datos Estructura Jerárquica</h5>
   
-  <p class="text-lg text-gray-700 mb-4">
-    La estructura jerárquica fue usada en las primeras bases de datos. Las relaciones entre registros forman una estructura en árbol. Actualmente, las bases de datos jerárquicas más utilizadas son IMS de IBM y el Registro de Windows en Microsoft.
-  </p>
+La estructura jerárquica fue usada en las primeras bases de datos. Las relaciones entre registros forman una estructura en árbol. Actualmente, las bases de datos jerárquicas más utilizadas son IMS de IBM y el Registro de Windows en Microsoft.
+
+![Base De Datos Estructura Jerárquica](/BaseDeDatosEstructuraJerargica.avif "Imagen de Una Estructura Jerárquica")
+
+##### Base De Datos Con estructura en red
+
+Esta estructura contiene relaciones más complejas que las jerárquicas. Admite relaciones de cada registro con varios que se pueden seguir por distintos caminos.
   
-  <img src="/BaseDeDatosEstructuraJerargica.avif" alt="Base De Datos Estructura Jerargica" title="Imagen de Una Estructura Jerargica" class="max-w-80 md:max-w-[500px] mx-auto" />
-  
-  <h4 class="text-2xl font-bold mb-6 text-blue-400 text-center">Base De Datos Con estructura en red</h4>
+![Base De Datos Estructura De Red](/BaseDeDatosEstructuraDeRed.avif "Imagen de Una Estructura De red")
 
-  <p class="text-lg text-gray-700 mb-4">
-    Esta estructura contiene relaciones más complejas que las jerárquicas. Admite relaciones de cada registro con varios que se pueden seguir por distintos caminos.
-  </p>
+##### Base De Datos Con estructura relacional
 
-<div>
-  <img src="/BaseDeDatosEstructuraDeRed.avif" alt="Base De Datos Estructura De Red" title="Imagen de Una Estructura De red" class="max-w-80 md:max-w-[500px] mx-auto" />
+La **Estructura Relacional** es la más extendida hoy en día. Almacena los datos en **Filas** o **Registros** (**Tuplas**) y **Columnas** o **Campos** (**Atributos**). Estas tablas pueden estar conectadas entre sí por claves comunes.
 
-  <h4 class="text-2xl font-bold mb-6 text-blue-400 text-center">Base De Datos Con estructura relacional</h4>
+<figure>
+  ![Base De Datos Estructura Relacional](/BaseDeDatosEstructuraRelacional.avif "Imagen de Una Estructura Relacional")
+  *Esta imagen muestra una estructura relacional con tablas y relaciones que facilitan la organización y consulta de datos.*
+</figure>
 
-  <p class="text-lg text-gray-700 mb-4">
-    La <span class="font-semibold">Estructura Relacional</span> es la  más extendida hoy en día. Almacena los datos en <span class="font-semibold">Filas</span> o <span class="font-semibold">Registros</span>  (<span class="font-semibold text-green-600 uppercase">Tuplas</span>) y <span class="font-semibold">Columnas</span> o <span class="font-semibold">Campos</span>  (<span class="font-semibold text-green-600 uppercase">Atributos</span>). Estas tablas pueden estar conectadas entre sí por claves comunes.
-  </p>
+##### Base De Datos Con estructura orientada a Objetos
 
-  <figure class="max-w-80 md:max-w-[500px] mx-auto">
-    <img src="/BaseDeDatosEstructuraRelacional.avif" alt="Base De Datos Estructura Relacional" title="Imagen de Una Estructura Relacional" />
-    <figcaption>
-      Esta imagen muestra una estructura relacional con tablas y relaciones que facilitan la organización y consulta de datos.
-    </figcaption>
-  </figure>
+La **Estructura Orientada a Objetos** está diseñada siguiendo el paradigma de los lenguajes orientados a objetos. De este modo soporta los tipos de datos **Gráficos**, **Imágenes**, **Voz** y **Texto** de manera natural. Esta estructura tiene gran difusión en aplicaciones web para aplicaciones multimedia.
 
-  <h4 class="text-2xl font-bold mb-6 text-blue-400 text-center">Base De Datos Con estructura orientada a Objetos</h4>
+![Base De Datos de Estructura Orientada a Objetos](/BaseDeDatosEstructuraOrientadaAObjetos.avif "Imagen de Una Estructura Orientada a Objetos")
 
-  <p class="text-lg text-gray-700 mb-4">
-    La <span class="font-semibold">Estructura Orientada a Objetos</span> está diseñada siguiendo el paradigma de los lenguajes orientados a objetos. De este modo soporta los tipos de datos <span class="font-semibold">Graficos</span>, <span class="font-semibold">Imágenes</span>, <span class="font-semibold">Voz</span> y <span class="font-semibold">Texto</span> de manera natural. Esta Estructura tiene gran difusión en aplicaciones web para aplicaciones multimedia.
-  </p>
+*Esta imagen muestra una base de datos orientada a objetos.*
 
-  <figure class="max-w-80 md:max-w-[500px] mx-auto">
-    <img src="/BaseDeDatosEstructuraOrientadaAObjetos.avif" alt="Base De Datos de Estructura Estructuras Orientada Objetos" title="Imagen de Una Estructura Orientada a Objetos" />
-    <figcaption>
-      Esta imagen muestra una base de datos orientada a objetos
-  </figcaption>
-  </figure>
+##### Sistemas de ficheros tradicionales
 
-  <h3 class="text-2xl font-bold mb-4 text-blue-600">Sistemas de ficheros tradicionales</h3>
-  
-  <p class="text-lg text-gray-700 mb-4">
-    En estos sistemas, cada programa almacenaba y utilizaba sus propios datos de forma un tanto caótica. La única ventaja que conlleva esto es que los procesos son independientes, por lo que la modificación de uno no afecta al resto.
-  </p>
-  
-  <h4 class="text-xl font-semibold text-gray-800 mb-2">Inconvenientes:</h4>
-  <ul class="list-disc list-inside text-gray-700">
-    <li>Datos redundantes. Ya que se repiten continuamente.</li>
-    <li>Coste de almacenamiento elevado. Al almacenarse varias veces el mismo dato en distintas aplicaciones, se requiere más espacio en los discos.</li>
-    <li>Tiempos de procesamiento elevados. Al no poder optimizar el espacio de almacenamiento.</li>
-    <li>Probabilidad alta de inconsistencia en los datos. Ya que un proceso cambia sus datos y no el resto. Por lo que el mismo dato puede tener valores distintos según qué aplicación acceda a él.</li>
-    <li>Difícil modificación en los datos. Debido a la probabilidad de inconsistencia, cada modificación se debe repetir en todas las copias del dato (algo que normalmente es imposible).</li>
-  </ul>
+En estos sistemas, cada programa almacenaba y utilizaba sus propios datos de forma un tanto caótica. La única ventaja que conlleva esto es que los procesos son independientes, por lo que la modificación de uno no afecta al resto.
 
-  <figure class="max-w-80 md:max-w-[500px] mx-auto">
-    <img src="/BaseDeDatosEstructuraConFicheros.avif" alt="Base De Datos de una estructura con Ficheros" title="Imagen de Una Estructura Con Ficheros" />
-    <figcaption>
-      Esta imagen ilustra una base de datos desorganizada, que presenta problemas como datos redundantes. La falta de consistencia en los datos dificulta las modificaciones, ya que cada cambio debe replicarse en múltiples copias.
-    </figcaption>
-  </figure>
+#### Inconvenientes:
 
-  <figure class="max-w-80 md:max-w-[500px] mx-auto">
-    <img src="/BaseDeDatosEstructuraRelacionalAcomodada.avif" alt="Base De Datos de una estructura Relacional acomodada" title="Imagen de Una Estructura Con Ficheros" />
-    <figcaption>
-      Esta imagen ilustra una base de datos relacional organizada, que presenta  todos los  datos necesarios. Con  consistencia en los datos facilita las modificaciones, ya que cada cambio se replica correctamente.
-    </figcaption>
-  </figure>
+- Datos redundantes. Ya que se repiten continuamente.
+- Coste de almacenamiento elevado. Al almacenarse varias veces el mismo dato en distintas aplicaciones, se requiere más espacio en los discos.
+- Tiempos de procesamiento elevados. Al no poder optimizar el espacio de almacenamiento.
+- Probabilidad alta de inconsistencia en los datos. Ya que un proceso cambia sus datos y no el resto. Por lo que el mismo dato puede tener valores distintos según qué aplicación acceda a él.
+- Difícil modificación en los datos. Debido a la probabilidad de inconsistencia, cada modificación se debe repetir en todas las copias del dato (algo que normalmente es imposible).
 
-  <h3 class="text-2xl font-bold text-gray-800 mb-4">Sistemas de bases de datos relacionales</h3>
 
-  <h4 class="text-xl font-semibold text-gray-800 mb-2">Ventajas:</h4>
-  <ul class="list-disc list-inside text-gray-700">
-    <li>Menor redundancia. No hace falta tanta repetición de datos.</li>
-    <li>Menor espacio de almacenamiento. Gracias a una mejor estructuración de los datos.</li>
-    <li>Acceso a los datos más eficiente. La organización de los datos produce un resultado más óptimo en rendimiento.</li>
-    <li>Datos más documentados. Gracias a los metadatos que permiten describir la información de la base de datos.</li>
-    <li>Independencia de los datos y los programas y procesos. Esto permite modificar los datos sin modificar el código de las aplicaciones.</li>
-    <li>Integridad de los datos. Mayor dificultad de perder los datos o de realizar incoherencias con ellos.</li>
-    <li>Mayor seguridad en los datos. Al limitar el acceso a ciertos usuarios.</li>
-  </ul>
+ <figure>
+  ![Base De Datos de una estructura con Ficheros](/BaseDeDatosEstructuraConFicheros.avif "Imagen de Una Estructura Con Ficheros")
+  *Esta imagen ilustra una base de datos desorganizada, que presenta problemas como datos redundantes. La falta de consistencia en los datos dificulta las modificaciones, ya que cada cambio debe replicarse en múltiples copias.*
+</figure>
 
-  <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">Desventajas:</h4>
-  <ul class="list-disc list-inside text-gray-700">
-    <li>Instalación costosa. El control y administración de bases de datos requiere de un software y hardware potente.</li>
-    <li>Requiere personal cualificado. Debido a la dificultad de manejo de este tipo de sistemas.</li>
-    <li>Implantación larga y difícil. Debido a los puntos anteriores, la adaptación del personal es mucho más complicada y lleva bastante tiempo.</li>
-  </ul>
+<figure>
+  ![Base De Datos de una estructura Relacional acomodada](/BaseDeDatosEstructuraRelacionalAcomodada.avif "Imagen de Una Estructura Con Ficheros")
+  *Esta imagen ilustra una base de datos relacional organizada, que presenta todos los datos necesarios. Con consistencia en los datos facilita las modificaciones, ya que cada cambio se replica correctamente.*
+</figure>
 
-  <h3 class="text-2xl font-bold text-gray-800 mb-4">Diseño de Base de Datos</h3>
+### Sistemas de bases de datos relacionales
 
-  <div class="bg-blue-50 -l-4 -blue-500 text-blue-700 p-4 mb-4">
-    <h4 class="text-xl font-semibold">Requerimientos de la Información</h4>
-    <p class="mt-2">
-    Esta etapa consiste en identificar y recopilar toda la información necesaria para el sistema de base de datos. Implica entender qué datos se deben almacenar, cómo se relacionan entre sí, y qué consultas o informes serán necesarios. Es fundamental para garantizar que la base de datos cumpla con las necesidades de los usuarios y el funcionamiento de la organización.
-    </p>
-  </div>
+#### Ventajas:
+- Menor redundancia. No hace falta tanta repetición de datos.
+- Menor espacio de almacenamiento. Gracias a una mejor estructuración de los datos.
+- Acceso a los datos más eficiente. La organización de los datos produce un resultado más óptimo en rendimiento.
+- Datos más documentados. Gracias a los metadatos que permiten describir la información de la base de datos.
+- Independencia de los datos y los programas y procesos. Esto permite modificar los datos sin modificar el código de las aplicaciones.
+- Integridad de los datos. Mayor dificultad de perder los datos o de realizar incoherencias con ellos.
+- Mayor seguridad en los datos. Al limitar el acceso a ciertos usuarios.
 
-  <h4 class="text-xl font-semibold text-gray-800 mb-2">Etapas de diseño para la base de datos:</h4>
+#### Desventajas:
+- Instalación costosa. El control y administración de bases de datos requiere de un software y hardware potente.
+- Requiere personal cualificado. Debido a la dificultad de manejo de este tipo de sistemas.
+- Implantación larga y difícil. Debido a los puntos anteriores, la adaptación del personal es mucho más complicada y lleva bastante tiempo.
 
-  <ul class="list-none text-gray-700">
-    <li class="mb-2">
-      <span class="text-green-600 font-bold">1. Diseño conceptual:</span> Definición de los requerimientos de información y estructura general de la base de datos.
-    </li>
-    <li class="mb-2">
-    <span class="text-red-600 font-bold">2. Diseño lógico:</span> Definición de las tablas, relaciones, y reglas de integridad de acuerdo con el modelo conceptual.
-    </li>
-    <li class="mb-2">
-    <span class="text-yellow-500 font-bold">3. Diseño físico de la base de datos:</span> Definición de la estructura física, tipos de datos, índices y cómo se almacenará la información.
-    </li>
-  </ul>
 
-  <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">4. Implementación de la base de datos</h4>
-  <p class="text-gray-700">
-      La etapa final donde la base de datos es creada y puesta en funcionamiento basada en los diseños conceptual, lógico y físico.
-  </p>
+### Diseño de Base de Datos
 
-  <div class="bg-yellow-50 -l-4 -yellow-500 text-yellow-700 p-4 mb-4">
-    <h4 class="text-xl font-semibold">Diseño de Bases de Datos</h4>
-    <p class="mt-2">
-      <strong>Fase de Análisis: Especificación de Requisitos Software (E.R.S.)</strong> Antes de pasar a diseñar una base de datos (BD), es crucial tener claro qué se quiere lograr. Para ello, los informáticos se reúnen con los futuros usuarios del sistema para recopilar la información que necesitan y entender las expectativas de dichos usuarios.
-    </p>
-    <p class="mt-2">
-      Normalmente, se realiza una reunión inicial y, a partir de ella, se elabora una batería de preguntas para entrevistar a los usuarios finales en una segunda reunión. Esta segunda entrevista permite obtener información detallada sobre lo que se espera de la base de datos.
-    </p>
-    <p class="mt-2">
-      De estas entrevistas, se extrae el documento más importante del análisis, el <strong>documento de Especificación de Requisitos Software (E.R.S.)</strong>. A partir de este documento, se obtiene toda la información necesaria para la modelización de datos.
-    </p>
-  </div>
-  
-  <h5 class="font-semibold">Fase 1 del Diseño: Diseño Conceptual - Modelo Entidad/Relación (E/R)</h5>
-  <p>
-    El objetivo de esta fase es representar la información obtenida del usuario final y concretada en el E.R.S., utilizando estándares para que el resto de la comunidad informática pueda entender el modelo. El modelo que se utiliza en esta primera fase tiene un gran poder expresivo para comunicarse con usuarios no expertos en informática y se denomina <strong>Modelo Conceptual</strong>. En esta fase, empleamos el <strong>Modelo Entidad/Relación</strong>.
-  </p>
+#### Requerimientos de la Información
+Esta etapa consiste en identificar y recopilar toda la información necesaria para el sistema de base de datos. Implica entender qué datos se deben almacenar, cómo se relacionan entre sí, y qué consultas o informes serán necesarios. Es fundamental para garantizar que la base de datos cumpla con las necesidades de los usuarios y el funcionamiento de la organización.
 
-  <h5 class="font-semibold">Fase 2 del Diseño: Diseño Lógico - Modelo Relacional</h5>
-  <p>
-    Este modelo es más técnico y está orientado al personal informático, con traducción directa al modelo físico que entiende el SGBD. Se obtiene a partir del modelo conceptual y dependerá de la implementación de la base de datos. La implementación varía según el tipo de BD: jerárquica, orientada a objetos o relacional.
-  </p>
-  <p class="font-semibold">Ejemplos:</p>
-  <p>Productos, Inventario, Inventario, Categorías, Relaciones entre estas entidades que reflejan cómo los datos se interconectan y se organizan.</p>
+#### Etapas de diseño para la base de datos:
 
-  <h5 class="font-semibold">Fase 3 del Diseño: Diseño Físico - Modelo Físico</h5>
-  <p>
-    Es el resultado de aplicar el modelo lógico a un SGBD específico. Generalmente, se expresa en un lenguaje de programación de bases de datos como SQL. En esta etapa, transformaremos el <strong>Modelo Relacional</strong> en el modelo físico utilizando el sublenguaje DDL de SQL.
-  </p>
-  </div>
-</div>
+- **1. Diseño conceptual**: Definición de los requerimientos de información y estructura general de la base de datos.
+- **2. Diseño lógico**: Definición de las tablas, relaciones, y reglas de integridad de acuerdo con el modelo conceptual.
+- **3. Diseño físico de la base de datos**: Definición de la estructura física, tipos de datos, índices y cómo se almacenará la información.
+
+#### 4. Implementación de la base de datos
+La etapa final donde la base de datos es creada y puesta en funcionamiento basada en los diseños conceptual, lógico y físico.
+
+#### Diseño de Bases de Datos
+
+**Fase de Análisis: Especificación de Requisitos Software (E.R.S.)**  
+Antes de pasar a diseñar una base de datos (BD), es crucial tener claro qué se quiere lograr. Para ello, los informáticos se reúnen con los futuros usuarios del sistema para recopilar la información que necesitan y entender las expectativas de dichos usuarios.
+
+Normalmente, se realiza una reunión inicial y, a partir de ella, se elabora una batería de preguntas para entrevistar a los usuarios finales en una segunda reunión. Esta segunda entrevista permite obtener información detallada sobre lo que se espera de la base de datos.
+
+De estas entrevistas, se extrae el documento más importante del análisis, el **documento de Especificación de Requisitos Software (E.R.S.)**. A partir de este documento, se obtiene toda la información necesaria para la modelización de datos.
+
+#### Fase 1 del Diseño: Diseño Conceptual - Modelo Entidad/Relación (E/R)
+El objetivo de esta fase es representar la información obtenida del usuario final y concretada en el E.R.S., utilizando estándares para que el resto de la comunidad informática pueda entender el modelo. El modelo que se utiliza en esta primera fase tiene un gran poder expresivo para comunicarse con usuarios no expertos en informática y se denomina **Modelo Conceptual**. En esta fase, empleamos el **Modelo Entidad/Relación**.
+
+#### Fase 2 del Diseño: Diseño Lógico - Modelo Relacional
+Este modelo es más técnico y está orientado al personal informático, con traducción directa al modelo físico que entiende el SGBD. Se obtiene a partir del modelo conceptual y dependerá de la implementación de la base de datos. La implementación varía según el tipo de BD: jerárquica, orientada a objetos o relacional.
+
+**Ejemplos:**  
+Productos, Inventario, Inventario, Categorías, Relaciones entre estas entidades que reflejan cómo los datos se interconectan y se organizan.
+
+#### Fase 3 del Diseño: Diseño Físico - Modelo Físico
+Es el resultado de aplicar el modelo lógico a un SGBD específico. Generalmente, se expresa en un lenguaje de programación de bases de datos como SQL. En esta etapa, transformaremos el **Modelo Relacional** en el modelo físico utilizando el sublenguaje DDL de SQL.
+
 
 ### Clase I - Parte 2 - 16 de agosto de 2024
 
-<div class="w-full md:w-[800px] min-h-80   p-4  mx-auto my-4 rounded-lg">
-  <h3 class="text-3xl font-bold text-center mb-6 text-blue-600">Modelo Entidad-Relación</h3>
-  <p>
-    El <span class="font-semibold">modelo Entidad-Relación </span>
-    es el modelo más utilizado para el diseño conceptual de bases de datos. Fue introducido por Peter Chen en 1976 y se basa en la existencia de objetos a los que se les da el nombre de entidades, y asociaciones entre ellos, llamadas relaciones.
-  </p>
-  <img src="/PeterCheen.avif" alt="Introductor de El modelo Entidad Relación" title="Imagen de Peter Cheen" class="max-w-80 md:max-w-[500px] mx-auto" />
-  <figcaption class="text-center text-gray-600 italic">Creado por Peter Chen en 1976</figcaption>
+ #### Modelo Entidad-Relación
 
-  <p>Sus símbolos principales se representan en el cuadro siguiente:</p>
-  <img src="/BaseDeDatosSimbolosEntidadRelacion.avif" alt="Simbolos Entidad Relación" title="Imagen de Simbolos Entidad Relación" class="max-w-80 md:max-w-[500px] mx-auto" />
+El **modelo Entidad-Relación** es el modelo más utilizado para el diseño conceptual de bases de datos. Fue introducido por Peter Chen en 1976 y se basa en la existencia de objetos a los que se les da el nombre de entidades, y asociaciones entre ellos, llamadas relaciones.
 
-  <h4 class="text-xl font-semibold">Entidades</h4>
-  <p>
-    Una <strong>entidad</strong> es cualquier objeto o elemento acerca del cual se puede almacenar información en la <strong>base de datos</strong>. Las entidades pueden ser <strong>concretas</strong>, como personas y vehículos, o <strong>abstractas</strong>, como materias en una institución o cuentas bancarias.
-  </p>
-  <p>
-    Gráficamente, las entidades se representan mediante <strong>rectángulos</strong>, con su nombre escrito en el interior. Es importante destacar que un nombre de entidad solo puede aparecer una vez en el <strong>esquema conceptual</strong>, asegurando la claridad y la unicidad de la información.
-  </p>
-  <p>
-    Existen dos tipos de entidades: las entidades <strong>fuertes</strong>, que pueden existir de manera independiente, y las entidades <strong>débil</strong>, cuya existencia depende de la existencia de otra entidad. Este concepto es crucial para entender la <strong>estructura</strong> y las <strong>relaciones</strong> dentro de una base de datos.
-  </p>
+![Introductor del modelo Entidad Relación](/PeterCheen.avif)
+*Creado por Peter Chen en 1976*
 
-  <h4 class="text-xl font-semibold">Atributos</h4>
-  <p>
-    Una entidad se caracteriza y distingue de otra por los <strong>atributos</strong>, también llamados propiedades o campos, que representan las características de una entidad.
-  </p>
-  <p>
-    Los atributos de una entidad pueden tomar un conjunto de valores permitidos al que se le conoce como <strong>dominio del atributo</strong>. Dando valores a estos atributos, se obtienen las diferentes ocurrencias de una entidad.
-  </p>
+Sus símbolos principales se representan en el cuadro siguiente:
 
-   <h5 class="font-semibold mt-4">Tipos de Atributos:</h5>
+![Símbolos Entidad Relación](/BaseDeDatosSimbolosEntidadRelacion.avif)
 
-  
-<div class="flex flex-col space-y-4">
-  <div>
-    <p class="font-semibold underline">Identificadores:</p>
-    <p>Definición: Son atributos cuyos valores no se repiten dentro de una misma entidad o relación. Actúan como clave principal o primaria.</p>
-    <div class="-4 -black rounded-full flex items-center justify-center px-4 max-w-40">Identificadores</div>
-    <p>Ej: dni</p>
-  </div>
-  
-  <div>
-    <p class="font-semibold">Descriptores:</p>
-    <p>Definición: Atributos que describen diversas propiedades de una entidad o relación. Son los más frecuentes.</p>
-    <div class=" rounded-full flex items-center justify-center px-4 max-w-40">Descriptores</div>
-    <p>Ej: nombre</p>
-  </div>
+#### Entidades
 
-  <div>
-    <p class="font-semibold">Derivados:</p>
-    <p>Definición: Atributos cuyos valores se calculan a partir de los valores de otros atributos.</p>
-    <div class="  rounded-full flex items-center justify-center px-4 max-w-40">Derivados</div>
-    <p>Ej: edad</p>
-  </div>
+Una **entidad** es cualquier objeto o elemento acerca del cual se puede almacenar información en la **base de datos**. Las entidades pueden ser **concretas**, como personas y vehículos, o **abstractas**, como materias en una institución o cuentas bancarias.
 
-  <div>
-    <p class="font-semibold">Multivaluados:</p>
-    <p>Definición: Atributos descriptores que poseen varios valores de un mismo dominio, utilizados para almacenar múltiples datos.</p>
-    <div class="  rounded-full flex items-center justify-center px-4 max-w-40">Multivaluados</div>
-    <p>Ej: teléfono</p>
-  </div>
+Gráficamente, las entidades se representan mediante **rectángulos**, con su nombre escrito en el interior. Es importante destacar que un nombre de entidad solo puede aparecer una vez en el **esquema conceptual**, asegurando la claridad y la unicidad de la información.
 
-    <div>
-      <p class="font-semibold">Compuestos:</p>
-      <p>Definición: Atributos que pueden ser descompuestos en otros atributos pertenecientes a distintos dominios.</p>
-      <div class="-4 -black rounded-full flex items-center justify-center px-4 max-w-40">Compuestos</div>
-      <p>Ej: fecha (Día, Mes, Año)</p>
-    </div>
-  </div>
-  <div class="px-2 py-4 rounded-lg">
-    <h3 class="text-2xl font-bold text-gray-800">Ejemplo de una Entidad de Base de Datos</h3>
-    <p>
-      Supongamos que estamos creando la base de datos para una tienda de televisores. El dueño de la tienda desea un sistema que le permita conocer todos los <strong>televisores</strong> que ha vendido a cada cliente. Para esto, es importante identificar la información clave.
-    </p>
+Existen dos tipos de entidades: las entidades **fuertes**, que pueden existir de manera independiente, y las entidades **débiles**, cuya existencia depende de la existencia de otra entidad. Este concepto es crucial para entender la **estructura** y las **relaciones** dentro de una base de datos.
 
-    <h4 class="text-xl font-semibold text-gray-700">Entidades Principales:</h4>
-    <ul class="list-disc list-inside">
-      <li class="font-semibold text-gray-600">Televisores</li>
-      <li class="font-semibold text-gray-600">Clientes</li>
-    </ul>
-    <div class="flex flex-col md:flex-row justify-around">
-      <div>
-        <h4 class="text-xl font-semibold text-gray-700 text-center">Características de los Clientes:</h4>
-        <ul class="list-disc list-inside">
-          <li class="text-gray-600">ID</li>
-          <li class="text-gray-600">Nombres</li>
-          <li class="text-gray-600">Apellidos</li>
-        </ul>
-      </div>
-      <div>
-          <h4 class="text-xl font-semibold text-gray-700 text-center">Características de los Televisores:</h4>
-          <ul class="list-disc list-inside">
-            <li class="text-gray-600">Seriales</li>
-            <li class="text-gray-600">Modelo</li>
-            <li class="text-gray-600">Marca</li>
-            <li class="text-gray-600">Dimensiones</li>
-            <li class="text-gray-600">Precios</li>
-          </ul>
-      </div>
-    </div>
+#### Atributos
 
+Una entidad se caracteriza y distingue de otra por los **atributos**, también llamados propiedades o campos, que representan las características de una entidad.
 
-    <div>
-    
-    </div>
-    <div class="flex flex-col md:flex-row justify-around">
-      <figure class="flex flex-col items-center">
-        <img src="/BaseDeDatosDiagramaCliente.avif" alt="Imagen Diagrama Cliente" title="Imagen de Diagrama Cliente" class="max-w-80 md:max-w-[500px]" />
-        <figcaption class="text-center text-sm text-gray-600 mt-2">
-        Aunque atributos como <strong>ID</strong> y <strong>Nombre</strong> en la entidad de "Clientes" podrían subrayarse para indicar su importancia, en esta fase del diagrama aún no se realiza esa diferenciación.
-        </figcaption>
-      </figure>
+Los atributos de una entidad pueden tomar un conjunto de valores permitidos al que se le conoce como **dominio del atributo**. Dando valores a estos atributos, se obtienen las diferentes ocurrencias de una entidad.
 
-      <figure class="flex flex-col items-center">
-        <img src="/BaseDeDatosDiagramaTelevisores.avif" alt="Imagen Diagrama Televisores" title="Imagen de Diagrama Televisores" class="max-w-80 md:max-w-[500px]" />
-        <figcaption class="text-center text-sm text-gray-600 mt-2">
-        La misma consideración aplica para los atributos del diagrama de "Televisores," donde aún no se hace distinción con subrayados en esta etapa del diseño.
-        </figcaption>
-      </figure>
-    </div>
-  </div>
+##### Tipos de Atributos:
 
-  <div>
-    <h4 class="text-xl font-semibold">Relaciones</h4>
-    <p>
-     Una <strong>relación</strong> es la asociación que existe entre dos o más <strong>entidades</strong>. Cada relación tiene un nombre que describe su función. Las relaciones se representan gráficamente mediante <strong>rombos</strong> y su nombre aparece en el interior.
-    </p>
-    <p>
-      Las entidades que están involucradas en una determinada relación se denominan <strong>entidades participantes</strong>. El número de participantes en una relación es lo que se denomina <strong>grado de la relación</strong>.
-    </p>
+- **Identificadores**: Son atributos cuyos valores no se repiten dentro de una misma entidad o relación. Actúan como clave principal o primaria.
+  - Ej: dni
+- **Descriptores**: Atributos que describen diversas propiedades de una entidad o relación. Son los más frecuentes.
+  - Ej: nombre
+- **Derivados**: Atributos cuyos valores se calculan a partir de los valores de otros atributos.
+  - Ej: edad
+- **Multivaluados**: Atributos descriptores que poseen varios valores de un mismo dominio, utilizados para almacenar múltiples datos.
+  - Ej: teléfono
+- **Compuestos**: Atributos que pueden ser descompuestos en otros atributos pertenecientes a distintos dominios.
+  - Ej: fecha (Día, Mes, Año)
 
-    <p>
-      Por ejemplo, La relación Película-Actor es de grado 2 o binaria, ya que intervienen dos entidades: <strong>Pelicula </strong>y <strong>Actor</strong>
-    </p>
-    <figure class="flex flex-col items-center">
-        <img src="/BaseDeDatosDiagramaBinario.avif" alt="Imagen Diagrama Binario" title="Imagen de un Diagrama De Binario" class="max-w-80 md:max-w-[500px]" />
-        <figcaption class="text-center text-sm text-gray-600 mt-2">
-        Un diagrama Binario.
-        </figcaption>
-      </figure>
-      <p>
-       La relación PUBLICAR es de grado 3 ya que involucra las entidades:
-       <strong>Libro </strong>, <strong>Editorial</strong>y <strong>Autor</strong>
-      </p>
-    <figure class="flex flex-col items-center">
-        <img src="/BaseDeDatosDiagramaGradoTres.avif" alt="Imagen Diagrama Grado Tres" title="Imagen de un Diagrama De Grado Tres" class="max-w-80 md:max-w-[500px]" />
-        <figcaption class="text-center text-sm text-gray-600 mt-2">
-        Un diagrama Grado Tres.
-        </figcaption>
-      </figure>
-    <p>
-      Cuando una entidad esta relacionada consigo misma, es una relación reflexiva, ya que involucra dos entidades reflexivas 
-       <strong>Empleado </strong>es a la misma vez <strong>Jefe</strong>
+#### Ejemplo de una Entidad de Base de Datos
 
-    </p>
-  </div>
+Supongamos que estamos creando la base de datos para una tienda de televisores. El dueño de la tienda desea un sistema que le permita conocer todos los **televisores** que ha vendido a cada cliente. Para esto, es importante identificar la información clave.
 
-      <figure class="flex flex-col items-center">
-        <img src="/BaseDeDatosDiagramaReflexivo.avif" alt="Imagen Diagrama Reflexivo" title="Imagen de un Diagrama Reflexivo" class="max-w-80 md:max-w-[500px]" />
-        <figcaption class="text-center text-sm text-gray-600 mt-2">
-        Un diagrama reflexivo.
-        </figcaption>
-      </figure>
+#### Entidades Principales:
 
-  <div>
-    <h4 class="text-xl font-semibold">Cardinalidad</h4>
-    <p>
-      La <strong>correspondencia de cardinalidades</strong>, o razón de cardinalidad, expresa el número de entidades a las que otra entidad puede estar asociada vía un conjunto de relaciones. Para un conjunto de relaciones binarias R entre los conjuntos de entidades A y B, la correspondencia de cardinalidades debe ser una de las siguientes:
-    </p>
-    <ul class="list-disc list-inside mt-2">
-      <li>
-        <strong>Uno a uno:</strong> Una entidad en A se asocia con a lo sumo una entidad en B, y una entidad en B se asocia con a lo sumo una entidad en A.
-      </li>
-    </ul>
-  <figure class="flex flex-col items-center">
-    <img src="/BaseDeDatosUnoAUno.avif" alt="Imagen Diagrama Uno A uno" title="Imagen de un Diagrama Uno a Uno" class="max-w-80 md:max-w-[500px]" />
-    <figcaption class="text-center text-sm text-gray-600 mt-2">
-    Un diagrama Uno a Uno.
-    </figcaption>
-  </figure>
+- **Televisores**
+- **Clientes**
 
-  <ul class="list-disc list-inside mt-2">
-    <li>
-      <strong>Uno a varios:</strong> Una entidad en A se asocia con cualquier número de entidades en B (ninguna o varias). Una entidad en B, sin embargo, se puede asociar con a lo sumo una entidad en A.
-   </li>
-  </ul>
-  <figure class="flex flex-col items-center">
-    <img src="/BaseDeDatosUnoAVarios.avif" alt="Imagen Diagrama Uno a Varios" title="Imagen de un Diagrama Uno a Varios" class="max-w-80 md:max-w-[500px]" />
-    <figcaption class="text-center text-sm text-gray-600 mt-2">
-      Un diagrama de Uno a Varios / Uno a Muchos
-    </figcaption>
-  </figure>
+##### Características de los Clientes:
 
-  <ul class="list-disc list-inside mt-2">
-    <li>
-      <strong>Varios a uno:</strong> Una entidad en A se asocia con a lo sumo una entidad en B. Una entidad en B, sin embargo, se puede asociar con cualquier número de entidades (ninguna o varias) en A.
-    </li>
-  </ul>
-  <figure class="flex flex-col items-center">
-    <img src="/BaseDeDatosVariosAUno.avif" alt="Imagen Diagrama Varios A uno" title="Imagen de un Diagrama Varios a Uno" class="max-w-80 md:max-w-[500px]" />
-    <figcaption class="text-center text-sm text-gray-600 mt-2">
-    Un diagrama de Varios A Uno / Muchos a Uno
-    </figcaption>
-  </figure>
+- ID
+- Nombres
+- Apellidos
 
-    <ul class="list-disc list-inside mt-2">
-    <li>
-      <strong>Varios a varios:</strong> Una entidad en A se asocia con cualquier número de entidades (ninguna o varias) en B, y una entidad en B se asocia con cualquier número de entidades (ninguna o varias) en A.
-    </li>
-  </ul>
-  <figure class="flex flex-col items-center">
-    <img src="/BaseDeDatosVariosAVarios.avif" alt="Imagen Diagrama Varios A Varios" title="Imagen de un Diagrama Varios a Varios" class="max-w-80 md:max-w-[500px]" />
-    <figcaption class="text-center text-sm text-gray-600 mt-2">
-      Un diagrama de Varios A Varios / Muchos a Muchos
-    </figcaption>
-  </figure>
-  </div>
+##### Características de los Televisores:
 
-<div class="p-4  rounded space-y-4">
-  <h2 class="text-2xl font-bold text-gray-800">Ejercicio Práctico:</h2>
-  <p class="text-lg font-semibold text-gray-700">Realizar el diagrama Entidad Relación</p>  
-  <ul class="list-disc list-inside space-y-2 text-gray-700">
-    <li>En una escuela se quiere crear un sistema para el control de asistencia.</li>
-    <li>Se quiere registrar la asistencia diaria de los estudiantes a las clases. Cada estudiante puede estar inscripto en una o varias asignaturas.</li>
-    <li>Cada asignatura puede ser impartida por uno o varios profesores.</li>
-    <li>Se debe almacenar la fecha y hora de las clases, cada clase será impartida por un profesor en una asignatura determinada.</li>
-  </ul>
-  
-  <p class="text-lg font-semibold text-gray-700">Los datos que se requieren son:</p>
-  
-  <ul class="list-disc list-inside space-y-2 text-gray-700">
-    <li><strong>Estudiantes:</strong> idEstudiante, Nombre, Apellido y Fecha de Nacimiento.</li>
-    <li><strong>Asignaturas:</strong> idAsignatura, Nombre.</li>
-    <li><strong>Profesores:</strong> idProfesor, Nombre y Apellido.</li>
-    <li><strong>Clases:</strong> idClase, Fecha y Hora.</li>
-  </ul>
-  </div>
+- Seriales
+- Modelo
+- Marca
+- Dimensiones
+- Precios
 
-  <div class="mt-4  rounded-lg max-w-md mx-auto">
-    <h6 class="text-xl font-bold text-gray-800">Pasos para la Resolución</h6>
-    <ul class="list-decimal list-inside text-gray-700 [&>*:py-2]">
-        <li class="bg-gray-100 p-2 rounded hover:bg-gray-200 transition">Identificar las <strong> entidades</strong> y sus <strong>atributos</strong></li>
-        <li class="bg-gray-100 p-2 rounded hover:bg-gray-200 transition">Paso 2</li>
-        <li class="bg-gray-100 p-2 rounded hover:bg-gray-200 transition">Paso 3</li>
-        <li class="bg-gray-100 p-2 rounded hover:bg-gray-200 transition">Paso 4</li>
-        <li class="bg-gray-100 p-2 rounded hover:bg-gray-200 transition">Paso 5</li>
-        <li class="bg-gray-100 p-2 rounded hover:bg-gray-200 transition">Paso 6</li>
-    </ul>
-</div>
-</div>
+#### Relaciones
+
+Una **relación** es la asociación que existe entre dos o más **entidades**. Cada relación tiene un nombre que describe su función. Las relaciones se representan gráficamente mediante **rombos** y su nombre aparece en el interior.
+
+Las entidades que están involucradas en una determinada relación se denominan **entidades participantes**. El número de participantes en una relación es lo que se denomina **grado de la relación**.
+
+Por ejemplo, la relación Película-Actor es de grado 2 o binaria, ya que intervienen dos entidades: **Película** y **Actor**.
+
+![Diagrama Binario](/BaseDeDatosDiagramaBinario.avif)
+*Un diagrama Binario.*
+
+La relación PUBLICAR es de grado 3, ya que involucra las entidades: **Libro**, **Editorial** y **Autor**.
+
+![Diagrama Grado Tres](/BaseDeDatosDiagramaGradoTres.avif)
+*Un diagrama Grado Tres.*
+
+Cuando una entidad está relacionada consigo misma, es una relación reflexiva, ya que involucra dos entidades reflexivas: **Empleado** es a la misma vez **Jefe**.
+
+![Diagrama Reflexivo](/BaseDeDatosDiagramaReflexivo.avif)
+*Un diagrama reflexivo.*
+
+#### Cardinalidad
+
+La **correspondencia de cardinalidades**, o razón de cardinalidad, expresa el número de entidades a las que otra entidad puede estar asociada vía un conjunto de relaciones. Para un conjunto de relaciones binarias R entre los conjuntos de entidades A y B, la correspondencia de cardinalidades debe ser una de las siguientes:
+
+- **Uno a uno**: Una entidad en A se asocia con a lo sumo una entidad en B, y una entidad en B se asocia con a lo sumo una entidad en A.
+
+![Diagrama Uno a Uno](/BaseDeDatosUnoAUno.avif)
+*Un diagrama Uno a Uno.*
+
+- **Uno a varios**: Una entidad en A se asocia con cualquier número de entidades en B (ninguna o varias). Una entidad en B, sin embargo, se puede asociar con a lo sumo una entidad en A.
+
+![Diagrama Uno a Varios](/BaseDeDatosUnoAVarios.avif)
+*Un diagrama de Uno a Varios / Uno a Muchos.*
+
+- **Varios a uno**: Una entidad en A se asocia con a lo sumo una entidad en B. Una entidad en B, sin embargo, se puede asociar con cualquier número de entidades (ninguna o varias) en A.
+
+![Diagrama Varios a Uno](/BaseDeDatosVariosAUno.avif)
+*Un diagrama de Varios A Uno / Muchos a Uno.*
+
+- **Varios a varios**: Una entidad en A se asocia con cualquier número de entidades (ninguna o varias) en B, y una entidad en B se asocia con cualquier número de entidades (ninguna o varias) en A.
+
+![Diagrama Varios a Varios](/BaseDeDatosVariosAVarios.avif)
+*Un diagrama de Varios A Varios / Muchos a Muchos.*
+
+#### Ejercicio Práctico:
+
+**Realizar el diagrama Entidad Relación**  
+
+En una escuela se quiere crear un sistema para el control de asistencia:
+
+- Se quiere registrar la asistencia diaria de los estudiantes a las clases. Cada estudiante puede estar inscrito en una o varias asignaturas.
+- Cada asignatura puede ser impartida por uno o varios profesores.
+- Se debe almacenar la fecha y hora de las clases, cada clase será impartida por un profesor en una asignatura determinada.
+
+**Los datos que se requieren son:**
+
+- **Estudiantes**: idEstudiante, Nombre, Apellido y Fecha de Nacimiento.
+- **Asignaturas**: idAsignatura, Nombre.
+- **Profesores**: idProfesor, Nombre y Apellido.
+- **Clases**: idClase, Fecha y Hora.
+
+#### Pasos para la Resolución
+
+1. Identificar las **entidades** y sus **atributos**.
+2. Paso 2
+3. Paso 3
+4. Paso 4
+5. Paso 5
+6. Paso 6
 
 ### Clase 2 - 23 de agosto de 2024
 
-Modelo
-Relacional
-de datos
+#### Modelo Relacional de Datos
 
-Modelo relacional de base de datos
-El modelo relacional se define como la base de datos que permite
-agrupar sus elementos de datos en una o más tablas independientes,
-que pueden relacionarse entre sí utilizando campos comunes a cada
-tabla relacionada.
+El modelo relacional se define como la base de datos que permite agrupar sus elementos de datos en una o más tablas independientes, que pueden relacionarse entre sí utilizando campos comunes a cada tabla relacionada.
