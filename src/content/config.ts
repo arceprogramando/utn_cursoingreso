@@ -14,7 +14,7 @@ const career = defineCollection({
       totalTimeClass: z.number(),
       totalExam: z.number(),
       totalTime: z.number(),
-      professor: z.string(),
+      professor: z.string().optional(),
     order: z.number(),
       downloadUrl:z.string().optional(),
     }),
