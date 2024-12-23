@@ -5,7 +5,6 @@ const career = defineCollection({
       layout: z.string().optional(),
       title: z.string(),
       author: z.string(),
-      description: z.string(),
       image: z.object({
         url: z.string().optional(),  
         alt: z.string().optional(),
