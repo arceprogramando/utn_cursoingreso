@@ -3,7 +3,8 @@ import { Icon } from 'astro-icon/components';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import type { Collaborator } from '../types/collaborator';
 
-const title = 'Colaboradores';
+const subTitle = 'Colaboradores';
+const title = 'Colaboradores de la Tecnicatura Universitaria en Programación - UTN 2025';
 const url = 'https://apicollaborator.vercel.app/';
 
 let colaboradores: Collaborator[] = [];
@@ -45,7 +46,7 @@ try {
 }
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} subTitle={subTitle}>
   <div class="flex flex-col justify-center items-center container mx-auto text-center">
     {
       errorMessage ? (

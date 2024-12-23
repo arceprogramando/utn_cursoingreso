@@ -1,7 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const { title } = Astro.props;
+const { title, subTitle } = Astro.props;
 import SideMenu from '../components/layout/SideMenu.astro';
 import Layout from './Layout.astro';
 ---
@@ -12,7 +12,7 @@ import Layout from './Layout.astro';
     <SideMenu />
     <main class="flex flex-col items-center max-w-5xl mx-auto mb-8">
       <h2 class="text-center max-w-2xl uppercase my-8 md:my-4 text-4xl leading-none md:text-5xl font-bold gradient" transition:animate="slide">
-        {title}
+        {subTitle? subTitle : title}
       </h2>
       <slot />
     </main>

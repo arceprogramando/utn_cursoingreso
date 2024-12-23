@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import type { Correlativity } from '../types/correlativity';
 
 const title = 'Correlatividades de la Tecnicatura Universitaria en Programación - UTN 2025';
-
+const subTitle = 'Correlatividades';
 const subjects: Correlativity[] = [
   { id: 0, name: 'Programación (Ingreso)', prerequisites: '-', isPassed: true, hours: 0 },
   { id: 0, name: 'Matemática Inicial (Ingreso)', prerequisites: '-', isPassed: true, hours: 0 },
@@ -29,7 +29,7 @@ const subjects: Correlativity[] = [
 ];
 ---
 
-<BaseLayout title={`${title}`}>
+<BaseLayout title={`${title}`} subTitle={`${subTitle}`}>
   <div class="flex flex-col justify-center items-center container mx-auto text-center p-2 overflow-x-scroll md:overflow-hidden">
     <table class="min-w-full divide-y divide-gray-200 shadow border-b border-gray-200 sm:rounded-lg">
       <thead class="bg-gray-50">
