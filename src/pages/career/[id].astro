@@ -63,14 +63,10 @@ function addSpaceBeforeSecondUpperCase(str: string) {
         </p>
       </div>
 
-      {
-        professor && (
-          <div class="relative inline-block">
-            <span class="absolute -inset-x-2 -inset-y-0.5 rounded-sm bg-green-200 rotate-1 -skew-y-3  -z-10"></span>
-            <p class="font-bold relative">Profesor/a: {professor ? professor: '-' }</p>
-          </div>
-        )
-      }
+      <div class="relative inline-block">
+        <span class="absolute -inset-x-2 -inset-y-0.5 rounded-sm bg-green-200 rotate-1 -skew-y-3 -z-10"></span>
+        <p class="font-bold relative">Profesor/a: {professor || 'Anónimo'}</p>
+      </div>
 
       {
         downloadUrl && (
