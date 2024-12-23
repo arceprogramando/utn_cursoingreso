@@ -68,8 +68,15 @@ const { title } = Astro.props;
     />
     <meta name="twitter:image" content="https://res.cloudinary.com/dyanh7yda/image/upload/v1705374365/c77n6krmnazj9yaafrxh.jpg" />
 
-    <!-- // Github Fonts -->
-    <link rel="preload" href="Mona-Sans.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>{title}</title>
     <ClientRouter />
   </head>
@@ -103,17 +110,8 @@ const { title } = Astro.props;
     overflow-y: scroll;
   }
 
-  @font-face {
-    font-family: 'Mona Sans';
-    src:
-      url('Mona-Sans.woff2') format('woff2 supports variations'),
-      url('Mona-Sans.woff2') format('woff2-variations');
-    font-weight: 200 900;
-    font-stretch: 75% 125%;
-  }
-
   html {
-    font-family: 'Mona Sans', sans-serif;
+    font-family: 'Roboto', serif;
   }
 
   body::-webkit-scrollbar {
