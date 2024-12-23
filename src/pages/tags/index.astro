@@ -27,19 +27,19 @@ function addSpaceBeforeSecondUpperCase(str: string) {
 ---
 
 <BaseLayout title={`${title}`}>
-  <div class="flex flex-wrap justify-center gap-2 max-w-2xl">
+    <ul class="flex flex-wrap justify-center gap-2 max-w-2xl">
     {
       allTags.length > 0 ? (
         allTags.map((tag) => (
-          <p class="px-2 md:px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
+          <li class="px-2 md:px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
             <a href={`/tags/${tag}`} title={`Ver elementos con el tag ${tag}`}>
               {addSpaceBeforeSecondUpperCase(tag)}
             </a>
-          </p>
+          </li>
         ))
       ) : (
         <p class="text-lg font-bold text-gray-500">No hay tags disponibles.</p>
       )
     }
-  </div>
+    </ul>
 </BaseLayout>
