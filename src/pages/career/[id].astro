@@ -66,7 +66,7 @@ function addSpaceBeforeSecondUpperCase(str: string) {
       {
         professor && (
           <div class="relative inline-block">
-            <span class="absolute -inset-x-4 -inset-y-0 rounded-sm bg-green-200 rotate-1 -skew-y-3  -z-10"></span>
+            <span class="absolute -inset-x-2 -inset-y-0.5 rounded-sm bg-green-200 rotate-1 -skew-y-3  -z-10"></span>
             <p class="font-bold relative">Profesor/a: {professor ? professor: '-' }</p>
           </div>
         )
@@ -80,7 +80,7 @@ function addSpaceBeforeSecondUpperCase(str: string) {
               download={`${title.replace(/ /g, '_')}.pdf`}
               class="bg-black hover:bg-zinc-800 text-white hover:text-zinc-200 max-w-40 md:max-w-max p-2"
             >
-              Descargar {title}
+              Descargar Apunte de {title}
             </a>
           </div>
         )
