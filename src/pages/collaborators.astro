@@ -6,8 +6,9 @@ import { fetchCollaborators } from '../data/collaborator';
 export const prerender = true;
 const subTitle = 'Colaboradores';
 const title = 'Colaboradores Tecnicatura en Programación - UTN 2025';
+const apiUrl = 'https://apicollaborator.vercel.app/';
 
-const { colaboradores, errorMessage } = await fetchCollaborators();
+const { colaboradores, errorMessage } = await fetchCollaborators(apiUrl);
 ---
 
 <BaseLayout title={title} subTitle={subTitle}>

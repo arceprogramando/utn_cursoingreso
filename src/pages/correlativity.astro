@@ -1,32 +1,11 @@
 ---
+import { subjects } from '../data/correlativity';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import type { Correlativity } from '../types/correlativity';
 
 const title = 'Correlatividades de la Tecnicatura en Programación - UTN 2025';
 const subTitle = 'Correlatividades';
-const subjects: Correlativity[] = [
-  { id: 0, name: 'Programación (Ingreso)', prerequisites: '-', isPassed: true, hours: 0 },
-  { id: 0, name: 'Matemática Inicial (Ingreso)', prerequisites: '-', isPassed: true, hours: 0 },
-  { id: 0, name: 'Lectura Comprensiva (Ingreso)', prerequisites: '-', isPassed: true, hours: 0 },
-  { id: 1, name: 'Programación I', prerequisites: '-', isPassed: true, hours: 128 },
-  { id: 2, name: 'Arquitectura y Sistemas operativos', prerequisites: '-', isPassed: true, hours: 64 },
-  { id: 3, name: 'Matemática', prerequisites: '-', isPassed: true, hours: 64 },
-  { id: 4, name: 'Organización empresarial', prerequisites: '-', isPassed: true, hours: 64 },
-  { id: 5, name: 'Programación II', prerequisites: '1, 2', isPassed: true, hours: 128 },
-  { id: 6, name: 'Probabilidad y Estadística', prerequisites: '3', isPassed: true, hours: 64 },
-  { id: 7, name: 'Base de Datos I', prerequisites: '1, 3', isPassed: true, hours: 64 },
-  { id: 8, name: 'Inglés I', prerequisites: '-', isPassed: true, hours: 64 },
-  { id: 9, name: 'Programación III', prerequisites: '5, 7', isPassed: false, hours: 128 },
-  { id: 10, name: 'Base de Datos II', prerequisites: '7', isPassed: false, hours: 64 },
-  { id: 11, name: 'Metodología de Sistemas I', prerequisites: '5, 7', isPassed: false, hours: 64 },
-  { id: 12, name: 'Inglés II', prerequisites: '8', isPassed: false, hours: 64 },
-  { id: 13, name: 'Programación IV', prerequisites: '9, 10, 11', isPassed: false, hours: 128 },
-  { id: 14, name: 'Metodología de Sistemas II', prerequisites: '11', isPassed: false, hours: 64 },
-  { id: 15, name: 'Introducción al análisis de datos', prerequisites: '10', isPassed: false, hours: 32 },
-  { id: 16, name: 'Legislación', prerequisites: '7', isPassed: false, hours: 32 },
-  { id: 17, name: 'Gestión de desarrollo de software', prerequisites: '9, 10', isPassed: false, hours: 64 },
-  { id: 18, name: 'Trabajo Final Integrador', prerequisites: '-', isPassed: false, hours: 95 },
-];
+
 ---
 
 <BaseLayout title={`${title}`} subTitle={`${subTitle}`}>

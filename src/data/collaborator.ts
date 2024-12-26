@@ -1,8 +1,6 @@
 import type { Collaborator } from '../types/collaborator';
 
-const apiUrl = 'https://apicollaborator.vercel.app/';
-
-export async function fetchCollaborators() {
+export async function fetchCollaborators(apiUrl: string): Promise<{ colaboradores: Collaborator[]; errorMessage: string }> {
   try {
     const response = await fetch(apiUrl);
     if (!response.ok) throw new Error('Error al obtener colaboradores desde la API principal.');
