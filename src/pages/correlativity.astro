@@ -30,20 +30,18 @@ const subjects: Correlativity[] = [
 ---
 
 <BaseLayout title={`${title}`} subTitle={`${subTitle}`}>
-  <div class="flex flex-col justify-center items-center container mx-auto text-center p-2 overflow-x-scroll md:overflow-hidden">
-    <table class="min-w-full divide-y divide-gray-200 shadow border-b border-gray-200 sm:rounded-lg">
-      <thead class="bg-gray-50">
+  <div class="flex flex-col-reverse md:flex-col  justify-center items-center container mx-auto text-center p-2 overflow-x-scroll md:overflow-hidden text-sm">
+    <table class="min-w-full  divide-y divide-gray-200 shadow border-b border-gray-200 sm:rounded-lg">
+      <thead class="border-t-2 border-l-2 border-r-2 bg-black text-white">
         <tr class="[&>*]:w-4">
-          <th scope="col" class="md:px-6 md:py-3 text-center text-xs md:font-medium text-gray-500 uppercase md:tracking-wider"> Nº </th>
-          <th scope="col" class="md:px-6 md:py-3 text-center text-xs md:font-medium text-gray-500 uppercase md:tracking-wider"> ASIGNATURA </th>
-          <th scope="col" class="md:px-6 md:py-3 text-center text-xs md:font-medium text-gray-500 uppercase md:tracking-wider">
-            NECESARIAS CURSADAS
-          </th>
-          <th scope="col" class="md:px-6 md:py-3 text-center text-xs md:font-medium text-gray-500 uppercase md:tracking-wider"> Aprobadas </th>
-          <th scope="col" class="md:px-6 md:py-3 text-center text-xs md:font-medium text-gray-500 uppercase md:tracking-wider"> Horas Totales </th>
+          <th scope="col" class="px-2 py-3 md:px-6 md:py-3 text-center text-xs md:font-medium uppercase md:tracking-wider"> Nº </th>
+          <th scope="col" class="px-2 py-3 md:px-6 md:py-3 text-center text-xs md:font-medium uppercase md:tracking-wider md:min-w-64"> ASIGNATURA </th>
+          <th scope="col" class="px-2 py-3 md:px-6 md:py-3 text-center text-xs md:font-medium uppercase md:tracking-wider"> NECESARIAS CURSADAS </th>
+          <th scope="col" class="px-2 py-3 md:px-6 md:py-3 text-center text-xs md:font-medium uppercase md:tracking-wider"> Aprobadas </th>
+          <th scope="col" class="px-2 py-3 md:px-6 md:py-3 text-center text-xs md:font-medium uppercase md:tracking-wider"> Horas Totales </th>
         </tr>
       </thead>
-      <tbody class="bg-white divide-y divide-gray-200 text-xs">
+      <tbody class="divide-y divide-x-2 ">
         {
           subjects.map((subject) => {
             const bgColor = subject.isPassed ? 'bg-green-300' : 'bg-yellow-300';
@@ -62,18 +60,21 @@ const subjects: Correlativity[] = [
         }
       </tbody>
     </table>
+    
+    <div>
+
+      <p class="text-lg font-semibold text-gray-800">
+        Horas Totales:
+        <span class="font-bold text-blue-600">
+          {subjects.reduce((total, subject) => total + subject.hours, 0)}
+        </span>
+      </p>
+      
+      <p class="text-lg font-semibold text-gray-800">
+        Horas Faltantes: <span class="font-bold text-blue-600">
+          {subjects.reduce((total, subject) => (subject.isPassed ? total : total + subject.hours), 0)}
+        </span>
+      </p>
+    </div>
   </div>
-
-  <p class="text-lg font-semibold text-gray-800">
-    Horas Totales:
-    <span class="font-bold text-blue-600">
-      {subjects.reduce((total, subject) => total + subject.hours, 0)}
-    </span>
-  </p>
-
-  <p class="text-lg font-semibold text-gray-800">
-    Horas Faltantes: <span class="font-bold text-blue-600">
-      {subjects.reduce((total, subject) => (subject.isPassed ? total : total + subject.hours), 0)}
-    </span>
-  </p>
 </BaseLayout>
