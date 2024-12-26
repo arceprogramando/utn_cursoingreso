@@ -4,10 +4,14 @@ import { ClientRouter } from 'astro:transitions';
 interface Props {
   title: string;
   thumbnailImage?: string;
+  description?: string;
 }
 
-const { title = 'Título por defecto', thumbnailImage = 'https://res.cloudinary.com/dyanh7yda/image/upload/v1705374365/c77n6krmnazj9yaafrxh.jpg' } =
-  Astro.props;
+const {
+  title = 'Título por defecto',
+  thumbnailImage = 'https://res.cloudinary.com/dyanh7yda/image/upload/v1705374365/c77n6krmnazj9yaafrxh.jpg',
+  description = 'Descubre la Tecnicatura Universitaria en Programación y aprende conceptos básicos para iniciarte en la programación en 2025.',
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -19,10 +23,7 @@ const { title = 'Título por defecto', thumbnailImage = 'https://res.cloudinary.
     <meta name="generator" content={Astro.generator} />
     <meta http-equiv="content-language" content="es" />
     <meta property="og:locale" content="es_AR" />
-    <meta
-      name="description"
-      content="Infórmate sobre la Tecnicatura Universitaria en Programación: conceptos básicos para iniciarte en la programación en 2025."
-    />
+    <meta name="description" content={description} />
     <meta
       name="keywords"
       content="Tecnicatura en Programación, UTN, CUDI, La Matanza, González Catán, Estudiar Programación, Apuntes de Programación"
