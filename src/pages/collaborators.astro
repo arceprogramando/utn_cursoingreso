@@ -2,21 +2,22 @@
 import { Icon } from 'astro-icon/components';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import type { Collaborator } from '../types/collaborator';
-
+import Image from 'astro/components/Image.astro';
+export const prerender = true;
 const subTitle = 'Colaboradores';
 const title = 'Colaboradores Tecnicatura en Programación - UTN 2025';
-const url = 'https://apicollaborator.vercel.app/';
+const apiUrl = 'https://apicollaborator.vercel.app/';
 
-let colaboradores: Collaborator[] = [];
-let errorMessage: string = '';
+async function fetchCollaborators() {
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) throw new Error('Error al obtener colaboradores desde la API principal.');
 
-try {
-  const response = await fetch(url);
-  if (response.ok) {
-    colaboradores = await response.json();
+    const colaboradores: Collaborator[] = await response.json();
 
-    await Promise.all(
-      colaboradores.map(async (colaborador: Collaborator) => {
+    // Mapear descripciones desde la API de GitHub
+    const colaboradoresConDescripcion = await Promise.all(
+      colaboradores.map(async (colaborador) => {
         try {
           const userResponse = await fetch(`https://api.github.com/users/${colaborador.login}`);
           if (userResponse.ok) {
@@ -25,25 +26,21 @@ try {
           } else {
             colaborador.description = '';
           }
-        } catch (error: unknown) {
-          if (error instanceof Error) {
-            colaborador.description = 'Error al obtener la descripción: ' + error.message;
-          } else {
-            colaborador.description = 'Error desconocido.';
-          }
+        } catch {
+          colaborador.description = 'Error al obtener la descripción.';
         }
+        return colaborador;
       }),
     );
-  } else {
-    errorMessage = 'Respuesta de red OK pero respuesta HTTP no OK, Por favor revise la API';
-  }
-} catch (error: unknown) {
-  if (error instanceof Error) {
-    errorMessage = 'Hubo un problema con la petición Fetch: ' + error.message;
-  } else {
-    errorMessage = 'Hubo un problema desconocido.';
+
+    return { colaboradores: colaboradoresConDescripcion, errorMessage: '' };
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? `Error al cargar datos: ${error.message}` : 'Error desconocido al cargar datos.';
+    return { colaboradores: [], errorMessage };
   }
 }
+
+const { colaboradores, errorMessage } = await fetchCollaborators();
 ---
 
 <BaseLayout title={title} subTitle={subTitle}>
@@ -56,9 +53,14 @@ try {
           {colaboradores.map((colaborador) => (
             <li class="p-6 bg-black text-white rounded-lg shadow-lg flex flex-col items-center gap-4 w-64">
               <div class="flex flex-col items-center">
-                <div class="h-24 w-24 border-4 bg-white rounded-full overflow-hidden mb-4">
-                  <img src={colaborador.avatar_url} alt={colaborador.login} class="object-cover w-full h-full" />
-                </div>
+                <Image
+                  src={colaborador.avatar_url}
+                  alt={colaborador.login}
+                  loading="lazy"
+                  width="96"
+                  height="96"
+                  class="rounded-full border-4 border-white"
+                />
                 <div class="text-center">
                   <div class="font-bold text-xl">{colaborador.login}</div>
                   <div class="text-gray-400 text-sm">{colaborador.description ? colaborador.description : 'Contributor'}</div>
