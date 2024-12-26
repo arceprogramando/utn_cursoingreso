@@ -47,7 +47,7 @@ function addSpaceBeforeSecondUpperCase(str: string) {
       }
     </div>
 
-    <div class="flex flex-col justify-around px-3 md:px-4 md:items-center">
+    <div class="flex flex-col gap-2 md:gap-0 justify-center  px-3 md:px-4 md:items-center">
       <div class="flex flex-col gap-2">
         <div class="flex md:gap-8 justify-around">
           <p class="font-semibold text-xs md:text-base px-2 text-black text-center">
@@ -63,8 +63,8 @@ function addSpaceBeforeSecondUpperCase(str: string) {
         </p>
       </div>
 
-      <div class="text-center">
-        <p class="py-2">Profesor/a:</p>
+      <div class="text-center my-2">
+        <p>Profesor/a:</p>
         <div class="relative inline-block">
           <span class="absolute -inset-x-1 -inset-y-0.5 rounded-sm bg-green-200 rotate-1 -skew-y-3 -z-10"></span>
           <p class="font-bold relative">{professor || 'Anónimo'}</p>
@@ -77,7 +77,7 @@ function addSpaceBeforeSecondUpperCase(str: string) {
             <a
               href={downloadUrl}
               download={`${title.replace(/ /g, '_')}.pdf`}
-              class="bg-black hover:bg-zinc-800 text-white hover:text-zinc-200 max-w-40 md:max-w-max p-2"
+              class="bg-black hover:bg-zinc-800 text-white hover:text-zinc-200 max-w-40 md:max-w-max p-2 my-1 md:my-0"
             >
               Descargar Apunte de {title}
             </a>
