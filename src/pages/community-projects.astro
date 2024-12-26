@@ -75,9 +75,11 @@ const projects: Project[] = [
               </p>
             </div>
           </div>
-          <div class="flex flex-wrap justify-center gap-2 px-1 py-4">
-            {project.tags.map((tag) => (
-              <span class="bg-zinc-700 text-white py-1 px-3 rounded-full text-xs">{tag}</span>
+          <div class="flex flex-wrap justify-center gap-2  py-4">
+            {project.tags.map((tag,index) => (
+              index % 2 === 0
+              ? <span class="bg-zinc-700 text-white py-1 px-3  text-xs">{tag}</span>
+              : <span class="bg-zinc-800 text-white py-1 px-3  text-xs">{tag}</span>
             ))}
           </div>
         </div>
