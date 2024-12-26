@@ -53,6 +53,7 @@ Union = U Intersección = ∩
 Todos los posibles resultados de dicho experimento son:
 
 <Latex formula="U = \{III, DII, IDI, IID, IDD, DID, DDI, DDD\}" />
+
 Donde D Representa hacia la derecha e "I" hacia la izquierda
 
 **Suceso Elemental o evento Simple:** Cada uno de los posibles resultados, que no se pueden descomponer en otros más simples, da un experimento
@@ -99,7 +100,6 @@ Definimos los siguientes sucesos:
 Los sucesos A y B son particiones de U, Ya que son **mutuamente excluyentes** y **colectivamente exhaustivos**
 
 **Mutuamente Excluyentes:** Es uno o es el otro , se cumple que si es par no se cumple que es impar
-{/* 
 
 **Colectivamente exhaustivos:** Porque si hago la union de todos los sucesos me da el total del universo
 
@@ -121,377 +121,305 @@ El operador "o" equivale a la unión de los conjuntos.
 
 Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la intersección, la diferencia, la diferencia simétrica y el complemento.
 
-<h3 class="text-center uppercase">Representación grafica con diagramas de Venn.</h3>
+#### Representación grafica con diagramas de Venn.
 
-<div class="flex  md:flex-row gap-2 items-center justify-around">
-  <img src="/DiagramaVennProbabilidad1.svg" alt="Diagrama de Venn de los sucesos A Y B" class="max-w-40 md:max-w-80 md:w-80" />
-  <p> Diagrama de Venn de los sucesos A y B</p>
-</div>
+![Diagrama de Venn de los sucesos A y B](/DiagramaVennProbabilidad1.svg)
 
-<div class="flex md:flex-row gap-2 items-center justify-around">
-  <p>La región sombreada es A ∩ B (intersección) representan a los elementos que pertenecen al suceso A y al suceso B</p>
-  <img src="/DiagramaVennProbabilidad2.svg" alt="Diagrama de Venn de los sucesos A intersección B" class="max-w-40 md:max-w-80 md:w-80" />
-</div>
+Diagrama de Venn de los sucesos A y B
 
-<div class="flex  md:flex-row gap-2 items-center justify-around">
-  <img src="/DiagramaVennProbabilidad3.svg" alt="Diagrama de Venn de los sucesos A intersección B" class="max-w-40 md:max-w-80 md:w-80" />
-  <p>La región sombreada es A U B (unión) representan a los elementos que pertenecen al suceso A y al suceso B o a ambos</p>
-</div>
 
-<div class="flex  gap-2 items-center justify-around">
-  <p>
-    <span class="font-bold">Sucesos A Y B mutuamente excluyentes</span>, Cuando ocurre uno de los sucesos, el otro no puede ocurrir.
-  </p>
-  <img src="/DiagramaVennProbabilidad4.svg" alt="Diagrama de Venn de los sucesos A intersección B" class="max-w-40 md:max-w-80 md:w-80" />
-</div>
+![Diagrama de Venn de los sucesos A intersección B](/DiagramaVennProbabilidad2.svg)
 
-<div class="flex gap-2 items-center justify-around">
-  <img src="/DiagramaVennProbabilidad5.svg" alt="Diagrama de Venn de los sucesos A intersección B" class="max-w-40 md:max-w-80 md:w-80" />
-  <p>La región sombreada es el complemento de A</p>
-</div>
 
-<div class="flex gap-2 items-center justify-around">
-  <p>Representa a los elementos que pertenecen al suceso A o bien al suceso B pero no a Ambos , osea que la intersección no es agregada</p>
-  <img src="/DiagramaVennProbabilidad6.svg" alt="Pertenecen al suceso A o bien al suceso B pero no a Ambos" class="max-w-40 md:max-w-80 md:w-80" />
-</div>
+![Diagrama de Venn de los sucesos A intersección B](/DiagramaVennProbabilidad3.svg)
 
-<h3 class="text-xl text-blue-700">Concepto de Probabilidad. Propiedades.</h3>
-<h4 class="text-lg text-blue-700">Definición clasica de la probabilidad.</h4>
+La región sombreada es A ∩ B (intersección) representan a los elementos que pertenecen al suceso A y al suceso B
+
+
+![Diagrama de Venn de los sucesos A intersección B](/DiagramaVennProbabilidad4.svg)
+
+La región sombreada es A U B (unión) representan a los elementos que pertenecen al suceso A y al suceso B o a ambos
+
+![Diagrama de Venn de los sucesos A intersección B](/DiagramaVennProbabilidad5.svg)
+
+**Sucesos A Y B mutuamente excluyentes**, Cuando ocurre uno de los sucesos, el otro no puede ocurrir.
+La región sombreada es el complemento de A
+
+![Pertenecen al suceso A o bien al suceso B pero no a Ambos](/DiagramaVennProbabilidad6.svg)
+
+Representa a los elementos que pertenecen al suceso A o bien al suceso B pero no a Ambos, o sea que la intersección no es agregada
+
+### Concepto de Probabilidad. Propiedades.
+
+#### Definición clásica de la probabilidad.
 
 **Espacio muestral comprobable** "Todos los sucesos elementales tienen igual probabilidad de ocurrir"
 
-<div class="w-80 md:w-full min-h-80 border bg-blue-400 p-4">
 
-  <h5 class="text-xl font-bold text-center">Definición clásica de probabilidad</h5>
 
-  <p>Sea un suceso <span class="font-bold">aleatorio \( S \) </span> definido en un espacio muestral <span class="font-bold">\( U \)</span> . La probabilidad de ocurrencia de <span class="font-bold">\( S \)</span> se define como el <span class="font-bold">cociente</span> entre los <span class="font-bold">casos favorables</span> al suceso aleatorio <span class="font-bold">\( S \)</span> y los casos posibles del experimento aleatorio.</p>
+### Definición clásica de probabilidad
 
-  <p class="font-bold text-2xl">
-    <Latex formula="P(S) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}}" />
-  </p>
+Sea un suceso **aleatorio \( S \)** definido en un espacio muestral **\( U \)**. La probabilidad de ocurrencia de **\( S \)** se define como el **cociente** entre los **casos favorables** al suceso aleatorio **\( S \)** y los casos posibles del experimento aleatorio.
 
-  <p>
-    <Latex formula="P(S) = \frac{CF}{CP}" />
-  </p>
+<Latex formula="P(S) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}}" />
 
-</div>
+<Latex formula="P(S) = \frac{CF}{CP}" />
 
-<div class="md:min-w-[520px] md:w-full min-h-80 border bg-green-400 p-4">
-  <h6 class="text-xl font-bold text-center">Ejemplo</h6>
-  
-  <p>E4: Se arroja un dado y se observa el número que sale.</p>
-  
-  <p><Latex formula="A = \{\text{sale número par}\} = \{2,4,6\}" /></p>
-  <p><Latex formula="A = \{\text{sale número impar}\} = \{1,3,5\}" /></p>
-  <p><Latex formula="A = \{\text{sale múltiplo de 3}\} = \{3,6\}" /></p>
+### Ejemplo
 
-  <p>Para calcular la probabilidad de que salga un numero par hacemos:</p>
+E4: Se arroja un dado y se observa el número que sale.
 
-  <p class="font-bold text-2xl">
-    <Latex formula="P(A) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} = 0.5" />
-  </p>
+<Latex formula="A = \{\text{sale número par}\} = \{2,4,6\}" />
 
-  <p> Para calcular la probabilidad de que salga un número impar </p>
-  <p class="font-bold text-2xl">
-    <Latex formula="P(A) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} = 0.5" />
-  </p>
+<Latex formula="A = \{\text{sale número impar}\} = \{1,3,5\}" />
 
-  <p> Para calcular la probabilidad de que salga un múltiplo de 3 </p>
-  <p class="font-bold text-2xl">
-  <Latex formula="P(A) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{2}{6} = \frac{1}{3}" />
-  </p>
-  <p>Para calcular la probabilidad de que no salga un número par:</p>
-  <p class="font-bold text-2xl">
-    <Latex formula="P(A^c) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} = 0.5" />
-  </p>
+<Latex formula="A = \{\text{sale múltiplo de 3}\} = \{3,6\}" />
 
-  <p>Para calcular la probabilidad de que no salga un múltiplo de 3:</p>
-  <p class="font-bold text-2xl">
-  <Latex formula="P(A^c) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} =\frac{4}{6} = \frac{2}{3}" />
-  </p>
-  <p>Para calcular la probabilidad de que salga un número par o impar:</p>
-  <p class="font-bold text-2xl"><Latex formula="P(A \cup B) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} + \frac{3}{6} = \frac{6}{6} = 1" /></p>
-  <p class="font-bold text-2xl"><Latex formula="P(A \cap B) = \frac{\text{Casos favorables al suceso par y múltiplo de 3}}{\text{Casos posibles del experimento}} = \frac{1}{6}" /></p>
-</div>
+Para calcular la probabilidad de que salga un número par hacemos:
 
-<div class="w-full md:w-full min-h-80 border bg-blue-100 p-4">
-  <h5 class="text-xl font-bold text-center">Axiomas de la probabilidad</h5>
+<Latex formula="P(A) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} = 0.5" />
 
-  <p>La probabilidad se basa en tres axiomas fundamentales establecidos por el matemático Andrey Kolmogorov:</p>
+Para calcular la probabilidad de que salga un número impar:
 
-  <p>
-    <strong>Axioma 1:</strong> La probabilidad de cualquier evento es un número no negativo.
-    <Latex formula="P(A) \geq 0" />
-  </p>
+<Latex formula="P(A) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} = 0.5" />
 
-  <p>
-    <strong>Axioma 2:</strong> La probabilidad del espacio muestral completo es 1.
-    <Latex formula="P(U) = 1" />
-  </p>
+Para calcular la probabilidad de que salga un múltiplo de 3:
 
-  <p>
-    <strong>Axioma 3:</strong> La probabilidad de la unión de eventos mutuamente excluyentes es la suma de sus probabilidades.
-    <Latex formula="P(A \cup B) = P(A) + P(B)" />
-    <span class="text-gray-700">(si \(A\) y \(B\) son eventos mutuamente excluyentes)</span>
-  </p>
+<Latex formula="P(A) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{2}{6} = \frac{1}{3}" />
 
-  <p>
-    Estos axiomas forman la base para el cálculo de probabilidades y para el desarrollo de modelos estadísticos y probabilísticos.
-  </p>
-</div>
+Para calcular la probabilidad de que no salga un número par:
 
-<div class="w-full md:w-full  min-h-80 border bg-green-100 p-4">
-  <h6 class="text-xl font-bold text-center">Ejemplo</h6>
+<Latex formula="P(A^c) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} = 0.5" />
 
-  <p>
-    En una pareja, cada uno de sus miembros posee genes para ojos castaños y para ojos azules. Teniendo en cuenta que cada uno tiene la misma
-    probabilidad de aportar un gen para ojos castaños que para ojos azules y que el gen para ojos castaños es dominante, se desea obtener la
-    probabilidad de que un hijo nacido de esta pareja tenga los ojos castaños.
-  </p>
+Para calcular la probabilidad de que no salga un múltiplo de 3:
 
-  <p>
-    Espacio muestral:
-    <Latex formula="E = \text{Genes que aporta cada padre}" />
-  </p>
+<Latex formula="P(A^c) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{4}{6} = \frac{2}{3}" />
 
-  <p>
-    Supongamos que los genes están representados como:
-    <Latex formula="C = \text{gen para ojos castaños}" />
-   <Latex formula="A = \text{gen para ojos azules}" />
-  </p>
+Para calcular la probabilidad de que salga un número par o impar:
 
-  <p>
-    Dado que cada padre puede aportar uno de los dos genes con igual probabilidad, y el gen para ojos castaños (C) es dominante sobre el gen para ojos
-    azules (A), tenemos los siguientes posibles pares de genes para el hijo:
-  </p>
+<Latex formula="P(A \cup B) = \frac{\text{Casos favorables al suceso}}{\text{Casos posibles del experimento}} = \frac{3}{6} + \frac{3}{6} = \frac{6}{6} = 1" />
 
-  <ul class="list-disc pl-5">
+Para calcular la probabilidad de que salga un número par y múltiplo de 3:
+
+<Latex formula="P(A \cap B) = \frac{\text{Casos favorables al suceso par y múltiplo de 3}}{\text{Casos posibles del experimento}} = \frac{1}{6}" />
+
+## Axiomas de la probabilidad
+
+La probabilidad se basa en tres axiomas fundamentales establecidos por el matemático Andrey Kolmogorov:
+
+**Axioma 1:** La probabilidad de cualquier evento es un número no negativo.
+
+<Latex formula="P(A) \geq 0" />
+
+**Axioma 2:** La probabilidad del espacio muestral completo es 1.
+
+<Latex formula="P(U) = 1" />
+
+**Axioma 3:** La probabilidad de la unión de eventos mutuamente excluyentes es la suma de sus probabilidades.
+
+<Latex formula="P(A \cup B) = P(A) + P(B)" />
+
+<span class="text-gray-700">(si \(A\) y \(B\) son eventos mutuamente excluyentes)</span>
+
+
+
+Estos axiomas forman la base para el cálculo de probabilidades y para el desarrollo de modelos estadísticos y probabilísticos.
+
+## Ejemplo
+
+En una pareja, cada uno de sus miembros posee genes para ojos castaños y para ojos azules. Teniendo en cuenta que cada uno tiene la misma probabilidad de aportar un gen para ojos castaños que para ojos azules y que el gen para ojos castaños es dominante, se desea obtener la probabilidad de que un hijo nacido de esta pareja tenga los ojos castaños.
+
+### Espacio muestral:
+<Latex formula="E = \text{Genes que aporta cada padre}" />
+
+Supongamos que los genes están representados como:
+<Latex formula="C = \text{gen para ojos castaños}" />
+<Latex formula="A = \text{gen para ojos azules}" />
+
+Dado que cada padre puede aportar uno de los dos genes con igual probabilidad, y el gen para ojos castaños (C) es dominante sobre el gen para ojos azules (A), tenemos los siguientes posibles pares de genes para el hijo:
+
+<Latex formula="CC" />
+<Latex formula="CA" />
+<Latex formula="AC" />
+<Latex formula="AA" />
+
+Los pares de genes que resultan en ojos castaños son:
+<Latex formula="CC" />
+<Latex formula="CA" />
+<Latex formula="AC" />
+
+Como el gen para ojos castaños (C) es dominante, cualquier combinación que tenga al menos un gen para ojos castaños resultará en ojos castaños. Por lo tanto, las combinaciones que dan como resultado ojos castaños son:
+<Latex formula="CC, CA, AC" />
+
+La probabilidad de que el hijo tenga ojos castaños es:
+<Latex formula="P(\text{Ojos castaños}) = \frac{\text{Número de combinaciones favorables}}{\text{Número total de combinaciones}}" />
+
+Existen 3 combinaciones favorables (CC, CA, AC) y 4 combinaciones posibles en total (CC, CA, AC, AA). Por lo tanto:
+<Latex formula="P(\text{Ojos castaños}) = \frac{3}{4} = 0.75" />
+
+Así, la probabilidad de que un hijo nacido de esta pareja tenga ojos castaños es 0.75 o 75%.
+
+
+## Otro Ejemplo
+
+Una mujer es portadora de hemofilia. Aunque la mujer no tenga la enfermedad, puede transmitirla a los hijos. Suponiendo que es igualmente probable que se transmita o no la enfermedad, obtendremos las probabilidades de los siguientes sucesos en tres hijos:
+
+### 1. Ninguno tenga la enfermedad (Suceso A)
+
+La probabilidad de que un hijo no tenga la enfermedad es:
+<Latex formula="P(\text{No enfermedad}) = \frac{1}{2}" />. Si consideramos tres hijos, la probabilidad de que ninguno de ellos tenga la enfermedad se puede calcular como:
+<Latex formula="P(\text{Ninguno tenga la enfermedad(Suceso A)o (A)}) = \frac{CF}{CP} = \frac{1}{8} = 0.125" />
+
+Donde:  
+CF (Casos Favorables) = 1 (solo la trayectoria NNN corresponde a que ninguno tenga la enfermedad).  
+CP (Casos Posibles) = 8 (las trayectorias posibles en total, ya que hay 2 posibilidades por hijo y 3 hijos):
+<Latex formula="2^3" />
+
+### 2. Dos hijos tengan la enfermedad (Suceso B)
+
+La probabilidad de que un hijo tenga la enfermedad es:
+
+<Latex formula="P(\text{Enfermedad}) = \frac{1}{2}" />. Las trayectorias posibles en las que exactamente dos hijos tengan la enfermedad son tres, por lo que la probabilidad es:
+
+<Latex formula="P(\text{Dos hijos tengan la enfermedad(Suceso B)o (B)}) = \frac{CF}{CP} = \frac{3}{8} = 0.375" />
+
+Donde:  
+CF (Casos Favorables) = 3 (las trayectorias SSN, SNS, y NSS corresponden a dos hijos con la enfermedad).  
+CP (Casos Posibles) = 8 (las trayectorias posibles en total).
+
+### 3. Obtener las trayectorias para este experimento mediante un diagrama de árbol
+
+Podemos representar este problema utilizando un diagrama de árbol para visualizar todas las posibles trayectorias del experimento. El diagrama de árbol para este experimento se puede construir de la siguiente manera:
+
+![Diagrama de árbol de hemofilia](/diagrama-arbol-hemofilia.avif)
+
+En el diagrama de árbol, cada rama representa la probabilidad de que un hijo tenga o no tenga la enfermedad. Las trayectorias posibles son:
+
+<Latex formula="\text{SSS : Todos los hijos tienen la enfermedad.}" />
+<Latex formula="\text{SSN, SNS, NSS : Dos hijos tienen la enfermedad.}" />
+<Latex formula="\text{SNN, NSN, NNS : Un hijo tiene la enfermedad.}" />
+<Latex formula="\text{NNN : Ningún hijo tiene la enfermedad.}" />
+
+El espacio muestral total es: <Latex formula="2^3 = 8" /> trayectorias.
+
+
+#### Considerando el siguiente experimento, escribe su espacio muestral.
+
+**Experimento:**
+
+- Se elige un número natural al azar entre 1 y 5 al mismo tiempo que se elige un color entre rojo, verde, azul.
+
+
+### Espacio muestral:
+
+<div class="overflow-x-auto">
+  <ul class="w-max">
     <li>
-      <Latex formula="CC" />
-    </li>
-    <li>
-      <Latex formula="CA" />
-    </li>
-    <li>
-      <Latex formula="AC" />
-    </li>
-    <li>
-      <Latex formula="AA" />
+      <Latex formula="\{ (1, \text{rojo}), (1, \text{verde}), (1, \text{azul}), (2, \text{rojo}), (2, \text{verde}), (2, \text{azul}), (3, \text{rojo}), (3, \text{verde}), (3, \text{azul}), (4, \text{rojo}), (4, \text{verde}), (4, \text{azul}), (5, \text{rojo}), (5, \text{verde}), (5, \text{azul}) \}" />
     </li>
   </ul>
-
-
-
-  <p>
-    Los pares de genes que resultan en ojos castaños son:
-    <Latex formula="CC" />
-    <Latex formula="CA" />
-    <Latex formula="AC" />
-  </p>
-
-
-
-  <p>
-    Como el gen para ojos castaños (C) es dominante, cualquier combinación que tenga al menos un gen para ojos castaños resultará en ojos castaños. Por
-    lo tanto, las combinaciones que dan como resultado ojos castaños son:
-    <Latex formula="CC, CA, AC" />
-  </p>
-
-
-
-  <p>
-    La probabilidad de que el hijo tenga ojos castaños es:
-    <Latex formula="P(\text{Ojos castaños}) = \frac{\text{Número de combinaciones favorables}}{\text{Número total de combinaciones}}" />
-  </p>
-
-
-
-  <p>
-    Existen 3 combinaciones favorables (CC, CA, AC) y 4 combinaciones posibles en total (CC, CA, AC, AA). Por lo tanto:
-    <Latex formula="P(\text{Ojos castaños}) = \frac{3}{4} = 0.75" />
-  </p>
-
-  <p>
-    Así, la probabilidad de que un hijo nacido de esta pareja tenga ojos castaños es 0.75 o 75%.
-  </p>
 </div>
 
-<div class="w-full md:w-full min-h-80 border bg-blue-100 p-4">
-  <h6 class="text-xl font-bold text-center">Otro Ejemplo</h6>
-  <p>
-    Una mujer es portadora de hemofilia. Aunque la mujer no tenga la enfermedad, puede transmitirla a los hijos. Suponiendo que es igualmente probable
-    que se transmita o no la enfermedad, obtendremos las probabilidades de los siguientes sucesos en tres hijos:
-  </p>
+Se le puede decir de dos formas diferentes:
 
-  <h6 class="text-lg font-bold">1. Ninguno tenga la enfermedad (Suceso A)</h6>
-  <p>
-    La probabilidad de que un hijo no tenga la enfermedad es <Latex formula="P(\text{No enfermedad}) = \frac{1}{2}" />. Si consideramos tres hijos, la
-    probabilidad de que ninguno de ellos tenga la enfermedad se puede calcular como:
-  </p>
-
-  <p>
-    <Latex formula="P(\text{Ninguno tenga la enfermedad(Suceso A)o (A)}) = \frac{CF}{CP} = \frac{1}{8} = 0.125" />
-  </p>
+<Latex formula="\text{\#E = espacio muestral/universo}" />
+<Latex formula="\text{\#U = espacio muestral/universo}" />
+<Latex formula="\text{\#E = 15}" />
+<Latex formula="\text{\#U = 15}" />
 
 
+###### Ejercicios
 
-  <p> Donde: CF (Casos Favorables) = 1 (solo la trayectoria NNN corresponde a que ninguno tenga la enfermedad).</p>
-  <p/>
-  CP (Casos Posibles) = 8 las trayectorias posibles en total, ya que hay 2 posibilidades por hijo y 3 hijos:
-  <Latex formula="2^3" />
-  <p/>
+1. Para cada uno de los siguientes experimentos, se pide definir el espacio muestral:
+    a. Se analiza un tubo de ensayo con una muestra para detectar la presencia o ausencia de una molécula contaminante.  
+    b. Se seleccionaron sucesivamente dos artículos de una producción y se clasifica cada uno en NORMAL o DEFECTUOSO.  
+    c. Se arroja una moneda.  
+    d. Se seleccionaron dos billetes de una billetera que contiene: un billete de $10, uno de $50 y uno de $20. Considerar al experimento con y sin reposición.  
+    e. De una caja que contiene bolillas blancas y negras, se extraen sucesivamente hasta obtener dos bolillas blancas o cuatro bolillas cualesquiera.
 
-  <h6 class="text-lg font-bold">2. Dos hijos tengan la enfermedad (Suceso B)</h6>
-  <p>
-    La probabilidad de que un hijo tenga la enfermedad es <Latex formula="P(\text{Enfermedad}) = \frac{1}{2}" />
-  </p>
-  <p> 
-  Las trayectorias posibles en las que exactamente dos hijos tengan la enfermedad son tres, por lo que la probabilidad es:
-  </p>
+2. Describir por extensión los siguientes sucesos correspondientes a los experimentos aleatorios descriptos en el ítem b del ejercicio anterior.
 
+    **A** = el primer artículo es defectuoso.  
+    **B** = al menos uno de los artículos es defectuoso.  
+    **C** = ambos artículos son defectuosos.
 
+3. Considerando el ítem 2, indicar el valor de verdad de las siguientes preposiciones:
 
-  <p>
-    <Latex formula="P(\text{Dos hijos tengan la enfermedad(Suceso B)o (B)}) = \frac{CF}{CP} = \frac{3}{8} = 0.375" />
-  </p>
+    a. A ⊂ B (incluido) _______________________  
+    b. C ⊂ A (incluido) _______________________  
+    c. \( A \cap C \) es un evento imposible _______________________  
+    d. El complemento de un evento imposible es verdadero _______________________
 
-  <p>Donde:</p>
-  <p> CF (Casos Favorables) = 3 (las trayectorias SSN, SNS, y NSS corresponden a dos hijos con la enfermedad).</p>
-  <p>CP (Casos Posibles) = 8 (las trayectorias posibles en total).</p>
+4. Supongamos que se lanza una moneda tres veces y se observan las caras superiores registrando cara o cruz según corresponda.
 
-  <h6 class="text-lg font-bold">3. Obtener las trayectorias para este experimento mediante un diagrama de árbol</h6>
-  <p>Podemos representar este problema utilizando un diagrama de árbol para visualizar todas las posibles trayectorias del experimento. El diagrama de árbol para este experimento se puede construir de la siguiente manera:</p>
+    a. Establecer el espacio muestral de este experimento.  
+    b. Asignar una probabilidad a cada punto. ¿Se trata de un espacio de equiprobabilidad?  
+    c. Sea **A** el evento de observar exactamente una sola vez cara, y **B**, el evento de observar al menos una cara. Obtener los espacios muestrales de **A** y de **B**.  
+    d. A partir de las respuestas del ítem anterior, calcular: \( P(A) \), \( P(B) \).
 
-  <div class="flex flex-col items-center">
-    <img src="/diagrama-arbol-hemofilia.avif" alt="Diagrama de árbol de hemofilia" class="w-full md:w-[400px] border border-gray-300 p-2" />
-  </div>
+5. Describir por extensión los siguientes sucesos correspondientes a los experimentos aleatorios descriptos en el ítem b del ejercicio anterior.
 
-  <p>En el diagrama de árbol, cada rama representa la probabilidad de que un hijo tenga o no tenga la enfermedad. Las trayectorias posibles son:</p>
-  <ul class="list-disc list-inside">
-    <li class="inline">
-      <Latex formula="\text{SSS : Todos los hijos tienen la enfermedad.}" />
-    </li>
-    <li class="inline">
-      <Latex formula="\text{SSN, SNS, NSS : Dos hijos tienen la enfermedad.}" />
-    </li>
-    <li class="inline">
-      <Latex formula="\text{SNN, NSN, NNS : Un hijo tiene la enfermedad.}" />
-    </li>
-    <li class="inline">
-      <Latex formula="\text{NNN : Ningún hijo tiene la enfermedad.}" />
-    </li>
-  </ul>
-  <p>El espacio muestral total es: <Latex formula="2^3 = 8" /> trayectorias. </p>
+    **A** = el primer artículo es defectuoso.  
+    **B** = al menos uno de los artículos es defectuoso.  
+    **C** = ambos artículos son defectuosos.
 
-</div>
-
-<div class="w-full md:w-[600px] min-h-80 border bg-blue-300 p-4">
-  <p>Considerando el siguiente experimento, escribe su espacio muestral.</p>
-  <p>Experimento:</p>
-  <ul>
-    <li>Se elige un número natural al azar entre 1 y 5 al mismo tiempo que se elige un color entre rojo, verde, azul.</li>
-  </ul>
-  <p>Espacio muestral:</p>
-
-  <div class="overflow-x-auto">
-    <ul class="w-max">
-      <li class="">
-        <Latex formula="\{ (1, \text{rojo}), (1, \text{verde}), (1, \text{azul}), (2, \text{rojo}), (2, \text{verde}), (2, \text{azul}), (3, \text{rojo}), (3, \text{verde}), (3, \text{azul}), (4, \text{rojo}), (4, \text{verde}), (4, \text{azul}), (5, \text{rojo}), (5, \text{verde}), (5, \text{azul}) \}" />
-      </li>
-    </ul>
-  </div>
-
-  <p>Se le puede decir de dos formas diferentes:</p>
-  <Latex formula="\text{\#E = espacio muestral/universo}" />
-  <Latex formula="\text{\#U = espacio muestral/universo}" />
-  <Latex formula="\text{\#E = 15}" />
-  <Latex formula="\text{\#U = 15}" />
-</div>
+6. Una bolsa contiene 10 bolas numeradas del 1 al 10. La experiencia consiste en extraer una bola al azar. ¿Cuál es el espacio muestral?  
+    Considerando los siguientes sucesos:  
+    **A** = obtener un número primo  
+    **B** = obtener un múltiplo de 3  
+    Escribe los sucesos 
+<Latex formula="A" />, 
+<Latex formula="B" />, 
+<Latex formula="A \cup B" /> y <Latex formula="A \cap B" />.
 
 
-<div class="w-full items-center min-h-80  bg-gray-100 p-4">
-  <h6 class="text-xl font-bold text-center mb-4">Ejercicios</h6>
+7. Lanzamos tres veces una moneda obteniendo un suceso elemental. Escribe el espacio muestral para el suceso anterior.
 
-  <ol class="list-decimal list-inside space-y-2">
-    <li>Para cada uno de los siguientes experimentos, se pide definir el espacio muestral:</li>
-    <ol class="list-[lower-alpha] list-inside ml-6 space-y-1">
-      <li>Se analiza un tubo de ensayo con una muestra para detectar la presencia o ausencia de una molécula contaminante.</li>
-      <li>Se seleccionaron sucesivamente dos artículos de una producción y se clasifica cada uno en NORMAL o DEFECTUOSO.</li>
-      <li>Se arroja una moneda.</li>
-      <li>Se seleccionaron dos billetes de una billetera que contiene: un billete de $10, uno de $50 y uno de $20. Considerar al experimento con y sin reposición.</li>
-      <li>De una caja que contiene bolillas blancas y negras, se extraen sucesivamente hasta obtener dos bolillas blancas o cuatro bolillas cualesquiera.</li>
-    </ol>
+    a. ¿Cuáles de dichos sucesos componen? :  
+
+<Latex formula="S = \{\text{la primera vez salió cara}\}" />
     
-    <li>Describir por extensión los siguientes sucesos correspondientes a los experimentos aleatorios descriptos en el ítem b del ejercicio anterior.</li>
-    <p>A = el primer artículo es defectuoso.</p>
-    <p>B = al menos uno de los artículos es defectuoso.</p>
-    <p>C = ambos artículos son defectuosos.</p>
+    b. Escribe otro suceso en el espacio muestral anterior y llámalo  
+
+<Latex formula="K." />
     
-    <li>Considerando el ítem 2, indicar el valor de verdad de las siguientes preposiciones:</li>
-    <ol class="list-[lower-alpha] list-inside ml-6 space-y-2 p-0 m-0 ">
-      <li>A ⊂ B (incluido) _______________________</li>
-      <li>C ⊂ A (incluido) _______________________</li>
-      <li>A ∩ C es un evento imposible _______________________</li>
-      <li>El complemento de un evento imposible es verdadero _______________________</li>
-    </ol>
+    c. Escribe 
 
-    <li>Supongamos que se lanza una moneda tres veces y se observan  las caras superiores registrando cara o cruz según corresponda.</li>
-    <ol class="list-[lower-alpha] list-inside ml-6 space-y-2 p-0 m-0 ">
-      <li>Establecer el espacio muestral de este experimento. </li>
-      <li>Asignar una probabilidad a cada punto. ¿Se trata de un espacio de equiprobabilidad? </li>
-      <li>Sea A el evento de observar exactamente una sola vez cara, y B, el evento de observar al menos una cara. Obtener los espacios muestrales de A y de B. </li>
-      <li>A partir de las respuestas del ítem anterior, calcular: P(A), P(B). </li>
-    </ol>
-    <li>Describir por extensión los siguientes sucesos correspondientes a los experimentos aleatorios descriptos en el ítem b del ejercicio anterior.</li>
-    <p>A = el primer artículo es defectuoso.</p>
-    <p>B = al menos uno de los artículos es defectuoso.</p>
-    <p>C = ambos artículos son defectuosos.</p>
+<Latex formula="S \cup K" /> y <Latex formula="S \cap K" />.
 
-    <li>Una bolsa contiene 10 bolas numeradas del 1 al 10. La experiencia consiste en extraer una bola al azar ¿Cuál es el espacio muestral? <br/>Considerando Los siguientes Sucesos:</li>
-    <p>A = obtener un número primo</p>
-    <p>B = obtener un múltiplo de 3</p>
-    <p>Escribe los sucesos A, B, AUB y A∩B</p>
-    <li>Lanzamos tres veces una moneda obteniendo un suceso elemental. Escribe el espacio muestral para el suceso anterior. </li>
-    <ol>
-      <li>¿Cuáles de dichos sucesos componen? : <Latex formula="S = \{\text{la primera vez salió cara}\}" /></li>
-      <li>Escribe otro suceso en el espacio muestral anterior y llámalo <Latex formula="K." /></li>
-      <li>Escribe <Latex formula="S \cup K" /> y <Latex formula="S \cap K" />.</li>
-    </ol>
-  </ol>
-</div>
+
 
 ### Clase II - 20 de agosto de 2024
 
 Se inicia la clase Resolviendo los Ejercicios de la clase anterior
 
-<div class="w-full  min-h-80  p-4">
-  <h6 class="text-xl font-bold text-center mb-4">Ejercicios Resueltos</h6>
+###### Ejercicios Resueltos
 
-  <ol class="list-decimal list-inside space-y-2">
-    <li>Para cada uno de los siguientes experimentos, se pide definir el espacio muestral:</li>
-    <ol class="list-[lower-alpha] list-inside ml-6 space-y-1">
-      <li>Se analiza un tubo de ensayo con una muestra para detectar la presencia o ausencia de una molécula contaminante.</li>
-      <div class="overflow-x-auto">
-        <span><Latex formula="\#E = \{\text{PRESENCIA}, \text{AUSENCIA}\}" /></span>
-      </div>
-      <li>Se seleccionaron sucesivamente dos artículos de una producción y se clasifica cada uno en NORMAL o DEFECTUOSO.</li>
-      <div class="overflow-x-auto">
-        <span><Latex formula="\#E = \{\text{NN}, \text{ND}, \text{DD}, \text{DN}\}"  /></span>
-      </div>
-      <li>Se arroja una moneda.</li>
-      <div class="overflow-x-auto">
-        <span><Latex formula="\#E = \{\text{Cara}, \text{Cruz}\}" /></span>
-      </div>
-      <li>Se seleccionaron dos billetes de una billetera que contiene: un billete de \$10, uno de \$50 y uno de \$20. Considerar al experimento con y sin reposición.</li>
-      <p>Sin reposición:</p>
-      <div class="overflow-x-auto overflow-y-hidden">
-        <span><Latex formula="\#E = \left\{\begin{array}{ll}
+<ol class="list-decimal list-inside space-y-2">
+  <li>Para cada uno de los siguientes experimentos, se pide definir el espacio muestral:</li>
+  <ol class="list-[lower-alpha] list-inside ml-6 space-y-1">
+    <li>Se analiza un tubo de ensayo con una muestra para detectar la presencia o ausencia de una molécula contaminante.</li>
+    <div class="overflow-x-auto">
+      <span><Latex formula="\#E = \{\text{PRESENCIA}, \text{AUSENCIA}\}" /></span>
+    </div>
+    <li>Se seleccionaron sucesivamente dos artículos de una producción y se clasifica cada uno en NORMAL o DEFECTUOSO.</li>
+    <div class="overflow-x-auto">
+      <span><Latex formula="\#E = \{\text{NN}, \text{ND}, \text{DD}, \text{DN}\}"  /></span>
+    </div>
+    <li>Se arroja una moneda.</li>
+    <div class="overflow-x-auto">
+      <span><Latex formula="\#E = \{\text{Cara}, \text{Cruz}\}" /></span>
+    </div>
+    <li>Se seleccionaron dos billetes de una billetera que contiene: un billete de \$10, uno de \$50 y uno de \$20. Considerar al experimento con y sin reposición.</li>
+    <p>Sin reposición:</p>
+    <div class="overflow-x-auto overflow-y-hidden">
+      <Latex formula="\#E = \left\{\begin{array}{ll}
         \text{\$10, \$20} \\
         \text{\$10, \$50} \\
         \text{\$50, \$10} \\
         \text{\$50, \$20} \\
         \text{\$20, \$50}
-        \end{array}\right\}" /></span>
+        \end{array}\right\}" />
       </div>
        <p>Con reposición:</p>
       <div class="overflow-x-auto overflow-y-hidden">
@@ -578,6 +506,9 @@ Se inicia la clase Resolviendo los Ejercicios de la clase anterior
         </span>
       </div>
       <li class="font-semibold text-lg mb-2">Asignar una probabilidad a cada punto. ¿Se trata de un espacio de equiprobabilidad?</li>
+    </ol>
+  </ol>
+
 
   <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-md">
     <p class="text-base leading-6 mb-4"><strong>Equiprobabilidad</strong> es un concepto en probabilidad que significa que todos los resultados posibles de un experimento tienen la<strong>misma probabilidad</strong> de ocurrir.</p>
@@ -645,242 +576,216 @@ Se inicia la clase Resolviendo los Ejercicios de la clase anterior
   </span>
   <p class="mt-4"><Latex formula="P(B) = \frac{|B|}{\text{Total}} = \frac{7}{8}" /><span class="text-sm text-gray-600">Nota: Asumiendo que el total de elementos posibles es 8.</span></p>
 </div>
-    </ol>
-  </ol>
-</div>
 
 ##### Unidad 2 y 3:
 
 #### Unidad 2
 
-<div class="w-full md:w-[800px] min-h-80 border bg-gray-100 p-6">
-  <h2 class="text-2xl font-bold text-center mb-6">Definición Axiomática de Probabilidad</h2>
+##### Definición Axiomática de Probabilidad
 
-  <p class="mb-4">
-    La probabilidad es una medida que cuantifica la certeza o posibilidad de que ocurra un evento. La definición axiomática de probabilidad está basadaen tres axiomas fundamentales propuestos por Andrey Kolmogorov. Estos axiomas establecen las propiedades básicas que debe cumplir una función de
-    probabilidad:
-  </p>
-  <ol class="mb-6">
-    <li><strong>Axioma de No Negatividad:</strong> Para cualquier evento \( A \), la probabilidad de \( A \) es mayor o igual a 0, es decir:<Latex formula="P(A) \geq 0" /></li>
-    <li><strong>Axioma de Normalización:</strong> La probabilidad del espacio muestral completo es 1, es decir:<Latex formula="P(\Omega) = 1" /></li>
-    <li><strong>Axioma de Adición:</strong> Para cualquier par de eventos mutuamente excluyentes \( A \) y \( B \), la probabilidad de la unión de \( A \) y \( B \) es la suma de sus probabilidades, es decir:<Latex formula="P(A \cup B) = P(A) + P(B)" /> si <Latex formula="A \cap B = \emptyset" /></li>
-  </ol>
+La probabilidad es una medida que cuantifica la certeza o posibilidad de que ocurra un evento. La definición axiomática de probabilidad está basada en tres axiomas fundamentales propuestos por Andrey Kolmogorov. Estos axiomas establecen las propiedades básicas que debe cumplir una función de probabilidad:
+
+1. **Axioma de No Negatividad**: Para cualquier evento \( A \), la probabilidad de \( A \) es mayor o igual a 0, es decir:  
+   <Latex formula="P(A) \geq 0"/>
+
+2. **Axioma de Normalización**: La probabilidad del espacio muestral completo es 1, es decir:  
+   <Latex formula="P(\Omega) = 1"/>
+
+3. **Axioma de Adición**: Para cualquier par de eventos mutuamente excluyentes \( A \) y \( B \), la probabilidad de la unión de \( A \) y \( B \) es la suma de sus probabilidades, es decir:  
+   <Latex formula="P(A \cup B) = P(A) + P(B)"/>  
+   si <Latex formula="A \cap B = \emptyset"/>
 
 
+###### Consecuencias de la Definición
 
-<h3 class="text-xl font-semibold mb-4">Consecuencias de la Definición</h3>
-<ul class=" mb-6">
-  <li>
-    <strong>Probabilidad de la Intersección:</strong> La probabilidad de la intersección de dos eventos \( A \) y \( B \) puede ser calculada como
-    <Latex formula="P(A \cap B) = P(A) + P(B) - P(A \cup B)" />
-  </li>
-  <li>
-    <strong>Probabilidad del Complemento:</strong> La probabilidad del complemento de un evento \( A \) se define como
-    <Latex formula="P(A^c) = 1 - P(A)" />
-  </li>
-  <li>
-    <strong>Probabilidad Condicional:</strong> La probabilidad condicional de \( A \) dado \( B \) se define como
-    <Latex formula="P(A|B) = \frac{P(A \cap B)}{P(B)}" />, siempre que \( P(B) > 0 \).
-  </li>
-</ul>
+- **Probabilidad de la Intersección**: La probabilidad de la intersección de dos eventos \( A \) y \( B \) puede ser calculada como  
+  <Latex formula="P(A \cap B) = P(A) + P(B) - P(A \cup B)"/>
+
+- **Probabilidad del Complemento**: La probabilidad del complemento de un evento \( A \) se define como  
+  <Latex formula="P(A^c) = 1 - P(A)"/>
+
+- **Probabilidad Condicional**: La probabilidad condicional de \( A \) dado \( B \) se define como  
+  <Latex formula="P(A|B) = \frac{P(A \cap B)}{P(B)}"/>, siempre que \( P(B) > 0 \).
 
 
 
-<h3 class="text-xl font-semibold mb-4">Probabilidad Condicional</h3>
-<p class="mb-4">
-  La probabilidad condicional se utiliza para calcular la probabilidad de un evento dado que otro evento ha ocurrido. Se denota como \( P(A|B) \) y se
-  calcula utilizando la fórmula:
-</p>
-<p class="mb-4">
-  <Latex formula="P(A|B) = \frac{P(A \cap B)}{P(B)}" />
-</p>
-<div class="bg-blue-100 p-6 rounded-lg shadow-md">
-  <h2 class="text-2xl font-bold mb-4">Probabilidad Condicional</h2>
-  <p>La probabilidad condicional se usa para calcular la probabilidad de un evento \( A \) dado que otro evento \( B \) ya ha ocurrido, usando la siguiente fórmula:</p>
-  <p>**Nota importante**: para que esta fórmula sea válida, \( P(B) \) debe ser diferente de cero. Si \( P(B) = 0 \), no tendría sentido calcular \( P(A|B) \) porque no podríamos dividir entre cero, y, en términos prácticos, no podríamos tener certeza de un evento que nunca ocurre.</p>
-  <p class="my-4 text-xl font-semibold">
-    <Latex formula="P(A|B) = \frac{P(A \cap B)}{P(B)}"/>
-  </p>
-  <h3 class="text-xl font-semibold mt-4">Ejemplo</h3>
-  <p>Imaginemos que queremos saber la probabilidad de que una carta extraída de una baraja sea un rey, dado que sabemos que es una carta de figura (rey, reina o jota).</p>
-  <p class="mt-4">Entonces, al aplicar la fórmula obtenemos:</p>
-  <p class="text-xl font-semibold my-4">
-    <Latex formula="P(A|B) = \frac{\frac{4}{52}}{\frac{12}{52}} = \frac{4}{12} = \frac{1}{3}"/>
-  </p>
-  Por lo tanto, la probabilidad es <Latex formula="\frac{1}{3}"/>, o un 33.33%.
-</div>
+###### Probabilidad condicional
 
-<div class="bg-green-100 p-6 rounded-lg shadow-md">
-  <h2 class="text-2xl font-bold mb-4">Independencia de Sucesos</h2>
-  <p>En probabilidad, dos eventos <Latex formula="A"/> y <Latex formula="B"/> se consideran <strong>independientes</strong> si la ocurrencia de uno no afecta la probabilidad de que ocurra el otro. En otras palabras, saber que un evento ocurrió no nos da ninguna información adicional sobre el otro evento.</p>
-  
-  <p>La fórmula para determinar si dos eventos son independientes es:</p>
-  <p class="my-4 text-xl font-semibold">
-    <Latex formula="P(A \cap B) = P(A) \cdot P(B)"/>
-  </p>
+La probabilidad condicional se utiliza para calcular la probabilidad de un evento dado que otro evento ha ocurrido. Se denota como \( P(A|B) \) y se calcula utilizando la fórmula:
 
-  <p>Si esta igualdad se cumple, entonces los eventos <Latex formula="A"/> y <Latex formula="B"/> son independientes. De lo contrario, se consideran dependientes.</p>
+<Latex formula="P(A|B) = \frac{P(A \cap B)}{P(B)}" />
 
-  <h3 class="text-xl font-semibold mt-4">Ejemplo</h3>
-  <p>Supongamos que lanzamos un dado y una moneda. Sea el evento <Latex formula="A"/>: "obtener un número par en el dado" y el evento <Latex formula="B"/>: "obtener cara en la moneda".</p>
+## Probabilidad Condicional
 
-  <p>Como el resultado del dado no afecta el de la moneda (y viceversa), estos eventos son independientes. Entonces:</p>
-  <p class="text-xl font-semibold my-4">
-    <Latex formula="P(A \cap B) = P(A) \cdot P(B) = \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4}"/>
-  </p>
+La probabilidad condicional se usa para calcular la probabilidad de un evento \( A \) dado que otro evento \( B \) ya ha ocurrido, usando la siguiente fórmula:
 
-  <p>Es decir, la probabilidad de obtener un número par en el dado y cara en la moneda es <Latex formula="\frac{1}{4}"/>, o un 25%.</p>
+**Nota importante**: para que esta fórmula sea válida, \( P(B) \) debe ser diferente de cero. Si \( P(B) = 0 \), no tendría sentido calcular \( P(A|B) \) porque no podríamos dividir entre cero, y, en términos prácticos, no podríamos tener certeza de un evento que nunca ocurre.
 
-  <p>**Nota importante**: Si no se cumple que <Latex formula="P(A \cap B) = P(A) \cdot P(B)"/>, los eventos no son independientes.</p>
-</div>
+<Latex formula="P(A|B) = \frac{P(A \cap B)}{P(B)}"/>
+
+### Ejemplo
+
+Imaginemos que queremos saber la probabilidad de que una carta extraída de una baraja sea un rey, dado que sabemos que es una carta de figura (rey, reina o jota).
+
+Entonces, al aplicar la fórmula obtenemos:
+
+<Latex formula="P(A|B) = \frac{\frac{4}{52}}{\frac{12}{52}} = \frac{4}{12} = \frac{1}{3}"/>
+
+Por lo tanto, la probabilidad es <Latex formula="\frac{1}{3}"/>, o un 33.33%.
+
+###### Independencia de Sucesos
+
+En probabilidad, dos eventos \( A \) y \( B \) se consideran **independientes** si la ocurrencia de uno no afecta la probabilidad de que ocurra el otro. En otras palabras, saber que un evento ocurrió no nos da ninguna información adicional sobre el otro evento.
+
+La fórmula para determinar si dos eventos son independientes es:
+
+<Latex formula="P(A \cap B) = P(A) \cdot P(B)"/>
+
+Si esta igualdad se cumple, entonces los eventos \( A \) y \( B \) son independientes. De lo contrario, se consideran dependientes.
+
+### Ejemplo
+
+Supongamos que lanzamos un dado y una moneda. Sea el evento \( A \): "obtener un número par en el dado" y el evento \( B \): "obtener cara en la moneda".
+
+Como el resultado del dado no afecta el de la moneda (y viceversa), estos eventos son independientes. Entonces:
+
+<Latex formula="P(A \cap B) = P(A) \cdot P(B) = \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4}"/>
+
+Es decir, la probabilidad de obtener un número par en el dado y cara en la moneda es <Latex formula="\frac{1}{4}"/>, o un 25%.
+
+**Nota importante**: Si no se cumple que <Latex formula="P(A \cap B) = P(A) \cdot P(B)"/>, los eventos no son independientes.
 
 ### Clase III - 13 de agosto de 2024
 
 Esta clase no la pude presenciar ni hay grabaciones solamente un Powerpoint
 
-<div class="bg-indigo-100 p-6 rounded-lg shadow-md ">
-  <h2 class="text-2xl font-bold mb-4">Teorema de la Probabilidad Total</h2>
-  <p>El <strong>Teorema de la Probabilidad Total</strong> es una herramienta que nos permite calcular la probabilidad de un evento cuando dicho evento puede suceder de varias formas distintas, es decir, a través de diferentes "caminos" o "escenarios". En esencia, este teorema nos permite desglosar la probabilidad de un evento en función de probabilidades individuales de escenarios mutuamente excluyentes que cubren todas las posibilidades del evento.</p>
-  
-  <p>Por ejemplo, imaginemos que queremos calcular la probabilidad de que una persona compre un seguro. En este caso, podríamos dividir el análisis en factores que podrían influir, como su grupo de edad o su nivel de ingresos. El Teorema de la Probabilidad Total nos ayuda a organizar estas posibilidades y sumar las probabilidades de cada caso particular para obtener la probabilidad global.</p>
-  
-  <p>En resumen, este teorema es ideal cuando:</p>
-  <ul class="list-disc ml-6">
-    <li>Queremos calcular la probabilidad de un evento que depende de distintas condiciones.</li>
-    <li>Tenemos situaciones o subgrupos que cubren todas las alternativas posibles del evento.</li>
-  </ul>
+###### Teorema de la Probabilidad Total
 
-  <img src="/TeoremaDeProbabilidadTotal.avif" alt="Teorema de Probabilidad Total" class="p-0 m-0 max-w-[500px] mx-auto"/>
-</div>
+El **Teorema de la Probabilidad Total** es una herramienta que nos permite calcular la probabilidad de un evento cuando dicho evento puede suceder de varias formas distintas, es decir, a través de diferentes "caminos" o "escenarios". En esencia, este teorema nos permite desglosar la probabilidad de un evento en función de probabilidades individuales de escenarios mutuamente excluyentes que cubren todas las posibilidades del evento.
 
-<div class="bg-blue-100 p-6 rounded-lg shadow-md mt-6">
-  <h2 class="text-2xl font-bold mb-4">Teorema de Bayes</h2>
-  <p>El <strong>Teorema de Bayes</strong> es fundamental en probabilidad y estadística para actualizar nuestra comprensión de la probabilidad de un evento a medida que recibimos nueva información. Este teorema permite responder preguntas como: "¿Cómo cambia la probabilidad de un evento tras obtener nuevos datos o pruebas adicionales?".</p>
-  
-  <p>Imaginemos un ejemplo médico en el cual estamos interesados en conocer la probabilidad de que una persona tenga cierta enfermedad. Podemos partir de una probabilidad inicial, basada en la información general de la población, pero si realizamos una prueba y obtenemos un resultado positivo, el Teorema de Bayes nos ayuda a ajustar esa probabilidad inicial considerando la precisión de la prueba y la frecuencia de la enfermedad en la población.</p>
-  
-  <p>Este teorema es especialmente útil en situaciones como:</p>
-  <ul class="list-disc ml-6">
-    <li>Diagnósticos médicos, donde ajustamos probabilidades a medida que obtenemos resultados de pruebas.</li>
-    <li>Aprendizaje automático y análisis de datos, en los cuales se ajustan modelos probabilísticos con nueva información.</li>
-    <li>Evaluación de hipótesis y toma de decisiones bajo incertidumbre, donde la probabilidad de un evento puede cambiar al considerar nueva evidencia.</li>
-  </ul>
-  
-  <p>En resumen, el <strong>Teorema de Bayes</strong> permite actualizar la probabilidad de un evento en función de información reciente, haciendo que los cálculos sean más precisos y específicos al contexto.</p>
-</div>
+Por ejemplo, imaginemos que queremos calcular la probabilidad de que una persona compre un seguro. En este caso, podríamos dividir el análisis en factores que podrían influir, como su grupo de edad o su nivel de ingresos. El Teorema de la Probabilidad Total nos ayuda a organizar estas posibilidades y sumar las probabilidades de cada caso particular para obtener la probabilidad global.
+
+En resumen, este teorema es ideal cuando:
+
+- Queremos calcular la probabilidad de un evento que depende de distintas condiciones.
+- Tenemos situaciones o subgrupos que cubren todas las alternativas posibles del evento.
+
+![Teorema de Probabilidad Total](/TeoremaDeProbabilidadTotal.avif)
 
 
-<h3 class="text-xl font-semibold mb-4">Teorema de la Probabilidad Total</h3>
-<div class="overflow-x-auto overflow-y-hidden mt-6">
-<p><strong><Latex formula="\sum"/> </strong> es el símbolo de la sumatoria.</p>
-  <p class="mb-4">El símbolo <Latex formula="\sum"/> representa la <strong>sumatoria</strong> en matemáticas, que es una operación que consiste en sumar una secuencia de números o términos. Es una forma compacta de expresar la suma de muchos términos, y es especialmente útil en matemáticas, estadísticas, y muchas otras disciplinas.</p>
 
-  <h2 class="text-lg font-semibold">Notación</h2>
-  <p>En su forma más general, la notación de la sumatoria es:</p>
-  <p><Latex formula="\sum_{i=m}^{n} a_i"/></p>
-  <ul class="list-disc list-inside ml-6">
-    <li><strong><Latex formula="\sum"/> </strong> es el símbolo de la sumatoria.</li>
-    <li><strong>i</strong> es el <strong>índice de suma</strong>, que indica la variable sobre la cual se suman los términos.</li>
-    <li><strong>m</strong> es el <strong>índice inferior</strong>, que indica el valor inicial del índice de suma.</li>
-    <li><strong>n</strong> es el <strong>índice superior</strong>, que indica el valor final del índice de suma.</li>
-    <li><strong>a_i</strong> es la <strong>expresión</strong> que se suma para cada valor del índice <strong>i</strong>.</li>
-  </ul>
+###### Teorema de Bayes
 
-  <h2 class="text-lg font-semibold">Ejemplo</h2>
-  <p>Si queremos sumar los números del 1 al 5, podemos escribirlo como:</p>
-  <p><Latex formula="\sum_{i=1}^{5} i"/></p>
-  <p>Esto significa que debemos sumar <Latex formula="i"/> desde <Latex formula="i=1"/> hasta <Latex formula="i=5"/>, lo cual es igual a:</p>
-  <p><Latex formula="1 + 2 + 3 + 4 + 5 = 15"/></p>
+El **Teorema de Bayes** es fundamental en probabilidad y estadística para actualizar nuestra comprensión de la probabilidad de un evento a medida que recibimos nueva información. Este teorema permite responder preguntas como: "¿Cómo cambia la probabilidad de un evento tras obtener nuevos datos o pruebas adicionales?".
 
-  <h2 class="text-lg font-semibold">Uso en Fórmulas</h2>
-  <p>
-    En el contexto de la probabilidad, la sumatoria se usa para sumar probabilidades condicionales, esperanzas matemáticas, y otros cálculos que involucran una serie de eventos o valores. Por ejemplo, el Teorema de la Probabilidad Total utiliza la sumatoria para calcular la probabilidad total de un evento <Latex formula="A"/> basado en una partición del espacio muestral:
-  </p>
-  <p>
-    <Latex formula="P(A) = \sum_{i=1}^{n} P(A \mid B_i) \cdot P(B_i)"/>
-  </p>
-  <p>Aquí se suman las probabilidades de: <Latex formula="A"/> dado cada <Latex formula="B_i"/> multiplicadas por la probabilidad de <Latex formula="B_i" class="overflow-x-hidden"/>, para obtener la probabilidad total de <Latex formula="A"/>.</p>
-</div>
+Imaginemos un ejemplo médico en el cual estamos interesados en conocer la probabilidad de que una persona tenga cierta enfermedad. Podemos partir de una probabilidad inicial, basada en la información general de la población, pero si realizamos una prueba y obtenemos un resultado positivo, el Teorema de Bayes nos ayuda a ajustar esa probabilidad inicial considerando la precisión de la prueba y la frecuencia de la enfermedad en la población.
 
-  <p class="mb-4">El Teorema de la Probabilidad Total permite calcular la probabilidad de un evento considerando una partición del espacio muestral en eventos
-  disjuntos. Si<Latex formula="B_1, B_2, \ldots, B_n" /> son eventos que forman una partición del espacio muestral, entonces:</p>
-  <p><Latex formula="P(A) = \sum_{i=1}^{n} P(A \mid B_i) \cdot P(B_i)" /></p>
-  <p class="mb-4"><Latex formula="P(A) = \sum_{i=1}^{n} P(A|B_i) \cdot P(B_i)" /></p>
-  <p class="text-sm text-gray-600 mb-6">(Nota: Este tema se abordará en detalle en la Unidad 3).</p>
+Este teorema es especialmente útil en situaciones como:
 
-  <h3 class="text-xl font-semibold mb-4">Teorema de Bayes</h3>
-  <p class="mb-4">
-    El Teorema de Bayes es una aplicación de la probabilidad condicional que permite actualizar la probabilidad de un evento basado en nueva evidencia. Se expresa como:
-  </p>
-  <p class="mb-4">
-    <Latex formula="P(B_i|A) = \frac{P(A|B_i) \cdot P(B_i)}{\sum_{j=1}^{n} P(A|B_j) \cdot P(B_j)}" />
-  </p>
-  <img src="/TeoremaDeBayes.avif" alt="Teorema de Bayes" class="p-0 m-0 max-w-[500px] mx-auto"/>
-  
+- Diagnósticos médicos, donde ajustamos probabilidades a medida que obtenemos resultados de pruebas.
+- Aprendizaje automático y análisis de datos, en los cuales se ajustan modelos probabilísticos con nueva información.
+- Evaluación de hipótesis y toma de decisiones bajo incertidumbre, donde la probabilidad de un evento puede cambiar al considerar nueva evidencia.
 
-  
-</div>
+En resumen, el **Teorema de Bayes** permite actualizar la probabilidad de un evento en función de información reciente, haciendo que los cálculos sean más precisos y específicos al contexto.
 
-<div class="bg-blue-100 p-6 rounded-lg shadow-md">
-  <h2 class="text-2xl font-bold mb-4">Paso a Paso para Entender el Teorema de Bayes</h2>
+###### Teorema de la Probabilidad Total
 
-  <ol class="list-decimal ml-6">
-    <li>
-      <strong>Concepto de Probabilidades Iniciales:</strong> 
-      Antes de recibir nueva información, tenemos probabilidades iniciales (o a priori) sobre eventos. Por ejemplo, podríamos tener una idea de la prevalencia de una enfermedad en una población.
-    </li>
-    <li>
-      <strong>Nueva Información:</strong> 
-      Recibimos nueva evidencia o información que puede influir en nuestra percepción de la probabilidad del evento. Por ejemplo, un resultado positivo en una prueba médica.
-    </li>
-    <li>
-      <strong>Relación entre Eventos:</strong> 
-      Es crucial entender la relación entre el evento que estamos evaluando y la nueva información. Esto implica conocer:
-      <ul class="list-disc ml-6">
-        <li>La probabilidad de obtener el resultado dado que el evento es cierto (veracidad de la prueba).</li>
-        <li>La probabilidad del resultado dado que el evento es falso (falsedad de la prueba).</li>
-      </ul>
-    </li>
-    <li>
-      <strong>Cálculo de Probabilidades Actualizadas:</strong> 
-      Usamos la información anterior para calcular la probabilidad actualizada del evento usando el Teorema de Bayes. La fórmula es:
-      <p class="my-4 text-xl font-semibold">
-        <Latex formula="P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}"/>
-      </p>
-    </li>
-    <li>
-      <strong>Interpretación de Resultados:</strong> 
-      Analizamos el resultado para tomar decisiones informadas. Por ejemplo, si la probabilidad de tener la enfermedad después de un resultado positivo es alta, podríamos considerar realizar más pruebas o iniciar un tratamiento.
-    </li>
-  </ol>
-</div>
 
-<div class="bg-green-100 p-6 rounded-lg shadow-md mt-6">
-  <h2 class="text-2xl font-bold mb-4">¿Cuándo Usar el Teorema de Bayes en Lugar de la Probabilidad Total?</h2>
+**<Latex formula="\sum"/>** es el símbolo de la sumatoria.
 
-  <ul class="list-disc ml-6">
-    <li>
-      <strong>Condiciones de Interés:</strong> 
-      Usar el Teorema de Bayes es más apropiado cuando estamos interesados en <strong>actualizar</strong> una probabilidad en función de nueva información, mientras que el Teorema de la Probabilidad Total se utiliza para calcular probabilidades globales basadas en diferentes escenarios posibles.
-    </li>
-    <li>
-      <strong>Naturaleza de la Información:</strong> 
-      Si tenemos un evento que ocurre bajo condiciones inciertas y queremos adaptar nuestras creencias o probabilidades a la luz de nueva evidencia (por ejemplo, un diagnóstico médico), el Teorema de Bayes es más útil. 
-      El Teorema de la Probabilidad Total es útil cuando se desea calcular la probabilidad de un evento sin necesariamente actualizarla con nueva información.
-    </li>
-    <li>
-      <strong>Escenarios de Aplicación:</strong>
-      <ul class="list-disc ml-6">
-        <li>
-          <strong>Teorema de Bayes:</strong> Usado en medicina, inteligencia artificial y cualquier campo donde la información puede cambiar y se necesita ajustar la probabilidad.
-        </li>
-        <li>
-          <strong>Teorema de la Probabilidad Total:</strong> Usado cuando se quiere tener una visión general de todas las posibilidades y calcular una probabilidad total de un evento.
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+El símbolo **<Latex formula="\sum"/>** representa la **sumatoria** en matemáticas, que es una operación que consiste en sumar una secuencia de números o términos. Es una forma compacta de expresar la suma de muchos términos, y es especialmente útil en matemáticas, estadísticas, y muchas otras disciplinas.
+
+## Notación
+
+En su forma más general, la notación de la sumatoria es:
+
+<Latex formula="\sum_{i=m}^{n} a_i"/>
+
+- **<Latex formula="\sum"/>** es el símbolo de la sumatoria.
+- **i** es el **índice de suma**, que indica la variable sobre la cual se suman los términos.
+- **m** es el **índice inferior**, que indica el valor inicial del índice de suma.
+- **n** es el **índice superior**, que indica el valor final del índice de suma.
+- **a_i** es la **expresión** que se suma para cada valor del índice **i**.
+
+## Ejemplo
+
+Si queremos sumar los números del 1 al 5, podemos escribirlo como:
+
+<Latex formula="\sum_{i=1}^{5} i"/>
+
+Esto significa que debemos sumar **i** desde **i=1** hasta **i=5**, lo cual es igual a:
+
+<Latex formula="1 + 2 + 3 + 4 + 5 = 15"/>
+
+## Uso en Fórmulas
+
+En el contexto de la probabilidad, la sumatoria se usa para sumar probabilidades condicionales, esperanzas matemáticas, y otros cálculos que involucran una serie de eventos o valores. Por ejemplo, el Teorema de la Probabilidad Total utiliza la sumatoria para calcular la probabilidad total de un evento **A** basado en una partición del espacio muestral:
+
+<Latex formula="P(A) = \sum_{i=1}^{n} P(A \mid B_i) \cdot P(B_i)"/>
+
+Aquí se suman las probabilidades de <Latex formula="A"/> dado cada <Latex formula="B_i"/> multiplicadas por la probabilidad de <Latex formula="B_i"/>, para obtener la probabilidad total de <Latex formula="A"/>.
+
+
+
+El Teorema de la Probabilidad Total permite calcular la probabilidad de un evento considerando una partición del espacio muestral en eventos disjuntos. 
+
+Si <Latex formula="B_1, B_2, \ldots, B_n" /> son eventos que forman una partición del espacio muestral, entonces:
+
+<Latex formula="P(A) = \sum_{i=1}^{n} P(A \mid B_i) \cdot P(B_i)" />
+
+<Latex formula="P(A) = \sum_{i=1}^{n} P(A|B_i) \cdot P(B_i)" />
+
+*(Nota: Este tema se abordará en detalle en la Unidad 3).*
+
+### Teorema de Bayes
+
+El Teorema de Bayes es una aplicación de la probabilidad condicional que permite actualizar la probabilidad de un evento basado en nueva evidencia. Se expresa como:
+
+<Latex formula="P(B_i|A) = \frac{P(A|B_i) \cdot P(B_i)}{\sum_{j=1}^{n} P(A|B_j) \cdot P(B_j)}" />
+
+![Teorema de Bayes](/TeoremaDeBayes.avif)
+
+
+
+###### Paso a Paso para Entender el Teorema de Bayes
+
+1. **Concepto de Probabilidades Iniciales:**  
+   Antes de recibir nueva información, tenemos probabilidades iniciales (o a priori) sobre eventos. Por ejemplo, podríamos tener una idea de la prevalencia de una enfermedad en una población.
+
+2. **Nueva Información:**  
+   Recibimos nueva evidencia o información que puede influir en nuestra percepción de la probabilidad del evento. Por ejemplo, un resultado positivo en una prueba médica.
+
+3. **Relación entre Eventos:**  
+   Es crucial entender la relación entre el evento que estamos evaluando y la nueva información. Esto implica conocer:
+   - La probabilidad de obtener el resultado dado que el evento es cierto (veracidad de la prueba).
+   - La probabilidad del resultado dado que el evento es falso (falsedad de la prueba).
+
+4. **Cálculo de Probabilidades Actualizadas:**  
+   Usamos la información anterior para calcular la probabilidad actualizada del evento usando el Teorema de Bayes. La fórmula es:
+
+   <Latex formula="P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}"/>
+
+5. **Interpretación de Resultados:**  
+   Analizamos el resultado para tomar decisiones informadas. Por ejemplo, si la probabilidad de tener la enfermedad después de un resultado positivo es alta, podríamos considerar realizar más pruebas o iniciar un tratamiento.
+
+
+
+###### ¿Cuándo Usar el Teorema de Bayes en Lugar de la Probabilidad Total?
+
+- **Condiciones de Interés:**  
+  Usar el Teorema de Bayes es más apropiado cuando estamos interesados en **actualizar** una probabilidad en función de nueva información, mientras que el Teorema de la Probabilidad Total se utiliza para calcular probabilidades globales basadas en diferentes escenarios posibles.
+
+- **Naturaleza de la Información:**  
+  Si tenemos un evento que ocurre bajo condiciones inciertas y queremos adaptar nuestras creencias o probabilidades a la luz de nueva evidencia (por ejemplo, un diagnóstico médico), el Teorema de Bayes es más útil.  
+  El Teorema de la Probabilidad Total es útil cuando se desea calcular la probabilidad de un evento sin necesariamente actualizarla con nueva información.
+
+- **Escenarios de Aplicación:**
+  - **Teorema de Bayes:** Usado en medicina, inteligencia artificial y cualquier campo donde la información puede cambiar y se necesita ajustar la probabilidad.
+  - **Teorema de la Probabilidad Total:** Usado cuando se quiere tener una visión general de todas las posibilidades y calcular una probabilidad total de un evento.
+
+
+{/* Hasta aca llego bien */}
+
 
 ### Clase IV - Unidad 4 - 
 
@@ -944,43 +849,25 @@ Las variables aleatorias se denotan con letras mayúsculas, y sus posibles valor
 <Latex formula="P(X = x) = \frac{1}{6} \, \forall \, x" />
 
 
-<div class="max-w-2xl mx-auto p-6 bg-white text-black rounded-lg shadow-lg space-y-8">
-  
-  <p>
-    Hasta el momento vimos que el espacio muestral es el conjunto de resultados del experimento aleatorio. Dado el sinfín de experimentos posibles, los resultados pueden ser cosas tan diversas como <Latex formula="{\text{cara}; \text{cruz}}" />, <Latex formula="{1, 2, 3, 4, 5, 6}" />, <Latex formula="{\text{ganar la lotería}, \text{no ganar la lotería}}" />. Es decir, el resultado de un experimento puede ser un número, un valor booleano (si/no), un texto, etc. Una variable aleatoria puede ser numérica, booleana, etc. Pero como con los números podemos medir magnitudes y hacer operaciones, por lo general podemos extraer de ellos mayor cantidad de información. Por eso concentraremos nuestro estudio en experimentos cuyo resultado es un número, es decir, variables aleatorias numéricas.
-  </p>
+Hasta el momento vimos que el espacio muestral es el conjunto de resultados del experimento aleatorio. Dado el sinfín de experimentos posibles, los resultados pueden ser cosas tan diversas como <Latex formula="\{\text{cara}, \text{cruz}\}" />, <Latex formula="\{1, 2, 3, 4, 5, 6\}" />, <Latex formula="\{\text{ganar la lotería}, \text{no ganar la lotería}\}" />. Es decir, el resultado de un experimento puede ser un número, un valor booleano (si/no), un texto, etc. Una variable aleatoria puede ser numérica, booleana, etc. Pero como con los números podemos medir magnitudes y hacer operaciones, por lo general podemos extraer de ellos mayor cantidad de información. Por eso concentraremos nuestro estudio en experimentos cuyo resultado es un número, es decir, variables aleatorias numéricas.
 
-  <div>
-    <h2 class="text-2xl font-bold text-blue-600">Variables Aleatorias Discretas y Continuas</h2>
-    <p>
-      Comparemos el ejemplo del dado, donde llamamos <Latex formula="X" /> a los posibles resultados del experimento, con otro: elegimos una naranja al azar en una verdulería y llamamos <Latex formula="Y" /> al peso de la naranja elegida. Si pensamos en los valores posibles que puede tomar la variable aleatoria <Latex formula="Y" />, no solo son infinitos, sino que entre cualquier valor y el siguiente existen infinitos valores. Así:
-    </p>
-    <p>
-      <span class="font-semibold">La variable aleatoria <Latex formula="X" /> es discreta</span>, mientras que <span class="font-semibold">la variable aleatoria <Latex formula="Y" /> es continua</span>.
-    </p>
-  </div>
+## Variables Aleatorias Discretas y Continuas
 
-  <div>
-    <h2 class="text-2xl font-bold text-blue-600">Definición de Variables Aleatorias</h2>
-    
-    <div class="space-y-2">
-      <h3 class="font-semibold">Variable aleatoria discreta:</h3>
-      <p>
-        Aquella tal que la cantidad de valores posibles que puede tomar es finita o infinita pero numerable. Dicho de otra forma, si tomamos dos valores posibles cualesquiera, entre ellos habrá una cantidad finita de valores posibles.
-      </p>
-    </div>
+Comparemos el ejemplo del dado, donde llamamos <Latex formula="X" /> a los posibles resultados del experimento, con otro: elegimos una naranja al azar en una verdulería y llamamos <Latex formula="Y" /> al peso de la naranja elegida. Si pensamos en los valores posibles que puede tomar la variable aleatoria <Latex formula="Y" />, no solo son infinitos, sino que entre cualquier valor y el siguiente existen infinitos valores. Así:
 
-    <div class="space-y-2">
-      <h3 class="font-semibold">Variable aleatoria continua:</h3>
-      <p>
-        Aquella tal que la cantidad de valores posibles es infinita y no numerable, como el intervalo de los números reales <Latex formula="R" />. Magnitudes como el tiempo, el peso en kilogramos y la altura son ejemplos típicos de variables continuas.
-      </p>
-    </div>
-  </div>
-  
-</div>
+**La variable aleatoria <Latex formula="X" /> es discreta**, mientras que **la variable aleatoria <Latex formula="Y" /> es continua**.
 
-<div class="max-w-2xl mx-auto p-6 bg-white text-black rounded-lg shadow-lg space-y-4">
+## Definición de Variables Aleatorias
+
+### Variable aleatoria discreta:
+
+Aquella tal que la cantidad de valores posibles que puede tomar es finita o infinita pero numerable. Dicho de otra forma, si tomamos dos valores posibles cualesquiera, entre ellos habrá una cantidad finita de valores posibles.
+
+### Variable aleatoria continua:
+
+Aquella tal que la cantidad de valores posibles es infinita y no numerable, como el intervalo de los números reales <Latex formula="R" />. Magnitudes como el tiempo, el peso en kilogramos y la altura son ejemplos típicos de variables continuas.
+
+ <div class="max-w-2xl mx-auto p-6 bg-white text-black rounded-lg shadow-lg space-y-4">
   <ol class="space-y-4 list-decimal list-inside">
     <li>Indique para cada una de las siguientes variables aleatorias si son discretas o continuas. Haga las aclaraciones que considere necesarias.</li>
       
@@ -1103,4 +990,4 @@ Las variables aleatorias se denotan con letras mayúsculas, y sus posibles valor
 
   <p>La cursada fue bastante buena, la profesora explico excelente , el curso fue interesante , aprendimos acerca de la probabilidad y estadistica basica , y como se aplica en la vida cotidiana.</p>
   <p>Aprendimos a usar herramientas tales como Esperanza, Varianza ,Desviacion estandar , y como se usan en la vida real.</p>
-</div> */}
+</div>
