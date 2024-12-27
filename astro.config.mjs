@@ -15,6 +15,7 @@ export default defineConfig({
         const indexUrl = /^https?:\/\/[^/]+\/$/.test(item.url) || item.url === '/';
         const isCareerUrl = /career/.test(item.url) && !/\/career\/programacion(1|2)(\/|$)/.test(item.url);
         const isCareerProgramationUrl = /\/career\/programacion(1|2)(\/|$)/.test(item.url);
+        const isDataBaseUrl = /\/career\/basededatos(1|2)(\/|$)/.test(item.url);
 
         if (indexUrl) return { ...item, changefreq: 'daily', lastmod: today, priority: 1.0 };
 
@@ -22,6 +23,8 @@ export default defineConfig({
 
         if (isCareerProgramationUrl) return { ...item, changefreq: 'daily', lastmod: today, priority: 0.8 };
 
+        if (isDataBaseUrl) return { ...item, changefreq: 'daily', lastmod: today, priority: 0.7 };
+        
         return { ...item, changefreq: 'monthly', lastmod: today, priority: 0.6 };
       },
     }),
