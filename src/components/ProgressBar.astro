@@ -1,0 +1,63 @@
+---
+import type { Correlativity } from '../types/correlativity';
+import getMotivationalPhrase from '../utils/getMotivationalPhrase';
+
+const { subjects = [] }: { subjects?: Correlativity[] } = Astro.props;
+
+const porcentajofApproved = subjects.reduce((total, subject) => (subject.isPassed ? total + 1 : total), 0);
+const totalSubjects = subjects.length;
+const percentageApproved = totalSubjects > 0 ? (porcentajofApproved / totalSubjects) * 100 : 0;
+
+const motivationalPhrase = getMotivationalPhrase(percentageApproved);
+const totalHours = subjects.reduce((total, subject) => total + subject.hours, 0);
+const missingHours = subjects.reduce((total, subject) => (subject.isPassed ? total : total + subject.hours), 0);
+---
+
+<div class="border-2 p-4 rounded-lg bg-white my-2">
+  <p class="text-xl text-center font-bold">Progreso Universitario</p>
+
+  {
+    subjects.length > 0 ? (
+      <div>
+        <p class="text-center text-gray-800 text-xs">% {percentageApproved.toFixed(1)} Completado</p>
+
+        <div class="charge-bar bg-gray-200">
+          <div class="charge-bar-progress bg-black" style={{ width: `${percentageApproved}%` }} />
+        </div>
+
+        <p class="text-sm">{motivationalPhrase}</p>
+
+        <div class="mt-2 flex flex-wrap gap-4">
+          <p class="text-lg font-semibold text-gray-800">
+            Horas Totales:
+            <span class="font-bold text-blue-600">{totalHours}</span>
+          </p>
+
+          <p class="text-lg font-semibold text-gray-800">
+            Horas Faltantes:
+            <span class="font-bold text-blue-600">{missingHours}</span>
+          </p>
+        </div>
+      </div>
+    ) : (
+      <p>No hay materias</p>
+    )
+  }
+</div>
+
+<style>
+  .charge-bar {
+    height: 20px;
+    background-color: #e5e7eb;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .charge-bar-progress {
+    height: 100%;
+    background-color: #000000;
+    transition: width 0.3s ease-in-out;
+  }
+</style>

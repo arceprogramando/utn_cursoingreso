@@ -1,7 +1,7 @@
 ---
+import ProgressBar from '../components/ProgressBar.astro';
 import { subjects } from '../data/correlativity';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import type { Correlativity } from '../types/correlativity';
 
 const title = 'Correlatividades de la Tecnicatura en Programación - UTN 2025';
 const subTitle = 'Correlatividades';
@@ -9,6 +9,7 @@ const subTitle = 'Correlatividades';
 ---
 
 <BaseLayout title={`${title}`} subTitle={`${subTitle}`}>
+  <ProgressBar subjects={subjects} />
   <div class="flex flex-col-reverse md:flex-col  justify-center items-center container mx-auto text-center p-2 overflow-x-scroll md:overflow-hidden text-sm">
     <table class="min-w-full  divide-y divide-gray-200 shadow border-b border-gray-200 sm:rounded-lg">
       <thead class="border-t-2 border-l-2 border-r-2 bg-black text-white">
@@ -40,20 +41,6 @@ const subTitle = 'Correlatividades';
       </tbody>
     </table>
     
-    <div>
-
-      <p class="text-lg font-semibold text-gray-800">
-        Horas Totales:
-        <span class="font-bold text-blue-600">
-          {subjects.reduce((total, subject) => total + subject.hours, 0)}
-        </span>
-      </p>
-      
-      <p class="text-lg font-semibold text-gray-800">
-        Horas Faltantes: <span class="font-bold text-blue-600">
-          {subjects.reduce((total, subject) => (subject.isPassed ? total : total + subject.hours), 0)}
-        </span>
-      </p>
-    </div>
+    
   </div>
 </BaseLayout>
