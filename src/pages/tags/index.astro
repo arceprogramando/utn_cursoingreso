@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import addSpaceBeforeSecondUppercase from '../../utils/addSpaceBeforeSecondUppercase';
 
 export async function getStaticPaths() {
   const matchedCareerPosts = await getCollection('career');
@@ -21,9 +22,6 @@ const { allTags } = await getStaticPaths();
 
 const title = 'Índice de Tags';
 
-function addSpaceBeforeSecondUpperCase(str: string) {
-  return str.replace(/(?!^)([A-Z])/g, ' $1').trim();
-}
 ---
 
 <BaseLayout title={`${title}`}>
@@ -31,9 +29,9 @@ function addSpaceBeforeSecondUpperCase(str: string) {
     {
       allTags.length > 0 ? (
         allTags.map((tag) => (
-          <li class="px-2 md:px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-transform">
+          <li class="px-2 md:px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800  transition-transform">
             <a href={`/tags/${tag}`} title={`Ver elementos con el tag ${tag}`}>
-              {addSpaceBeforeSecondUpperCase(tag)}
+              {addSpaceBeforeSecondUppercase(tag)}
             </a>
           </li>
         ))
