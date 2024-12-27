@@ -12,7 +12,7 @@ export default defineConfig({
     tailwind(),
     sitemap({
       serialize(item) {
-        const today = new Date('2024-12-22').toISOString();
+        const today = new Date('2024-12-27').toISOString();
 
         const indexUrl = /^https?:\/\/[^/]+\/$/.test(item.url) || item.url === '/';
         const isCareerUrl = /career/.test(item.url) && !/\/career\/programacion(1|2)(\/|$)/.test(item.url);
