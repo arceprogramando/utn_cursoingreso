@@ -5,13 +5,18 @@ interface Props {
   title: string;
   thumbnailImage?: string;
   description?: string;
+  keywords?: string;
 }
 
 const {
   title = 'Título por defecto',
   thumbnailImage = 'https://res.cloudinary.com/dyanh7yda/image/upload/v1705374365/c77n6krmnazj9yaafrxh.jpg',
   description = 'Descubre la Tecnicatura Universitaria en Programación y aprende conceptos básicos para iniciarte en la programación en 2025.',
+  keywords = 'Aprende cosas Nuevas'
 } = Astro.props;
+
+const basicKeywords = 'Tecnica en Programación, UTN, CUDI, Estudiar Programación, Apuntes de Programación';
+const allKeywords = `${basicKeywords}, ${keywords}`;
 ---
 
 <!doctype html>
@@ -24,31 +29,28 @@ const {
     <meta http-equiv="content-language" content="es" />
     <meta property="og:locale" content="es_AR" />
     <meta name="description" content={description} />
-    <meta
-      name="keywords"
-      content="Tecnicatura en Programación, UTN, CUDI, La Matanza, González Catán, Estudiar Programación, Apuntes de Programación"
-    />
+    <meta name="keywords" content={allKeywords} />
     <meta name="author" content="Felipe Arce" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
     <meta name="google" content="nositelinkssearchbox" />
     <meta name="google" content="notranslate" />
+
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="QbnO1zhnFpEbeVyVd9WcIysRpWTboN0RrG3NHIF3BwU" />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta
       property="og:description"
       content="Infórmate sobre la Tecnicatura Universitaria en Programación: conceptos básicos para iniciarte en la programación en 2025."
     />
-
-    <!-- Open Graph -->
     <meta property="og:image" content={thumbnailImage} />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://utn-cursoingreso.vercel.app" />
     <meta property="og:title" content="Tecnicatura Universitaria en Programación" />
-
-    <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="QbnO1zhnFpEbeVyVd9WcIysRpWTboN0RrG3NHIF3BwU" />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:image" content={thumbnailImage} />
