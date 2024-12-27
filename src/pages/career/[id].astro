@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 
 const { career } = Astro.props;
 const { data } = career;
-const { image, title, totalTimeClass, totalExam, totalTime, professor, downloadUrl, pubDate, author, tags } = data;
+const { image, title, totalTimeClass, totalExam, totalTime, professor, downloadUrl, pubDate, author, tags,description } = data;
 
 const { Content } = await render(career);
 
@@ -26,7 +26,7 @@ function addSpaceBeforeSecondUpperCase(str: string) {
 }
 ---
 
-<BaseLayout title={`Apunte de  ${addSpaceBeforeSecondUpperCase(title)}`} subTitle={title}>
+<BaseLayout title={`Apunte de  ${addSpaceBeforeSecondUpperCase(title)}`} subTitle={title} description={description}>
   <a href="/career" class="hover:underline opacity-75">← Volver atrás</a>
 
   <div class="flex justify-around my-10 max-w-lg">

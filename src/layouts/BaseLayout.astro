@@ -1,12 +1,12 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const { title, subTitle } = Astro.props;
+const { title, subTitle , description } = Astro.props;
 import SideMenu from '../components/layout/SideMenu.astro';
 import Layout from './Layout.astro';
 ---
 
-<Layout title={title}>
+<Layout title={title} description={description} >
   <div class="flex flex-col justify-around min-h-screen">
     <Header />
     <SideMenu />
