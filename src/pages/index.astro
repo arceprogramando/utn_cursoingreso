@@ -4,12 +4,12 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import SideMenu from '../components/layout/SideMenu.astro';
 import Footer from '../components/Footer.astro';
+import { YouTube } from 'astro-embed';
 ---
 
 <Layout title={`${title}`}>
   <Header />
   <SideMenu />
-
   <main class="max-w-3xl mx-auto md:h-auto">
     <h2 class="text-4xl md:text-5xl font-bold text-center my-8">Tecnicatura Universitaria en Programación</h2>
     <h3 class="text-3xl md:text-4xl font-bold text-center mt-4 md:mt-2 text-gray-700">Construí el futuro que soñas.</h3>
@@ -39,7 +39,8 @@ import Footer from '../components/Footer.astro';
         trabajo final integrador que refleja el aprendizaje acumulado.
       </p>
       <p class="text-lg md:text-start leading-relaxed">
-        La UTN ofrece una curricula que en las diferentes sedes se adoptan desde un enfoque diferente , pueden cambiar el abordaje de las materias y el nivel de exigencia, dependiendo de la sede y del cuerpo docente.
+        La UTN ofrece una curricula que en las diferentes sedes se adoptan desde un enfoque diferente , pueden cambiar el abordaje de las materias y
+        el nivel de exigencia, dependiendo de la sede y del cuerpo docente.
       </p>
       <h4 class="text-2xl font-semibold text-start py-4">-- Perfil del Egresado --</h4>
       <p class="text-lg md:text-start leading-relaxed">
@@ -70,6 +71,8 @@ import Footer from '../components/Footer.astro';
         </a>.
       </p>
     </div>
+
+    <YouTube id="https://www.youtube.com/watch?v=5azNrCaiqFo" class="rounded-xl" />
   </main>
 </Layout>
 <Footer />
