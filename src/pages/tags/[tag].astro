@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CardPostImage from '../../components/CardPostImage.astro';
 import { getCollection } from 'astro:content';
+import addSpaceBeforeSecondUppercase from '../../utils/addSpaceBeforeSecondUppercase';
 
 export async function getStaticPaths() {
   const career = await getCollection('career');
@@ -31,12 +32,9 @@ export async function getStaticPaths() {
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 
-function addSpaceBeforeSecondUpperCase(str: string) {
-  return str.replace(/(?!^)([A-Z])/g, ' $1').trim();
-}
 ---
 
-<BaseLayout title={addSpaceBeforeSecondUpperCase(tag)}>
+<BaseLayout title={addSpaceBeforeSecondUppercase(tag)}>
   <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
     {
       posts.map((post) => {
