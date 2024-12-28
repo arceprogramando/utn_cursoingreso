@@ -16,22 +16,20 @@ export async function getStaticPaths() {
 
 const { career } = Astro.props;
 const { data } = career;
-const { image, title, totalTimeClass, totalExam, totalTime, professor, downloadUrl, pubDate, author, tags,description} = data;
+const { image, title, totalTimeClass, totalExam, totalTime, professor, downloadUrl, pubDate, author, tags, description } = data;
 
 const { Content } = await render(career);
 
 const keywords = tags.map((tag) => addSpaceBeforeSecondUppercase(tag)).join(', ');
 
 export const prerender = true;
-
-
 ---
 
 <BaseLayout title={`Apunte de  ${addSpaceBeforeSecondUppercase(title)}`} subTitle={title} description={description} keywords={keywords}>
   <a href="/career" class="hover:underline opacity-75">← Volver atrás</a>
 
   <div class="flex justify-around my-10 max-w-lg">
-    <div class="max-w-56  p-2">
+    <div class="max-w-56 p-2">
       {
         image && image.url && image.alt && (
           <Image
@@ -48,7 +46,7 @@ export const prerender = true;
       }
     </div>
 
-    <div class="flex flex-col gap-2 md:gap-0 justify-center  px-3 md:px-4 md:items-center">
+    <div class="flex flex-col gap-2 md:gap-0 justify-center px-3 md:px-4 md:items-center">
       <div class="flex flex-col gap-2">
         <div class="flex md:gap-8 justify-around">
           <p class="font-semibold text-xs md:text-base px-2 text-black text-center">
@@ -103,7 +101,11 @@ export const prerender = true;
       {
         tags.map((tag) => (
           <li class="px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full  hover:bg-gray-800 hover:scale-105 transition-transform">
-            <a href={`/tags/${tag}`} title={`Ver todos los contenidos con el tag ${tag}`} aria-label={tag}>
+            <a
+              href={`/tags/${tag.toLowerCase()}`}
+              title={`Ver todos los contenidos con el tag ${addSpaceBeforeSecondUppercase(tag)}`}
+              aria-label={tag}
+            >
               {addSpaceBeforeSecondUppercase(tag)}
             </a>
           </li>

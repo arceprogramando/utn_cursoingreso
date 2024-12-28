@@ -16,10 +16,10 @@ export async function getStaticPaths() {
 
   return allTags.map((tag) => {
     const filteredCareerPosts = career.filter((post) => post.data.tags?.includes(tag));
-
     return {
-      params: { tag },
+      params: { tag: tag.toLowerCase() },
       props: {
+        title: tag,
         posts: filteredCareerPosts.map((post) => ({
           ...post,
           image: post.data.image,
@@ -30,15 +30,14 @@ export async function getStaticPaths() {
 }
 
 const { tag } = Astro.params;
-const { posts } = Astro.props;
-
+const { posts, title } = Astro.props;
 ---
 
-<BaseLayout title={addSpaceBeforeSecondUppercase(tag)}>
+<BaseLayout title={addSpaceBeforeSecondUppercase(title)}>
   <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
     {
       posts.map((post) => {
-        const url = post.slug;
+        const url = post.slug.toLowerCase();
         const imageUrl = post.data?.image?.url || '';
         const imageAlt = post.data?.image?.alt || '';
 

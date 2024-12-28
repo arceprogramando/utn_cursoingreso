@@ -30,7 +30,7 @@ const title = 'Índice de Tags';
       allTags.length > 0 ? (
         allTags.map((tag) => (
           <li class="px-2 md:px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800  transition-transform">
-            <a href={`/tags/${tag}`} title={`Ver elementos con el tag ${tag}`}>
+            <a href={`/tags/${tag.toLowerCase()}`} title={`Ver elementos con el tag ${tag}`}>
               {addSpaceBeforeSecondUppercase(tag)}
             </a>
           </li>
