@@ -14,6 +14,7 @@ professor: Rosalía Insaurralde
 order: 10
 
 ---
+import Image from 'astro/components/Image.astro'
 
 ## Base De Datos 1
 
@@ -79,28 +80,62 @@ Concidiendo con la evolución histórica de las bases de datos, estas han utiliz
   
 La estructura jerárquica fue usada en las primeras bases de datos. Las relaciones entre registros forman una estructura en árbol. Actualmente, las bases de datos jerárquicas más utilizadas son IMS de IBM y el Registro de Windows en Microsoft.
 
-![Base De Datos Estructura Jerárquica](/BaseDeDatosEstructuraJerargica.avif "Imagen de Una Estructura Jerárquica")
+<Image 
+  src="/BaseDeDatosEstructuraJerargica.avif" 
+  alt="Imagen de Una Estructura Jerárquica" 
+  decoding="async" 
+  width={400} 
+  height={400} 
+  densities={[1.5, 2]} 
+  class="max-w-88 md:max-w-80 my-1 rounded-md" 
+/>
 
 ##### Base De Datos Con estructura en red
 
 Esta estructura contiene relaciones más complejas que las jerárquicas. Admite relaciones de cada registro con varios que se pueden seguir por distintos caminos.
   
-![Base De Datos Estructura De Red](/BaseDeDatosEstructuraDeRed.avif "Imagen de Una Estructura De red")
+<Image 
+  src="/BaseDeDatosEstructuraDeRed.avif" 
+  alt="Imagen de Una Estructura De red" 
+  decoding="async" 
+  width={800} 
+  height={800} 
+  densities={[1.5, 2]} 
+  class="max-w-88 md:max-w-[600px] my-1 rounded-md" 
+/>
 
 ##### Base De Datos Con estructura relacional
 
 La **Estructura Relacional** es la más extendida hoy en día. Almacena los datos en **Filas** o **Registros** (**Tuplas**) y **Columnas** o **Campos** (**Atributos**). Estas tablas pueden estar conectadas entre sí por claves comunes.
 
 <figure>
-  ![Base De Datos Estructura Relacional](/BaseDeDatosEstructuraRelacional.avif "Imagen de Una Estructura Relacional")
-  *Esta imagen muestra una estructura relacional con tablas y relaciones que facilitan la organización y consulta de datos.*
+  <Image 
+    src="/BaseDeDatosEstructuraRelacional.avif" 
+    alt="Imagen de Una Estructura Relacional" 
+    decoding="async" 
+    width={400} 
+    height={400} 
+    densities={[1.5, 2]} 
+    class="max-w-88 md:max-w-96 my-1 rounded-md" 
+  />
+  <figcaption>
+    *Esta imagen muestra una estructura relacional con tablas y relaciones que facilitan la organización y consulta de datos.*
+  </figcaption>
 </figure>
 
 ##### Base De Datos Con estructura orientada a Objetos
 
 La **Estructura Orientada a Objetos** está diseñada siguiendo el paradigma de los lenguajes orientados a objetos. De este modo soporta los tipos de datos **Gráficos**, **Imágenes**, **Voz** y **Texto** de manera natural. Esta estructura tiene gran difusión en aplicaciones web para aplicaciones multimedia.
 
-![Base De Datos de Estructura Orientada a Objetos](/BaseDeDatosEstructuraOrientadaAObjetos.avif "Imagen de Una Estructura Orientada a Objetos")
+<Image 
+  src="/BaseDeDatosEstructuraOrientadaAObjetos.avif" 
+  alt="Imagen de Una Estructura Orientada a Objetos" 
+  decoding="async" 
+  width={400} 
+  height={400} 
+  densities={[1.5, 2]} 
+  class="max-w-88 md:max-w-96 my-1 rounded-md" 
+/>
 
 *Esta imagen muestra una base de datos orientada a objetos.*
 
@@ -117,14 +152,34 @@ En estos sistemas, cada programa almacenaba y utilizaba sus propios datos de for
 - Difícil modificación en los datos. Debido a la probabilidad de inconsistencia, cada modificación se debe repetir en todas las copias del dato (algo que normalmente es imposible).
 
 
- <figure>
-  ![Base De Datos de una estructura con Ficheros](/BaseDeDatosEstructuraConFicheros.avif "Imagen de Una Estructura Con Ficheros")
-  *Esta imagen ilustra una base de datos desorganizada, que presenta problemas como datos redundantes. La falta de consistencia en los datos dificulta las modificaciones, ya que cada cambio debe replicarse en múltiples copias.*
+<figure>
+  <Image 
+    src="/BaseDeDatosEstructuraConFicheros.avif" 
+    alt="Imagen de Una Estructura Con Ficheros" 
+    decoding="async" 
+    width={500} 
+    height={500} 
+    densities={[1.5, 2]} 
+    class="max-w-88 md:max-w-[500px] my-1 rounded-md" 
+  />
+  <figcaption>
+    *Esta imagen ilustra una base de datos desorganizada, que presenta problemas como datos redundantes. La falta de consistencia en los datos dificulta las modificaciones, ya que cada cambio debe replicarse en múltiples copias.*
+  </figcaption>
 </figure>
 
 <figure>
-  ![Base De Datos de una estructura Relacional acomodada](/BaseDeDatosEstructuraRelacionalAcomodada.avif "Imagen de Una Estructura Con Ficheros")
-  *Esta imagen ilustra una base de datos relacional organizada, que presenta todos los datos necesarios. Con consistencia en los datos facilita las modificaciones, ya que cada cambio se replica correctamente.*
+  <Image 
+    src="/BaseDeDatosEstructuraRelacionalAcomodada.avif" 
+    alt="Imagen de Una Estructura Con Ficheros" 
+    decoding="async" 
+    width={500} 
+    height={500} 
+    densities={[1.5, 2]} 
+    class="max-w-88 md:max-w-[500px] my-1 rounded-md" 
+  />
+  <figcaption>
+    *Esta imagen ilustra una base de datos relacional organizada, que presenta todos los datos necesarios. Con consistencia en los datos facilita las modificaciones, ya que cada cambio se replica correctamente.*
+  </figcaption>
 </figure>
 
 ### Sistemas de bases de datos relacionales
@@ -186,12 +241,32 @@ Es el resultado de aplicar el modelo lógico a un SGBD específico. Generalmente
 
 El **modelo Entidad-Relación** es el modelo más utilizado para el diseño conceptual de bases de datos. Fue introducido por Peter Chen en 1976 y se basa en la existencia de objetos a los que se les da el nombre de entidades, y asociaciones entre ellos, llamadas relaciones.
 
-![Introductor del modelo Entidad Relación](/PeterCheen.avif)
-*Creado por Peter Chen en 1976*
+<figure>
+  <Image 
+    src="/PeterCheen.avif" 
+    alt="Introductor del modelo Entidad Relación" 
+    decoding="async" 
+    width={300} 
+    height={300} 
+    densities={[1.5, 2]} 
+    class="max-w-44 md:max-w-80 my-1 rounded-md" 
+  />
+  <figcaption>
+    *Creado por Peter Chen en 1976*
+  </figcaption>
+</figure>
 
 Sus símbolos principales se representan en el cuadro siguiente:
 
-![Símbolos Entidad Relación](/BaseDeDatosSimbolosEntidadRelacion.avif)
+<Image 
+  src="/BaseDeDatosSimbolosEntidadRelacion.avif" 
+  alt="Símbolos Entidad Relación" 
+  decoding="async" 
+  width={300} 
+  height={300} 
+  densities={[1.5, 2]} 
+  class="max-w-88 md:max-w-80 my-1 rounded-md" 
+/>
 
 #### Entidades
 
@@ -251,18 +326,54 @@ Las entidades que están involucradas en una determinada relación se denominan 
 
 Por ejemplo, la relación Película-Actor es de grado 2 o binaria, ya que intervienen dos entidades: **Película** y **Actor**.
 
-![Diagrama Binario](/BaseDeDatosDiagramaBinario.avif)
-*Un diagrama Binario.*
+<figure>
+  <Image 
+    src="/BaseDeDatosDiagramaBinario.avif" 
+    alt="Diagrama Binario" 
+    decoding="async" 
+    width={500} 
+    height={500} 
+    densities={[1.5, 2]} 
+    class="max-w-88 md:max-w-[500px] my-1 rounded-md" 
+  />
+  <figcaption>
+    *Un diagrama Binario.*
+  </figcaption>
+</figure>
 
 La relación PUBLICAR es de grado 3, ya que involucra las entidades: **Libro**, **Editorial** y **Autor**.
 
-![Diagrama Grado Tres](/BaseDeDatosDiagramaGradoTres.avif)
-*Un diagrama Grado Tres.*
+<figure>
+  <Image 
+    src="/BaseDeDatosDiagramaGradoTres.avif" 
+    alt="Diagrama Grado Tres" 
+    decoding="async" 
+    width={300} 
+    height={300} 
+    densities={[1.5, 2]} 
+    class="max-w-44 md:max-w-80 my-1 rounded-md" 
+  />
+  <figcaption>
+    *Un diagrama Grado Tres.*
+  </figcaption>
+</figure>
 
 Cuando una entidad está relacionada consigo misma, es una relación reflexiva, ya que involucra dos entidades reflexivas: **Empleado** es a la misma vez **Jefe**.
 
-![Diagrama Reflexivo](/BaseDeDatosDiagramaReflexivo.avif)
-*Un diagrama reflexivo.*
+<figure>
+  <Image 
+    src="/BaseDeDatosDiagramaReflexivo.avif" 
+    alt="Diagrama Reflexivo" 
+    decoding="async" 
+    width={300} 
+    height={300} 
+    densities={[1.5, 2]} 
+    class="max-w-44 md:max-w-80 my-1 rounded-md" 
+  />
+  <figcaption>
+    *Un diagrama reflexivo.*
+  </figcaption>
+</figure>
 
 #### Cardinalidad
 
@@ -270,23 +381,71 @@ La **correspondencia de cardinalidades**, o razón de cardinalidad, expresa el n
 
 - **Uno a uno**: Una entidad en A se asocia con a lo sumo una entidad en B, y una entidad en B se asocia con a lo sumo una entidad en A.
 
-![Diagrama Uno a Uno](/BaseDeDatosUnoAUno.avif)
-*Un diagrama Uno a Uno.*
+<figure>
+  <Image 
+    src="/BaseDeDatosUnoAUno.avif" 
+    alt="Diagrama Uno a Uno" 
+    decoding="async" 
+    width={300} 
+    height={300} 
+    densities={[1.5, 2]} 
+    class="max-w-44 md:max-w-80 my-1 rounded-md" 
+  />
+  <figcaption>
+    *Un diagrama Uno a Uno.*
+  </figcaption>
+</figure>
 
 - **Uno a varios**: Una entidad en A se asocia con cualquier número de entidades en B (ninguna o varias). Una entidad en B, sin embargo, se puede asociar con a lo sumo una entidad en A.
 
-![Diagrama Uno a Varios](/BaseDeDatosUnoAVarios.avif)
-*Un diagrama de Uno a Varios / Uno a Muchos.*
+<figure>
+  <Image 
+    src="/BaseDeDatosUnoAVarios.avif" 
+    alt="Diagrama Uno a Varios" 
+    decoding="async" 
+    width={300} 
+    height={300} 
+    densities={[1.5, 2]} 
+    class="max-w-44 md:max-w-80 my-1 rounded-md" 
+  />
+  <figcaption>
+    *Un diagrama de Uno a Varios / Uno a Muchos.*
+  </figcaption>
+</figure>
 
 - **Varios a uno**: Una entidad en A se asocia con a lo sumo una entidad en B. Una entidad en B, sin embargo, se puede asociar con cualquier número de entidades (ninguna o varias) en A.
 
-![Diagrama Varios a Uno](/BaseDeDatosVariosAUno.avif)
-*Un diagrama de Varios A Uno / Muchos a Uno.*
+<figure>
+  <Image 
+    src="/BaseDeDatosVariosAUno.avif" 
+    alt="Diagrama Varios a Uno" 
+    decoding="async" 
+    width={300} 
+    height={300} 
+    densities={[1.5, 2]} 
+    class="max-w-44 md:max-w-80 my-1 rounded-md" 
+  />
+  <figcaption>
+    *Un diagrama de Varios A Uno / Muchos a Uno.*
+  </figcaption>
+</figure>
 
 - **Varios a varios**: Una entidad en A se asocia con cualquier número de entidades (ninguna o varias) en B, y una entidad en B se asocia con cualquier número de entidades (ninguna o varias) en A.
 
-![Diagrama Varios a Varios](/BaseDeDatosVariosAVarios.avif)
-*Un diagrama de Varios A Varios / Muchos a Muchos.*
+<figure>
+  <Image 
+    src="/BaseDeDatosVariosAVarios.avif" 
+    alt="Diagrama Varios a Varios" 
+    decoding="async" 
+    width={300} 
+    height={300} 
+    densities={[1.5, 2]} 
+    class="max-w-44 md:max-w-80 my-1 rounded-md" 
+  />
+  <figcaption>
+    *Un diagrama de Varios A Varios / Muchos a Muchos.*
+  </figcaption>
+</figure>
 
 #### Ejercicio Práctico:
 
