@@ -10,9 +10,9 @@ const careerEntries = await getCollection('career');
 careerEntries.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
 
 const sectionTitles = [
-  { title: 'Segundo cuatrimestre', minOrder: 7, maxOrder: 10 },
-  { title: 'Primer cuatrimestre', minOrder: 3, maxOrder: 6 },
   { title: 'Curso de ingreso', minOrder: 0, maxOrder: 2 },
+  { title: 'Primer cuatrimestre', minOrder: 3, maxOrder: 6 },
+  { title: 'Segundo cuatrimestre', minOrder: 7, maxOrder: 10 },
 ];
 ---
 
