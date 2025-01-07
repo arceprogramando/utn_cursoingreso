@@ -11,7 +11,7 @@ import Layout from './Layout.astro';
     <Header />
     <SideMenu />
     <main class="flex flex-col items-center max-w-5xl mx-auto mb-8">
-      <h2 class="text-center max-w-2xl uppercase my-8 md:my-4 text-4xl leading-none md:text-5xl font-bold gradient" transition:animate="slide">
+      <h2 class="text-center max-w-2xl  my-8 md:my-4 text-4xl leading-none md:text-5xl font-bold gradient">
         {subTitle ? subTitle : title}
       </h2>
       <slot />
@@ -23,3 +23,10 @@ import Layout from './Layout.astro';
     </div>
   </div>
 </Layout>
+
+<style>
+  h2 {
+    font-family: 'Dancing Script', cursive;
+    transform: skewX(-20deg);
+  }
+</style>
