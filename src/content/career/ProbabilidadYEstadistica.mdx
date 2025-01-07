@@ -15,6 +15,7 @@ order: 8
 ---
 
 import Latex from '../../components/Latex.astro';
+import Image from 'astro/components/Image.astro';
 
 ## Probabilidad y Estadística
 
@@ -123,29 +124,69 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 
 #### Representación grafica con diagramas de Venn.
 
-![Diagrama de Venn de los sucesos A y B](/DiagramaVennProbabilidad1.svg)
+<Image src="/DiagramaVennProbabilidad1.svg" alt="Diagrama de Venn de los sucesos A y B" decoding="async" width={175} height={175} densities={[1.5, 2]} class="max-w-44 md:max-w-80 my-1 rounded-md" />
 
 Diagrama de Venn de los sucesos A y B
 
 
-![Diagrama de Venn de los sucesos A intersección B](/DiagramaVennProbabilidad2.svg)
+<Image 
+  src="/DiagramaVennProbabilidad2.svg" 
+  alt="Diagrama de Venn de los sucesos A intersección B" 
+  decoding="async" 
+  width={175} 
+  height={175} 
+  densities={[1.5, 2]} 
+  class="max-w-44 md:max-w-80 my-1 rounded-md" 
+/>
 
 
-![Diagrama de Venn de los sucesos A intersección B](/DiagramaVennProbabilidad3.svg)
+<Image 
+  src="/DiagramaVennProbabilidad3.svg" 
+  alt="Diagrama de Venn de los sucesos A intersección B" 
+  decoding="async" 
+  width={175} 
+  height={175} 
+  densities={[1.5, 2]} 
+  class="max-w-44 md:max-w-80 my-1 rounded-md" 
+/>
 
 La región sombreada es A ∩ B (intersección) representan a los elementos que pertenecen al suceso A y al suceso B
 
 
-![Diagrama de Venn de los sucesos A intersección B](/DiagramaVennProbabilidad4.svg)
+<Image 
+  src="/DiagramaVennProbabilidad4.svg" 
+  alt="Diagrama de Venn de los sucesos A intersección B" 
+  decoding="async" 
+  width={175} 
+  height={175} 
+  densities={[1.5, 2]} 
+  class="max-w-44 md:max-w-80 my-1 rounded-md" 
+/>
 
 La región sombreada es A U B (unión) representan a los elementos que pertenecen al suceso A y al suceso B o a ambos
 
-![Diagrama de Venn de los sucesos A intersección B](/DiagramaVennProbabilidad5.svg)
+<Image 
+  src="/DiagramaVennProbabilidad5.svg" 
+  alt="Diagrama de Venn de los sucesos A intersección B" 
+  decoding="async" 
+  width={175} 
+  height={175} 
+  densities={[1.5, 2]} 
+  class="max-w-44 md:max-w-80 my-1 rounded-md" 
+/>
 
 **Sucesos A Y B mutuamente excluyentes**, Cuando ocurre uno de los sucesos, el otro no puede ocurrir.
 La región sombreada es el complemento de A
 
-![Pertenecen al suceso A o bien al suceso B pero no a Ambos](/DiagramaVennProbabilidad6.svg)
+<Image 
+  src="/DiagramaVennProbabilidad6.svg" 
+  alt="Pertenecen al suceso A o bien al suceso B pero no a Ambos" 
+  decoding="async" 
+  width={175} 
+  height={175} 
+  densities={[1.5, 2]} 
+  class="max-w-44 md:max-w-80 my-1 rounded-md" 
+/>
 
 Representa a los elementos que pertenecen al suceso A o bien al suceso B pero no a Ambos, o sea que la intersección no es agregada
 
@@ -291,8 +332,15 @@ CP (Casos Posibles) = 8 (las trayectorias posibles en total).
 
 Podemos representar este problema utilizando un diagrama de árbol para visualizar todas las posibles trayectorias del experimento. El diagrama de árbol para este experimento se puede construir de la siguiente manera:
 
-![Diagrama de árbol de hemofilia](/diagrama-arbol-hemofilia.avif)
-
+<Image 
+  src="/diagrama-arbol-hemofilia.avif" 
+  alt="Diagrama de árbol de hemofilia" 
+  decoding="async" 
+  width={300} 
+  height={300} 
+  densities={[1.5, 2]} 
+  class="max-w-48 md:max-w-96 my-1 rounded-md" 
+/>
 En el diagrama de árbol, cada rama representa la probabilidad de que un hijo tenga o no tenga la enfermedad. Las trayectorias posibles son:
 
 <Latex formula="\text{SSS : Todos los hijos tienen la enfermedad.}" />
@@ -670,9 +718,15 @@ En resumen, este teorema es ideal cuando:
 - Queremos calcular la probabilidad de un evento que depende de distintas condiciones.
 - Tenemos situaciones o subgrupos que cubren todas las alternativas posibles del evento.
 
-![Teorema de Probabilidad Total](/TeoremaDeProbabilidadTotal.avif)
-
-
+<Image 
+  src="/TeoremaDeProbabilidadTotal.avif" 
+  alt="Teorema de Probabilidad Total" 
+  decoding="async" 
+  width={175} 
+  height={175} 
+  densities={[1.5, 2]} 
+  class="max-w-44 md:max-w-80 my-1 rounded-md" 
+/>
 
 ###### Teorema de Bayes
 
@@ -725,8 +779,6 @@ En el contexto de la probabilidad, la sumatoria se usa para sumar probabilidades
 
 Aquí se suman las probabilidades de <Latex formula="A"/> dado cada <Latex formula="B_i"/> multiplicadas por la probabilidad de <Latex formula="B_i"/>, para obtener la probabilidad total de <Latex formula="A"/>.
 
-
-
 El Teorema de la Probabilidad Total permite calcular la probabilidad de un evento considerando una partición del espacio muestral en eventos disjuntos. 
 
 Si <Latex formula="B_1, B_2, \ldots, B_n" /> son eventos que forman una partición del espacio muestral, entonces:
@@ -743,7 +795,15 @@ El Teorema de Bayes es una aplicación de la probabilidad condicional que permit
 
 <Latex formula="P(B_i|A) = \frac{P(A|B_i) \cdot P(B_i)}{\sum_{j=1}^{n} P(A|B_j) \cdot P(B_j)}" />
 
-![Teorema de Bayes](/TeoremaDeBayes.avif)
+<Image 
+  src="/TeoremaDeBayes.avif" 
+  alt="Teorema de Bayes" 
+  decoding="async" 
+  width={175} 
+  height={175} 
+  densities={[1.5, 2]} 
+  class="max-w-44 md:max-w-80 my-1 rounded-md" 
+/>
 
 
 
