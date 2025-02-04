@@ -1,1 +1,3 @@
 /* TODO: Conectar global css  eliminar contenido redundante de componentes para traerlos aca si es necesario */
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
