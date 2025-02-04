@@ -1,13 +1,14 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind';
 import icon from 'astro-icon';
 import mdx from '@astrojs/mdx';
 
+import tailwindcss from '@tailwindcss/vite';
+
 export default defineConfig({
   site: 'https://utn-cursoingreso.vercel.app',
+
   integrations: [
-    tailwind(),
     sitemap({
       serialize(item) {
         const today = new Date('2024-12-27').toISOString();
@@ -24,14 +25,19 @@ export default defineConfig({
         if (isCareerProgramationUrl) return { ...item, changefreq: 'daily', lastmod: today, priority: 0.8 };
 
         if (isDataBaseUrl) return { ...item, changefreq: 'daily', lastmod: today, priority: 0.7 };
-        
+
         return { ...item, changefreq: 'monthly', lastmod: today, priority: 0.6 };
       },
     }),
     icon(),
     mdx(),
   ],
+
   devToolbar: {
     enabled: false,
+  },
+
+  vite: {
+    plugins: [tailwindcss()],
   },
 });
