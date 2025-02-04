@@ -5,13 +5,16 @@ import Header from '../components/Header.astro';
 import SideMenu from '../components/layout/SideMenu.astro';
 import Footer from '../components/Footer.astro';
 import { YouTube } from 'astro-embed';
+import ProgramShowCase from '../components/ProgramShowCase.astro';
 ---
 
 <Layout title={`${title}`}>
   <Header />
   <SideMenu />
+
   <main class="max-w-3xl mx-auto md:h-auto">
     <h2 class="text-4xl md:text-5xl font-bold text-center my-8">Tecnicatura Universitaria en Programación</h2>
+    <ProgramShowCase />
     <h3 class="text-3xl md:text-4xl font-bold text-center mt-4 md:mt-2 text-gray-700">Construí el futuro que soñas.</h3>
 
     <div class="w-full flex justify-center mt-4">
@@ -49,7 +52,16 @@ import { YouTube } from 'astro-embed';
         lo que les permite abordar problemas complejos y gestionar proyectos de software con éxito. También destacan por sus habilidades de liderazgo,
         trabajo en equipo y adaptabilidad a entornos dinámicos.
       </p>
+      <h4 class="text-2xl font-semibold text-start py-16" id="Certificación">Certificación</h4>
+      <p class="text-lg md:text-start leading-relaxed">
+        El titulo de Tecnico Universitario En programación va respaldado por la respetada institución de Universidad Tecnica Nacional
+      </p>
+      <h4 class="text-2xl font-semibold text-start py-16" id="Metodologia">Metodología</h4>
+      <p class="text-lg md:text-start leading-relaxed">
+        La metodología de la carrera va desenvuelta entre las diferentes tecnologias base para poder trabajar en el mundo de la programación
+      </p>
 
+    
       <p class="mt-6 text-sm text-gray-600">
         ¡Inscríbete y comienza tu camino hacia una exitosa carrera en programación! Puedes hacerlo a
         <a
@@ -73,9 +85,8 @@ import { YouTube } from 'astro-embed';
     </div>
 
     <div class="p-4">
-
-      <YouTube id="https://www.youtube.com/watch?v=5azNrCaiqFo" class="rounded-xl  md:p-0"  posterQuality='max'/>
-    </div> 
+      <YouTube id="https://www.youtube.com/watch?v=5azNrCaiqFo" class="rounded-xl md:p-0" posterQuality="max" />
+    </div>
   </main>
 </Layout>
 <Footer />

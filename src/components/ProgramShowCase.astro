@@ -1,0 +1,38 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Program {
+  title: string;
+  description: string;
+  icon?: string;
+  href?: string;
+}
+
+const Programs: Program[] = [
+  { title: 'Programación', description: 'Aprende la lógica de la programación desde cero.', icon: 'code', href: '/tags/programacion' },
+  { title: 'Trabajo en Equipo', description: 'Desarrolla habilidades en colaboración.', icon: 'users', href: '/community-projects' },
+  { title: 'Plan Actualizado', description: 'Contenido actualizado con la industria.', icon: 'book', href: '/correlativity/' },
+  { title: 'Certificación', description: 'Certificación de la UTN.', icon: 'trophy', href: '/#Certificación' },
+  { title: 'Práctica Real', description: 'Proyectos reales para la práctica.', icon: 'laptop', href: '/community-projects' },
+  { title: 'Metodología', description: 'Enfoque práctico y teórico balanceado.', icon: 'brain' , href:'/#Metodologia' },
+];
+---
+
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 w-full justify-items-center my-8">
+  {
+    Programs.map((program) => (
+      <a
+        href={program.href}
+        title={`Ir a página de ${program.title}`}
+        aria-label={`Ir a página de ${program.title}`}
+        class="transition-transform transform hover:scale-105 hover:shadow-lg"
+      >
+        <div class="flex flex-col justify-center rounded-lg min-h-40 p-4 md:p-6 border-1 border-gray-200 w-80">
+          <Icon name={program.icon} width={40} height={40} title={program.title} class="text-primary w-10 h-10" />
+          <h4 class="font-bold text-lg">{program.title}</h4>
+          <p class="text-sm text-gray-600">{program.description}</p>
+        </div>
+      </a>
+    ))
+  }
+</div>
