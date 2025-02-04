@@ -11,8 +11,8 @@ const subTitle = 'Correlatividades';
 <BaseLayout title={`${title}`} subTitle={`${subTitle}`}>
   <ProgressBar subjects={subjects} />
   <div class="flex flex-col-reverse md:flex-col  justify-center items-center container mx-auto text-center p-2 overflow-x-scroll md:overflow-hidden text-sm">
-    <table class="min-w-full  divide-y divide-gray-200 shadow border-b border-gray-200 sm:rounded-lg">
-      <thead class="border-t-2 border-l-2 border-r-2 bg-black text-white">
+    <table class="min-w-full  divide-y-1 divide-x-1 divide-gray-200 shadow border-b border-gray-200 sm:rounded-lg">
+      <thead class="border-t-2 border-l-2  bg-black text-white ">
         <tr class="[&>*]:w-4">
           <th scope="col" class="px-2 py-3 md:px-6 md:py-3 text-center text-xs md:font-medium uppercase md:tracking-wider"> Nº </th>
           <th scope="col" class="px-2 py-3 md:px-6 md:py-3 text-center text-xs md:font-medium uppercase md:tracking-wider md:min-w-64"> ASIGNATURA </th>
@@ -21,7 +21,7 @@ const subTitle = 'Correlatividades';
           <th scope="col" class="px-2 py-3 md:px-6 md:py-3 text-center text-xs md:font-medium uppercase md:tracking-wider"> Horas Totales </th>
         </tr>
       </thead>
-      <tbody class="divide-y divide-x-2 ">
+      <tbody class="divide-y-1  ">
         {
           subjects.map((subject) => {
             const bgColor = subject.isPassed ? 'bg-green-300' : 'bg-yellow-300';
