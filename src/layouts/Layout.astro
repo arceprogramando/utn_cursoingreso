@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from 'astro:transitions';
+import "../styles/global.css";
 
 interface Props {
   title: string;
@@ -9,7 +10,7 @@ interface Props {
 }
 
 const {
-  title = 'Título por defecto',
+  title = 'Tecnictura en Programación',
   thumbnailImage = 'https://res.cloudinary.com/dyanh7yda/image/upload/v1705374365/c77n6krmnazj9yaafrxh.jpg',
   description = 'Descubre la Tecnicatura Universitaria en Programación en la Universidad Técnica Nacional, aprende los conceptos para iniciarte en la programación en 2025.',
   keywords = 'Aprende cosas Nuevas',
