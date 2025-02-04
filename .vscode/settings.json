@@ -1,9 +1,11 @@
 {
-  "conventionalCommits.scopes": [
-    "docs",
-    "frontend",
-    "improve seo search robots and sitemap",
-    "seo",
-    "blog"
-  ]
+  "conventionalCommits.scopes": ["docs", "frontend", "improve seo search robots and sitemap", "seo", "blog"],
+  "tailwindCSS.includeLanguages": {
+    "astro": "html",
+    "html": "html",
+    "javascript": "javascript",
+    "typescript": "typescript",
+    "typescriptreact": "typescriptreact",
+    "javascriptreact": "javascriptreact",
+  }
 }
