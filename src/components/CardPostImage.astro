@@ -1,10 +1,10 @@
 ---
-const { url, tag, alt } = Astro.props;
+const { url, tag, alt, loading } = Astro.props;
 import { Image } from 'astro:assets';
 ---
 
 <li>
   <a href={url} title={`Ver ${alt}`} transition:name={tag} class="transition">
-    <Image src={tag} alt={alt} decoding="async" width={175} height={175} densities={[1.5, 2]} class="max-w-44 md:max-w-80 my-1 rounded-md" />
+    <Image src={tag} alt={alt} decoding="async" width={175} height={175} densities={[1.5, 2]} class="max-w-44 md:max-w-80 my-1 rounded-md" loading={loading} />
   </a>
 </li>
