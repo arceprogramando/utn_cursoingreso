@@ -16,10 +16,13 @@ export async function getStaticPaths() {
 
   return allTags.map((tag) => {
     const filteredCareerPosts = career.filter((post) => post.data.tags?.includes(tag));
+
+    const description = filteredCareerPosts.map((post) => post.data.title).join(', ');
     return {
       params: { tag: tag.toLowerCase() },
       props: {
         title: tag,
+        description,
         posts: filteredCareerPosts.map((post) => ({
           ...post,
           image: post.data.image,
@@ -29,11 +32,15 @@ export async function getStaticPaths() {
   });
 }
 
-// const { tag } = Astro.params;
-const { posts, title } = Astro.props;
+const { posts, title, description } = Astro.props;
+const titleWithSpacing = addSpaceBeforeSecondUppercase(title);
 ---
 
-<BaseLayout title={`Apuntes con el tag: ${addSpaceBeforeSecondUppercase(title)}`} subTitle={`TAGS: ${addSpaceBeforeSecondUppercase(title)}`}>
+<BaseLayout
+  title={`Apuntes con el tag: ${titleWithSpacing}`}
+  subTitle={`TAGS: ${titleWithSpacing}`}
+  description={`Encuentra Materias de ${titleWithSpacing} como: ${description}`}
+>
   <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
     {
       posts.map((post) => {
