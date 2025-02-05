@@ -33,7 +33,7 @@ export async function getStaticPaths() {
 const { posts, title } = Astro.props;
 ---
 
-<BaseLayout title={addSpaceBeforeSecondUppercase(title)}>
+<BaseLayout title={`Apuntes con el tag: ${addSpaceBeforeSecondUppercase(title)}`} subTitle={`TAGS: ${addSpaceBeforeSecondUppercase(title)}`}>
   <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
     {
       posts.map((post) => {

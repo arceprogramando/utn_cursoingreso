@@ -20,11 +20,12 @@ export async function getStaticPaths() {
 
 const { allTags } = await getStaticPaths();
 
-const title = 'Índice de Tags';
+const title = 'Tecnicatura en Programación - Índice de Tags';
+const subTitle = 'Índice De Tags';
 
 ---
 
-<BaseLayout title={`${title}`}>
+<BaseLayout title={`${title}`} subTitle={`${subTitle}`}>
     <ul class="flex flex-wrap justify-center gap-2 max-w-2xl">
     {
       allTags.length > 0 ? (
