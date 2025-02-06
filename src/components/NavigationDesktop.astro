@@ -1,0 +1,21 @@
+---
+import { linksData } from "../data/layouts/links";
+---
+
+<ul class="hidden sm:flex sm:gap-2 md:gap-4 ">
+  {
+    linksData.map((item) => (
+      <li class="relative cursor-pointer group z-10 ">
+        <a
+          href={item.href}
+          class="block relative  border bg-black z-[11] border-[#24365a] dark:border-white text-white border-solid p-1  md:px-2 uppercase text-sm font-bold leading-7"
+          title={`Ir a página de ${item.title}`}
+          aria-label={`Ir a página de ${item.title}`}
+        >
+          {item.title}
+        </a>
+        <div class=" absolute border border-black dark:border:z transform origin-top-right transition-all duration-300 -top-1 right-1 w-full h-full  group-hover:top-0 group-hover:right-0" />
+      </li>
+    ))
+  }
+</ul>
