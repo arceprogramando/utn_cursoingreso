@@ -4,14 +4,20 @@ import Footer from '../components/Footer.astro';
 const { title, subTitle, description, keywords } = Astro.props;
 import SideMenu from '../components/layout/SideMenu.astro';
 import Layout from './Layout.astro';
+import LogoIcon from '../components/LogoIcon.astro';
 ---
 
 <Layout title={title} description={description} keywords={keywords}>
   <div class="flex flex-col justify-around min-h-screen">
-    <Header />
+    <header class="sm:border-1 sm:border-gray-200">
+      <div class="sm:hidden px-8 pt-8 bg-white">
+        <LogoIcon />
+      </div>
+      <Header />
+    </header>
     <SideMenu />
     <main class="flex flex-col items-center max-w-5xl mx-auto mb-8">
-      <h2 class="text-center max-w-2xl  my-8 md:my-4 text-4xl leading-none md:text-5xl font-bold gradient">
+      <h2 class="text-center max-w-2xl my-8 md:my-4 text-4xl leading-none md:text-5xl font-bold gradient">
         {subTitle ? subTitle : title}
       </h2>
       <slot />
