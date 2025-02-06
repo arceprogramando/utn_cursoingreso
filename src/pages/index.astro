@@ -6,12 +6,18 @@ import SideMenu from '../components/layout/SideMenu.astro';
 import Footer from '../components/Footer.astro';
 import { YouTube } from 'astro-embed';
 import ProgramShowCase from '../components/ProgramShowCase.astro';
+import LogoIcon from '../components/LogoIcon.astro';
 ---
 
 <Layout title={`${title}`}>
-  <Header />
-  <SideMenu />
+  <header class="sm:border-1 sm:border-gray-200">
+    <div class="block sm:hidden px-8 pt-8">
 
+      <LogoIcon />
+    </div>
+    <Header />
+  </header>
+  <SideMenu />
   <main class="max-w-3xl mx-auto md:h-auto">
     <h2 class="text-4xl px-2 md:px-0 md:text-5xl font-bold text-center mt-8 mb-4">Tecnicatura Universitaria en Programación</h2>
     <ProgramShowCase />
@@ -61,7 +67,6 @@ import ProgramShowCase from '../components/ProgramShowCase.astro';
         La metodología de la carrera va desenvuelta entre las diferentes tecnologias base para poder trabajar en el mundo de la programación
       </p>
 
-    
       <p class="mt-6 text-sm text-gray-600">
         ¡Inscríbete y comienza tu camino hacia una exitosa carrera en programación! Puedes hacerlo a
         <a
