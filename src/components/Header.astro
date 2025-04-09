@@ -3,11 +3,16 @@ import LogoIcon from './LogoIcon.astro';
 import Navigation from './Navigation.astro';
 ---
 
-<div class="fixed w-full bottom-0 right-0 sm:sticky md:top-0 md:block py-4 z-50 sm:bg-white  sm:border-gray-200">
-  <nav class="flex justify-end px-20 md:px-0 sm:justify-between sm:items-center max-w-3xl sm:mx-auto">
+<div
+  class="fixed w-full bottom-0 right-0 sm:sticky md:top-0 md:block py-4 z-50 sm:bg-white sm:border-gray-200"
+>
+  <nav
+    class="flex justify-end px-20 md:px-0 sm:justify-between sm:items-center max-w-3xl sm:mx-auto"
+  >
     <div class="hidden sm:block">
       <LogoIcon />
     </div>
-      <Navigation />
+    <Navigation />
   </nav>
+  <h1 class="sr-only">Universidad Tecnológica Nacional</h1>
 </div>
