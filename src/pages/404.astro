@@ -3,13 +3,17 @@ import Layout from '../layouts/Layout.astro';
 let title = '404';
 ---
 
-<Layout title={title}>
-  <div class="flex flex-col items-center justify-center h-screen bg-white text-black">
+<Layout title={title} description="404 pages not found">
+  <div
+    class="flex flex-col items-center justify-center h-screen bg-white text-black"
+  >
     <h2 class="text-6xl font-bold">404</h2>
     <p class="mt-4 text-xl">No se ha encontrado la página que solicita.</p>
     <p class="mt-2 max-w-2xl p-8 text-center">
-      Estamos cambiando de rutas en nuestra web. Tal vez surgió otro inconveniente. Prueba ir al
-      <a href="/" class="text-blue-500 hover:underline"> índice</a> y buscar manualmente hasta que Google actualice los endpoints. Disculpe las molestias.
+      Estamos cambiando de rutas en nuestra web. Tal vez surgió otro
+      inconveniente. Prueba ir al
+      <a href="/" class="text-blue-500 hover:underline"> índice</a> y buscar manualmente
+      hasta que Google actualice los endpoints. Disculpe las molestias.
     </p>
   </div>
 </Layout>

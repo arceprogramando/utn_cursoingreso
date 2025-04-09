@@ -11,8 +11,14 @@ const apiUrl = 'https://apicollaborator.vercel.app/';
 const { colaboradores, errorMessage } = await fetchCollaborators(apiUrl);
 ---
 
-<BaseLayout title={title} subTitle={subTitle}>
-  <div class="flex flex-col justify-center items-center container mx-auto text-center">
+<BaseLayout
+  title={title}
+  subTitle={subTitle}
+  description="Colaboradores Tecnicatura en Programación - UTN 2025"
+>
+  <div
+    class="flex flex-col justify-center items-center container mx-auto text-center"
+  >
     {
       errorMessage ? (
         <p class="text-red-500">{errorMessage}</p>
@@ -31,10 +37,18 @@ const { colaboradores, errorMessage } = await fetchCollaborators(apiUrl);
                 />
                 <div class="text-center">
                   <div class="font-bold text-xl">{colaborador.login}</div>
-                  <div class="text-gray-400 text-sm">{colaborador.description ? colaborador.description : 'Contributor'}</div>
+                  <div class="text-gray-400 text-sm">
+                    {colaborador.description
+                      ? colaborador.description
+                      : 'Contributor'}
+                  </div>
                 </div>
               </div>
-              {colaborador.contributions && <div class="text-center text-sm text-gray-400">{colaborador.contributions} Contribuciones</div>}
+              {colaborador.contributions && (
+                <div class="text-center text-sm text-gray-400">
+                  {colaborador.contributions} Contribuciones
+                </div>
+              )}
               <a
                 href={colaborador.html_url}
                 title={`Ir a perfil de ${colaborador.login} en Github`}
