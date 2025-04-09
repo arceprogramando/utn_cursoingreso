@@ -9,10 +9,17 @@ const careerEntries = await getCollection('career');
 
 careerEntries.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
 
-const sectionTitles = [
+interface SectionTitle {
+  title: string;
+  minOrder: number;
+  maxOrder: number;
+}
+
+const sectionTitles : SectionTitle[] = [
   { title: 'Curso de ingreso', minOrder: 0, maxOrder: 2 },
   { title: 'Primer cuatrimestre', minOrder: 3, maxOrder: 6 },
   { title: 'Segundo cuatrimestre', minOrder: 7, maxOrder: 10 },
+  {title:'Tercer Cuatrimestre' , minOrder:11, maxOrder: 14}
 ];
 ---
 
@@ -28,7 +35,7 @@ const sectionTitles = [
           <>
             <h2 class="w-full text-center text-2xl font-bold">{title}</h2>
             <ul class="flex justify-center gap-2 flex-wrap">
-              {sectionEntries.map(({ data, slug }, index) => {
+              {sectionEntries.map(({ data, slug }) => {
                 const { image } = data || {};
                 const imageUrl = image?.url || '';
                 const imageAlt = image?.alt || 'Imagen sin descripción';
