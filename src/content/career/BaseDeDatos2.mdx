@@ -1,0 +1,177 @@
+---
+title: Base De Datos 2
+author: Felipe Arce
+description: Apunte de Base de Datos 2, abordando la evolución histórica, modelos de bases de datos y diseño. ¡Aprende conceptos fundamentales para tu formación en 2025! # De 150 a 160 caracteres
+image:
+  url: '/ApunteBaseDeDatos2.avif'
+  alt: 'Apunte de Base De Datos 2'
+pubDate: 2025-04-16
+tags: ['Apuntes', 'BaseDeDatos','TercerCuatrimestre']
+totalTimeClass: 56
+totalExam: 8
+totalTime: 64
+professor: Rosalía Insaurralde 
+order: 12
+
+---
+
+### Base de Datos 2
+
+Otra vez volvemos a tener una hermosa materia con la excelente profesora Rosalía Insaurralde, es increible lo que transmite y sabe esta profesora , hace que la carrera se nutra un poco mas de de conocimientos, en la anterior matería de Base de datos 1 nos enseño a usar diseñar base de datos SQL.
+
+En este caso, Base de Datos 2, nos enseñara a usar bases de datos NoSQL, y a entender como funcionan los sistemas de bases de datos en la actualidad, y como se han ido adaptando a lo largo del tiempo.
+
+#### Clase 1
+
+
+**¿Qué es una base de datos NoSQL?**
+
+NoSQL (acrónimo de “not only SQL”) se refiere a bases de datos no relacionales que no utilizan el formato tabular de las bases de datos relacionales tradicionales. En lugar de eso, usan un modelo flexible que permite almacenar datos estructurados, semiestructurados o no estructurados, como documentos JSON, pares clave-valor, grafos y columnas anchas.
+
+Estas bases están diseñadas para escalar horizontalmente, ofrecer alto rendimiento y permitir cambios rápidos en la estructura de los datos, lo que las hace ideales para aplicaciones modernas como servicios web, apps móviles, big data y análisis en tiempo real.
+
+---
+
+**Breve historia de las bases de datos NoSQL**
+
+Las bases NoSQL surgieron a finales de los años 2000. Algunos factores clave para su aparición fueron:
+
+- Disminución de los costos de almacenamiento.
+- Aumento de la cantidad y variedad de datos generados por las aplicaciones modernas.
+- Necesidad de escalabilidad y rendimiento que las bases SQL tradicionales no podían ofrecer fácilmente.
+
+Con NoSQL, los desarrolladores dejaron de preocuparse por esquemas rígidos y normalización estricta, enfocándose en la agilidad y productividad.
+
+---
+
+**Modelos de datos no relacionales**
+
+- **Clave-valor**  
+  Almacenan datos en pares únicos de clave y valor. Útiles para sesiones, preferencias y datos de configuración.  
+  Ejemplos: Redis, DynamoDB.
+
+- **Documento**  
+  Utilizan estructuras como JSON o BSON. Permiten consultar por cualquier campo del documento. Muy usados en apps modernas.  
+  Ejemplos: MongoDB, Couchbase.
+
+- **Grafo**  
+  Almacenan relaciones complejas entre datos usando nodos y bordes. Ideales para redes sociales, detección de fraudes o logística.  
+  Ejemplos: Neo4j, ArangoDB.
+
+- **Columna ancha**  
+  Parecidas a las tablas relacionales, pero con mayor flexibilidad. Excelentes para analítica y big data.  
+  Ejemplos: Apache Cassandra, HBase.
+
+---
+
+**Tipos de bases de datos NoSQL**
+
+- **Bases de datos de documentos**  
+  Guardan datos en formato JSON o similar. Muy útiles para CMS, plataformas de e-commerce, blogs y APIs REST.
+
+- **Bases de datos de pares clave-valor**  
+  Son las más simples. Cada clave única se asocia a un valor. Ideales para almacenar configuraciones, carritos de compras o perfiles.
+
+- **Bases de datos orientadas a columnas**  
+  Almacenan datos por columnas en vez de filas, lo que mejora el rendimiento en consultas analíticas.
+
+- **Bases de datos de grafos**  
+  Modelan relaciones complejas. Se usan para redes sociales, motores de recomendación o sistemas de reserva.
+
+- **Bases de datos en memoria**  
+  Almacenan datos directamente en RAM, proporcionando latencia ultra baja. Se usan en cachés, mensajería y procesamiento en tiempo real.  
+  Ejemplos: Redis, Valkey.
+
+---
+
+**¿Cuándo usar NoSQL?**
+
+- Cuando necesitas escalar horizontalmente fácilmente.
+- Si los datos son semiestructurados o cambian con frecuencia.
+- Cuando el rendimiento es clave (por ejemplo, en apps en tiempo real).
+- Para proyectos ágiles donde los esquemas cambian constantemente.
+
+---
+
+**Resumen de casos de uso por tipo**
+
+| Tipo de BD NoSQL       | Casos de uso comunes                           | Ejemplos               |
+|------------------------|------------------------------------------------|------------------------|
+| Documentos             | CMS, blogs, e-commerce                         | MongoDB, Couchbase     |
+| Clave-valor            | Sesiones, perfiles, cachés                     | Redis, DynamoDB        |
+| Columnas anchas        | Big data, analítica, catálogos                 | Cassandra, HBase       |
+| Grafos                 | Redes sociales, recomendaciones, logística     | Neo4j, ArangoDB        |
+| En memoria             | Caching, streaming, procesamiento en tiempo real | Redis, Valkey          |
+
+**Ventajas de NoSQL**
+
+🟢 **Modelo de datos y esquema flexibles**  
+NoSQL permite trabajar con datos estructurados, semiestructurados o sin estructura, como JSON, sin depender de un esquema rígido. Esto lo hace ideal para modelos que cambian frecuentemente o datos heterogéneos.
+
+🟢 **Desarrollo ágil y rápido**  
+Gracias a su flexibilidad, los desarrolladores pueden empezar a trabajar sin definir un esquema fijo desde el inicio. Esto reduce el tiempo de modelado, facilita las iteraciones rápidas y encaja perfectamente con metodologías ágiles.
+
+🟢 **Almacenamiento eficiente de grandes volúmenes de datos**  
+Diseñado para manejar datos a gran escala, incluyendo escenarios de big data, IoT, analítica en tiempo real y streaming. Soporta almacenamiento distribuido de forma nativa.
+
+🟢 **Escalabilidad horizontal**  
+La mayoría de bases NoSQL permiten escalar fácilmente agregando más nodos al clúster (scale-out), sin tiempo de inactividad. En entornos cloud, muchas ofrecen escalado automático y elasticidad bajo demanda.
+
+🟢 **Alta disponibilidad y tolerancia a fallos**  
+Al estar distribuidas por diseño, muchas bases NoSQL no tienen un único punto de fallo. Usan replicación automática y particionado (sharding) para garantizar disponibilidad continua, incluso frente a caídas.
+
+🟢 **Rendimiento optimizado en consultas específicas**  
+NoSQL evita uniones complejas y estructuras normalizadas estrictas, lo que permite acceder rápidamente a los datos más utilizados, especialmente cuando están denormalizados para rendimiento.
+
+💡 Algunas bases modernas permiten ejecutar queries más complejas o transaccionales, pero siguen priorizando la velocidad y disponibilidad.
+
+---
+
+**Desventajas de NoSQL**
+
+🔴 **Menor madurez en comparación con SQL tradicional**  
+Aunque han avanzado bastante, algunas bases NoSQL aún tienen ecosistemas menos robustos, menos herramientas avanzadas, y la comunidad puede ser más limitada para casos raros.
+
+🔴 **Falta de un lenguaje de consulta estándar**  
+Cada motor NoSQL tiene su propia forma de consulta (ej: MongoDB usa su propio API, Redis comandos, Cassandra CQL). Aunque algunos se parecen a SQL, **no son compatibles entre sí**, lo que complica el cambio de motor.
+
+🔴 **Menor soporte nativo para integridad de datos**  
+No todas las bases NoSQL implementan transacciones ACID. Algunas, como **MongoDB o Firebase Firestore**, ya ofrecen soporte limitado para transacciones, pero no es la norma en todos los motores.
+
+🔴 **No aptas para uniones complejas ni lógica relacional avanzada**  
+Aplicaciones con relaciones fuertes entre tablas y que requieren uniones (JOINs), triggers, constraints o consistencia fuerte, se benefician más de una base de datos SQL.
+
+🔴 **Consistencia eventual en vez de fuerte**  
+Muchas bases NoSQL optan por **consistencia eventual** para lograr mejor disponibilidad y escalabilidad (según el teorema CAP). Esto significa que los datos podrían no estar actualizados en todos los nodos inmediatamente.
+
+💡 En la mayoría de casos web, esta pequeña "latencia" es tolerable. Pero en apps críticas (como bancos), podría ser un problema.
+
+---
+
+**ACID (SQL) vs BASE (NoSQL)**
+
+- **ACID**: Atomicidad, Coherencia, Aislamiento y Durabilidad. Característica de las bases SQL, asegura transacciones seguras.
+- **BASE**: Basically Available, Soft state, Eventually consistent. Modelo que prioriza la disponibilidad y tolerancia a fallos, común en NoSQL.
+
+---
+
+**SQL vs NoSQL: ¿cuándo usar cada una?**
+
+**Usar SQL cuando:**
+- Se necesita consistencia fuerte en transacciones.
+- Hay estructuras relacionales con múltiples tablas.
+- Se requieren JOINs complejos y reglas de negocio estrictas.
+- Casos de uso:
+  - Transacciones financieras (bancos, pagos)
+  - Gestión de pacientes en salud
+  - CRM o ERPs con relaciones entre datos
+
+**Usar NoSQL cuando:**
+- El modelo de datos es flexible o cambia con frecuencia.
+- Se requiere escalabilidad horizontal.
+- Se prioriza el rendimiento y la disponibilidad sobre la consistencia fuerte.
+- Casos de uso:
+  - E-commerce, redes sociales, juegos online
+  - Almacenamiento de logs y telemetría (IoT)
+  - Recomendaciones, cachés, sesiones
+
