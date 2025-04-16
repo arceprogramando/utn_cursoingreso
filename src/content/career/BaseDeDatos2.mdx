@@ -23,6 +23,7 @@ En este caso, Base de Datos 2, nos enseñara a usar bases de datos NoSQL, y a en
 
 #### Clase 1
 
+##### lunes 7 de abril de 2025
 
 **¿Qué es una base de datos NoSQL?**
 
@@ -175,3 +176,60 @@ Muchas bases NoSQL optan por **consistencia eventual** para lograr mejor disponi
   - Almacenamiento de logs y telemetría (IoT)
   - Recomendaciones, cachés, sesiones
 
+**Teorema CAP**  
+Plantea que en sistemas distribuidos solo se pueden garantizar dos de las siguientes tres propiedades al mismo tiempo:  
+- **Consistencia (C):** Todos los nodos ven los mismos datos al mismo tiempo.  
+- **Disponibilidad (A):** Cada solicitud recibe una respuesta, incluso si algunos nodos fallan.  
+- **Tolerancia a particiones (P):** El sistema continúa operando aunque haya fallos en la red o pérdida de comunicación.
+
+En la práctica, las bases NoSQL suelen elegir entre **consistencia** o **disponibilidad**, priorizando lo que mejor se ajuste al caso de uso.
+
+#### Clase 2 
+
+##### lunes 14 de abril de 2025
+
+**Características de MongoDB**
+
+- **No relacional**: No utiliza tablas ni esquemas fijos como una base de datos relacional tradicional.
+- **Flexible**: Permite almacenar documentos con estructuras diferentes en la misma colección.
+- **Escalable horizontalmente**: Ideal para manejar grandes volúmenes de datos distribuidos.
+- **Alta disponibilidad**: Soporta replicación automática y recuperación ante fallos.
+- **Consultas poderosas**: Permite realizar búsquedas complejas y filtrado avanzado con operadores propios.
+- **Formato BSON**: Internamente almacena los datos en BSON (una versión binaria de JSON), lo que permite un procesamiento más eficiente.
+- **Indexación**: Soporta múltiples tipos de índices (únicos, compuestos, geoespaciales, etc.) para optimizar las consultas.
+- **Agregación**: Posee un framework robusto para realizar transformaciones y análisis de datos (aggregation pipeline).
+- **Transacciones ACID**: Desde versiones recientes, MongoDB permite transacciones multi-documento con soporte ACID.
+
+---
+
+**Conceptos básicos**
+
+A diferencia de una base de datos relacional (SQL), MongoDB no se basa en **tablas** ni **columnas**. En su lugar:
+
+- Los datos se almacenan en **colecciones** y **documentos**.
+- Esquema flexible: no se requiere que todos los documentos tengan los mismos campos.
+- Orientado a documentos: estructura basada en pares clave-valor.
+
+| Relacional (SQL)       | MongoDB (NoSQL)      |
+|------------------------|----------------------|
+| Tabla                  | Colección            |
+| Fila (registro)        | Documento            |
+| Columna                | Campo                |
+| Relaciones explícitas  | Embebido o referencias |
+
+---
+
+**Formato BSON y JSON**
+
+MongoDB utiliza internamente **BSON** (Binary JSON), una versión binaria optimizada de JSON.
+
+- **JSON (JavaScript Object Notation)**: Formato de texto ligero y legible por humanos.
+- JSON es ideal para representar datos semiestructurados.
+- MongoDB utiliza JSON para entrada/salida, pero almacena internamente en BSON para mayor eficiencia y soporte de tipos adicionales (fechas, binarios, etc.).
+
+---
+
+**Principales componentes de MongoDB**
+
+**Colección**  
+Es un conjunto de documentos. A diferencia de las tablas en SQL, no requiere de un esquema predefinido. Es posible almacenar diferentes estructuras de documentos dentro de una misma colección, aunque es recomendable mantener una forma
