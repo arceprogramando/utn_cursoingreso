@@ -104,6 +104,13 @@ Work systematically toward a complete, robust, and well-tested solution. If comp
 - **Get approval first**: When suggesting automation or script solutions, ask the user if they want the script created.
 - **Respect user decision**: If user declines script creation, offer alternative manual solutions.
 
+### Git Operations Policy
+
+- **Never perform git operations automatically**: Never execute git add, git commit, git push, or any other git commands without explicit user request.
+- **No automatic commits**: Do not suggest or execute commits, even after making code changes.
+- **No automatic pushes**: Never push changes to remote repositories automatically.
+- **Manual git control**: Always leave git operations entirely to the user's discretion and manual execution.
+
 ### Temporary Scripts Handling
 
 - If generating temporary scripts (e.g., `crearUsuarioPrueba.js`, `testImport.js`, etc.), they must be treated as disposable.
