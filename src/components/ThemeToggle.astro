@@ -1,0 +1,117 @@
+---
+// ThemeToggle.astro - Componente para cambiar entre light/dark mode
+---
+
+<button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+  <div class="sun">☀️</div>
+
+  <div class="moon">🌙</div>
+</button>
+
+<style>
+  .theme-toggle {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s ease;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .theme-toggle div {
+    font-size: 20px;
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+
+  .sun {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+
+  .moon {
+    opacity: 0;
+    transform: rotate(180deg) scale(0.8);
+  }
+
+  /* Modo oscuro: mostrar luna, ocultar sol */
+  :global(.dark) .sun {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.8);
+  }
+
+  :global(.dark) .moon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+</style>
+
+<script is:inline>
+  const getInitialTheme = () => {
+    const savedTheme = localStorage?.getItem('theme');
+    if (savedTheme && ['light', 'dark'].includes(savedTheme)) {
+      return savedTheme;
+    }
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+
+    return 'light';
+  };
+
+  const applyTheme = (theme) => {
+    const html = document.documentElement;
+    if (theme === 'dark') {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+  };
+
+  const toggleTheme = () => {
+    const html = document.documentElement;
+    const isDark = html.classList.contains('dark');
+    const newTheme = isDark ? 'light' : 'dark';
+    applyTheme(newTheme);
+  };
+
+  const initializeTheme = () => {
+    const theme = getInitialTheme();
+    applyTheme(theme);
+
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      // Remover listener previo si existe
+      themeToggle.removeEventListener('click', toggleTheme);
+      // Agregar nuevo listener
+      themeToggle.addEventListener('click', toggleTheme);
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', initializeTheme);
+
+  document.addEventListener('astro:after-swap', () => {
+    const currentTheme = localStorage.getItem('theme') || getInitialTheme();
+    applyTheme(currentTheme);
+
+    setTimeout(initializeTheme, 0);
+  });
+
+  window
+    .matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change', (e) => {
+      // Solo aplicar si no hay preferencia guardada
+      if (!localStorage.getItem('theme')) {
+        const newTheme = e.matches ? 'dark' : 'light';
+        applyTheme(newTheme);
+      }
+    });
+</script>

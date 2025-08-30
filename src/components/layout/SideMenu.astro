@@ -2,17 +2,25 @@
 import { Icon } from 'astro-icon/components';
 import { linksData } from '../../data/layouts/links';
 import Link from './Link.astro';
+import ThemeToggle from '../ThemeToggle.astro';
 ---
 
 <header class="md:hidden">
   <div
-    class="bg-white fixed m-4 border-1 border-gray-300 rounded-xl bottom-20 -right-[500px] transition-all h-auto pb-8 w-[290px] md:w-[350px] lg:[420px] z-50"
+    class="bg-white dark:bg-gray-800 fixed m-4 rounded-xl bottom-20 -right-[500px] transition-all h-auto pb-8 w-[290px] md:w-[350px] lg:[420px] z-50"
     id="side_Menu"
   >
     <nav class="flex flex-col md:flex-row gap-2">
-      <button class="self-end bg-black text-black m-2 rounded-xl" id="side_menu_cross" aria-label="boton para cerrar el menu">
-        <Icon name="cross" width={40} height={40}></Icon>
-      </button>
+      <div class="flex justify-between items-center px-2">
+        <ThemeToggle />
+        <button
+          class="bg-black dark:bg-white text-white dark:text-black m-2 rounded-xl"
+          id="side_menu_cross"
+          aria-label="boton para cerrar el menu"
+        >
+          <Icon name="cross" width={40} height={40} />
+        </button>
+      </div>
       <ul class="flex flex-col md:flex-row gap-4 pl-8">
         {
           linksData.map((link) => (

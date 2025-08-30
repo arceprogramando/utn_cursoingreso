@@ -1,6 +1,6 @@
 ---
 import { ClientRouter } from 'astro:transitions';
-import "../styles/global.css";
+import '../styles/global.css';
 
 interface Props {
   title: string;
@@ -16,7 +16,8 @@ const {
   keywords = 'Aprende cosas Nuevas',
 } = Astro.props;
 
-const basicKeywords = 'Tecnica en Programación, UTN, CUDI, Estudiar Programación, Apuntes de Programación';
+const basicKeywords =
+  'Tecnica en Programación, UTN, CUDI, Estudiar Programación, Apuntes de Programación';
 const allKeywords = `${basicKeywords}, ${keywords}`;
 ---
 
@@ -39,7 +40,10 @@ const allKeywords = `${basicKeywords}, ${keywords}`;
     <meta name="google" content="notranslate" />
 
     <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="QbnO1zhnFpEbeVyVd9WcIysRpWTboN0RrG3NHIF3BwU" />
+    <meta
+      name="google-site-verification"
+      content="QbnO1zhnFpEbeVyVd9WcIysRpWTboN0RrG3NHIF3BwU"
+    />
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -54,14 +58,23 @@ const allKeywords = `${basicKeywords}, ${keywords}`;
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://utn-cursoingreso.vercel.app" />
-    <meta property="og:title" content="Tecnicatura Universitaria en Programación" />
+    <meta
+      property="og:title"
+      content="Tecnicatura Universitaria en Programación"
+    />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:image" content={thumbnailImage} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content="utn-cursoingreso.vercel.app" />
-    <meta property="twitter:url" content="https://utn-cursoingreso.vercel.app" />
-    <meta name="twitter:title" content="Tecnicatura Universitaria en Programación" />
+    <meta
+      property="twitter:url"
+      content="https://utn-cursoingreso.vercel.app"
+    />
+    <meta
+      name="twitter:title"
+      content="Tecnicatura Universitaria en Programación"
+    />
     <meta name="twitter:description" content={description} />
 
     <!-- Font -->
@@ -77,6 +90,40 @@ const allKeywords = `${basicKeywords}, ${keywords}`;
 
     <title>{title}</title>
     <ClientRouter />
+
+    <!-- Theme initialization script to prevent flash -->
+    <script is:inline>
+      (function () {
+        const getInitialTheme = () => {
+          const savedTheme = localStorage?.getItem('theme');
+          if (savedTheme && ['light', 'dark'].includes(savedTheme)) {
+            return savedTheme;
+          }
+          if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'dark';
+          }
+          return 'light';
+        };
+
+        const theme = getInitialTheme();
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+
+        // También aplicar después de navegación SPA
+        document.addEventListener('astro:before-preparation', () => {
+          const currentTheme =
+            localStorage.getItem('theme') || getInitialTheme();
+          if (currentTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        });
+      })();
+    </script>
   </head>
   <body>
     <slot />
@@ -101,8 +148,8 @@ const allKeywords = `${basicKeywords}, ${keywords}`;
   }
 
   body {
-    --sb-track-color: #e0e0e000;
-    --sb-thumb-color: #000000;
+    --sb-track-color: var(--bg-primary);
+    --sb-thumb-color: var(--text-primary);
     --sb-size: 10px;
     overflow-y: scroll;
   }
