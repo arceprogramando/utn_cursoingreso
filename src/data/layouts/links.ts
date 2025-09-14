@@ -7,6 +7,6 @@ export const linksData: Link[] = [
   { href: '/career', title: 'Carrera' },
   { href: '/correlativity/', title: 'Correlatividad' },
   { href: '/collaborators', title: 'Colaboradores' },
-  { href: '/community-projects', title: 'Proyectos UTN' },
+  { href: '/community-projects', title: 'Proyectos' },
   { href: '/tags', title: 'Tags' },
 ];
