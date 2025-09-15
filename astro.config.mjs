@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import icon from 'astro-icon';
 import mdx from '@astrojs/mdx';
+import { resolve } from 'path';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -39,5 +40,10 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        '@': resolve('./src'),
+      },
+    },
   },
 });

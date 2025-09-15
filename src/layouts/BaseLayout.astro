@@ -1,10 +1,10 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
 const { title, subTitle, description, keywords } = Astro.props;
-import SideMenu from '../components/layout/SideMenu.astro';
-import Layout from './Layout.astro';
-import LogoIcon from '../components/LogoIcon.astro';
+import SideMenu from '@/components/layout/SideMenu.astro';
+import Layout from '@/layouts/Layout.astro';
+import LogoIcon from '@/components/LogoIcon.astro';
 ---
 
 <Layout title={title} description={description} keywords={keywords}>

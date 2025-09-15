@@ -1,4 +1,4 @@
-import type { Correlativity } from "../types/correlativity";
+import type { Correlativity } from "@/types/correlativity";
 
 export const subjects: Correlativity[] = [
   { id: 0, name: 'Programación (Ingreso)', prerequisites: '-', isPassed: true, hours: 0 },

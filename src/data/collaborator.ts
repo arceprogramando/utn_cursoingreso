@@ -1,4 +1,4 @@
-import type { Collaborator } from '../types/collaborator';
+import type { Collaborator } from '@/types/collaborator';
 
 export async function fetchCollaborators(apiUrl: string): Promise<{ colaboradores: Collaborator[]; errorMessage: string }> {
   try {
