@@ -13,7 +13,7 @@ const totalHours = subjects.reduce((total, subject) => total + subject.hours, 0)
 const missingHours = subjects.reduce((total, subject) => (subject.isPassed ? total : total + subject.hours), 0);
 ---
 
-<div class="p-4 rounded-lg bg-white my-2">
+<div class="p-4 rounded-lg dark:bg-white dark:text-black my-2">
   <p class="text-xl text-center font-bold">Progreso Universitario</p>
 
   {
