@@ -19,9 +19,13 @@
     --btn-primary-text: #ffffff;
 }
 
+.text-fixed {
+    color: black;
+}
+
 .dark {
     /* Dark mode colors */
-    --bg-primary: #0f172a;
+    --bg-primary: #292929;
     --bg-secondary: #1e293b;
     --bg-tertiary: #334155;
     --text-primary: #f8fafc;
@@ -37,6 +41,10 @@
     --btn-primary: #f8fafc;
     --btn-primary-hover: #e2e8f0;
     --btn-primary-text: #0f172a;
+}
+
+.dark .text-fixed {
+    color: rgb(240, 240, 240);
 }
 
 /* Aplicar variables a elementos base */
