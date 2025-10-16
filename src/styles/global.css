@@ -1,7 +1,7 @@
 /* CSS Variables para Dark Mode */
 :root {
     /* Light mode colors */
-    --bg-primary: #ffffff;
+    --bg-primary: #eeeeee;
     --bg-secondary: #f8fafc;
     --bg-tertiary: #f1f5f9;
     --text-primary: #000000;
