@@ -1,5 +1,4 @@
 ---
-const title = 'Tecnicatura Universitaria en Programación - UTN 2025';
 import Layout from '@/layouts/Layout.astro';
 import Header from '@/components/Header.astro';
 import SideMenu from '@/components/layout/SideMenu.astro';
@@ -7,11 +6,14 @@ import Footer from '@/components/Footer.astro';
 import { YouTube } from 'astro-embed';
 import ProgramShowCase from '@/components/ProgramShowCase.astro';
 import LogoIcon from '@/components/LogoIcon.astro';
+
+const PAGE_TITLE = 'Tecnicatura Universitaria en Programación - UTN 2025';
+const PAGE_DESCRIPTION = 'Sitio web con recursos y material de estudio para la Tecnicatura Universitaria en Programación de la UTN, actualizado al plan 2025.';
 ---
 
 <Layout
-  title={`${title}`}
-  description="Tecnicatura Universitaria en Programación - UTN 2025"
+  title={PAGE_TITLE}
+  description={PAGE_DESCRIPTION}
 >
   <header>
     <div class="block sm:hidden px-8 pt-8">
@@ -28,7 +30,7 @@ import LogoIcon from '@/components/LogoIcon.astro';
     </h1>
     <ProgramShowCase />
     <h2
-      class="text-3xl md:text-4xl font-bold text-center mt-4 md:mt-2 text-gray-700"
+      class="text-3xl md:text-4xl font-bold text-fixed text-center  mt-4 md:mt-2 text-gray-700"
     >
       Construí el futuro que soñas.
     </h2>
@@ -44,30 +46,15 @@ import LogoIcon from '@/components/LogoIcon.astro';
         Descargar Nuevo Plan de Estudio 2025
       </a>
     </div>
-    <div class="my-4 md:my-8 max-w-4xl mx-auto text-gray-800 p-2 md:p-0">
-      <p class="text-lg md:text-start text-fixed leading-relaxed">
-        Esta página está diseñada para ayudar a interesados en la
-        <strong class="font-semibold text-fixed"
-          >Tecnicatura Universitaria en Programación </strong
-        > UTN 2025. Aunque no es oficial, sigue la currícula de la UTN y se actualiza
-        constantemente para brindar apoyo a los estudiantes.
-      </p>
-      <p class="text-lg md:text-start text-fixed leading-relaxed">
-        Además, proporciona recursos clave para que los aspirantes se preparen
-        adecuadamente.
-      </p>
+    <div class="my-4 md:my-8 max-w-4xl mx-auto text-gray-800 p-2 md:p-0 text-lg md:text-start text-fixed leading-relaxed space-y-4">
+      <p>
+        Esta página está diseñada para ayudar a interesados en la <strong class="font-semibold">Tecnicatura Universitaria en Programación</strong> 
+UTN 2025. Aunque aún no es oficial, sigue la currícula de la Universidad Tecnológica Nacional (UTN) y se actualiza constantemente para brindar apoyo a los estudiantes.
+Además, ofrece recursos clave para que los aspirantes puedan prepararse de manera adecuada.
 
-      <p class="text-lg md:text-start text-fixed leading-relaxed">
-        La carrera abarca materias fundamentales como programación en diferentes
-        niveles, matemáticas, bases de datos, estadística, inglés y más. También
-        incluye asignaturas avanzadas como metodología de sistemas, gestión de
-        desarrollo de software y análisis de datos, culminando con un trabajo
-        final integrador que refleja el aprendizaje acumulado.
-      </p>
-      <p class="text-lg md:text-start text-fixed leading-relaxed">
-        La UTN ofrece una curricula que en las diferentes sedes se adoptan desde
-        un enfoque diferente , pueden cambiar el abordaje de las materias y el
-        nivel de exigencia, dependiendo de la sede y del cuerpo docente.
+La carrera abarca materias fundamentales como programación en distintos niveles, matemáticas, bases de datos, estadística, inglés y más. También incluye asignaturas avanzadas como metodología de sistemas, gestión del desarrollo de software y análisis de datos, culminando con un trabajo final integrador que refleja el aprendizaje adquirido.
+
+La UTN presenta una currícula que, si bien es común en sus diferentes sedes, puede variar en el enfoque, la profundidad de los contenidos y el nivel de exigencia, dependiendo de la sede y del cuerpo docente.
       </p>
       <h3 class="text-2xl font-semibold text-start text-fixed py-4">
         Perfil del Egresado

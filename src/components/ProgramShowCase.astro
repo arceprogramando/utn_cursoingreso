@@ -27,10 +27,10 @@ const Programs: Program[] = [
         aria-label={`Ir a página de ${program.title}`}
         class="transition-transform transform hover:scale-105 hover:shadow-lg"
       >
-        <div class="flex flex-col justify-center rounded-lg min-h-40 p-4 md:p-6 border-1 border-gray-200 w-80">
+        <div class="flex flex-col justify-center rounded-lg min-h-40 p-4 md:p-6 border-1 border-gray-200 w-80 text-fixed">
           <Icon name={program.icon} width={40} height={40} title={program.title} class="text-primary w-10 h-10" />
           <h3 class="font-bold text-lg">{program.title}</h3>
-          <p class="text-sm text-gray-600">{program.description}</p>
+          <p class="text-sm text-gray-600 text-fixed">{program.description}</p>
         </div>
       </a>
     ))
