@@ -17,6 +17,7 @@ order: 8
 import Latex from '@/components/Latex.astro';
 import Image from 'astro/components/Image.astro';
 
+<div className="text-fixed">
 ### Probabilidad y Estadística
 
 #### Clase I - 13 de agosto de 2024
@@ -52,7 +53,9 @@ la rampa de salida.
 Union = U Intersección = ∩
 
 Todos los posibles resultados de dicho experimento son:
+</div>
 
+<div className="text-fixed">
 <Latex formula="U = \{III, DII, IDI, IID, IDD, DID, DDI, DDD\}" />
 
 Donde D Representa hacia la derecha e "I" hacia la izquierda
@@ -127,8 +130,8 @@ Como los sucesos son conjuntos pueden operarse como tales aplicando la unión la
 <Image src="/DiagramaVennProbabilidad1.svg" alt="Diagrama de Venn de los sucesos A y B" decoding="async" width={175} height={175} densities={[1.5, 2]} class="max-w-44 md:max-w-80 my-1 rounded-md" />
 
 Diagrama de Venn de los sucesos A y B
-
-
+</div>
+<div className="text-fixed">
 <Image 
   src="/DiagramaVennProbabilidad2.svg" 
   alt="Diagrama de Venn de los sucesos A intersección B" 
@@ -1066,3 +1069,4 @@ Aquella tal que la cantidad de valores posibles es infinita y no numerable, como
 La cursada fue bastante buena, la profesora explicó excelente, el curso fue interesante, aprendimos acerca de la probabilidad y estadística básica, y cómo se aplica en la vida cotidiana.
 
 Aprendimos a usar herramientas tales como Esperanza, Varianza, Desviación estándar, y cómo se usan en la vida real.
+</div>
