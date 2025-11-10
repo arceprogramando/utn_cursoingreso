@@ -80,6 +80,223 @@ Estos patrones tratan con algoritmos y la asignación de responsabilidades entre
 
 ---
 
+### Clase 2: Patrones Creacionales
+
+#### ¿Qué son los Patrones Creacionales?
+
+Los patrones creacionales abordan la manera en la que se crean los objetos en un sistema. Su propósito es desacoplar el proceso de creación del objeto del código que lo utiliza, brindando mayor flexibilidad, control y reutilización en la arquitectura del software.
+
+**Beneficios principales:**
+- Ocultan los detalles de instanciación de los objetos.
+- Permiten crear estructuras de objetos más flexibles y dinámicas.
+- Facilitan la implementación de arquitecturas orientadas a la expansión (extensibles).
+
+#### Singleton (Instancia única)
+
+Singleton asegura que una clase tenga una única instancia y proporciona un punto de acceso global a ella.
+
+**Casos de uso comunes:**
+- Conexiones a base de datos.
+- Gestión de logs o configuración de la aplicación.
+- Sistemas de impresión o recursos compartidos.
+
+##### Singleton - Problema
+
+El patrón Singleton resuelve dos problemas al mismo tiempo, vulnerando el Principio de responsabilidad única:
+
+**1) Garantizar que una clase tenga una única instancia.**
+
+¿Por qué querría alguien controlar cuántas instancias tiene una clase? El motivo más habitual es controlar el acceso a algún recurso compartido, por ejemplo, una base de datos o un archivo.
+
+- Funciona así: imagina que has creado un objeto y al cabo de un tiempo decides crear otro nuevo. En lugar de recibir un objeto nuevo, obtendrás el que ya habías creado.
+- Ten en cuenta que este comportamiento es imposible de implementar con un constructor normal, ya que una llamada al constructor siempre debe devolver un nuevo objeto por diseño.
+
+Puede ser que los clientes ni siquiera se den cuenta de que trabajan con el mismo objeto todo el tiempo.
+
+Hoy en día el patrón Singleton se ha popularizado tanto que la gente suele llamar singleton a cualquier patrón, incluso si solo resuelve uno de los problemas antes mencionados.
+
+**2) Proporcionar un punto de acceso global a dicha instancia.**
+
+¿Recuerdas esas variables globales que utilizaste para almacenar objetos esenciales? Aunque son muy útiles, también son poco seguras, ya que cualquier código podría sobrescribir el contenido de esas variables y descomponer la aplicación.
+
+Al igual que una variable global, el patrón Singleton nos permite acceder a un objeto desde cualquier parte del programa. No obstante, también evita que otro código sobreescriba esa instancia.
+
+Este problema tiene otra cara: no queremos que el código que resuelve el primer problema se encuentre disperso por todo el programa. Es mucho más conveniente tenerlo dentro de una clase, sobre todo si el resto del código ya depende de ella.
+
+##### Singleton - Solución
+
+Todas las implementaciones del patrón Singleton tienen estos dos pasos en común:
+
+- **Hacer privado el constructor por defecto** para evitar que otros objetos utilicen el operador `new` con la clase Singleton.
+- **Crear un método de creación estático** que actúe como constructor. Este método invoca al constructor privado para crear un objeto y lo guarda en un campo estático. Las siguientes llamadas a este método devuelven el objeto almacenado en caché.
+
+Si tu código tiene acceso a la clase Singleton, podrá invocar su método estático. De esta manera, cada vez que se invoque este método, siempre se devolverá el mismo objeto.
+
+**Analogía en el mundo real:**
+
+El gobierno es un ejemplo excelente del patrón Singleton. Un país sólo puede tener un gobierno oficial. Independientemente de las identidades personales de los individuos que forman el gobierno, el título "Gobierno de X" es un punto de acceso global que identifica al grupo de personas a cargo.
+
+##### Singleton - Estructura
+
+1. La clase Singleton declara el método estático `getInstance` que devuelve la misma instancia de su propia clase.
+2. El constructor del Singleton debe ocultarse del código cliente. La llamada al método `getInstance` debe ser la única manera de obtener el objeto de Singleton.
+
+##### Singleton - Ventajas y desventajas
+
+**Ventajas:**
+- Control completo sobre la instancia única.
+- Facilita el acceso centralizado a ciertos recursos.
+
+**Desventajas:**
+- Puede ocultar dependencias.
+- Dificulta las pruebas unitarias si no se gestiona correctamente.
+
+#### Factory Method (Método fábrica, Constructor virtual)
+
+Factory Method es un patrón de diseño creacional que proporciona una interfaz para crear objetos en una superclase, mientras permite a las subclases alterar el tipo de objetos que se crearán.
+
+**Propósito:**
+- Define una interfaz para crear un objeto, pero permite que las subclases decidan qué clase instanciar.
+- Encapsula la creación de objetos dentro de un método.
+
+**Ventajas:**
+- Aumenta la flexibilidad al permitir instanciar distintas clases según el contexto.
+- Se integra fácilmente con el principio de "abierto/cerrado" (Open/Closed).
+
+> **Principio Abierto/Cerrado:** Es una regla de diseño de software que establece que las entidades de software (clases, módulos, funciones) deben estar abiertas a la extensión, pero cerradas a la modificación. Esto significa que se puede añadir nuevo comportamiento o funcionalidad al código sin tener que modificar el código existente, lo que promueve sistemas más flexibles, mantenibles y adaptables. Se logra principalmente a través del uso de abstracciones, interfaces y herencia.
+
+##### Factory Method - Problema
+
+Imagina que estás creando una aplicación de gestión logística. La primera versión de tu aplicación sólo es capaz de manejar el transporte en camión, por lo que la mayor parte de tu código se encuentra dentro de la clase `Camión`.
+
+Al cabo de un tiempo, tu aplicación se vuelve bastante popular. Cada día recibes decenas de peticiones de empresas de transporte marítimo para que incorpores la logística por mar a la aplicación.
+
+Añadir una nueva clase al programa no es tan sencillo si el resto del código ya está acoplado a clases existentes. En este momento, la mayor parte de tu código está acoplado a la clase `Camión`. Para añadir barcos a la aplicación habría que hacer cambios en toda la base del código. Además, si más tarde decides añadir otro tipo de transporte a la aplicación, probablemente tendrás que volver a hacer todos estos cambios.
+
+Al final acabarás con un código bastante sucio, plagado de condicionales que cambian el comportamiento de la aplicación dependiendo de la clase de los objetos de transporte.
+
+##### Factory Method - Solución
+
+El patrón Factory Method sugiere que, en lugar de llamar al operador `new` para construir objetos directamente, se invoque a un método fábrica (`create`) especial. No te preocupes: los objetos se siguen creando a través del operador `new`, pero se invocan desde el método fábrica. Los objetos devueltos por el método fábrica a menudo se denominan **productos**.
+
+Las subclases pueden alterar la clase de los objetos devueltos por el método fábrica.
+
+A simple vista, puede parecer que este cambio no tiene sentido, ya que tan solo hemos cambiado el lugar desde donde invocamos al constructor. Sin embargo, piensa en esto: ahora puedes sobrescribir el método fábrica en una subclase y cambiar la clase de los productos creados por el método.
+
+No obstante, hay una pequeña limitación: las subclases sólo pueden devolver productos de distintos tipos si dichos productos tienen una clase base o interfaz común. Además, el método fábrica en la clase base debe tener su tipo de retorno declarado como dicha interfaz.
+
+**Todos los productos deben seguir la misma interfaz.**
+
+Por ejemplo, tanto la clase `Camión` como la clase `Barco` deben implementar la interfaz `Transporte`, que declara un método llamado `entrega`. Cada clase implementa este método de forma diferente: los camiones entregan su carga por tierra, mientras que los barcos lo hacen por mar.
+
+El método fábrica dentro de la clase `LogísticaTerrestre` devuelve objetos de tipo camión, mientras que el método fábrica de la clase `LogísticaMarítima` devuelve barcos.
+
+Siempre y cuando todas las clases de producto implementen una interfaz común, podrás pasar sus objetos al código cliente sin descomponerlo.
+
+El código que utiliza el método fábrica (a menudo denominado **código cliente**) no encuentra diferencias entre los productos devueltos por varias subclases, y trata a todos los productos como la clase abstracta `Transporte`. El cliente sabe que todos los objetos de transporte deben tener el método `entrega`, pero no necesita saber cómo funciona exactamente.
+
+##### Factory Method - Estructura
+
+1. **El Producto** declara la interfaz, que es común a todos los objetos que puede producir la clase creadora y sus subclases.
+
+2. **Los Productos Concretos** son distintas implementaciones de la interfaz de producto.
+
+3. **La clase Creadora** declara el método fábrica que devuelve nuevos objetos de producto. Es importante que el tipo de retorno de este método coincida con la interfaz de producto. Puedes declarar el patrón Factory Method como abstracto para forzar a todas las subclases a implementar sus propias versiones del método. Como alternativa, el método fábrica base puede devolver algún tipo de producto por defecto.
+
+4. **Los Creadores Concretos** sobrescriben el Factory Method base, de modo que devuelva un tipo diferente de producto. Observa que el método fábrica no tiene que crear nuevas instancias todo el tiempo. También puede devolver objetos existentes de una memoria caché, una agrupación de objetos, u otra fuente.
+
+> **Nota:** `doStuff()` es un nombre genérico de una función o método en diseño de software que indica que la función debe "hacer algo"; no es un término técnico específico sino una forma de indicar que esa parte del código tiene una tarea que realizar sin especificar cuál es esa tarea. Su uso es común como un marcador de posición o un ejemplo de código, donde el desarrollador debe reemplazarlo con la implementación real de la funcionalidad deseada.
+
+##### Factory Method - ¿Cuándo se puede aplicar?
+
+✓ Cuando no conozcas de antemano las dependencias y los tipos exactos de los objetos con los que deba funcionar tu código.
+
+✓ Cuando quieras ofrecer a los usuarios de tu biblioteca o framework, una forma de extender sus componentes internos.
+
+✓ Cuando quieras ahorrar recursos del sistema mediante la reutilización de objetos existentes en lugar de reconstruirlos cada vez.
+
+#### Abstract Factory (Fábrica Abstracta)
+
+##### Abstract Factory - Solución
+
+Lo primero que sugiere el patrón Abstract Factory es que declaremos de forma explícita interfaces para cada producto diferente de la familia de productos (por ejemplo, silla, sofá o mesilla). Después podemos hacer que todas las variantes de los productos sigan esas interfaces. Por ejemplo, todas las variantes de silla pueden implementar la interfaz `Silla`, así como todas las variantes de mesilla pueden implementar la interfaz `Mesilla`, y así sucesivamente.
+
+**Todas las variantes del mismo objeto deben moverse a una única jerarquía de clase.**
+
+El siguiente paso consiste en declarar la **Fábrica abstracta**: una interfaz con una lista de métodos de creación para todos los productos que son parte de la familia de productos (por ejemplo, `crearSilla`, `crearSofá` y `crearMesilla`). Estos métodos deben devolver productos abstractos representados por las interfaces que extrajimos previamente: `Silla`, `Sofá`, `Mesilla`, etc.
+
+Ahora bien, ¿qué hay de las variantes de los productos? Para cada variante de una familia de productos, creamos una clase de fábrica independiente basada en la interfaz `FábricaAbstracta`. Una fábrica es una clase que devuelve productos de un tipo particular. Por ejemplo, la `FábricadeMueblesModernos` sólo puede crear objetos modernos.
+
+El código cliente tiene que funcionar con fábricas y productos a través de sus respectivas interfaces abstractas. Esto nos permite cambiar el tipo de fábrica que pasamos al código cliente, así como la variante del producto que recibe el código cliente, sin descomponer el propio código cliente.
+
+Al cliente no le debe importar la clase concreta de la fábrica con la que funciona. Ya sea un modelo moderno o una silla de estilo victoriano, el cliente debe tratar a todas las sillas del mismo modo, utilizando la interfaz abstracta `Silla`. Con este sistema, lo único que sabe el cliente sobre la silla es que implementa de algún modo el método `sentarse`. Además, sea cual sea la variante de silla devuelta, siempre combinará con el tipo de sofá o mesilla producida por el mismo objeto de fábrica.
+
+##### Abstract Factory - Estructura
+
+1. **Los Productos Abstractos** declaran interfaces para un grupo de productos diferentes pero relacionados que forman una familia de productos.
+
+2. **Los Productos Concretos** son implementaciones distintas de productos abstractos agrupados por variantes. Cada producto abstracto (silla/sofá) debe implementarse en todas las variantes dadas (victoriano/moderno).
+
+3. **La interfaz Fábrica Abstracta** declara un grupo de métodos para crear cada uno de los productos abstractos.
+
+4. **Las Fábricas Concretas** implementan métodos de creación de la fábrica abstracta. Cada fábrica concreta se corresponde con una variante específica de los productos y crea tan solo dichas variantes de los productos.
+
+5. Aunque las fábricas concretas instancian productos concretos, las firmas de sus métodos de creación deben devolver los productos abstractos correspondientes. De este modo, el código cliente que utiliza una fábrica no se acopla a la variante específica del producto que obtiene de una fábrica. **El Cliente** puede funcionar con cualquier variante fábrica/producto concreta, siempre y cuando se comunique con sus objetos a través de interfaces abstractas.
+
+##### Abstract Factory - ¿Cuándo se puede aplicar?
+
+✓ Cuando tu código deba funcionar con varias familias de productos relacionados, pero no desees que dependa de las clases concretas de esos productos, ya que puede ser que no los conozcas de antemano o sencillamente quieras permitir una futura extensibilidad.
+
+✓ Cuando tengas una clase con un grupo de métodos de fábrica que nublen su responsabilidad principal.
+
+#### Builder (Constructor)
+
+Builder es un patrón de diseño creacional que nos permite construir objetos complejos paso a paso. El patrón nos permite producir distintos tipos y representaciones de un objeto empleando el mismo código de construcción.
+
+##### Builder - Problema
+
+Imagina un objeto complejo que requiere una inicialización laboriosa, paso a paso, de muchos campos y objetos anidados. Normalmente, este código de inicialización está sepultado dentro de un monstruoso constructor con una gran cantidad de parámetros. O, peor aún: disperso por todo el código cliente.
+
+Crear una subclase por cada configuración posible de un objeto puede complicar demasiado el programa. Por ejemplo, pensemos en cómo crear un objeto `Casa`. Para construir una casa sencilla, debemos construir cuatro paredes y un piso, así como instalar una puerta, colocar un par de ventanas y ponerle un tejado. Pero ¿qué pasa si quieres una casa más grande y luminosa, con un jardín y otros extras (como sistema de calefacción, instalación de fontanería y cableado eléctrico)?
+
+La solución más sencilla es extender la clase base `Casa` y crear un grupo de subclases que cubran todas las combinaciones posibles de los parámetros. Pero, en cualquier caso, acabarás con una cantidad considerable de subclases. Cualquier parámetro nuevo, como el estilo del porche, exigirá que incrementes esta jerarquía aún más.
+
+Existe otra posibilidad que no implica generar subclases. Puedes crear un enorme constructor dentro de la clase base `Casa` con todos los parámetros posibles para controlar el objeto casa. Aunque es cierto que esta solución elimina la necesidad de las subclases, genera otro problema.
+
+Un constructor con un montón de parámetros tiene su inconveniente: no todos los parámetros son necesarios todo el tiempo. En la mayoría de los casos, gran parte de los parámetros no se utilizará, lo que provocará que las llamadas al constructor sean bastante feas. Por ejemplo, solo una pequeña parte de las casas tiene piscina, por lo que los parámetros relacionados con piscinas serán inútiles en nueve de cada diez casos.
+
+##### Builder - Solución
+
+El patrón Builder sugiere que saques el código de construcción del objeto de su propia clase y lo coloques dentro de objetos independientes llamados **constructores**. El patrón organiza la construcción de objetos en una serie de pasos (`construirParedes`, `construirPuerta`, etc.). Para crear un objeto, se ejecuta una serie de estos pasos en un objeto constructor.
+
+Puede ser que algunos pasos de la construcción necesiten una implementación diferente cuando tengamos que construir distintas representaciones del producto. Por ejemplo, las paredes de una cabaña pueden ser de madera, pero las paredes de un castillo tienen que ser de piedra.
+
+> **El patrón Builder te permite construir objetos complejos paso a paso. El patrón Builder no permite a otros objetos acceder al producto mientras se construye.**
+
+En este caso, podemos crear varias clases constructoras distintas que implementen la misma serie de pasos de construcción, pero de forma diferente. Entonces podemos utilizar estos constructores en el proceso de construcción (por ejemplo, una serie ordenada de llamadas a los pasos de construcción) para producir distintos tipos de objetos.
+
+Los distintos constructores ejecutan la misma tarea de formas distintas. Por ejemplo, imagina un constructor que construye todo de madera y vidrio, otro que construye todo con piedra y hierro y un tercero que utiliza oro y diamantes. Al invocar la misma serie de pasos, obtenemos una casa normal del primer constructor, un pequeño castillo del segundo y un palacio del tercero. Sin embargo, esto sólo funcionaría si el código cliente que invoca los pasos de construcción es capaz de interactuar con los constructores mediante una interfaz común.
+
+##### Builder - Estructura
+
+1. **La interfaz Constructora** declara pasos de construcción de producto que todos los tipos de objetos constructores tienen en común.
+
+2. **Los Constructores Concretos** ofrecen distintas implementaciones de los pasos de construcción. Los constructores concretos pueden crear productos que no siguen la interfaz común.
+
+3. **Los Productos** son los objetos resultantes. Los productos construidos por distintos objetos constructores no tienen que pertenecer a la misma jerarquía de clases o interfaz.
+
+4. **La clase Directora** define el orden en el que se invocarán los pasos de construcción, por lo que puedes crear y reutilizar configuraciones específicas de los productos.
+
+5. **El Cliente** debe asociar uno de los objetos constructores con la clase directora. Normalmente, se hace una sola vez mediante los parámetros del constructor de la clase directora, que utiliza el objeto constructor para el resto de la construcción.
+
+##### Builder - ¿Cuándo se puede aplicar?
+
+✓ Utiliza el patrón Builder para evitar un "constructor telescópico". Cuando tengas un constructor con diez parámetros opcionales. Invocar a semejante bestia es poco práctico.
+
+✓ Cuando quieras que el código sea capaz de crear distintas representaciones de ciertos productos (por ejemplo, casas de piedra y madera).
+
+---
+
 ### Contenido a desarrollar
 
 *Este contenido será ampliado próximamente con más material de la materia.*
