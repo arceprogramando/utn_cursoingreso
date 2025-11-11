@@ -1903,6 +1903,158 @@ La mejora continua y la automatización mediante CI/CD no son solo prácticas t�
 
 ---
 
+## Clase 8
+
+### Repositorios de software y control de versiones
+
+#### 1. Introducción
+
+En esta clase abordaremos el uso de herramientas de control de versiones, con especial énfasis en **Git** y **GitHub**, elementos fundamentales en el trabajo colaborativo moderno de desarrollo de software.
+
+Su aplicación adecuada permite mantener un registro ordenado y seguro del código fuente, así como facilitar el trabajo en equipo en proyectos de cualquier escala.
+
+#### ¿Qué es el control de versiones?
+
+El **control de versiones** es una práctica que permite gestionar los cambios realizados sobre los archivos de un proyecto, especialmente el código fuente.
+
+**Permite:**
+
+- Registrar cada modificación de forma cronológica.
+- Comparar versiones y revertir cambios si es necesario.
+- Trabajar en paralelo sin sobrescribir el trabajo de otros desarrolladores.
+
+---
+
+### 2. Git: Sistema de control de versiones distribuido
+
+**Git** es el sistema de control de versiones más utilizado actualmente.
+
+#### Características principales:
+
+- **Distribuido**: cada desarrollador posee una copia completa del repositorio.
+- **Velocidad**: operaciones locales rápidas (commits, diffs, branches).
+- **Integridad**: cada versión del archivo está registrada con una firma (hash SHA-1).
+- **Branching**: permite múltiples líneas o ramas de desarrollo.
+
+#### Conceptos clave:
+
+- **Repositorio**: almacén donde se guarda el código y su historial.
+- **Commit**: registro de cambios realizados.
+- **Branch**: una rama de desarrollo independiente.
+- **Merge**: fusión de cambios entre ramas.
+- **Staging area**: área de preparación para los commits.
+
+---
+
+### 3. GitHub: Plataforma para alojar repositorios
+
+**GitHub** es una plataforma basada en la web que permite almacenar repositorios Git y colaborar en línea.
+
+#### Facilita:
+
+- Trabajo colaborativo con otras personas en un mismo proyecto.
+- Control de cambios, revisión de código y manejo de tareas.
+- Automatización mediante GitHub Actions.
+
+---
+
+### 4. Flujo básico de trabajo en Git y GitHub
+
+#### Comandos básicos
+
+| Comando | Descripción |
+|---------|-------------|
+| `git clone` | Clona un repositorio remoto a la máquina local. |
+| `git branch` | Crea una nueva rama. |
+| `git checkout` | Cambia a la rama indicada. |
+| `git add` | Agrega cambios al área de preparación. |
+| `git commit -m "mensaje"` | Registra los cambios localmente. |
+| `git push` | Envía los cambios al repositorio remoto. |
+| `git pull` | Trae los cambios más recientes desde el repositorio remoto. |
+| `git merge` | Fusiona una rama con la rama actual. |
+
+---
+
+### 5. Buenas prácticas en el trabajo colaborativo
+
+✓ **Crear ramas por funcionalidad**: evita conflictos trabajando en ramas separadas por tarea.
+
+✓ **Commits frecuentes y significativos**: cada cambio importante debe registrarse con un mensaje claro.
+
+✓ **Pull frecuente**: mantener el repositorio local actualizado para evitar conflictos.
+
+✓ **Resolución de conflictos**: revisar cuidadosamente antes de hacer merges.
+
+✓ **Pull requests**: antes de integrar cambios a la rama principal, usar PRs para revisión y validación.
+
+✓ **Documentación**: acompañar el código con documentación mínima (README, comentarios, issues).
+
+---
+
+### 6. ¿Por qué usar control de versiones?
+
+El control de versiones y el uso de plataformas como GitHub son habilidades fundamentales para cualquier desarrollador. Más allá del manejo técnico, fomentan el trabajo en equipo, la responsabilidad compartida y la mejora continua del código.
+
+Incorporar estas herramientas en el desarrollo diario es una señal de madurez profesional.
+
+---
+
+### 7. ¿Qué es un hash SHA-1?
+
+Un **hash** es una cadena de texto alfanumérica generada por una función matemática que toma una entrada (en este caso, el contenido de un commit) y produce un resultado de 40 caracteres hexadecimales.
+
+**Ejemplo:**
+
+```
+e83c5163316f89bfbde7d9ab23ca2e25604af290
+```
+
+**SHA-1** (Secure Hash Algorithm 1) es el algoritmo que usa Git para generar ese identificador. Aunque SHA-1 ha sido reemplazado por algoritmos más seguros (como SHA-256), Git todavía lo utiliza por compatibilidad. Sin embargo, ya existen versiones de Git que soportan SHA-256 para mayor seguridad.
+
+#### ¿Cómo usa Git el hash SHA-1?
+
+Cada vez que haces un commit, Git calcula el hash SHA-1 en base a:
+
+- El contenido de los archivos
+- La fecha y hora del commit
+- El autor
+- El mensaje del commit
+- Y el hash del commit anterior (para mantener la cadena de historial)
+
+Por eso, si cambias, aunque sea un solo carácter en un archivo o mensaje, el hash cambia completamente.
+
+#### ¿Qué funciones cumple el hash SHA-1?
+
+**1. Identificación única:**
+
+Cada commit tiene su propio hash, que Git usa como "DNI" del commit.
+
+Ejemplo: `git show e83c516` muestra la información del commit cuyo hash empieza con esos caracteres.
+
+**2. Integridad del historial:**
+
+Git usa el hash del commit anterior al calcular el actual, formando una cadena inmutable de cambios. Esto hace casi imposible modificar el historial sin dejar rastro.
+
+**3. Referencia en GitHub:**
+
+En GitHub, verás esos hashes abreviados (por ejemplo: `a1b2c3d`) en los commits, ramas o pull requests, y podés copiarlos para referirte a un commit específico.
+
+---
+
+### 8. Resumen de comandos que manejan hash
+
+| Comando | Descripción | Muestra |
+|---------|-------------|---------|
+| `git log` | Lista todos los commits con hash completo | Hash + mensaje + autor |
+| `git log --oneline` | Muestra un resumen abreviado | Hash corto + mensaje |
+| `git rev-parse HEAD` | Devuelve el hash completo del commit actual | Solo el hash |
+| `git show <hash>` | Muestra detalles del commit indicado | Hash, autor, cambios |
+| `git revert <hash>` | Crea un nuevo commit que revierte los cambios introducidos por el commit indicado. No borra el historial, sino que agrega un nuevo commit inverso. | Genera un nuevo commit que "deshace" los cambios de ese hash |
+| `git commit --amend -m "Nuevo mensaje"` | Corrige el mensaje del último commit, si todavía no se ejecutó push. | Se reemplaza el mensaje anterior |
+| `git commit -m "Aclara mensaje anterior"` | Si ya se realizó push, lo más conveniente es ejecutar otro commit para aclarar el error del mensaje. | Se agrega un nuevo commit |
+
+---
+
 ### Contenido a desarrollar
 
 *Este contenido será ampliado próximamente con más material de la materia.*
