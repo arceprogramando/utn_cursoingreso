@@ -962,6 +962,111 @@ El pedido en papel hace la función de un comando. Permanece en una cola hasta q
 
 ---
 
+### State (Estado)
+
+State es un patrón de diseño de comportamiento que permite a un objeto alterar su comportamiento cuando su estado interno cambia. Parece como si el objeto cambiara su clase.
+
+Permite que un objeto cambie su comportamiento cuando cambia su estado interno, pareciendo cambiar de clase. Útil para máquinas de estados, flujos de trabajo, validadores o sistemas con múltiples modos de operación.
+
+**Participantes del patrón:**
+
+- **Contexto**: objeto cuyo comportamiento cambia según su estado.
+- **Estado (State)**: interfaz para los comportamientos.
+- **Estados concretos**: implementaciones específicas.
+
+#### State - Problema
+
+**Máquina de estados finitos.**
+
+El patrón State está estrechamente relacionado con el concepto de la **Máquina de estados finitos**.
+
+La idea principal es que, en cualquier momento dado, un programa puede encontrarse en un número finito de estados. Dentro de cada estado único, el programa se comporta de forma diferente y puede cambiar de un estado a otro instantáneamente. Sin embargo, dependiendo de un estado actual, el programa puede cambiar o no a otros estados. Estas normas de cambio llamadas **transiciones** también son finitas y predeterminadas.
+
+Las Máquinas de estados finitos se componen de un conjunto de estados, un conjunto de entradas y un conjunto de transiciones. Los estados representan los distintos modos o condiciones en que puede encontrarse el sistema, mientras que las entradas son los sucesos o señales que desencadenan el cambio de un estado a otro. Las transiciones describen las reglas que rigen el paso del sistema de un estado a otro.
+
+**Aplicación a objetos:**
+
+También puedes aplicar esta solución a los objetos. Imagina que tienes una clase `Documento`. Un documento puede encontrarse en uno de estos tres estados: Borrador, Moderación y Publicado. El método `publicar` del documento funciona de forma ligeramente distinta en cada estado:
+
+- **En Borrador**: mueve el documento a moderación.
+- **En Moderación**: hace público el documento, pero sólo si el usuario actual es un administrador.
+- **En Publicado**: no hace nada en absoluto.
+
+Las máquinas de estado se implementan normalmente con muchos operadores condicionales (`if` o `switch`) que seleccionan el comportamiento adecuado dependiendo del estado actual del objeto. Normalmente, este "estado" es tan solo un grupo de valores de los campos del objeto. Aunque nunca hayas oído hablar de máquinas de estados finitos, probablemente hayas implementado un estado al menos alguna vez. ¿Te suena esta estructura de código?
+
+**El problema se agrava:**
+
+La mayor debilidad de una máquina de estado basada en condicionales se revela una vez que empezamos a añadir más y más estados y comportamientos dependientes de estados a la clase `Documento`. La mayoría de los métodos contendrán condicionales monstruosos que eligen el comportamiento adecuado de un método de acuerdo con el estado actual.
+
+Un código así es muy difícil de mantener, porque cualquier cambio en la lógica de transición puede requerir cambiar los condicionales de estado de cada método. El problema tiende a empeorar con la evolución del proyecto. Es bastante difícil predecir todos los estados y transiciones posibles en la etapa de diseño. Por ello, una máquina de estados esbelta, creada con un grupo limitado de condicionales, puede crecer y convertirse en un desastre con el tiempo.
+
+#### State - Solución
+
+El patrón State sugiere que crees nuevas clases para todos los estados posibles de un objeto y extraigas todos los comportamientos específicos del estado para colocarlos dentro de esas clases.
+
+En lugar de implementar todos los comportamientos por su cuenta, el objeto original, llamado **contexto**, almacena una referencia a uno de los objetos de estado que representa su estado actual y delega todo el trabajo relacionado con el estado a ese objeto.
+
+**Documento delega el trabajo a un objeto de estado.**
+
+Para la transición del contexto a otro estado, sustituye el objeto de estado activo por otro objeto que represente ese nuevo estado. Esto sólo es posible si todas las clases de estado siguen la misma interfaz y el propio contexto funciona con esos objetos a través de esa interfaz.
+
+Esta estructura puede resultar similar al patrón Strategy, pero hay una diferencia clave. En el patrón State, los estados particulares pueden conocerse entre sí e iniciar transiciones de un estado a otro, mientras que las estrategias casi nunca se conocen.
+
+#### State - Analogía en el mundo real
+
+Los botones e interruptores de tu smartphone se comportan de forma diferente dependiendo del estado actual del dispositivo:
+
+- Cuando el teléfono está **desbloqueado**, al pulsar botones se ejecutan varias funciones.
+- Cuando el teléfono está **bloqueado**, pulsar un botón desbloquea la pantalla.
+- Cuando la batería del teléfono está **baja**, pulsar un botón muestra la pantalla de carga.
+
+#### State - Estructura
+
+1. **La clase Contexto** almacena una referencia a uno de los objetos de estado concreto y le delega todo el trabajo específico del estado. El contexto se comunica con el objeto de estado a través de la interfaz de estado. El contexto expone un modificador (setter) para pasarle un nuevo objeto de estado.
+
+2. **La interfaz Estado** declara los métodos específicos del estado. Estos métodos deben tener sentido para todos los estados concretos, porque no querrás que uno de tus estados tenga métodos inútiles que nunca son invocados.
+
+3. **Los Estados Concretos** proporcionan sus propias implementaciones para los métodos específicos del estado. Para evitar la duplicación de código similar a través de varios estados, puedes incluir clases abstractas intermedias que encapsulen algún comportamiento común. Los objetos de estado pueden almacenar una referencia inversa al objeto de contexto. A través de esta referencia, el estado puede extraer cualquier información requerida del objeto de contexto, así como iniciar transiciones de estado.
+
+Tanto el estado de contexto como el concreto pueden establecer el nuevo estado del contexto y realizar la transición de estado sustituyendo el objeto de estado vinculado al contexto.
+
+#### State - ¿Cuándo se puede aplicar?
+
+✓ Utiliza el patrón State cuando tengas un objeto que se comporta de forma diferente dependiendo de su estado actual, el número de estados sea enorme y el código específico del estado cambie con frecuencia.
+
+✓ Utiliza el patrón cuando tengas una clase contaminada con enormes condicionales que alteran el modo en que se comporta la clase de acuerdo con los valores actuales de los campos de la clase.
+
+✓ Utiliza el patrón State cuando tengas mucho código duplicado por estados similares y transiciones de una máquina de estados basada en condiciones.
+
+#### State - Ventajas y desventajas
+
+**Ventajas:**
+
+✓ Elimina condicionales extensos (if, switch) relacionados al estado.
+
+✓ Permite agregar nuevos estados sin modificar el código del contexto.
+
+✓ Promueve el principio de responsabilidad única.
+
+**Desventajas:**
+
+✗ Puede ser excesivo si hay pocos estados o raramente cambian.
+
+✗ Aumenta el número de clases en el sistema.
+
+---
+
+### Patrones de comportamiento - Comparación general
+
+| Patrón | Propósito | Aplicación típica |
+|--------|-----------|-------------------|
+| **Observer** | Notificar cambios a múltiples objetos. Define una relación uno a muchos: cuando un objeto cambia de estado, todos los que dependen de él son notificados automáticamente. | Sistema de notificaciones, eventos GUI |
+| **Strategy** | Encapsular algoritmos intercambiables. Permite definir un conjunto de algoritmos intercambiables y elegir cuál usar en tiempo de ejecución. | Métodos de ordenamiento, cálculo de precios |
+| **Command** | Encapsular una acción como un objeto. Encapsula una solicitud como un objeto, permitiendo deshacer operaciones, encolarlas o ejecutarlas más tarde. | Control remoto, menús, deshacer |
+| **State** | Cambiar comportamiento según estado interno. Permite que un objeto cambie su comportamiento cuando cambia su estado interno, como si fuera de otra clase. | Máquinas de estados, validadores |
+
+---
+
 ### Contenido a desarrollar
 
 *Este contenido será ampliado próximamente con más material de la materia.*
