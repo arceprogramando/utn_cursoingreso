@@ -767,6 +767,96 @@ El notificador mantiene una lista de suscriptores y sabe qué revistas les inter
 
 ---
 
+### Strategy (Estrategia)
+
+Strategy es un patrón de diseño de comportamiento que te permite definir una familia de algoritmos, colocar cada uno de ellos en una clase separada y hacer sus objetos intercambiables.
+
+Permite definir una familia de algoritmos, encapsular cada uno y hacerlos intercambiables en tiempo de ejecución, sin cambiar el código del cliente. Es útil cuando queremos elegir entre múltiples variantes de comportamiento sin usar estructuras condicionales complejas.
+
+**Referencias:**
+
+- **Contexto**: mantiene una referencia a un objeto Strategy.
+- **Strategy (estrategia)**: interfaz común para los algoritmos.
+- **ConcreteStrategy**: implementación específica del algoritmo.
+
+#### Strategy - Problema
+
+Un día decidiste crear una aplicación de navegación para viajeros ocasionales. La aplicación giraba alrededor de un bonito mapa que ayudaba a los usuarios a orientarse rápidamente en cualquier ciudad.
+
+Una de las funciones más solicitadas para la aplicación era la planificación automática de rutas. Un usuario debía poder introducir una dirección y ver la ruta más rápida a ese destino mostrado en el mapa.
+
+**El código del navegador se saturó.**
+
+La primera versión de la aplicación sólo podía generar las rutas sobre carreteras. Las personas que viajaban en coche estaban locas de alegría. Pero, no a todo el mundo le gusta conducir durante sus vacaciones. De modo que, en la siguiente actualización, añadiste una opción para crear rutas a pie. Después, añadiste otra opción para permitir a las personas utilizar el transporte público en sus rutas.
+
+Sin embargo, esto era sólo el principio. Más tarde planeaste añadir la generación de rutas para ciclistas, y más tarde, otra opción para trazar rutas por todas las atracciones turísticas de una ciudad.
+
+Cada vez que añadías un nuevo algoritmo de enrutamiento, la clase principal del navegador doblaba su tamaño y se volvió demasiado difícil de mantener. Cualquier cambio en alguno de los algoritmos, afecta a toda la clase, aumentando las probabilidades de crear un error en un código ya funcional.
+
+#### Strategy - Solución
+
+El patrón Strategy sugiere que tomes esa clase que hace algo específico de muchas formas diferentes y extraigas todos esos algoritmos para colocarlos en clases separadas llamadas **estrategias**.
+
+La clase original, llamada **contexto**, debe tener un campo para almacenar una referencia a una de las estrategias. El contexto delega el trabajo a un objeto de estrategia vinculado en lugar de ejecutarlo por su cuenta.
+
+**Estrategia de planificación de rutas.**
+
+La clase contexto no es responsable de seleccionar un algoritmo adecuado para la tarea. En lugar de eso, el cliente pasa la estrategia deseada a la clase contexto. De hecho, la clase contexto no sabe mucho acerca de las estrategias. Funciona con todas las estrategias a través de la misma interfaz genérica, que sólo expone un único método para disparar el algoritmo encapsulado dentro de la estrategia seleccionada.
+
+De esta forma, el contexto se vuelve independiente de las estrategias concretas, así que puedes añadir nuevos algoritmos o modificar los existentes sin cambiar el código de la clase contexto o de otras estrategias.
+
+**Aplicación práctica:**
+
+En nuestra aplicación de navegación, cada algoritmo de enrutamiento puede extraerse y ponerse en su propia clase con un único método `crearRuta`. El método acepta un origen y un destino y devuelve una colección de puntos de control de la ruta.
+
+Incluso contando con los mismos argumentos, cada clase de enrutamiento puede crear una ruta diferente. A la clase navegadora principal no le importa qué algoritmo se selecciona ya que su labor principal es representar un grupo de puntos de control en el mapa. La clase tiene un método para cambiar la estrategia activa de enrutamiento, de modo que sus clientes, como los botones en la interfaz de usuario, pueden sustituir el comportamiento seleccionado de enrutamiento por otro.
+
+#### Strategy - Analogía en el mundo real
+
+Imagina que tienes que llegar al aeropuerto. Puedes tomar el autobús, pedir un taxi o ir en bicicleta. Éstas son tus estrategias de transporte. Puedes elegir una de las estrategias, dependiendo de factores como el presupuesto o los límites de tiempo.
+
+**Ejemplo cotidiano:**
+
+Un usuario elige cómo ordenar una lista de productos: por precio, por nombre o por popularidad.
+
+#### Strategy - Estructura
+
+1. **La clase Contexto** mantiene una referencia a una de las estrategias concretas y se comunica con este objeto únicamente a través de la interfaz estrategia.
+
+2. **La interfaz Estrategia** es común a todas las estrategias concretas. Declara un método que la clase contexto utiliza para ejecutar una estrategia.
+
+3. **Las Estrategias Concretas** implementan distintas variaciones de un algoritmo que la clase contexto utiliza.
+
+4. La clase contexto invoca el método de ejecución en el objeto de estrategia vinculado cada vez que necesita ejecutar el algoritmo. La clase contexto no sabe con qué tipo de estrategia funciona o cómo se ejecuta el algoritmo.
+
+5. **El Cliente** crea un objeto de estrategia específico y lo pasa a la clase contexto. La clase contexto expone un modificador set que permite a los clientes sustituir la estrategia asociada al contexto durante el tiempo de ejecución.
+
+#### Strategy - ¿Cuándo se puede aplicar?
+
+✓ Utiliza el patrón Strategy cuando quieras utilizar distintas variantes de un algoritmo dentro de un objeto y poder cambiar de un algoritmo a otro durante el tiempo de ejecución.
+
+✓ Utiliza el patrón Strategy cuando tengas muchas clases similares que sólo se diferencien en la forma en que ejecutan cierto comportamiento.
+
+✓ Utiliza el patrón cuando tu clase tenga un enorme operador condicional que cambie entre distintas variantes del mismo algoritmo.
+
+#### Strategy - Ventajas y desventajas
+
+**Ventajas:**
+
+✓ Elimina estructuras condicionales complejas (if/else, switch).
+
+✓ Promueve el principio de abierto/cerrado: se pueden agregar estrategias sin modificar código existente.
+
+✓ Facilita pruebas unitarias y separación de responsabilidades.
+
+**Desventajas:**
+
+✗ Puede generar muchas clases.
+
+✗ Aumenta la complejidad si no se necesita la flexibilidad.
+
+---
+
 ### Contenido a desarrollar
 
 *Este contenido será ampliado próximamente con más material de la materia.*
