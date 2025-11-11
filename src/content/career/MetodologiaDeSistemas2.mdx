@@ -1067,6 +1067,589 @@ Tanto el estado de contexto como el concreto pueden establecer el nuevo estado d
 
 ---
 
+## Clase 5
+
+### Examen 
+
+*Espacio reservado para la evaluación de Patrones de Diseño.*
+
+---
+
+## Clase 6
+
+### Buenas prácticas de Desarrollo de software
+
+**Introducción**
+
+El desarrollo de software no se trata únicamente de que el código funcione, sino también de que sea **legible, mantenible y escalable**. Las buenas prácticas permiten que los proyectos crezcan sin volverse inestables o difíciles de modificar.
+
+Algunas buenas prácticas en desarrollo de software que ayudan a mejorar la calidad del código son:
+
+- Patrones de refactorización
+- Diseño guiado por el dominio (DDD)
+- Principios SOLID/DRY
+- Patrones de diseño
+- Clean Code
+
+---
+
+### Patrones de Refactorización
+
+**La Refactorización** es el proceso de mejorar la estructura interna del código sin cambiar su comportamiento externo.
+
+#### ¿Cuándo refactorizar?
+
+- Cuando el código es difícil de entender.
+- Cuando se repite lógica en varios lugares.
+- Después de agregar nuevas funcionalidades.
+
+#### 1. Extract Method (Extraer Método)
+
+Imagina que tienes una función extensa que realiza múltiples tareas. El patrón "Extract Method" consiste en identificar partes del código que se pueden agrupar y moverlas a una nueva función con un nombre descriptivo.
+
+**¿Por qué usarlo?**
+
+- **Legibilidad**: Funciones más cortas y enfocadas son más fáciles de entender.
+- **Reutilización**: Puedes utilizar el nuevo método en diferentes partes de tu código.
+- **Mantenimiento**: Es más sencillo probar y mantener funciones pequeñas y específicas.
+
+**Ejemplo:**
+
+```typescript
+// Antes de refactorizar
+function procesarPedido(pedido: Pedido) {
+  // Validar pedido
+  if (!pedido.cliente || !pedido.items.length) {
+    throw new Error('Pedido inválido');
+  }
+  
+  // Calcular total
+  let total = 0;
+  for (const item of pedido.items) {
+    total += item.precio * item.cantidad;
+  }
+  
+  // Aplicar descuento
+  if (pedido.cliente.esVIP) {
+    total *= 0.9;
+  }
+  
+  // Procesar pago
+  console.log(`Procesando pago de ${total}`);
+}
+
+// Después de refactorizar con Extract Method
+function procesarPedido(pedido: Pedido) {
+  validarPedido(pedido);
+  const total = calcularTotal(pedido);
+  procesarPago(total);
+}
+
+function validarPedido(pedido: Pedido) {
+  if (!pedido.cliente || !pedido.items.length) {
+    throw new Error('Pedido inválido');
+  }
+}
+
+function calcularTotal(pedido: Pedido): number {
+  let total = 0;
+  for (const item of pedido.items) {
+    total += item.precio * item.cantidad;
+  }
+  
+  if (pedido.cliente.esVIP) {
+    total *= 0.9;
+  }
+  
+  return total;
+}
+
+function procesarPago(total: number) {
+  console.log(`Procesando pago de ${total}`);
+}
+```
+
+#### 2. Inline Method (Integrar Método)
+
+Es el opuesto a "Extract Method". Si tienes un método que es muy simple y solo se utiliza en un lugar, puedes integrar su contenido directamente en donde se llama.
+
+**¿Por qué usarlo?**
+
+- **Simplicidad**: Reduces la cantidad de métodos que necesitas rastrear.
+- **Claridad**: Evitas saltos innecesarios en el código.
+- **Mantenimiento**: Menos abstracciones pueden simplificar la comprensión.
+
+**Nota:** Asegúrate de que al integrar el método no estás duplicando código en múltiples lugares.
+
+**Ejemplo:**
+
+```typescript
+// Antes de refactorizar
+function obtenerNombreCompleto(persona: Persona): string {
+  return getNombre(persona);
+}
+
+function getNombre(persona: Persona): string {
+  return `${persona.nombre} ${persona.apellido}`;
+}
+
+// Después de refactorizar con Inline Method
+function obtenerNombreCompleto(persona: Persona): string {
+  return `${persona.nombre} ${persona.apellido}`;
+}
+```
+
+---
+
+### Diseño Guiado por el Dominio (DDD)
+
+El **Diseño Guiado por el Dominio** es una forma de desarrollar software centrada en el dominio del negocio y su lógica. Se trata de modelar el código basándose en cómo funciona realmente el negocio, utilizando términos y estructuras que son familiares para los expertos en la materia.
+
+#### Componentes clave:
+
+- **Entidades**: Objetos con identidad única que persiste en el tiempo.
+- **Objetos de Valor**: Descritos por sus atributos; no tienen identidad propia.
+- **Agregados**: Grupos de entidades y objetos de valor que se consideran una unidad.
+- **Repositorios**: Interfaces para almacenar y recuperar agregados.
+- **Servicios de Dominio**: Lógica que no encaja en una entidad u objeto de valor.
+
+#### Ejemplo de DDD
+
+Supongamos que estamos creando un sistema de gestión de pedidos.
+
+**Entidades:**
+
+`Cliente` es una entidad porque tiene una identidad única (id).
+
+```typescript
+class Cliente {
+  constructor(
+    public id: number,
+    public nombre: string,
+    public email: string
+  ) {}
+}
+```
+
+**Objetos de Valor:**
+
+`DireccionEnvio` es un objeto de valor; se define por sus atributos y no tiene identidad propia.
+
+```typescript
+class DireccionEnvio {
+  constructor(
+    public calle: string,
+    public ciudad: string,
+    public codigoPostal: string
+  ) {}
+}
+```
+
+**Agregado:**
+
+`Pedido` es un agregado que incluye entidades y objetos de valor.
+
+```typescript
+class Pedido {
+  constructor(
+    public id: number,
+    public cliente: Cliente,
+    public items: ItemPedido[],
+    public direccionEnvio: DireccionEnvio
+  ) {}
+}
+```
+
+**Repositorio:**
+
+`PedidoRepositorio` maneja cómo almacenamos y recuperamos pedidos.
+
+```typescript
+interface PedidoRepositorio {
+  guardar(pedido: Pedido): void;
+  obtenerPorId(id: number): Pedido;
+}
+```
+
+**Servicio de Dominio:**
+
+`ServicioPago` contiene lógica que no pertenece directamente a una entidad específica.
+
+```typescript
+class ServicioPago {
+  procesarPago(pedido: Pedido, metodoPago: MetodoPago): void {
+    // Lógica para procesar el pago
+  }
+}
+```
+
+---
+
+### Principios SOLID
+
+Los principios **SOLID** son cinco reglas que ayudan a diseñar software orientado a objetos de manera clara, flexible, fácil de mantener y ampliar.
+
+**Los 5 principios son:**
+
+- **S** — Single Responsibility Principle (Responsabilidad Única)
+- **O** — Open/Closed Principle (Abierto/Cerrado)
+- **L** — Liskov Substitution Principle (Sustitución de Liskov)
+- **I** — Interface Segregation Principle (Segregación de Interfaces)
+- **D** — Dependency Inversion Principle (Inversión de Dependencias)
+
+#### S - Single Responsibility Principle (Responsabilidad Única)
+
+Una clase debe tener una única responsabilidad o razón para cambiar.
+
+**Ejemplo:**
+
+```typescript
+// ❌ Mal - La clase tiene múltiples responsabilidades
+class Usuario {
+  guardarEnBaseDeDatos() { /* ... */ }
+  enviarEmail() { /* ... */ }
+  validarDatos() { /* ... */ }
+}
+
+// ✅ Bien - Cada clase tiene una única responsabilidad
+class Usuario {
+  constructor(public nombre: string, public email: string) {}
+}
+
+class RepositorioUsuario {
+  guardar(usuario: Usuario) { /* ... */ }
+}
+
+class ServicioEmail {
+  enviar(destinatario: string, mensaje: string) { /* ... */ }
+}
+
+class ValidadorUsuario {
+  validar(usuario: Usuario): boolean { /* ... */ }
+}
+```
+
+#### O - Open/Closed Principle (Abierto/Cerrado)
+
+Las clases deben estar abiertas para extensión pero cerradas para modificación.
+
+**Ejemplo:**
+
+```typescript
+// ❌ Mal - Necesitas modificar la clase para agregar nuevas formas
+class CalculadoraArea {
+  calcular(forma: any): number {
+    if (forma.tipo === 'circulo') {
+      return Math.PI * forma.radio ** 2;
+    } else if (forma.tipo === 'rectangulo') {
+      return forma.ancho * forma.alto;
+    }
+    return 0;
+  }
+}
+
+// ✅ Bien - Puedes extender sin modificar
+interface Forma {
+  calcularArea(): number;
+}
+
+class Circulo implements Forma {
+  constructor(public radio: number) {}
+  calcularArea(): number {
+    return Math.PI * this.radio ** 2;
+  }
+}
+
+class Rectangulo implements Forma {
+  constructor(public ancho: number, public alto: number) {}
+  calcularArea(): number {
+    return this.ancho * this.alto;
+  }
+}
+
+class CalculadoraArea {
+  calcular(forma: Forma): number {
+    return forma.calcularArea();
+  }
+}
+```
+
+#### L - Liskov Substitution Principle (Sustitución de Liskov)
+
+Los objetos de una clase derivada deben poder reemplazar objetos de la clase base sin alterar el comportamiento del programa.
+
+**Ejemplo:**
+
+```typescript
+// ❌ Mal - El Pinguino no puede volar
+class Ave {
+  volar() {
+    console.log('Volando...');
+  }
+}
+
+class Pinguino extends Ave {
+  volar() {
+    throw new Error('Los pingüinos no pueden volar');
+  }
+}
+
+// ✅ Bien - Separar comportamientos
+class Ave {
+  comer() {
+    console.log('Comiendo...');
+  }
+}
+
+class AveVoladora extends Ave {
+  volar() {
+    console.log('Volando...');
+  }
+}
+
+class Pinguino extends Ave {
+  nadar() {
+    console.log('Nadando...');
+  }
+}
+```
+
+#### I - Interface Segregation Principle (Segregación de Interfaces)
+
+Los clientes no deben estar obligados a depender de interfaces que no utilizan.
+
+**Ejemplo:**
+
+```typescript
+// ❌ Mal - Interfaz muy grande
+interface Trabajador {
+  trabajar(): void;
+  comer(): void;
+  dormir(): void;
+}
+
+class Robot implements Trabajador {
+  trabajar() { /* ... */ }
+  comer() { throw new Error('Los robots no comen'); }
+  dormir() { throw new Error('Los robots no duermen'); }
+}
+
+// ✅ Bien - Interfaces segregadas
+interface Trabajable {
+  trabajar(): void;
+}
+
+interface Alimentable {
+  comer(): void;
+}
+
+interface Descansable {
+  dormir(): void;
+}
+
+class Humano implements Trabajable, Alimentable, Descansable {
+  trabajar() { /* ... */ }
+  comer() { /* ... */ }
+  dormir() { /* ... */ }
+}
+
+class Robot implements Trabajable {
+  trabajar() { /* ... */ }
+}
+```
+
+#### D - Dependency Inversion Principle (Inversión de Dependencias)
+
+Las clases de alto nivel no deben depender de clases de bajo nivel. Ambas deben depender de abstracciones.
+
+**Ejemplo:**
+
+```typescript
+// ❌ Mal - Dependencia directa de implementación concreta
+class MySQLDatabase {
+  guardar(data: string) {
+    console.log('Guardando en MySQL');
+  }
+}
+
+class UsuarioService {
+  private db = new MySQLDatabase();
+  
+  guardarUsuario(usuario: string) {
+    this.db.guardar(usuario);
+  }
+}
+
+// ✅ Bien - Dependencia de abstracción
+interface Database {
+  guardar(data: string): void;
+}
+
+class MySQLDatabase implements Database {
+  guardar(data: string) {
+    console.log('Guardando en MySQL');
+  }
+}
+
+class MongoDatabase implements Database {
+  guardar(data: string) {
+    console.log('Guardando en MongoDB');
+  }
+}
+
+class UsuarioService {
+  constructor(private db: Database) {}
+  
+  guardarUsuario(usuario: string) {
+    this.db.guardar(usuario);
+  }
+}
+```
+
+---
+
+### Principio DRY (Don't Repeat Yourself)
+
+**DRY** significa "No te repitas". Este principio establece que cada pieza de conocimiento debe tener una representación única, inequívoca y autoritativa dentro del sistema.
+
+**Ejemplo:**
+
+```typescript
+// ❌ Mal - Código duplicado
+function calcularPrecioConIVA_Producto1(precio: number): number {
+  return precio * 1.21;
+}
+
+function calcularPrecioConIVA_Producto2(precio: number): number {
+  return precio * 1.21;
+}
+
+// ✅ Bien - Código reutilizable
+function calcularPrecioConIVA(precio: number): number {
+  return precio * 1.21;
+}
+```
+
+---
+
+### Clean Code - Principios Fundamentales
+
+**Clean Code** (Código Limpio) es una filosofía de desarrollo que promueve escribir código claro, simple y fácil de entender.
+
+#### Principios básicos de Clean Code:
+
+**1. Nombres significativos**
+
+Los nombres de variables, funciones y clases deben ser descriptivos y revelar su intención.
+
+```typescript
+// ❌ Mal
+const d = 30;
+function calc(x: number) { return x * 1.21; }
+
+// ✅ Bien
+const diasDelMes = 30;
+function calcularPrecioConImpuesto(precioBase: number) {
+  return precioBase * 1.21;
+}
+```
+
+**2. Funciones pequeñas**
+
+Las funciones deben hacer una sola cosa y hacerla bien.
+
+```typescript
+// ❌ Mal - Función que hace demasiadas cosas
+function procesarUsuario(usuario: Usuario) {
+  // Validar
+  if (!usuario.email.includes('@')) throw new Error('Email inválido');
+  // Guardar
+  database.save(usuario);
+  // Enviar email
+  emailService.send(usuario.email, 'Bienvenido');
+  // Registrar log
+  logger.log('Usuario procesado');
+}
+
+// ✅ Bien - Funciones pequeñas y específicas
+function validarEmail(email: string): boolean {
+  return email.includes('@');
+}
+
+function guardarUsuario(usuario: Usuario): void {
+  database.save(usuario);
+}
+
+function enviarEmailBienvenida(email: string): void {
+  emailService.send(email, 'Bienvenido');
+}
+
+function procesarUsuario(usuario: Usuario) {
+  if (!validarEmail(usuario.email)) {
+    throw new Error('Email inválido');
+  }
+  guardarUsuario(usuario);
+  enviarEmailBienvenida(usuario.email);
+  logger.log('Usuario procesado');
+}
+```
+
+**3. Comentarios solo cuando sea necesario**
+
+El código debe ser auto-explicativo. Los comentarios deben usarse para explicar el "por qué", no el "qué".
+
+```typescript
+// ❌ Mal - Comentario innecesario
+// Incrementar el contador en 1
+contador++;
+
+// ✅ Bien - Comentario que explica el "por qué"
+// Aplicamos un retraso de 100ms para evitar sobrecarga del servidor
+await sleep(100);
+```
+
+**4. Evitar números mágicos**
+
+Usa constantes con nombres significativos en lugar de números literales.
+
+```typescript
+// ❌ Mal
+if (edad >= 18) {
+  // ...
+}
+
+// ✅ Bien
+const EDAD_MINIMA_LEGAL = 18;
+if (edad >= EDAD_MINIMA_LEGAL) {
+  // ...
+}
+```
+
+**5. Manejo de errores claro**
+
+```typescript
+// ❌ Mal
+try {
+  // operación
+} catch (e) {
+  console.log(e);
+}
+
+// ✅ Bien
+try {
+  procesarPago(pedido);
+} catch (error) {
+  if (error instanceof PagoRechazadoError) {
+    notificarClientePagoRechazado(pedido.cliente);
+    registrarErrorPago(error);
+  } else {
+    throw error;
+  }
+}
+```
+
+---
+
 ### Contenido a desarrollar
 
 *Este contenido será ampliado próximamente con más material de la materia.*
