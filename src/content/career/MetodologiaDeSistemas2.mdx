@@ -448,6 +448,46 @@ La gran ventaja de esta solución es que no tienes que preocuparte por las clase
 
 ✓ Utiliza el patrón cuando quieras que el código cliente trate elementos simples y complejos de la misma forma.
 
+#### Facade (Fachada)
+
+Facade es un patrón de diseño estructural que proporciona una interfaz simplificada a una biblioteca, un framework o cualquier otro grupo complejo de clases. Proporciona una interfaz simplificada a un conjunto complejo de subsistemas. Es ideal para ocultar la complejidad interna de una librería o módulo y presentar al cliente una forma más sencilla de interactuar.
+
+##### Facade - Problema
+
+Imagina que debes lograr que tu código trabaje con un amplio grupo de objetos que pertenecen a una sofisticada biblioteca o framework. Normalmente, debes inicializar todos esos objetos, llevar un registro de las dependencias, ejecutar los métodos en el orden correcto y así sucesivamente.
+
+Como resultado, la lógica de negocio de tus clases se vería estrechamente acoplada a los detalles de implementación de las clases de terceros, haciéndola difícil de comprender y mantener.
+
+##### Facade - Solución
+
+Una **fachada** es una clase que proporciona una interfaz simple a un subsistema complejo que contiene muchas partes móviles. Una fachada puede proporcionar una funcionalidad limitada en comparación con trabajar directamente con el subsistema. Sin embargo, tan solo incluye las funciones realmente importantes para los clientes.
+
+Tener una fachada resulta útil cuando tienes que integrar tu aplicación con una biblioteca sofisticada con decenas de funciones, de la cual sólo necesitas una pequeña parte.
+
+Por ejemplo, una aplicación que sube breves vídeos divertidos de gatos a las redes sociales, podría potencialmente utilizar una biblioteca de conversión de vídeo profesional. Sin embargo, lo único que necesita en realidad es una clase con el método simple `codificar(nombreDelArchivo, formato)`. Una vez que crees dicha clase y la conectes con la biblioteca de conversión de vídeo, tendrás tu primera fachada.
+
+##### Facade - Analogía en el mundo real
+
+**Haciendo pedidos por teléfono.**
+
+Cuando llamas a una tienda para hacer un pedido por teléfono, un operador es tu fachada a todos los servicios y departamentos de la tienda. El operador te proporciona una sencilla interfaz de voz al sistema de pedidos, pasarelas de pago y varios servicios de entrega.
+
+##### Facade - Estructura
+
+1. **El patrón Facade** proporciona un práctico acceso a una parte específica de la funcionalidad del subsistema. Sabe a dónde dirigir la petición del cliente y cómo operar todas las partes móviles.
+
+2. Puede crearse una **clase Fachada Adicional** para evitar contaminar una única fachada con funciones no relacionadas que podrían convertirla en otra estructura compleja. Las fachadas adicionales pueden utilizarse por clientes y por otras fachadas.
+
+3. **El Subsistema Complejo** consiste en decenas de objetos diversos. Para lograr que todos hagan algo significativo, debes profundizar en los detalles de implementación del subsistema, que pueden incluir inicializar objetos en el orden correcto y suministrarles datos en el formato adecuado. Las clases del subsistema no conocen la existencia de la fachada. Operan dentro del sistema y trabajan entre sí directamente.
+
+4. **El Cliente** utiliza la fachada en lugar de invocar directamente los objetos del subsistema.
+
+##### Facade - ¿Cuándo se puede aplicar?
+
+✓ Utiliza el patrón Facade cuando necesites una interfaz limitada pero directa a un subsistema complejo.
+
+✓ Utiliza el patrón Facade cuando quieras estructurar un subsistema en capas.
+
 ---
 
 ### Contenido a desarrollar
