@@ -681,6 +681,92 @@ Una tarjeta de crédito es un proxy de una cuenta bancaria, que, a su vez, es un
 
 ---
 
+## Clase 4
+
+### Fundamentos de los Patrones de Comportamiento
+
+**Patrones de comportamiento**
+
+Estos patrones tratan con algoritmos y la asignación de responsabilidades entre objetos. Los patrones de comportamiento definen cómo interactúan los objetos entre sí y cómo se reparten las responsabilidades. Se enfocan en facilitar la comunicación, colaboración y flexibilidad entre componentes sin acoplarlos fuertemente. Permiten modificar el comportamiento del sistema sin alterar su estructura.
+
+---
+
+### Observer (Observador)
+
+Observer es un patrón de diseño de comportamiento que te permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando.
+
+Permite que múltiples objetos (observadores) reciban una notificación automática cuando otro objeto (sujeto) cambia su estado. Es un patrón ideal para sistemas de eventos, interfaces gráficas o sistemas de notificaciones.
+
+**Participantes del patrón:**
+
+- **Subject (Sujeto)**: objeto observado que mantiene una lista de observadores y les notifica cambios.
+- **Observer (Observador)**: objeto que quiere recibir las actualizaciones del sujeto.
+
+#### Observer - Problema
+
+Imagina que tienes dos tipos de objetos: un objeto Cliente y un objeto Tienda. El cliente está muy interesado en una marca particular de producto (digamos, un nuevo modelo de iPhone) que estará disponible en la tienda muy pronto.
+
+El cliente puede visitar la tienda cada día para comprobar la disponibilidad del producto. Pero, mientras el producto está en camino, la mayoría de estos viajes serán en vano.
+
+Por otro lado, la tienda podría enviar cientos de correos (lo cual se podría considerar spam) a todos los clientes cada vez que hay un nuevo producto disponible. Esto ahorraría a los clientes los interminables viajes a la tienda, pero, al mismo tiempo, molestaría a otros clientes que no están interesados en los nuevos productos.
+
+Nos encontramos ante un conflicto. O el cliente pierde tiempo comprobando la disponibilidad del producto, o bien la tienda desperdicia recursos notificando a los clientes equivocados.
+
+#### Observer - Solución
+
+El objeto que tiene un estado interesante suele denominarse **sujeto**, pero, como también va a notificar a otros objetos los cambios en su estado, le llamaremos **notificador** (en ocasiones también llamado **publicador**). El resto de los objetos que quieren conocer los cambios en el estado del notificador, se denominan **suscriptores**.
+
+Un mecanismo de suscripción permite a los objetos individuales suscribirse a notificaciones de eventos. El patrón Observer sugiere que añadas un mecanismo de suscripción a la clase notificadora para que los objetos individuales puedan suscribirse o cancelar su suscripción a un flujo de eventos que proviene de esa notificadora.
+
+No es tan complicado como parece. En realidad, este mecanismo consiste en: 
+
+1. Un campo matriz para almacenar una lista de referencias a objetos suscriptores
+2. Varios métodos públicos que permiten añadir suscriptores y eliminarlos de esa lista
+
+Ahora, cuando le sucede un evento importante al notificador, recorre sus suscriptores y llama al método de notificación específico de sus objetos.
+
+Las aplicaciones reales pueden tener decenas de clases suscriptoras diferentes interesadas en seguir los eventos de la misma clase notificadora. No querrás acoplar la notificadora a todas esas clases. Además, puede que no conozcas algunas de ellas de antemano si se supone que otras personas pueden utilizar tu clase notificadora.
+
+Por eso es fundamental que todos los suscriptores implementen la misma interfaz y que el notificador únicamente se comunique con ellos a través de esa interfaz. Esta interfaz debe declarar el método de notificación junto con un grupo de parámetros que el notificador puede utilizar para pasar cierta información contextual con la notificación.
+
+#### Observer - Analogía en el mundo real
+
+**Suscripciones a revistas y periódicos.**
+
+Si te suscribes a un periódico o una revista, ya no necesitarás ir a la tienda a comprobar si el siguiente número está disponible. En lugar de eso, el notificador envía nuevos números directamente a tu buzón justo después de la publicación, o incluso antes.
+
+El notificador mantiene una lista de suscriptores y sabe qué revistas les interesan. Los suscriptores pueden abandonar la lista en cualquier momento si quieren que el notificador deje de enviarles nuevos números.
+
+#### Observer - Estructura
+
+1. **El Notificador** envía eventos de interés a otros objetos. Esos eventos ocurren cuando el notificador cambia su estado o ejecuta algunos comportamientos. Los notificadores contienen una infraestructura de suscripción que permite a nuevos y antiguos suscriptores abandonar la lista.
+
+2. Cuando sucede un nuevo evento, el notificador recorre la lista de suscripción e invoca el método de notificación declarado en la interfaz suscriptora en cada objeto suscriptor.
+
+3. **La interfaz Suscriptora** declara la interfaz de notificación. En la mayoría de los casos, consiste en un único método actualizar. El método puede tener varios parámetros que permitan al notificador pasar algunos detalles del evento junto a la actualización.
+
+4. **Los Suscriptores Concretos** realizan algunas acciones en respuesta a las notificaciones emitidas por el notificador. Todas estas clases deben implementar la misma interfaz de forma que el notificador no esté acoplado a clases concretas.
+
+5. Normalmente, los suscriptores necesitan cierta información contextual para manejar correctamente la actualización. Por este motivo, a menudo los notificadores pasan cierta información de contexto como argumentos del método de notificación. El notificador puede pasarse a sí mismo como argumento, dejando que los suscriptores extraigan la información necesaria directamente.
+
+6. **El Cliente** crea objetos tipo notificador y suscriptor por separado y después registra a los suscriptores para las actualizaciones del notificador.
+
+#### Observer - Ventajas y desventajas
+
+**Ventajas:**
+
+✓ Promueve desacoplamiento entre el emisor y los receptores de eventos.
+
+✓ Permite flexibilidad y escalabilidad al agregar o quitar observadores dinámicamente.
+
+**Desventajas:**
+
+✗ Puede volverse complejo si hay muchos observadores.
+
+✗ La gestión de dependencias debe ser cuidadosa.
+
+---
+
 ### Contenido a desarrollar
 
 *Este contenido será ampliado próximamente con más material de la materia.*
