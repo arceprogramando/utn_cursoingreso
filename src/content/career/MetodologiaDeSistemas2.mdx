@@ -613,6 +613,72 @@ Una solución más elegante sería crear una clase de contexto separada que alma
 
 ✗ El código se complica mucho. Los nuevos miembros del equipo siempre estarán preguntándose por qué el estado de una entidad se separó de tal manera.
 
+#### Proxy (Apoderado)
+
+##### Proxy - Problema
+
+Imagina que tienes un objeto enorme que consume una gran cantidad de recursos del sistema. Lo necesitas de vez en cuando, pero no siempre.
+
+Puedes llevar a cabo una implementación diferida, es decir, crear este objeto sólo cuando sea realmente necesario. Todos los clientes del objeto tendrán que ejecutar algún código de inicialización diferida. Lamentablemente, esto seguramente generará una gran cantidad de código duplicado.
+
+En un mundo ideal, querríamos meter este código directamente dentro de la clase de nuestro objeto, pero eso no siempre es posible. Por ejemplo, la clase puede ser parte de una biblioteca cerrada de un tercero.
+
+##### Proxy - Solución
+
+El patrón Proxy sugiere que crees una nueva clase proxy con la misma interfaz que un objeto de servicio original. Después actualizas tu aplicación para que pase el objeto proxy a todos los clientes del objeto original. Al recibir una solicitud de un cliente, el proxy crea un objeto de servicio real y le delega todo el trabajo.
+
+Pero, ¿cuál es la ventaja? Si necesitas ejecutar algo antes o después de la lógica primaria de la clase, el proxy te permite hacerlo sin cambiar esa clase. Ya que el proxy implementa la misma interfaz que la clase original, puede pasarse a cualquier cliente que espere un objeto de servicio real.
+
+##### Proxy - Analogía con el mundo real
+
+Una tarjeta de crédito es un proxy de una cuenta bancaria, que, a su vez, es un proxy de un manojo de billetes. Ambos implementan la misma interfaz, por lo que pueden utilizarse para realizar un pago. El consumidor se siente genial porque no necesita llevar un montón de efectivo encima. El dueño de la tienda también está contento porque los ingresos de la transacción se añaden electrónicamente a la cuenta bancaria de la tienda sin el riesgo de perder el depósito o sufrir un robo de camino al banco.
+
+##### Proxy - Estructura
+
+1. **La Interfaz de Servicio** declara la interfaz del Servicio. El proxy debe seguir esta interfaz para poder camuflarse como objeto de servicio.
+
+2. **Servicio** es una clase que proporciona una lógica de negocio útil.
+
+3. **La clase Proxy** tiene un campo de referencia que apunta a un objeto de servicio. Cuando el proxy finaliza su procesamiento (por ejemplo, inicialización diferida, registro, control de acceso, almacenamiento en caché, etc.), pasa la solicitud al objeto de servicio. Normalmente los proxies gestionan el ciclo de vida completo de sus objetos de servicio.
+
+4. **El Cliente** debe funcionar con servicios y proxies a través de la misma interfaz. De este modo puedes pasar un proxy a cualquier código que espere un objeto de servicio.
+
+##### Proxy - Ventajas y desventajas
+
+**Ventajas:**
+
+✓ Puedes controlar el objeto de servicio sin que los clientes lo sepan.
+
+✓ Puedes gestionar el ciclo de vida del objeto de servicio cuando a los clientes no les importa.
+
+✓ El proxy funciona incluso si el objeto de servicio no está listo o no está disponible.
+
+✓ Principio de abierto/cerrado. Puedes introducir nuevos proxies sin cambiar el servicio o los clientes.
+
+**Desventajas:**
+
+✗ El código puede complicarse ya que debes introducir gran cantidad de clases nuevas.
+
+✗ La respuesta del servicio puede retrasarse.
+
+---
+
+### Comparación entre los patrones estructurales
+
+| Patrón | Propósito | Ejemplo típico |
+|--------|-----------|----------------|
+| **Adapter** | Adaptar interfaces incompatibles | Adaptador USB |
+| **Composite** | Tratar objetos individuales y compuestos de igual forma | Árbol de directorios |
+| **Decorator** | Agregar responsabilidades dinámicamente | Café con leche y azúcar |
+| **Facade** | Simplificar el acceso a sistemas complejos | Control remoto de TV |
+
+### Buenas prácticas al usar patrones estructurales
+
+- **Usar Adapter** para integrar código heredado o externo.
+- **Aplicar Composite** cuando haya estructuras recursivas jerárquicas.
+- **Preferir Decorator** antes que heredar múltiples combinaciones de clases.
+- **Implementar Facade** en sistemas con múltiples dependencias internas.
+
 ---
 
 ### Contenido a desarrollar
