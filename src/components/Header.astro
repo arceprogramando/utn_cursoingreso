@@ -4,7 +4,30 @@ import Navigation from '@/components/Navigation.astro';
 ---
 
 <div
-  class="fixed w-full bottom-0 right-0 sm:sticky md:top-0 md:block py-4 z-50 transition-colors duration-200"
+  class="
+    fixed top-0 left-0 w-full
+    py-4 z-50
+
+    /* 🔆 MODO CLARO: más clarito, suave, lindo */
+    bg-zinc-200/80 
+    backdrop-blur-md
+
+    /* 🌙 MODO OSCURO: oscuro suave, elegante */
+    dark:bg-zinc-700/70 
+    dark:backdrop-blur-md
+
+    /* BORDES */
+    border-t border-zinc-300/60 
+    dark:border-zinc-300/60
+    sm:border-0
+
+    /* SOMBRA */
+    shadow-lg shadow-black/10 
+    dark:shadow-black/30
+
+    /* TRANSICIÓN */
+    transition-colors duration-200
+  "
 >
   <nav
     class="flex justify-end px-20 md:px-0 sm:justify-between sm:items-center max-w-3xl sm:mx-auto"

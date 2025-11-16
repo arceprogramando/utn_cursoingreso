@@ -1,14 +1,20 @@
+/* ==========================
+   VARIABLES LIGHT MODE
+   ========================== */
 /* CSS Variables para Dark Mode */
 :root {
     /* Light mode colors */
     --bg-primary: #eeeeee;
     --bg-secondary: #f8fafc;
     --bg-tertiary: #f1f5f9;
+
     --text-primary: #000000;
     --text-secondary: #64748b;
     --text-muted: #94a3b8;
+
     --accent: #3182ce;
     --accent-hover: #2c5282;
+
     --border: #e2e8f0;
     --border-light: #f1f5f9;
     --shadow: rgba(0, 0, 0, 0.1);
@@ -19,20 +25,22 @@
     --btn-primary-text: #ffffff;
 }
 
-.text-fixed {
-    color: black;
-}
-
+/* ==========================
+   VARIABLES DARK MODE
+   ========================== */
 .dark {
     /* Dark mode colors */
     --bg-primary: #292929;
     --bg-secondary: #1e293b;
     --bg-tertiary: #334155;
+
     --text-primary: #f8fafc;
     --text-secondary: #cbd5e1;
     --text-muted: #94a3b8;
+
     --accent: #60a5fa;
     --accent-hover: #3b82f6;
+
     --border: #334155;
     --border-light: #475569;
     --shadow: rgba(0, 0, 0, 0.3);
@@ -43,17 +51,48 @@
     --btn-primary-text: #0f172a;
 }
 
+/* ==========================
+   TEXTOS FIJOS
+   ========================== */
+/* Igual que antes: negro en claro, clarito en oscuro */
+.text-fixed {
+    color: black;
+}
 .dark .text-fixed {
     color: rgb(240, 240, 240);
 }
 
-/* Aplicar variables a elementos base */
+/* ==========================
+   TIPOGRAFÍA GLOBAL SUAVE
+   ========================== */
+/* Esto solo asegura que TODO texto base use text-primary.
+   No forzamos colores raros (nada celeste acá). */
+
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* TODO: Conectar global css  eliminar contenido redundante de componentes para traerlos aca si es necesario */
+/* Títulos y texto base: heredarán el text-primary del body,
+   pero si un componente usa text-fixed, va a respetar eso. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+/* Dejamos los enlaces sin forzar color especial,
+   así usan lo que diga Tailwind o el componente. */
+
+/* ==========================
+   IMPORTS TAILWIND
+   ========================== */
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
