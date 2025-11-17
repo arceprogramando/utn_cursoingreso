@@ -1,10 +1,28 @@
 ---
-import ProgressBar from '@/components/ProgressBar.astro';
 import { subjects } from '@/data/correlativity';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const title = 'Correlatividades de la Tecnicatura en Programación - UTN 2025';
 const subTitle = 'Correlatividades';
+
+const totalSubjects = subjectsInitial.length;
+const approvedSubjects = subjectsInitial.filter((subject) => subject.isPassed).length;
+const percentageApproved =
+  totalSubjects > 0 ? (approvedSubjects / totalSubjects) * 100 : 0;
+
+const totalPlanHours = subjectsInitial.reduce(
+  (total, subject) => total + subject.hours,
+  0,
+);
+const completedHours = subjectsInitial.reduce(
+  (total, subject) => (subject.isPassed ? total + subject.hours : total),
+  0,
+);
+const pendingHours = Math.max(totalPlanHours - completedHours, 0);
+
+const motivationalPhrase = getMotivationalPhrase(percentageApproved);
+const hasSubjects = subjectsInitial.length > 0;
+const subjectsMap = new Map(subjectsInitial.map((s) => [s.id, s]));
 ---
 
 <BaseLayout
