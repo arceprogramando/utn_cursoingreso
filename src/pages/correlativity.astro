@@ -1,6 +1,14 @@
 ---
+import ProgressBar from '@/components/ProgressBar.astro';
 import { subjects } from '@/data/correlativity';
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import getMotivationalPhrase from '@/utils/getMotivationalPhrase';
+
+// Forzamos que TODO arranque como NO aprobado
+const subjectsInitial = subjects.map((subject) => ({
+  ...subject,
+  isPassed: false,
+}));
 
 const title = 'Correlatividades de la Tecnicatura en Programación - UTN 2025';
 const subTitle = 'Correlatividades';
@@ -26,69 +34,373 @@ const subjectsMap = new Map(subjectsInitial.map((s) => [s.id, s]));
 ---
 
 <BaseLayout
-  title={`${title}`}
-  subTitle={`${subTitle}`}
+  title={title}
+  subTitle={subTitle}
   description="Correlatividades de la Tecnicatura en Programación - UTN 2025"
 >
-  <ProgressBar subjects={subjects} />
-  <div
-    class="flex flex-col-reverse md:flex-col justify-center items-center container mx-auto text-center p-2 overflow-x-scroll md:overflow-hidden text-sm"
-  >
-    <table
-      class="min-w-full divide-y-1 divide-x-1 divide-gray-200 shadow border-b border-gray-200 sm:rounded-lg"
-    >
-      <thead class="border-t-2 border-l-2 bg-black text-white">
-        <tr class="[&>*]:w-4">
-          <th
-            scope="col"
-            class="px-2 py-3 md:px-6 md:py-3 text-center text-xs md:font-medium uppercase md:tracking-wider"
-          >
-            Nº
-          </th>
-          <th
-            scope="col"
-            class="px-2 py-3 md:px-6 md:py-3 text-center text-xs md:font-medium uppercase md:tracking-wider md:min-w-64"
-          >
-            ASIGNATURA
-          </th>
-          <th
-            scope="col"
-            class="px-2 py-3 md:px-6 md:py-3 text-center text-xs md:font-medium uppercase md:tracking-wider"
-          >
-            NECESARIAS CURSADAS
-          </th>
-          <th
-            scope="col"
-            class="px-2 py-3 md:px-6 md:py-3 text-center text-xs md:font-medium uppercase md:tracking-wider"
-          >
-            Aprobadas
-          </th>
-          <th
-            scope="col"
-            class="px-2 py-3 md:px-6 md:py-3 text-center text-xs md:font-medium uppercase md:tracking-wider"
-          >
-            Horas Totales
-          </th>
-        </tr>
-      </thead>
-      <tbody class="divide-y-1">
-        {
-          subjects.map((subject) => {
-            const bgColor = subject.isPassed ? 'bg-green-300' : 'bg-yellow-300';
-            const passed = subject.isPassed ? 'Aprobada ✅' : 'Pendiente ⏳';
+  {
+    hasSubjects ? (
+      <div class="space-y-8">
+        <!-- Progreso -->
+        <section
+          class="p-4 rounded-lg shadow bg-white dark:bg-zinc-900 text-fixed space-y-4"
+        >
+          <p class="text-xl text-center font-bold">Progreso Universitario</p>
 
-            return (
-              <tr class={`${bgColor} [&>*]:py-3 [&>*]:md:p-2`}>
-                {subject.id !== 0 ? <td>{subject.id}</td> : <td />}
-                <td>{subject.name}</td>
-                <td>{subject.prerequisites}</td>
-                <td>{passed}</td>
-                {subject.id !== 0 ? <td>{subject.hours}</td> : <td />}
-              </tr>
-            );
-          })
-        }
-      </tbody>
-    </table>
-  </div>
+          <p class="text-center text-xs">
+            <span data-progress-percentage>
+              {percentageApproved.toFixed(1)}
+            </span>
+            % del plan completado
+          </p>
+
+          <div class="charge-bar bg-gray-200 dark:bg-zinc-800">
+            <div
+              class="charge-bar-progress bg-black dark:bg-white"
+              data-progress-bar
+              style={{ width: `${percentageApproved}%` }}
+            />
+          </div>
+
+          <p class="text-sm text-center" data-motivational>
+            {motivationalPhrase}
+          </p>
+
+          <div class="mt-2 flex flex-wrap gap-4 justify-center text-sm md:text-base">
+            <p class="text-lg font-semibold">
+              Horas cursadas:
+              <span
+                class="font-bold text-blue-600 dark:text-blue-400"
+                data-hours-completed
+              >
+                {completedHours}
+              </span>
+            </p>
+
+            <p class="text-lg font-semibold">
+              Horas restantes:
+              <span
+                class="font-bold text-blue-600 dark:text-blue-400"
+                data-hours-missing
+              >
+                {pendingHours}
+              </span>
+            </p>
+          </div>
+        </section>
+
+        <!-- Tabla -->
+        <section class="space-y-4">
+          <p class="text-sm text-fixed text-center md:text-left">
+            Marcá las materias que tenés aprobadas para ver qué correlatividades
+            te faltan y cómo avanza tu progreso.
+          </p>
+
+          <div
+            class="overflow-x-auto border border-gray-200 dark:border-zinc-700 rounded-xl shadow-sm bg-white/90 dark:bg-zinc-950/80"
+          >
+            <table
+              class="min-w-full divide-y divide-gray-200 dark:divide-zinc-800 text-sm"
+            >
+              <thead class="bg-blue-400 text-white ">
+                <tr
+                  class="[&>*]:py-3 [&>*]:px-2 text-xs uppercase tracking-wide"
+                >
+                  <th class="text-center w-10">Nº</th>
+                  <th class="text-left min-w-56">Asignatura</th>
+                  <th class="text-center">Correlativas necesarias</th>
+                  <th class="text-center w-24">Horas</th>
+                  <th class="text-center w-1">✅</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 dark:divide-zinc-800">
+                {
+                  subjectsInitial.map((subject) => {
+                    const prerequisiteNames = subject.prerequisites.map(
+                      (prereqId) =>
+                        subjectsMap.get(prereqId)?.name ?? 'Correlativa',
+                    );
+
+                    return (
+                      <tr
+                        class={`subject-row subject-row--pending`}
+                        data-subject-row={subject.id}
+                      >
+                        <td class="text-center font-semibold">
+                          {typeof subject.order === 'number'
+                            ? subject.order
+                            : ''}
+                        </td>
+
+                        <td>
+                          <p class="font-semibold text-base md:text-lg text-fixed">
+                            {subject.name}
+                          </p>
+                          {subject.prerequisites.length === 0 ? (
+                            <p class="text-xs text-gray-500 dark:text-gray-400">
+                              Sin correlativas previas
+                            </p>
+                          ) : (
+                            <p class="text-xs text-gray-500 dark:text-gray-400">
+                              Requiere: {prerequisiteNames.join(', ')}
+                            </p>
+                          )}
+                        </td>
+
+                        <td class="text-center">
+                          {subject.prerequisites.length > 0 ? (
+                            <ul
+                              class="flex flex-wrap gap-1 justify-center"
+                              aria-label={`Correlativas necesarias para ${subject.name}`}
+                            >
+                              {subject.prerequisites.map((prereqId) => {
+                                const prereq = subjectsMap.get(prereqId);
+                                return (
+                                  <li
+                                    class="prereq-pill prereq-pill--pending"
+                                    data-prereq-pill
+                                    data-prereq-id={prereqId}
+                                  >
+                                    {prereq?.name ?? 'Correlativa'}
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          ) : (
+                            <span class="text-xs text-gray-600 dark:text-gray-400 italic">
+                              Sin correlativas
+                            </span>
+                          )}
+                        </td>
+
+                        <td class="text-center font-semibold">
+                          {subject.hours > 0 ? subject.hours : '-'}
+                        </td>
+
+                        <td class="text-center">
+                          <input
+                            type="checkbox"
+                            class="subject-checkbox accent-black dark:accent-white"
+                            checked={subject.isPassed}
+                            data-subject-checkbox
+                            data-subject-id={subject.id}
+                            aria-label={`Marcar ${subject.name} como aprobada`}
+                          />
+                        </td>
+                      </tr>
+                    );
+                  })
+                }
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Datos para el script -->
+        <script type="application/json" id="correlativity-data">
+          {JSON.stringify(subjectsInitial)}
+        </script>
+
+        <!-- Lógica interactiva --><script type="module">
+  (() => {
+    // 🔹 Astro acá te inyecta un string JSON válido
+    const subjectsState = JSON.parse(
+      '{JSON.stringify(subjectsInitial)}'
+    ).map((subject) => ({
+      ...subject,
+      prerequisites: Array.isArray(subject.prerequisites)
+        ? subject.prerequisites
+        : [],
+      hours: typeof subject.hours === 'number' ? subject.hours : 0,
+      isPassed: false,
+    }));
+
+    const subjectsMap = new Map(
+      subjectsState.map((subject) => [String(subject.id), subject]),
+    );
+
+    const totalSubjects = subjectsState.length;
+    const totalPlanHours = subjectsState.reduce(
+      (total, subject) => total + subject.hours,
+      0,
+    );
+
+    const progressPercentageEl = document.querySelector(
+      '[data-progress-percentage]',
+    );
+    const progressBarEl = document.querySelector('[data-progress-bar]');
+    const motivationalEl = document.querySelector('[data-motivational]');
+    const hoursCompletedEl = document.querySelector('[data-hours-completed]');
+    const hoursMissingEl = document.querySelector('[data-hours-missing]');
+
+    // 🎧 Listeners
+    document
+      .querySelectorAll('[data-subject-checkbox]')
+      .forEach((checkbox) => {
+        checkbox.addEventListener('change', (event) => {
+          const target = event.currentTarget;
+          if (!(target instanceof HTMLInputElement)) return;
+
+          const subjectId = target.getAttribute('data-subject-id');
+          if (!subjectId) return;
+
+          const subject = subjectsMap.get(subjectId);
+          if (!subject) return;
+
+          subject.isPassed = target.checked;
+          updateRowState(subjectId, subject.isPassed);
+          updateProgress();
+          updatePrerequisitePills();
+        });
+      });
+
+    function updateProgress() {
+      const passedCount = subjectsState.filter(
+        (subject) => subject.isPassed,
+      ).length;
+
+      const percentage =
+        totalSubjects > 0 ? (passedCount / totalSubjects) * 100 : 0;
+
+      const completedHours = subjectsState.reduce(
+        (total, subject) =>
+          subject.isPassed ? total + subject.hours : total,
+        0,
+      );
+
+      const missingHours = Math.max(totalPlanHours - completedHours, 0);
+
+      if (progressPercentageEl)
+        progressPercentageEl.textContent = percentage.toFixed(1);
+      if (progressBarEl) progressBarEl.style.width = `${percentage}%`;
+      if (hoursCompletedEl)
+        hoursCompletedEl.textContent = completedHours.toString();
+      if (hoursMissingEl)
+        hoursMissingEl.textContent = missingHours.toString();
+      if (motivationalEl)
+        motivationalEl.textContent = getMotivationalPhraseClient(percentage);
+    }
+
+    function updateRowState(subjectId, isApproved) {
+      const row = document.querySelector(
+        `[data-subject-row="${subjectId}"]`,
+      );
+      if (!row) return;
+
+      row.classList.toggle('subject-row--approved', isApproved);
+      row.classList.toggle('subject-row--pending', !isApproved);
+    }
+
+    function updatePrerequisitePills() {
+      document.querySelectorAll('[data-prereq-pill]').forEach((pill) => {
+        const prereqId = pill.getAttribute('data-prereq-id');
+        if (!prereqId) return;
+
+        const prereqSubject = subjectsMap.get(prereqId);
+        const isMet = prereqSubject?.isPassed ?? false;
+
+        pill.classList.toggle('prereq-pill--met', isMet);
+        pill.classList.toggle('prereq-pill--pending', !isMet);
+      });
+    }
+
+    function getMotivationalPhraseClient(progress) {
+      if (progress <= 0)
+        return 'Cuando empieces a marcar materias, vas a ver tu progreso 😊';
+      if (progress < 10)
+        return '¡Vamos! Apenas estamos comenzando, ¡a por más!';
+      if (progress < 20) return '¡Seguís sumando, paso a paso!';
+      if (progress < 30) return '¡Muy bien! Vas por buen camino.';
+      if (progress < 40) return '¡Buen trabajo! Cada materia suma.';
+      if (progress < 50)
+        return '¡Gran avance! Ya recorriste casi la mitad.';
+      if (progress < 60)
+        return '¡Mitad del plan completada, enorme logro!';
+      if (progress < 70)
+        return '¡Impresionante! Estás muy encaminado.';
+      if (progress < 80) return '¡Más de la mitad! No aflojes ahora.';
+      if (progress < 90)
+        return '¡Increíble! Estás muy cerca del final.';
+      if (progress < 100)
+        return '¡Último tramo! Un poco más y lo lográs.';
+      return '¡Felicidades! ¡Plan completo!';
+    }
+
+    // Estado inicial
+    updateProgress();
+    updatePrerequisitePills();
+  })();
+</script>
+
+      </div>
+    ) : (
+      <p class="text-center text-lg font-semibold py-8">
+        Todavía no hay materias cargadas para mostrar correlatividades.
+      </p>
+    )
+  }
+
+  <style>
+    .charge-bar {
+      height: 20px;
+      border-radius: 10px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .charge-bar-progress {
+      height: 100%;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .subject-row {
+      cursor: pointer;
+      transition: background-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    /* Color base por estado (SUAVE) */
+    .subject-row--pending {
+      background-color: #fffbeb; /* amarillo muy suave */
+    }
+
+    .subject-row--approved {
+      background-color: #dcfce7; /* verde suave */
+    }
+
+    .prereq-pill {
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .prereq-pill--met {
+      background-color: #dcfce7;
+      color: #15803d;
+      border-color: #15803d;
+    }
+
+    .prereq-pill--pending {
+      background-color: #aeaaff;
+      color: #273d96;
+      border-color: #261cb9;
+    }
+
+    .subject-checkbox {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .subject-row--pending {
+        background-color: rgb(134, 134, 134); /* amarillo suave en dark */
+      }
+
+      .subject-row--approved {
+        background-color: rgba(34, 197, 94, 0.18); /* verde suave en dark */
+      }
+    }
+  </style>
 </BaseLayout>

@@ -4,60 +4,79 @@ import getMotivationalPhrase from '@/utils/getMotivationalPhrase';
 
 const { subjects = [] }: { subjects?: Correlativity[] } = Astro.props;
 
-const porcentajofApproved = subjects.reduce((total, subject) => (subject.isPassed ? total + 1 : total), 0);
 const totalSubjects = subjects.length;
-const percentageApproved = totalSubjects > 0 ? (porcentajofApproved / totalSubjects) * 100 : 0;
+const approvedCount = subjects.reduce(
+  (total, subject) => (subject.isPassed ? total + 1 : total),
+  0,
+);
+const percentageApproved =
+  totalSubjects > 0 ? (approvedCount / totalSubjects) * 100 : 0;
 
 const motivationalPhrase = getMotivationalPhrase(percentageApproved);
 const totalHours = subjects.reduce((total, subject) => total + subject.hours, 0);
-const missingHours = subjects.reduce((total, subject) => (subject.isPassed ? total : total + subject.hours), 0);
+const missingHours = subjects.reduce(
+  (total, subject) => (subject.isPassed ? total : total + subject.hours),
+  0,
+);
 ---
 
-<div class="p-4 rounded-lg dark:bg-white dark:text-black my-2">
-  <p class="text-xl text-center font-bold">Progreso Universitario</p>
+<div class="rounded-2xl border border-zinc-200 bg-white/90 px-4 py-5 shadow-sm text-fixed md:px-6 md:py-6 dark:border-zinc-800 dark:bg-zinc-900/90 space-y-4">
+  <!-- Título + porcentaje -->
+  <div class="flex flex-col items-center gap-1 text-center">
+    <p class="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+      Progreso universitario
+    </p>
+    <p class="text-2xl font-bold">
+      {percentageApproved.toFixed(1)}%
+      <span class="ml-1 text-sm font-normal text-zinc-500 dark:text-zinc-400">
+        completado
+      </span>
+    </p>
+  </div>
 
   {
     subjects.length > 0 ? (
-      <div>
-        <p class="text-center text-gray-800 text-xs">% {percentageApproved.toFixed(1)} Completado</p>
-
-        <div class="charge-bar bg-gray-200">
-          <div class="charge-bar-progress bg-black" style={{ width: `${percentageApproved}%` }} />
+      <>
+        <!-- Barra -->
+        <div class="w-full">
+          <div class="h-3 w-full overflow-hidden rounded-full bg-zinc-200 dark:bg-zinc-800">
+            <div
+              class="h-full rounded-full bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-500 dark:from-zinc-100 dark:via-zinc-300 dark:to-zinc-500 transition-[width] duration-300 ease-out"
+              style={{ width: `${percentageApproved}%` }}
+            />
+          </div>
         </div>
 
-        <p class="text-sm">{motivationalPhrase}</p>
+        <!-- Frase motivacional -->
+        <p class="text-sm text-center text-zinc-600 dark:text-zinc-300">
+          {motivationalPhrase}
+        </p>
 
-        <div class="mt-2 flex flex-wrap gap-4">
-          <p class="text-lg font-semibold text-gray-800">
-            Horas Totales:
-            <span class="font-bold text-blue-600">{totalHours}</span>
-          </p>
+        <!-- Stats de horas -->
+        <div class="mt-1 grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
+          <div class="flex flex-col items-center gap-1 rounded-xl bg-zinc-100 px-4 py-2 sm:items-start dark:bg-zinc-800/70">
+            <span class="text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+              Horas totales del plan
+            </span>
+            <span class="text-lg font-semibold">
+              {totalHours}
+            </span>
+          </div>
 
-          <p class="text-lg font-semibold text-gray-800">
-            Horas Faltantes:
-            <span class="font-bold text-blue-600">{missingHours}</span>
-          </p>
+          <div class="flex flex-col items-center gap-1 rounded-xl bg-zinc-100 px-4 py-2 sm:items-start dark:bg-zinc-800/70">
+            <span class="text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+              Horas faltantes
+            </span>
+            <span class="text-lg font-semibold">
+              {missingHours}
+            </span>
+          </div>
         </div>
-      </div>
+      </>
     ) : (
-      <p>No hay materias</p>
+      <p class="text-sm text-center text-zinc-500 dark:text-zinc-400">
+        Todavía no hay materias cargadas para calcular tu progreso.
+      </p>
     )
   }
 </div>
-
-<style>
-  .charge-bar {
-    height: 20px;
-    background-color: #e5e7eb;
-    border-radius: 10px;
-    margin-top: 10px;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .charge-bar-progress {
-    height: 100%;
-    background-color: #000000;
-    transition: width 0.3s ease-in-out;
-  }
-</style>

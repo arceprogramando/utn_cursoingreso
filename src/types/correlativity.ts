@@ -1,7 +1,8 @@
 export interface Correlativity {
-  id: number;
+  id: string;
+  order?: number;
   name: string;
-  prerequisites: string;
+  prerequisites: string[];
   isPassed: boolean;
   hours: number;
 }
