@@ -1,22 +1,19 @@
 ---
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
-const { title, subTitle, description, keywords } = Astro.props;
 import SideMenu from '@/components/layout/SideMenu.astro';
 import Layout from '@/layouts/Layout.astro';
-import LogoIcon from '@/components/LogoIcon.astro';
+
+const { title, subTitle, description, keywords } = Astro.props;
 ---
 
 <Layout title={title} description={description} keywords={keywords}>
   <div class="flex flex-col justify-around min-h-screen">
     <header>
-      <div class="sm:hidden px-8 pt-8 bg-[var(--bg-primary)]">
-        <LogoIcon />
-      </div>
       <Header />
     </header>
     <SideMenu />
-    <main class="flex flex-col items-center max-w-5xl mx-auto mb-8 mt-4 md:mt-24">
+    <main class="flex flex-col items-center max-w-5xl mx-auto mb-8 mt-16 md:mt-24">
       <h1
         class="text-center max-w-2xl my-8 md:my-4 text-4xl leading-none md:text-5xl font-bold text-fixed"
       >
