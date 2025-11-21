@@ -5,7 +5,6 @@ import SideMenu from '@/components/layout/SideMenu.astro';
 import Footer from '@/components/Footer.astro';
 import { YouTube } from 'astro-embed';
 import ProgramShowCase from '@/components/ProgramShowCase.astro';
-import LogoIcon from '@/components/LogoIcon.astro';
 
 const PAGE_TITLE = 'Tecnicatura Universitaria en Programación - UTN 2025';
 const PAGE_DESCRIPTION =
@@ -17,10 +16,6 @@ const PAGE_DESCRIPTION =
   description={PAGE_DESCRIPTION}
 >
   <header>
-    {/* Logo solo en mobile, porque en el Header ya está para pantallas más grandes */}
-    <div class="block sm:hidden px-8 pt-8">
-      <LogoIcon />
-    </div>
     <Header />
   </header>
 
