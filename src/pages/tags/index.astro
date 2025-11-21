@@ -30,7 +30,7 @@ const subTitle = 'Índice De Tags';
     {
       allTags.length > 0 ? (
         allTags.map((tag) => (
-          <li class="px-2 md:px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full shadow-md hover:bg-gray-800  transition-transform">
+          <li class="tag-item px-2 md:px-4 py-2 text-lg font-bold uppercase rounded-full shadow-md hover:opacity-80 transition-all">
             <a href={`/tags/${tag.toLowerCase()}`} title={`Ver elementos con el tag ${tag}`}>
               {addSpaceBeforeSecondUppercase(tag)}
             </a>
@@ -42,3 +42,31 @@ const subTitle = 'Índice De Tags';
     }
     </ul>
 </BaseLayout>
+
+<style is:global>
+  .tag-item {
+    background-color: #231b42;
+    color: #f5f3e8;
+  }
+
+  .tag-item:hover {
+    background-color: #3d3266;
+  }
+
+  .tag-item a {
+    color: #f5f3e8;
+  }
+
+  .dark .tag-item {
+    background-color: #4a3f6b;
+    color: #e6e1cd;
+  }
+
+  .dark .tag-item:hover {
+    background-color: #5a4f7b;
+  }
+
+  .dark .tag-item a {
+    color: #e6e1cd;
+  }
+</style>

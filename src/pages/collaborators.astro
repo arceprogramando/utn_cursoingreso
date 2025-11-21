@@ -37,7 +37,7 @@ const { colaboradores, errorMessage } = await fetchCollaborators(apiUrl);
                 />
                 <div class="text-center">
                   <div class="font-bold text-xl collaborator-name">{colaborador.login}</div>
-                  <div class="text-[#333333] dark:text-[#c6d8c0] text-sm font-medium">
+                  <div class="text-sm font-medium collaborator-role">
                     {colaborador.description
                       ? colaborador.description
                       : 'Contributor'}
@@ -45,7 +45,7 @@ const { colaboradores, errorMessage } = await fetchCollaborators(apiUrl);
                 </div>
               </div>
               {colaborador.contributions && (
-                <div class="text-center text-sm font-semibold text-[#231b42] dark:text-[#c6d8c0]">
+                <div class="text-center text-sm font-semibold collaborator-contributions">
                   {colaborador.contributions} Contribuciones
                 </div>
               )}
@@ -72,22 +72,38 @@ const { colaboradores, errorMessage } = await fetchCollaborators(apiUrl);
   </div>
 </BaseLayout>
 
-<style>
+<style is:global>
   .collaborator-card {
     background-color: #f5f3e8;
     border: 1px solid #c6d8c0;
   }
 
-  .collaborator-name {
-    color: #000000 !important;
+  .collaborator-card .collaborator-name {
+    color: #000000;
   }
 
-  :global(.dark) .collaborator-card {
+  .collaborator-card .collaborator-role {
+    color: #333333;
+  }
+
+  .collaborator-card .collaborator-contributions {
+    color: #231b42;
+  }
+
+  .dark .collaborator-card {
     background-color: #2a2a2a;
     border-color: #4a3f6b;
   }
 
-  :global(.dark) .collaborator-name {
-    color: #ffffff !important;
+  .dark .collaborator-card .collaborator-name {
+    color: #ffffff;
+  }
+
+  .dark .collaborator-card .collaborator-role {
+    color: #c6d8c0;
+  }
+
+  .dark .collaborator-card .collaborator-contributions {
+    color: #c6d8c0;
   }
 </style>

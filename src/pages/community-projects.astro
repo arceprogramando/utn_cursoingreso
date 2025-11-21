@@ -45,7 +45,7 @@ const projects: Project[] = [
   <div class="flex flex-col md:flex-row gap-4 justify-center items-stretch">
     {
       projects.map((project) => (
-        <div class="w-full max-w-[250px] bg-zinc-900 text-white rounded-lg shadow-lg overflow-hidden">
+        <div class="project-card w-full max-w-[250px] rounded-lg shadow-lg overflow-hidden">
           <div>
             <div>
               <img
@@ -54,12 +54,12 @@ const projects: Project[] = [
                 class="w-full h-auto min-h-[135px]"
               />
             </div>
-            <div class="px-4 pt-4   flex justify-center items-center gap-4 ">
+            <div class="px-4 pt-4 flex justify-center items-center gap-4">
               {project.link && (
                 <a
                   href={project.link}
                   target="_blank"
-                  class=" hover:text-blue-400"
+                  class="project-link hover:opacity-70"
                   aria-label="Ir a la web del proyecto"
                   title="Ir a la web del proyecto"
                 >
@@ -85,12 +85,12 @@ const projects: Project[] = [
                 red="github"
                 icon="github"
                 alt="Ver en Github"
-                classValues="hover:underline font-bold uppercase hover:text-blue-400 text-white"
+                classValues="hover:underline font-bold uppercase hover:opacity-70 project-link"
               />
             </div>
             <div class="px-4 py-2">
-              <h3 class="text-1xl font-bold tracking-tight">{project.title}</h3>
-              <p class="text-sm text-gray-400">
+              <h3 class="text-1xl font-bold tracking-tight project-title">{project.title}</h3>
+              <p class="text-sm project-description">
                 {project?.description
                   ? project.description.length > 100
                     ? `${project.description.slice(0, 100)}...`
@@ -99,14 +99,14 @@ const projects: Project[] = [
               </p>
             </div>
           </div>
-          <div class="flex flex-wrap justify-center gap-2  py-4">
+          <div class="flex flex-wrap justify-center gap-2 py-4">
             {project.tags.map((tag, index) =>
               index % 2 === 0 ? (
-                <span class="bg-zinc-700 text-white py-1 px-3  text-xs">
+                <span class="project-tag-primary py-1 px-3 text-xs rounded">
                   {tag}
                 </span>
               ) : (
-                <span class="bg-zinc-800 text-white py-1 px-3  text-xs">
+                <span class="project-tag-secondary py-1 px-3 text-xs rounded">
                   {tag}
                 </span>
               )
@@ -117,3 +117,59 @@ const projects: Project[] = [
     }
   </div>
 </BaseLayout>
+
+<style is:global>
+  .project-card {
+    background-color: #f5f3e8;
+    border: 1px solid #c6d8c0;
+  }
+
+  .project-card .project-title {
+    color: #000000;
+  }
+
+  .project-card .project-description {
+    color: #333333;
+  }
+
+  .project-card .project-link {
+    color: #231b42;
+  }
+
+  .project-tag-primary {
+    background-color: #231b42;
+    color: #f5f3e8;
+  }
+
+  .project-tag-secondary {
+    background-color: #c6d8c0;
+    color: #231b42;
+  }
+
+  .dark .project-card {
+    background-color: #2a2a2a;
+    border-color: #4a3f6b;
+  }
+
+  .dark .project-card .project-title {
+    color: #ffffff;
+  }
+
+  .dark .project-card .project-description {
+    color: #c6d8c0;
+  }
+
+  .dark .project-card .project-link {
+    color: #e6e1cd;
+  }
+
+  .dark .project-tag-primary {
+    background-color: #4a3f6b;
+    color: #e6e1cd;
+  }
+
+  .dark .project-tag-secondary {
+    background-color: #3d3266;
+    color: #c6d8c0;
+  }
+</style>
