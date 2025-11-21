@@ -92,6 +92,22 @@ li {
    así usan lo que diga Tailwind o el componente. */
 
 /* ==========================
+   ACCESIBILIDAD
+   ========================== */
+/* Screen reader only - oculta visualmente pero mantiene accesible */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ==========================
    IMPORTS TAILWIND
    ========================== */
 @import "tailwindcss";
