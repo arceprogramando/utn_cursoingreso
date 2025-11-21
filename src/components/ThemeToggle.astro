@@ -2,7 +2,7 @@
 // ThemeToggle.astro - Componente para cambiar entre light/dark mode
 ---
 
-<button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+<button class="theme-toggle" aria-label="Cambiar tema">
   <div class="sun" aria-hidden="true">☀️</div>
   <div class="moon" aria-hidden="true">🌙</div>
   <span class="sr-only">Cambiar entre modo claro y oscuro</span>
@@ -87,13 +87,13 @@
     const theme = getInitialTheme();
     applyTheme(theme);
 
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-      // Remover listener previo si existe
-      themeToggle.removeEventListener('click', toggleTheme);
-      // Agregar nuevo listener
-      themeToggle.addEventListener('click', toggleTheme);
-    }
+    // Seleccionar TODOS los botones de tema (desktop y móvil)
+    const themeToggles = document.querySelectorAll('.theme-toggle');
+    themeToggles.forEach((btn) => {
+      // Evitar duplicar listeners
+      btn.removeEventListener('click', toggleTheme);
+      btn.addEventListener('click', toggleTheme);
+    });
   };
 
   document.addEventListener('DOMContentLoaded', initializeTheme);

@@ -14,11 +14,13 @@ import ThemeToggle from '@/components/ThemeToggle.astro';
       <div class="flex justify-between items-center px-2">
         <ThemeToggle />
         <button
-          class="bg-[var(--btn-primary)] dark:bg-white text-[var(--btn-primary-text)] dark:text-black m-2 rounded-xl"
+          class="bg-[#231b42] dark:bg-white m-2 rounded-xl p-1"
           id="side_menu_cross"
           aria-label="boton para cerrar el menu"
         >
-          <Icon name="cross" width={40} height={40} />
+          <svg width="40" height="40" viewBox="0 0 32 32" fill="none" class="text-white dark:text-black">
+            <path d="M22.5 9.5L9.5 22.5M9.5 9.5L22.5 22.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </button>
       </div>
       <ul class="flex flex-col md:flex-row gap-4 pl-8">
