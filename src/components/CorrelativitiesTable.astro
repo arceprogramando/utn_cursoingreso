@@ -1,0 +1,49 @@
+---
+import type { Correlativity } from '@/types/correlativity';
+import SubjectRow from './SubjectRow.astro';
+
+interface Props {
+  subjects: Correlativity[];
+}
+
+const { subjects } = Astro.props;
+const subjectsMap = new Map(subjects.map((s) => [s.id, s]));
+---
+
+<section class="space-y-4">
+  <p class="text-sm text-fixed text-center md:text-left">
+    Marcá las materias que tenés aprobadas para ver qué correlatividades te
+    faltan y cómo avanza tu progreso.
+  </p>
+
+  <div
+    class="overflow-x-auto border border-gray-200 dark:border-zinc-700 rounded-xl shadow-sm bg-white/90 dark:bg-zinc-950/80"
+  >
+    <table
+      class="min-w-full divide-y divide-gray-200 dark:divide-zinc-800 text-sm"
+    >
+      <thead class="bg-blue-400 text-white">
+        <tr class="*:py-3 *:px-2 text-xs uppercase tracking-wide">
+          <th class="text-center w-10">Nº</th>
+          <th class="text-left min-w-56">Asignatura</th>
+          <th class="text-center">Correlativas necesarias</th>
+          <th class="text-center w-24">Horas</th>
+          <th class="text-center w-1">✅</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-200 dark:divide-zinc-800">
+        {
+          subjects.map((subject) => {
+            const prerequisiteNames = subject.prerequisites.map(
+              (prereqId) => subjectsMap.get(prereqId)?.name ?? 'Correlativa'
+            );
+
+            return (
+              <SubjectRow subject={subject} prerequisiteNames={prerequisiteNames} />
+            );
+          })
+        }
+      </tbody>
+    </table>
+  </div>
+</section>

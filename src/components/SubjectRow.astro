@@ -1,0 +1,124 @@
+---
+import type { Correlativity } from '@/types/correlativity';
+
+interface Props {
+  subject: Correlativity;
+  prerequisiteNames: string[];
+}
+
+const { subject, prerequisiteNames } = Astro.props;
+---
+
+<tr class="subject-row subject-row--pending" data-subject-row={subject.id}>
+  <td class="text-center font-semibold">
+    {typeof subject.order === 'number' ? subject.order : ''}
+  </td>
+
+  <td>
+    <p class="font-semibold text-base md:text-lg text-fixed">
+      {subject.name}
+    </p>
+    {
+      subject.prerequisites.length === 0 ? (
+        <p class="text-xs text-gray-500 dark:text-gray-400">
+          Sin correlativas previas
+        </p>
+      ) : (
+        <p class="text-xs text-gray-500 dark:text-gray-400">
+          Requiere: {prerequisiteNames.join(', ')}
+        </p>
+      )
+    }
+  </td>
+
+  <td class="text-center">
+    {
+      subject.prerequisites.length > 0 ? (
+        <ul
+          class="flex flex-wrap gap-1 justify-center"
+          aria-label={`Correlativas necesarias para ${subject.name}`}
+        >
+          {subject.prerequisites.map((prereqId) => (
+            <li
+              class="prereq-pill prereq-pill--pending"
+              data-prereq-pill
+              data-prereq-id={prereqId}
+            >
+              {prerequisiteNames[subject.prerequisites.indexOf(prereqId)] ?? 'Correlativa'}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <span class="text-xs text-gray-600 dark:text-gray-400 italic">
+          Sin correlativas
+        </span>
+      )
+    }
+  </td>
+
+  <td class="text-center font-semibold">
+    {subject.hours > 0 ? subject.hours : '-'}
+  </td>
+
+  <td class="text-center">
+    <input
+      type="checkbox"
+      class="subject-checkbox accent-black dark:accent-white"
+      checked={subject.isPassed}
+      data-subject-checkbox
+      data-subject-id={subject.id}
+      aria-label={`Marcar ${subject.name} como aprobada`}
+    />
+  </td>
+</tr>
+
+<style>
+  .subject-row {
+    cursor: pointer;
+    transition: background-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .subject-row--pending {
+    background-color: #fffbeb;
+  }
+
+  .subject-row--approved {
+    background-color: #dcfce7;
+  }
+
+  .prereq-pill {
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+
+  .prereq-pill--met {
+    background-color: #dcfce7;
+    color: #15803d;
+    border-color: #15803d;
+  }
+
+  .prereq-pill--pending {
+    background-color: #aeaaff;
+    color: #273d96;
+    border-color: #261cb9;
+  }
+
+  .subject-checkbox {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .subject-row--pending {
+      background-color: rgb(134, 134, 134);
+    }
+
+    .subject-row--approved {
+      background-color: rgba(34, 197, 94, 0.18);
+    }
+  }
+</style>
