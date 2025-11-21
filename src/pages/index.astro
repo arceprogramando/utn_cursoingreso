@@ -49,9 +49,8 @@ const PAGE_DESCRIPTION =
     <ProgramShowCase />
 
     <div
-      <div
-  class="my-8 max-w-4xl mx-auto text-fixed p-2 md:p-0 text-lg md:text-start leading-relaxed space-y-6"
->
+      class="my-8 max-w-4xl mx-auto text-fixed p-2 md:p-0 text-lg md:text-start leading-relaxed space-y-6"
+    >
 
       <p>
         Esta página está pensada para acompañar a quienes se interesan por la
@@ -142,11 +141,13 @@ const PAGE_DESCRIPTION =
     </div>
 
     <div class="p-4 pb-10">
-      <YouTube
-        id="https://www.youtube.com/watch?v=5azNrCaiqFo"
-        class="rounded-xl md:p-0"
-        posterQuality="max"
-      />
+      <div class="aspect-video w-full">
+        <YouTube
+          id="https://www.youtube.com/watch?v=5azNrCaiqFo"
+          class="rounded-xl md:p-0"
+          posterQuality="max"
+        />
+      </div>
     </div>
   </main>
 

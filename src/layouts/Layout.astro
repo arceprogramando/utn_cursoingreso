@@ -79,13 +79,26 @@ const allKeywords = `${basicKeywords}, ${keywords}`;
     <meta property="twitter:domain" content="utn-cursoingreso.vercel.app" />
     <meta property="twitter:url" content={canonicalURL} />
 
-    <!-- Font -->
+    <!-- Font - Carga asíncrona para evitar render-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Dancing+Script:wght@400;700&display=swap"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Dancing+Script:wght@400;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
