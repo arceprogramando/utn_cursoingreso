@@ -52,23 +52,30 @@ const allKeywords = `${basicKeywords}, ${keywords}`;
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tecnicatura en Programación - UTN" />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={thumbnailImage} />
-    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:secure_url" content={thumbnailImage} />
+    <meta property="og:image:alt" content={`Imagen de ${title}`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content={title} />
 
     <!-- Twitter Meta Tags -->
-    <meta name="twitter:image" content={thumbnailImage} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="utn-cursoingreso.vercel.app" />
-    <meta property="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={thumbnailImage} />
+    <meta name="twitter:image:alt" content={`Imagen de ${title}`} />
+    <meta property="twitter:domain" content="utn-cursoingreso.vercel.app" />
+    <meta property="twitter:url" content={canonicalURL} />
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
