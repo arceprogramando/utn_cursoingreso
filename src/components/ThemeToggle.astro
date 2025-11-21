@@ -53,65 +53,63 @@
 </style>
 
 <script is:inline>
-  const getInitialTheme = () => {
-    const savedTheme = localStorage?.getItem('theme');
-    if (savedTheme && ['light', 'dark'].includes(savedTheme)) {
-      return savedTheme;
-    }
+  (function() {
+    // Evitar ejecutar múltiples veces
+    if (window.__themeToggleInitialized) return;
+    window.__themeToggleInitialized = true;
 
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
+    const getTheme = () => {
+      const savedTheme = localStorage?.getItem('theme');
+      if (savedTheme && ['light', 'dark'].includes(savedTheme)) {
+        return savedTheme;
+      }
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+      return 'light';
+    };
 
-    return 'light';
-  };
+    const applyTheme = (theme) => {
+      const html = document.documentElement;
+      if (theme === 'dark') {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+      localStorage.setItem('theme', theme);
+    };
 
-  const applyTheme = (theme) => {
-    const html = document.documentElement;
-    if (theme === 'dark') {
-      html.classList.add('dark');
-    } else {
-      html.classList.remove('dark');
-    }
-    localStorage.setItem('theme', theme);
-  };
+    const toggleTheme = () => {
+      const html = document.documentElement;
+      const isDark = html.classList.contains('dark');
+      const newTheme = isDark ? 'light' : 'dark';
+      applyTheme(newTheme);
+    };
 
-  const toggleTheme = () => {
-    const html = document.documentElement;
-    const isDark = html.classList.contains('dark');
-    const newTheme = isDark ? 'light' : 'dark';
-    applyTheme(newTheme);
-  };
+    const initializeTheme = () => {
+      const theme = getTheme();
+      applyTheme(theme);
 
-  const initializeTheme = () => {
-    const theme = getInitialTheme();
-    applyTheme(theme);
+      const themeToggles = document.querySelectorAll('.theme-toggle');
+      themeToggles.forEach((btn) => {
+        btn.removeEventListener('click', toggleTheme);
+        btn.addEventListener('click', toggleTheme);
+      });
+    };
 
-    // Seleccionar TODOS los botones de tema (desktop y móvil)
-    const themeToggles = document.querySelectorAll('.theme-toggle');
-    themeToggles.forEach((btn) => {
-      // Evitar duplicar listeners
-      btn.removeEventListener('click', toggleTheme);
-      btn.addEventListener('click', toggleTheme);
+    document.addEventListener('DOMContentLoaded', initializeTheme);
+
+    document.addEventListener('astro:after-swap', () => {
+      const currentTheme = localStorage.getItem('theme') || getTheme();
+      applyTheme(currentTheme);
+      setTimeout(initializeTheme, 0);
     });
-  };
 
-  document.addEventListener('DOMContentLoaded', initializeTheme);
-
-  document.addEventListener('astro:after-swap', () => {
-    const currentTheme = localStorage.getItem('theme') || getInitialTheme();
-    applyTheme(currentTheme);
-
-    setTimeout(initializeTheme, 0);
-  });
-
-  window
-    .matchMedia('(prefers-color-scheme: dark)')
-    .addEventListener('change', (e) => {
-      // Solo aplicar si no hay preferencia guardada
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
       if (!localStorage.getItem('theme')) {
         const newTheme = e.matches ? 'dark' : 'light';
         applyTheme(newTheme);
       }
     });
+  })();
 </script>
