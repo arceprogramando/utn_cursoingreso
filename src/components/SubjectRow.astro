@@ -31,7 +31,7 @@ const { subject, prerequisiteNames } = Astro.props;
     }
   </td>
 
-  <td class="text-center">
+  <td class="text-center hidden md:table-cell">
     {
       subject.prerequisites.length > 0 ? (
         <ul
