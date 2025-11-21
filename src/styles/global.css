@@ -1,28 +1,28 @@
 /* ==========================
    VARIABLES LIGHT MODE
    ========================== */
-/* CSS Variables para Dark Mode */
+/* Paleta de colores personalizada */
 :root {
-    /* Light mode colors */
-    --bg-primary: #eeeeee;
-    --bg-secondary: #f8fafc;
-    --bg-tertiary: #f1f5f9;
+    /* Light mode colors - Nueva paleta */
+    --bg-primary: #e6e1cd;      /* Crema */
+    --bg-secondary: #c6d8c0;    /* Verde menta */
+    --bg-tertiary: #d6b3b1;     /* Rosa pálido */
 
-    --text-primary: #000000;
-    --text-secondary: #64748b;
-    --text-muted: #94a3b8;
+    --text-primary: #231b42;    /* Púrpura oscuro */
+    --text-secondary: #4a3f6b;  /* Púrpura medio */
+    --text-muted: #7a6f99;      /* Púrpura claro */
 
-    --accent: #3182ce;
-    --accent-hover: #2c5282;
+    --accent: #f97992;          /* Rosa coral */
+    --accent-hover: #e85a75;    /* Rosa coral oscuro */
 
-    --border: #e2e8f0;
-    --border-light: #f1f5f9;
-    --shadow: rgba(0, 0, 0, 0.1);
+    --border: #c6d8c0;          /* Verde menta */
+    --border-light: #d6b3b1;    /* Rosa pálido */
+    --shadow: rgba(35, 27, 66, 0.1);
 
     /* Button colors */
-    --btn-primary: #000000;
-    --btn-primary-hover: #374151;
-    --btn-primary-text: #ffffff;
+    --btn-primary: #231b42;     /* Púrpura oscuro */
+    --btn-primary-hover: #4a3f6b;
+    --btn-primary-text: #e6e1cd; /* Crema */
 }
 
 /* ==========================

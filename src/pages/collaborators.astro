@@ -25,19 +25,19 @@ const { colaboradores, errorMessage } = await fetchCollaborators(apiUrl);
       ) : (
         <ul class="flex flex-wrap justify-center gap-6">
           {colaboradores.map((colaborador) => (
-            <li class="p-6 bg-black text-white rounded-lg shadow-lg flex flex-col items-center gap-4 w-64">
-              <div class="flex flex-col items-center">
+            <li class="collaborator-card p-6 rounded-xl shadow-lg flex flex-col items-center gap-4 w-64 transition-transform hover:scale-105">
+              <div class="flex flex-col items-center gap-3">
                 <Image
                   src={colaborador.avatar_url}
                   alt={colaborador.login}
                   loading="lazy"
                   width="96"
                   height="96"
-                  class="rounded-full border-4 border-white"
+                  class="rounded-full border-4 border-[#231b42] dark:border-[#c6d8c0] shadow-md"
                 />
                 <div class="text-center">
-                  <div class="font-bold text-xl">{colaborador.login}</div>
-                  <div class="text-gray-400 text-sm">
+                  <div class="font-bold text-xl collaborator-name">{colaborador.login}</div>
+                  <div class="text-[#333333] dark:text-[#c6d8c0] text-sm font-medium">
                     {colaborador.description
                       ? colaborador.description
                       : 'Contributor'}
@@ -45,7 +45,7 @@ const { colaboradores, errorMessage } = await fetchCollaborators(apiUrl);
                 </div>
               </div>
               {colaborador.contributions && (
-                <div class="text-center text-sm text-gray-400">
+                <div class="text-center text-sm font-semibold text-[#231b42] dark:text-[#c6d8c0]">
                   {colaborador.contributions} Contribuciones
                 </div>
               )}
@@ -53,6 +53,7 @@ const { colaboradores, errorMessage } = await fetchCollaborators(apiUrl);
                 href={colaborador.html_url}
                 title={`Ir a perfil de ${colaborador.login} en Github`}
                 aria-label={`Ir a perfil de ${colaborador.login} en Github`}
+                class="p-2 rounded-full bg-[#231b42] hover:bg-[#3d3266] transition-colors"
               >
                 <Icon
                   name="github"
@@ -60,7 +61,7 @@ const { colaboradores, errorMessage } = await fetchCollaborators(apiUrl);
                   height={24}
                   title="github"
                   aria-label="Ver en github"
-                  class="hover:underline font-bold uppercase hover:text-gray-500 text-white"
+                  class="text-white"
                 />
               </a>
             </li>
@@ -70,3 +71,23 @@ const { colaboradores, errorMessage } = await fetchCollaborators(apiUrl);
     }
   </div>
 </BaseLayout>
+
+<style>
+  .collaborator-card {
+    background-color: #f5f3e8;
+    border: 1px solid #c6d8c0;
+  }
+
+  .collaborator-name {
+    color: #000000 !important;
+  }
+
+  :global(.dark) .collaborator-card {
+    background-color: #2a2a2a;
+    border-color: #4a3f6b;
+  }
+
+  :global(.dark) .collaborator-name {
+    color: #ffffff !important;
+  }
+</style>

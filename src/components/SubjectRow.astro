@@ -20,11 +20,11 @@ const { subject, prerequisiteNames } = Astro.props;
     </p>
     {
       subject.prerequisites.length === 0 ? (
-        <p class="text-xs text-gray-500 dark:text-gray-400">
+        <p class="text-xs text-[var(--text-muted)] dark:text-gray-400">
           Sin correlativas previas
         </p>
       ) : (
-        <p class="text-xs text-gray-500 dark:text-gray-400">
+        <p class="text-xs text-[var(--text-muted)] dark:text-gray-400">
           Requiere: {prerequisiteNames.join(', ')}
         </p>
       )
@@ -49,7 +49,7 @@ const { subject, prerequisiteNames } = Astro.props;
           ))}
         </ul>
       ) : (
-        <span class="text-xs text-gray-600 dark:text-gray-400 italic">
+        <span class="text-xs text-[var(--text-muted)] dark:text-gray-400 italic">
           Sin correlativas
         </span>
       )
@@ -63,7 +63,7 @@ const { subject, prerequisiteNames } = Astro.props;
   <td class="text-center">
     <input
       type="checkbox"
-      class="subject-checkbox accent-black dark:accent-white"
+      class="subject-checkbox accent-[var(--accent)] dark:accent-white"
       checked={subject.isPassed}
       data-subject-checkbox
       data-subject-id={subject.id}
@@ -79,11 +79,11 @@ const { subject, prerequisiteNames } = Astro.props;
   }
 
   .subject-row--pending {
-    background-color: #fffbeb;
+    background-color: var(--bg-tertiary); /* Rosa pálido */
   }
 
   .subject-row--approved {
-    background-color: #dcfce7;
+    background-color: var(--bg-secondary); /* Verde menta */
   }
 
   .prereq-pill {
@@ -96,15 +96,15 @@ const { subject, prerequisiteNames } = Astro.props;
   }
 
   .prereq-pill--met {
-    background-color: #dcfce7;
-    color: #15803d;
-    border-color: #15803d;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
   }
 
   .prereq-pill--pending {
-    background-color: #aeaaff;
-    color: #273d96;
-    border-color: #261cb9;
+    background-color: var(--accent);
+    color: white;
+    border-color: var(--accent-hover);
   }
 
   .subject-checkbox {

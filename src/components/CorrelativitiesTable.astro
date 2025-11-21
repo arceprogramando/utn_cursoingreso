@@ -17,12 +17,12 @@ const subjectsMap = new Map(subjects.map((s) => [s.id, s]));
   </p>
 
   <div
-    class="overflow-x-auto border border-gray-200 dark:border-zinc-700 rounded-xl shadow-sm bg-white/90 dark:bg-zinc-950/80"
+    class="overflow-x-auto border border-[var(--border)] dark:border-zinc-700 rounded-xl shadow-sm bg-[var(--bg-primary)]/90 dark:bg-zinc-950/80"
   >
     <table
-      class="min-w-full divide-y divide-gray-200 dark:divide-zinc-800 text-sm"
+      class="min-w-full divide-y divide-[var(--border)] dark:divide-zinc-800 text-sm"
     >
-      <thead class="bg-blue-400 text-white">
+      <thead class="bg-[var(--btn-primary)] text-[var(--btn-primary-text)]">
         <tr class="*:py-3 *:px-2 text-xs uppercase tracking-wide">
           <th class="text-center w-10">Nº</th>
           <th class="text-left min-w-56">Asignatura</th>

@@ -24,46 +24,40 @@ const motivationalPhrase = getMotivationalPhrase(percentageApproved);
 ---
 
 <section
-  class="p-4 rounded-lg shadow bg-white dark:bg-zinc-900 text-fixed space-y-4"
+  class="p-4 rounded-lg shadow-md space-y-4 progress-section"
 >
-  <p class="text-xl text-center font-bold">Progreso Universitario</p>
+  <p class="text-xl text-center font-bold progress-title">Progreso Universitario</p>
 
-  <p class="text-center text-xs">
-    <span data-progress-percentage>
+  <p class="text-center text-xs progress-subtitle">
+    <span data-progress-percentage class="font-semibold progress-value">
       {percentageApproved.toFixed(1)}
     </span>
     % del plan completado
   </p>
 
-  <div class="charge-bar bg-gray-200 dark:bg-zinc-800">
+  <div class="charge-bar">
     <div
-      class="charge-bar-progress bg-black dark:bg-white"
+      class="charge-bar-progress"
       data-progress-bar
       style={{ width: `${percentageApproved}%` }}
     />
   </div>
 
-  <p class="text-sm text-center" data-motivational>
+  <p class="text-sm text-center progress-subtitle" data-motivational>
     {motivationalPhrase}
   </p>
 
   <div class="mt-2 flex flex-wrap gap-4 justify-center text-sm md:text-base">
-    <p class="text-lg font-semibold">
+    <p class="text-lg font-semibold progress-title">
       Horas cursadas:
-      <span
-        class="font-bold text-blue-600 dark:text-blue-400"
-        data-hours-completed
-      >
+      <span class="font-bold progress-accent" data-hours-completed>
         {completedHours}
       </span>
     </p>
 
-    <p class="text-lg font-semibold">
+    <p class="text-lg font-semibold progress-title">
       Horas restantes:
-      <span
-        class="font-bold text-blue-600 dark:text-blue-400"
-        data-hours-missing
-      >
+      <span class="font-bold progress-accent" data-hours-missing>
         {pendingHours}
       </span>
     </p>
@@ -71,15 +65,49 @@ const motivationalPhrase = getMotivationalPhrase(percentageApproved);
 </section>
 
 <style>
+  /* Light mode (default) */
+  .progress-section {
+    background-color: #f5f3e8;
+  }
+  .progress-title {
+    color: #231b42;
+  }
+  .progress-subtitle {
+    color: #4a3f6b;
+  }
+  .progress-value {
+    color: #231b42;
+  }
+  .progress-accent {
+    color: #f97992;
+  }
   .charge-bar {
     height: 20px;
     border-radius: 10px;
     width: 100%;
     overflow: hidden;
+    background-color: #c6d8c0;
   }
-
   .charge-bar-progress {
     height: 100%;
     transition: width 0.3s ease-in-out;
+    background-color: #f97992;
+  }
+
+  /* Dark mode */
+  :global(.dark) .progress-section {
+    background-color: #1f1f1f;
+  }
+  :global(.dark) .progress-title {
+    color: #e6e1cd;
+  }
+  :global(.dark) .progress-subtitle {
+    color: #c6d8c0;
+  }
+  :global(.dark) .progress-value {
+    color: #e6e1cd;
+  }
+  :global(.dark) .charge-bar {
+    background-color: #4a3f6b;
   }
 </style>

@@ -7,14 +7,14 @@ import ThemeToggle from '@/components/ThemeToggle.astro';
 
 <header class="md:hidden">
   <div
-    class="bg-white dark:bg-gray-800 fixed m-4 rounded-xl bottom-20 -right-[500px] transition-all h-auto pb-8 w-[290px] md:w-[350px] lg:[420px] z-50"
+    class="bg-[var(--bg-primary)] dark:bg-gray-800 fixed m-4 rounded-xl bottom-20 -right-[500px] transition-all h-auto pb-8 w-[290px] md:w-[350px] lg:[420px] z-50 shadow-lg"
     id="side_Menu"
   >
     <nav class="flex flex-col md:flex-row gap-2">
       <div class="flex justify-between items-center px-2">
         <ThemeToggle />
         <button
-          class="bg-black dark:bg-white text-white dark:text-black m-2 rounded-xl"
+          class="bg-[var(--btn-primary)] dark:bg-white text-[var(--btn-primary-text)] dark:text-black m-2 rounded-xl"
           id="side_menu_cross"
           aria-label="boton para cerrar el menu"
         >

@@ -8,21 +8,21 @@ import Navigation from '@/components/Navigation.astro';
     fixed top-0 left-0 w-full
     py-4 z-50
 
-    /* 🔆 MODO CLARO: más clarito, suave, lindo */
-    bg-zinc-200/80 
+    /* 🔆 MODO CLARO */
+    bg-[var(--bg-primary)]/90
     backdrop-blur-md
 
-    /* 🌙 MODO OSCURO: oscuro suave, elegante */
-    dark:bg-zinc-700/70 
+    /* 🌙 MODO OSCURO */
+    dark:bg-zinc-700/70
     dark:backdrop-blur-md
 
     /* BORDES */
-    border-t border-zinc-300/60 
-    dark:border-zinc-300/60
+    border-t border-[var(--border)]/60
+    dark:border-zinc-600/60
     sm:border-0
 
     /* SOMBRA */
-    shadow-lg shadow-black/10 
+    shadow-lg shadow-[var(--text-primary)]/10
     dark:shadow-black/30
 
     /* TRANSICIÓN */
