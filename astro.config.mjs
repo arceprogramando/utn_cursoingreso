@@ -92,7 +92,7 @@ export default defineConfig({
           },
           // Páginas locales
           {
-            urlPattern: ({ request, url }) => {
+            urlPattern: ({ request }) => {
               return request.mode === 'navigate';
             },
             handler: 'NetworkFirst',
