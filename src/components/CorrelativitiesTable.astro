@@ -17,16 +17,18 @@ const subjectsMap = new Map(subjects.map((s) => [s.id, s]));
   </p>
 
   <div
-    class="overflow-x-auto border border-[var(--border)] dark:border-zinc-700 rounded-xl shadow-sm bg-[var(--bg-primary)]/90 dark:bg-zinc-950/80 max-w-full"
+    class="overflow-x-auto border border-(--border) dark:border-zinc-700 rounded-xl shadow-sm bg-(--bg-primary)/90 dark:bg-zinc-950/80 max-w-full"
   >
     <table
-      class="w-full divide-y divide-[var(--border)] dark:divide-zinc-800 text-sm table-auto"
+      class="w-full divide-y divide-(--border) dark:divide-zinc-800 text-sm table-auto"
     >
-      <thead class="bg-[var(--btn-primary)] text-[var(--btn-primary-text)]">
+      <thead class="bg-(--btn-primary) text-(--btn-primary-text)">
         <tr class="*:py-3 *:px-2 text-xs uppercase tracking-wide">
           <th class="text-center w-8 md:w-10">Nº</th>
           <th class="text-left">Asignatura</th>
-          <th class="text-center hidden md:table-cell">Correlativas necesarias</th>
+          <th class="text-center hidden md:table-cell"
+            >Correlativas necesarias</th
+          >
           <th class="text-center w-16 md:w-24">Horas</th>
           <th class="text-center w-8 md:w-10">✅</th>
         </tr>
@@ -39,7 +41,10 @@ const subjectsMap = new Map(subjects.map((s) => [s.id, s]));
             );
 
             return (
-              <SubjectRow subject={subject} prerequisiteNames={prerequisiteNames} />
+              <SubjectRow
+                subject={subject}
+                prerequisiteNames={prerequisiteNames}
+              />
             );
           })
         }

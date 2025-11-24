@@ -20,11 +20,11 @@ const { subject, prerequisiteNames } = Astro.props;
     </p>
     {
       subject.prerequisites.length === 0 ? (
-        <p class="text-xs text-[var(--text-muted)] dark:text-gray-400">
+        <p class="text-xs text-(--text-muted) dark:text-gray-400">
           Sin correlativas previas
         </p>
       ) : (
-        <p class="text-xs text-[var(--text-muted)] dark:text-gray-400">
+        <p class="text-xs text-(--text-muted) dark:text-gray-400">
           Requiere: {prerequisiteNames.join(', ')}
         </p>
       )
@@ -44,12 +44,13 @@ const { subject, prerequisiteNames } = Astro.props;
               data-prereq-pill
               data-prereq-id={prereqId}
             >
-              {prerequisiteNames[subject.prerequisites.indexOf(prereqId)] ?? 'Correlativa'}
+              {prerequisiteNames[subject.prerequisites.indexOf(prereqId)] ??
+                'Correlativa'}
             </li>
           ))}
         </ul>
       ) : (
-        <span class="text-xs text-[var(--text-muted)] dark:text-gray-400 italic">
+        <span class="text-xs text-(--text-muted) dark:text-gray-400 italic">
           Sin correlativas
         </span>
       )
@@ -63,7 +64,7 @@ const { subject, prerequisiteNames } = Astro.props;
   <td class="text-center">
     <input
       type="checkbox"
-      class="subject-checkbox accent-[var(--accent)] dark:accent-white"
+      class="subject-checkbox accent-(--accent) dark:accent-white"
       checked={subject.isPassed}
       data-subject-checkbox
       data-subject-id={subject.id}
@@ -75,7 +76,9 @@ const { subject, prerequisiteNames } = Astro.props;
 <style>
   .subject-row {
     cursor: pointer;
-    transition: background-color 0.15s ease, box-shadow 0.15s ease;
+    transition:
+      background-color 0.15s ease,
+      box-shadow 0.15s ease;
   }
 
   .subject-row--pending {
