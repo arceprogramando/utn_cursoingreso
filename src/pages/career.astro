@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import CardPostImage from '@/components/CardPostImage.astro';
 import { getCollection } from 'astro:content';
+import { careerSlug } from '@/utils/careerSlug';
 
 const title = 'Materias de la Tecnicatura Universitaria en Programación - UTN 2025';
 const subTitle = 'Matérias';
@@ -36,14 +37,14 @@ const sectionTitles : SectionTitle[] = [
           <>
             <h2 class="w-full text-center text-2xl font-bold">{title}</h2>
             <ul class="flex justify-center gap-2 flex-wrap">
-              {sectionEntries.map(({ data, slug }) => {
+              {sectionEntries.map(({ data, id }) => {
                 const { image } = data || {};
                 const imageUrl = image?.url || '';
                 const imageAlt = image?.alt || 'Imagen sin descripción';
 
                 return (
                   <CardPostImage
-                    url={`/career/${slug}`}
+                    url={`/career/${careerSlug(id)}`}
                     tag={imageUrl}
                     alt={imageAlt}
                     decoding="async"

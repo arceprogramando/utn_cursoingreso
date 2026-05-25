@@ -4,12 +4,13 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import Prose from '@/components/Prose.astro';
 import addSpaceBeforeSecondUppercase from '@/utils/addSpaceBeforeSecondUppercase';
+import { careerSlug } from '@/utils/careerSlug';
 
 export async function getStaticPaths() {
   const career = await getCollection('career');
 
   return career.map((career) => ({
-    params: { id: career.slug },
+    params: { id: careerSlug(career.id) },
     props: { career },
   }));
 }

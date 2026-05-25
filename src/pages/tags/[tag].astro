@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import CardPostImage from '@/components/CardPostImage.astro';
 import { getCollection } from 'astro:content';
 import addSpaceBeforeSecondUppercase from '@/utils/addSpaceBeforeSecondUppercase';
+import { careerSlug } from '@/utils/careerSlug';
 
 export async function getStaticPaths() {
   const career = await getCollection('career');
@@ -44,7 +45,7 @@ const titleWithSpacing = addSpaceBeforeSecondUppercase(title);
   <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
     {
       posts.map((post) => {
-        const url = post.slug.toLowerCase();
+        const url = careerSlug(post.id);
         const imageUrl = post.data?.image?.url || '';
         const imageAlt = post.data?.image?.alt || '';
 

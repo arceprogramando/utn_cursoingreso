@@ -1,6 +1,9 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 const career = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/career' }),
   schema: z.object({
     layout: z.string().optional(),
     title: z.string(),
@@ -9,7 +12,7 @@ const career = defineCollection({
       .string()
       .optional()
       .refine((desc) => !desc || (desc.length > 150 && desc.length < 160), {
-        message: `La descripción debe tener entre 150 y 160 caracteres si se proporciona.`,
+        message: 'La descripción debe tener entre 150 y 160 caracteres si se proporciona.',
       }),
     image: z
       .object({
@@ -17,7 +20,7 @@ const career = defineCollection({
         alt: z.string().optional(),
       })
       .optional(),
-    pubDate: z.date(),
+    pubDate: z.coerce.date(),
     tags: z.array(z.string()),
     totalTimeClass: z.number(),
     totalExam: z.number(),
