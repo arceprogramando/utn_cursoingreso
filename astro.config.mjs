@@ -8,7 +8,7 @@ import AstroPWA from '@vite-pwa/astro';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://utn-cursoingreso.vercel.app',
+  site: 'https://utn.arceprog.dev',
 
   integrations: [
     sitemap({
@@ -76,7 +76,7 @@ export default defineConfig({
         runtimeCaching: [
           // Páginas HTML - Network First con fallback a caché
           {
-            urlPattern: /^https:\/\/utn-cursoingreso\.vercel\.app\/.*$/,
+            urlPattern: /^https:\/\/utn\.arceprog\.dev\/.*$/,
             handler: 'NetworkFirst',
             options: {
               cacheName: 'pages-cache',

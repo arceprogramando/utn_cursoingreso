@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "utn-cursoingreso.vercel.app" }],
+      "destination": "https://utn.arceprog.dev/:path*",
+      "permanent": true
+    }
+  ]
+}
