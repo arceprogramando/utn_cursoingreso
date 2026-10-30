@@ -1,4 +1,5 @@
 ---
+import { Font } from 'astro:assets';
 import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
 
@@ -14,7 +15,7 @@ const siteUrl = 'https://utn.arceprog.dev';
 const {
   title = 'Tecnicatura en Programación',
   thumbnailImage = `${siteUrl}/og-image.jpg`,
-  description = 'Descubre la Tecnicatura Universitaria en Programación en la Universidad Técnica Nacional, aprende los conceptos para iniciarte en la programación en 2025.',
+  description = 'Apuntes y recursos de la Tecnicatura Universitaria en Programación de la Universidad Tecnológica Nacional, según el Plan 2024 vigente desde 2026.',
   keywords = 'Aprende cosas Nuevas',
 } = Astro.props;
 
@@ -26,7 +27,7 @@ const allKeywords = `${basicKeywords}, ${keywords}`;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es-AR">
   <head>
     <!-- Meta Tags -->
     <meta charset="utf-8" />
@@ -79,30 +80,11 @@ const allKeywords = `${basicKeywords}, ${keywords}`;
     <meta property="twitter:domain" content="utn.arceprog.dev" />
     <meta property="twitter:url" content={canonicalURL} />
 
-    <!-- Font - Carga asíncrona para evitar render-blocking -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Dancing+Script:wght@400;700&display=swap"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Dancing+Script:wght@400;700&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.setAttribute('media', 'all')"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Dancing+Script:wght@400;700&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
-
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
 
+    <Font cssVariable="--font-atkinson" preload />
+    <Font cssVariable="--font-jetbrains" preload />
     <title>{title}</title>
     <ClientRouter />
 
@@ -121,85 +103,45 @@ const allKeywords = `${basicKeywords}, ${keywords}`;
         };
 
         const theme = getInitialTheme();
-        if (theme === 'dark') {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+        document.documentElement.style.colorScheme = theme;
 
         // También aplicar después de navegación SPA
         document.addEventListener('astro:before-preparation', () => {
           const currentTheme =
             localStorage.getItem('theme') || getInitialTheme();
-          if (currentTheme === 'dark') {
-            document.documentElement.classList.add('dark');
-          } else {
-            document.documentElement.classList.remove('dark');
-          }
+          document.documentElement.classList.toggle('dark', currentTheme === 'dark');
+          document.documentElement.style.colorScheme = currentTheme;
         });
       })();
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <slot />
+    <script is:inline>
+      (function () {
+        function markExternalLinks() {
+          document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+            if (link.querySelector('.external-hint')) return;
+            const label = (link.getAttribute('aria-label') || link.textContent || '').toLowerCase();
+            if (label.includes('pestaña nueva')) return;
+            const hint = document.createElement('span');
+            hint.className = 'sr-only external-hint';
+            hint.textContent = ' (se abre en una pestaña nueva)';
+            link.append(hint);
+          });
+        }
+
+        markExternalLinks();
+        document.addEventListener('astro:page-load', markExternalLinks);
+      })();
+    </script>
   </body>
 </html>
 
 <style is:global>
-  .gradient {
-    font-weight: bold;
-    background-image: linear-gradient(92deg, var(--text-secondary) 5%, var(--text-primary) 90%, var(--text-secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   body {
-    --sb-track-color: var(--bg-primary);
-    --sb-thumb-color: var(--text-primary);
-    --sb-size: 10px;
-  }
-
-  html {
-    font-family: 'Roboto', serif;
-    overflow-x: hidden;
-  }
-
-  body::-webkit-scrollbar {
-    width: var(--sb-size);
-  }
-
-  body::-webkit-scrollbar-track {
-    background: var(--sb-track-color);
-    border-radius: 10px;
-  }
-
-  body::-webkit-scrollbar-thumb {
-    background: var(--sb-thumb-color);
-    border-radius: 10px;
-  }
-
-  @supports not selector(::-webkit-scrollbar) {
-    body {
-      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-    }
-  }
-
-  .reset {
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  main {
-    flex-grow: 1;
+    scrollbar-color: var(--text-primary) var(--bg-primary);
   }
 </style>
