@@ -38,19 +38,38 @@ const titleWithSpacing = addSpaceBeforeSecondUppercase(title);
 ---
 
 <BaseLayout
-  title={`Apuntes con el tag: ${titleWithSpacing}`}
-  subTitle={`TAGS: ${titleWithSpacing}`}
-  description={`Encuentra Materias de ${titleWithSpacing} como: ${description}`}
+  title={`Materias del tema ${titleWithSpacing}`}
+  subTitle={titleWithSpacing}
+  description={`Materias agrupadas por el tema ${titleWithSpacing}: ${description}`}
 >
-  <ul class="flex gap-2 justify-center max-w-3xl flex-wrap">
+  <ul class="tag-results" aria-label={`Materias del tema ${titleWithSpacing}`}>
     {
       posts.map((post) => {
         const url = careerSlug(post.id);
         const imageUrl = post.data?.image?.url || '';
         const imageAlt = post.data?.image?.alt || '';
 
-        return <CardPostImage url={`/career/${url}`} tag={imageUrl} alt={imageAlt} />;
+        return (
+          <CardPostImage
+            url={`/career/${url}`}
+            tag={imageUrl}
+            alt={imageAlt || post.data.title}
+            title={post.data.title}
+          />
+        );
       })
     }
   </ul>
 </BaseLayout>
+
+<style>
+  .tag-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+    gap: 1rem;
+    width: min(100%, 48rem);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+</style>

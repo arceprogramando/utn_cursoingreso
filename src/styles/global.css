@@ -1,114 +1,287 @@
-/* ==========================
-   VARIABLES LIGHT MODE
-   ========================== */
-/* Paleta de colores personalizada */
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* El modo oscuro lo controla la clase .dark, no el sistema operativo. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Catppuccin Latte / Mocha. Texto y enlaces por encima de 4.5:1. */
 :root {
-    /* Light mode colors - Nueva paleta */
-    --bg-primary: #e6e1cd;      /* Crema */
-    --bg-secondary: #c6d8c0;    /* Verde menta */
-    --bg-tertiary: #d6b3b1;     /* Rosa pálido */
-
-    --text-primary: #231b42;    /* Púrpura oscuro */
-    --text-secondary: #4a3f6b;  /* Púrpura medio */
-    --text-muted: #7a6f99;      /* Púrpura claro */
-
-    --accent: #f97992;          /* Rosa coral */
-    --accent-hover: #e85a75;    /* Rosa coral oscuro */
-
-    --border: #c6d8c0;          /* Verde menta */
-    --border-light: #d6b3b1;    /* Rosa pálido */
-    --shadow: rgba(35, 27, 66, 0.1);
-
-    /* Button colors */
-    --btn-primary: #231b42;     /* Púrpura oscuro */
-    --btn-primary-hover: #4a3f6b;
-    --btn-primary-text: #e6e1cd; /* Crema */
+  color-scheme: light;
+  --bg-primary: #eff1f5;
+  --bg-secondary: #e6e9ef;
+  --bg-tertiary: #dce0e8;
+  --text-primary: #4c4f69;
+  --text-secondary: #5c5f77;
+  --text-muted: #55586f;
+  --accent: #1e40af;
+  --accent-hover: #1e3a8a;
+  --accent-2: #8839ef;
+  --border: #9ca0b0;
+  --border-light: #ccd0da;
+  --shadow: rgba(76, 79, 105, 0.14);
+  --btn-primary: #4c4f69;
+  --btn-primary-hover: #5c5f77;
+  --btn-primary-text: #eff1f5;
+  --focus: #1e66f5;
+  --danger: #d20f39;
+  --success: #40a02b;
+  --grid: rgba(76, 79, 105, 0.16);
+  --font-ui: var(--font-jetbrains), ui-monospace, monospace;
 }
 
-/* ==========================
-   VARIABLES DARK MODE
-   ========================== */
 .dark {
-    /* Dark mode colors */
-    --bg-primary: #292929;
-    --bg-secondary: #1e293b;
-    --bg-tertiary: #334155;
-
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-    --text-muted: #94a3b8;
-
-    --accent: #60a5fa;
-    --accent-hover: #3b82f6;
-
-    --border: #334155;
-    --border-light: #475569;
-    --shadow: rgba(0, 0, 0, 0.3);
-
-    /* Button colors */
-    --btn-primary: #f8fafc;
-    --btn-primary-hover: #e2e8f0;
-    --btn-primary-text: #0f172a;
+  color-scheme: dark;
+  --bg-primary: #1e1e2e;
+  --bg-secondary: #181825;
+  --bg-tertiary: #313244;
+  --text-primary: #cdd6f4;
+  --text-secondary: #bac2de;
+  --text-muted: #a6adc8;
+  --accent: #89b4fa;
+  --accent-hover: #b4befe;
+  --accent-2: #cba6f7;
+  --border: #45475a;
+  --border-light: #313244;
+  --shadow: rgba(0, 0, 0, 0.45);
+  --btn-primary: #cdd6f4;
+  --btn-primary-hover: #bac2de;
+  --btn-primary-text: #1e1e2e;
+  --focus: #89b4fa;
+  --danger: #f38ba8;
+  --success: #a6e3a1;
+  --grid: rgba(205, 214, 244, 0.07);
 }
 
-/* ==========================
-   TEXTOS FIJOS
-   ========================== */
-/* Igual que antes: negro en claro, clarito en oscuro */
 .text-fixed {
-    color: black;
-}
-.dark .text-fixed {
-    color: rgb(240, 240, 240);
+  color: var(--text-primary);
 }
 
-/* ==========================
-   TIPOGRAFÍA GLOBAL SUAVE
-   ========================== */
-/* Esto solo asegura que TODO texto base use text-primary.
-   No forzamos colores raros (nada celeste acá). */
+html {
+  font-family: var(--font-atkinson), "Segoe UI", sans-serif;
+  font-synthesis: none;
+  scroll-padding-top: 6.25rem;
+}
 
 body {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--bg-primary);
+  background-image: radial-gradient(var(--grid) 1px, transparent 1px);
+  background-size: 22px 22px;
+  color: var(--text-primary);
+  font-size: 1.0625rem;
+  line-height: 1.65;
 }
 
-/* Títulos y texto base: heredarán el text-primary del body,
-   pero si un componente usa text-fixed, va a respetar eso. */
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
 p,
 li {
-    color: var(--text-primary);
-    transition: color 0.3s ease;
+  color: var(--text-primary);
 }
 
-/* Dejamos los enlaces sin forzar color especial,
-   así usan lo que diga Tailwind o el componente. */
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  background: var(--btn-primary);
+  color: var(--btn-primary-text);
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
 
-/* ==========================
-   ACCESIBILIDAD
-   ========================== */
-/* Screen reader only - oculta visualmente pero mantiene accesible */
+.skip-link:focus {
+  transform: none;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  scroll-margin-top: 6.5rem;
+  scroll-margin-bottom: 1.5rem;
+}
+
+/* El color solo no identifica un enlace. Los controles con borde quedan sin subrayado. */
+main :where(a) {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+main :where(
+  .subject-card a,
+  .program-card,
+  .plan-links a,
+  .tag-link,
+  .tag-item,
+  .download-note,
+  .github-link,
+  .project-link,
+  .social-link
+) {
+  text-decoration: none;
+}
+
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-/* ==========================
-   IMPORTS TAILWIND
-   ========================== */
-@import "tailwindcss";
-@plugin "@tailwindcss/typography";
+.reset {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.prose {
+  --tw-prose-body: var(--text-primary);
+  --tw-prose-headings: var(--text-primary);
+  --tw-prose-lead: var(--text-secondary);
+  --tw-prose-links: var(--accent);
+  --tw-prose-bold: var(--text-primary);
+  --tw-prose-counters: var(--text-secondary);
+  --tw-prose-bullets: var(--text-secondary);
+  --tw-prose-hr: var(--border);
+  --tw-prose-quotes: var(--text-secondary);
+  --tw-prose-quote-borders: var(--accent);
+  --tw-prose-captions: var(--text-secondary);
+  --tw-prose-code: var(--text-primary);
+  --tw-prose-pre-code: var(--text-primary);
+  --tw-prose-pre-bg: var(--bg-tertiary);
+  --tw-prose-th-borders: var(--border);
+  --tw-prose-td-borders: var(--border);
+}
+
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  font-weight: 700;
+}
+
+.prose a:hover {
+  color: var(--accent-hover);
+}
+
+.prose code {
+  background-color: var(--bg-tertiary);
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+}
+
+.prose :where(code):not(:where(pre *))::before,
+.prose :where(code):not(:where(pre *))::after {
+  content: none;
+}
+
+.formula {
+  max-width: 100%;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.katex {
+  font-size: 1.05em;
+  color: var(--text-primary);
+}
+
+/* Utilidades de color que en el contenido no llegan a 4.5:1. */
+html .text-orange-600 {
+  color: #9a3412;
+}
+
+html.dark .text-orange-600 {
+  color: #fdba74;
+}
+
+html .text-green-600,
+html .text-green-900 {
+  color: #166534;
+}
+
+html.dark .text-green-600,
+html.dark .text-green-900 {
+  color: #86efac;
+}
+
+html .text-gray-500,
+html .text-gray-600,
+html .text-gray-700 {
+  color: var(--text-secondary);
+}
+
+html .text-blue-500 {
+  color: var(--accent);
+}
+
+html .text-red-500 {
+  color: var(--danger);
+}
+
+html.dark .text-black {
+  color: var(--text-primary);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .site-header,
+  .menu-panel,
+  .program-card,
+  .subject-card a {
+    backdrop-filter: none;
+    background: var(--bg-secondary);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --border: #1c1917;
+    --text-secondary: #1c1917;
+    --text-muted: #1c1917;
+  }
+
+  .dark {
+    --border: #f5f5f4;
+    --text-secondary: #f5f5f4;
+    --text-muted: #f5f5f4;
+  }
+}

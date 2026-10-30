@@ -1,0 +1,25 @@
+---
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import SideMenu from '@/components/layout/SideMenu.astro';
+import Layout from '@/layouts/Layout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+}
+
+const { title, description, keywords } = Astro.props;
+---
+
+<Layout title={title} description={description} keywords={keywords}>
+  <div class="flex min-h-screen flex-col justify-around">
+    <header>
+      <Header />
+    </header>
+    <SideMenu />
+    <slot />
+    <Footer />
+  </div>
+</Layout>

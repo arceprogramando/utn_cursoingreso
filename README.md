@@ -25,7 +25,7 @@ Sitio web educativo que recopila apuntes, materiales y proyectos de la **Tecnica
 ## 🛠️ Instalación y Desarrollo
 
 ### Prerrequisitos
-- Node.js 18+ 
+- Node.js 22.22 o superior 
 - npm o yarn
 
 ### Configuración
@@ -93,7 +93,7 @@ npm run dev
 
 ## 📝 Licencia
 
-Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
+El repositorio no incluye un archivo de licencia. Si vas a reutilizar el material, consultá con quien mantiene el proyecto.
 
 ## 👥 Equipo
 

@@ -1,31 +1,11 @@
 ---
+import Social from '@/components/Social.astro';
+import ExternalLink from '@/components/ExternalLink.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { projects } from '@/data/projects';
+
 const title = 'Proyectos de Alumnos de la Tecnicatura en Programación';
 const subTitle = 'Proyectos UTN';
-import Social from '@/components/Social.astro';
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import type { Project } from '@/types/project';
-
-const projects: Project[] = [
-  {
-    title: 'Tecnicatura Universitaria',
-    description:
-      'Web hecha para mejorar el acceso a la información de la Tecnicatura Universitaria en Programación.',
-    image: '/AnimeLeyendo.avif',
-    link: 'https://utn.arceprog.dev/',
-    tags: ['Astro.js', 'TailwindCSS', 'TypeScript'],
-    github: 'https://github.com/arceprogramando/utn_cursoingreso',
-    date: '2024',
-  },
-  {
-    title: 'Registro Profesores',
-    description:
-      'Aplicacion de escritorio en C# con WPF para registrar profesores y asignarlas a las materias que dictan.',
-    image: '/ProyectoUniversidad1.png',
-    tags: ['C#', 'WPF', 'XAML', '.NET'],
-    github: 'https://github.com/r0minaflorencia/Registro-de-profesores',
-    date: '2024',
-  },
-];
 ---
 
 <BaseLayout
@@ -40,136 +20,155 @@ const projects: Project[] = [
       Recopilación de proyectos hechos por los estudiantes de la UTN
     </h2>
   </div>
-  <!-- <p>Como aportar un proyecto:</p> -->
+  <p class="max-w-2xl text-center mb-6">
+    Si cursás la tecnicatura y querés sumar un proyecto, abrí un issue en el
+    <ExternalLink href="https://github.com/arceprogramando/utn_cursoingreso/issues">
+      repositorio
+    </ExternalLink>
+    con el título, una descripción, las tecnologías y el enlace.
+  </p>
 
-  <div class="flex flex-col md:flex-row gap-4 justify-center items-stretch">
+  <ul class="project-list">
     {
       projects.map((project) => (
-        <div class="project-card w-full max-w-[250px] rounded-lg shadow-lg overflow-hidden">
-          <div>
-            <div>
-              <img
-                src={project.image}
-                alt={`Imagen de ${project.title}`}
-                class="w-full h-auto min-h-[135px]"
-              />
-            </div>
-            <div class="px-4 pt-4 flex justify-center items-center gap-4">
+        <li class="project-card">
+          <article>
+            <h3 class="project-title">{project.title}</h3>
+            <img
+              src={project.image}
+              alt={`Captura del proyecto ${project.title}`}
+              width="400"
+              height="225"
+              class="project-image"
+            />
+            <p class="project-description">{project.description}</p>
+            <ul class="project-actions" aria-label={`Enlaces de ${project.title}`}>
               {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  class="project-link hover:opacity-70"
-                  aria-label="Ir a la web del proyecto"
-                  title="Ir a la web del proyecto"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide-icon lucide lucide-link"
+                <li>
+                  <ExternalLink
+                    href={project.link}
+                    class="project-link"
+                    label={`Sitio web de ${project.title}`}
                   >
-                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                  </svg>
-                </a>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                    </svg>
+                  </ExternalLink>
+                </li>
               )}
-              <Social
-                platform={project.github}
-                red="github"
-                icon="github"
-                alt="Ver en Github"
-                classValues="hover:underline font-bold uppercase hover:opacity-70 project-link"
-              />
-            </div>
-            <div class="px-4 py-2">
-              <h3 class="text-1xl font-bold tracking-tight project-title">{project.title}</h3>
-              <p class="text-sm project-description">
-                {project?.description
-                  ? project.description.length > 100
-                    ? `${project.description.slice(0, 100)}...`
-                    : project.description
-                  : ''}
-              </p>
-            </div>
-          </div>
-          <div class="flex flex-wrap justify-center gap-2 py-4">
-            {project.tags.map((tag, index) =>
-              index % 2 === 0 ? (
-                <span class="project-tag-primary py-1 px-3 text-xs rounded">
-                  {tag}
-                </span>
-              ) : (
-                <span class="project-tag-secondary py-1 px-3 text-xs rounded">
-                  {tag}
-                </span>
-              )
-            )}
-          </div>
-        </div>
+              <li>
+                <Social
+                  platform={project.github}
+                  red="github"
+                  icon="github"
+                  alt={`Repositorio de ${project.title} en GitHub`}
+                />
+              </li>
+            </ul>
+            <ul class="project-tags" aria-label={`Tecnologías de ${project.title}`}>
+              {project.tags.map((tag) => (
+                <li>{tag}</li>
+              ))}
+            </ul>
+          </article>
+        </li>
       ))
     }
-  </div>
+  </ul>
 </BaseLayout>
 
-<style is:global>
+<style>
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
   .project-card {
-    background-color: #f5f3e8;
-    border: 1px solid #c6d8c0;
+    width: 100%;
+    max-width: 18rem;
+    overflow: hidden;
+    border: 2px solid var(--border-light);
+    border-radius: 0.75rem;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
   }
 
-  .project-card .project-title {
-    color: #000000;
+  .project-title {
+    margin: 0;
+    padding: 1rem 1rem 0.35rem;
+    color: var(--text-primary);
+    font-size: 1.15rem;
+    line-height: 1.3;
   }
 
-  .project-card .project-description {
-    color: #333333;
+  .project-image {
+    width: 100%;
+    height: auto;
   }
 
-  .project-card .project-link {
-    color: #231b42;
+  .project-description {
+    margin: 0;
+    padding: 0.35rem 1rem 0;
+    color: var(--text-secondary);
   }
 
-  .project-tag-primary {
-    background-color: #231b42;
-    color: #f5f3e8;
+  .project-actions,
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0.75rem 1rem 0;
+    list-style: none;
   }
 
-  .project-tag-secondary {
-    background-color: #c6d8c0;
-    color: #231b42;
+  .project-tags {
+    padding-bottom: 1rem;
   }
 
-  .dark .project-card {
-    background-color: #2a2a2a;
-    border-color: #4a3f6b;
+  .project-tags li {
+    padding: 0.2rem 0.55rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    font-size: 0.85rem;
   }
 
-  .dark .project-card .project-title {
-    color: #ffffff;
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    color: var(--text-primary);
   }
 
-  .dark .project-card .project-description {
-    color: #c6d8c0;
+  .project-list a {
+    color: var(--accent);
+    font-weight: 700;
   }
 
-  .dark .project-card .project-link {
-    color: #e6e1cd;
-  }
-
-  .dark .project-tag-primary {
-    background-color: #4a3f6b;
-    color: #e6e1cd;
-  }
-
-  .dark .project-tag-secondary {
-    background-color: #3d3266;
-    color: #c6d8c0;
+  p a {
+    color: var(--accent);
+    text-underline-offset: 0.15em;
   }
 </style>

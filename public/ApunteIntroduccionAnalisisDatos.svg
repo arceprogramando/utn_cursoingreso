@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640" role="img" aria-label="Portada de Introducción al Análisis de Datos">
+  <rect width="640" height="640" fill="#1d4e89"/>
+  <rect x="48" y="48" width="544" height="544" fill="none" stroke="#f4f1ea" stroke-width="8"/>
+  <path d="M120 460 V220 M120 460 H500" fill="none" stroke="#f4f1ea" stroke-width="10" stroke-linecap="round"/>
+  <path d="M160 400 L250 330 L340 360 L470 230" fill="none" stroke="#9ec5ff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="250" cy="330" r="12" fill="#f4f1ea"/>
+  <circle cx="340" cy="360" r="12" fill="#f4f1ea"/>
+  <circle cx="470" cy="230" r="12" fill="#f4f1ea"/>
+  <text x="80" y="150" fill="#f4f1ea" font-family="Segoe UI, sans-serif" font-size="42" font-weight="700">Análisis de datos</text>
+</svg>

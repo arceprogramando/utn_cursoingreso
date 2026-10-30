@@ -1,0 +1,81 @@
+---
+title: Introducción al Análisis de Datos
+author: Guía del sitio (Plan 2024)
+description: "Guía de Introducción al Análisis de Datos del Plan 2024: conceptos, problemas típicos, herramientas y modelado. 32 horas de clase."
+image:
+  url: '/ApunteIntroduccionAnalisisDatos.svg'
+  alt: 'Portada de Introducción al Análisis de Datos'
+pubDate: 2026-10-30
+tags: ['Apuntes', 'AnalisisDeDatos', 'CuartoCuatrimestre']
+totalTimeClass: 32
+totalExam: 0
+totalTime: 32
+order: 17
+professor: A confirmar
+---
+<div className="text-fixed">
+
+### Introducción al análisis de datos
+
+Esta materia no tenía apunte en el sitio. La guía sigue los contenidos mínimos del Plan 2024 y está para orientarte hasta que haya notas de cátedra.
+
+Carga de clase: 2 horas semanales, 32 horas. La Ordenanza 2115 suma 18 horas de trabajo autónomo (50 horas totales, 2 créditos). Cuarto cuatrimestre. Correlativa habitual en este sitio: Base de Datos II.
+
+Fuente: [Ordenanza 2018, Plan 2024](http://csu.rec.utn.edu.ar/CSU/ORD/2018.pdf) y [Ordenanza 2115](https://www.frrq.utn.edu.ar/wp-content/uploads/2026/08/CSU-ORD-2115-Modificacion-Punto-8-Diseno-Curricular-TUP.pdf). Los mismos mínimos figuran en la [ordenanza de la modalidad a distancia](https://www.frsn.utn.edu.ar/wp-content/uploads/2024/12/CSU_ORD__0__2067.pdf).
+
+### Objetivos
+
+- Comprender los conceptos fundamentales del análisis de datos.
+- Reconocer los problemas típicos que aparecen cuando se trabaja con datos.
+- Identificar ámbitos donde se usa y qué tipo de pregunta se puede responder.
+
+### Qué es analizar datos
+
+Analizar datos es pasar de un conjunto de registros a una afirmación que se puede revisar. No es lo mismo que guardar datos (eso es la base) ni que programar una pantalla.
+
+Una pregunta de análisis tiene tres partes:
+
+1. Qué se quiere saber.
+2. Qué datos hacen falta y de dónde salen.
+3. Qué resultado se va a mostrar y cómo se va a comprobar que no está mal leído.
+
+Ejemplo: "¿en qué horario se concentran los pedidos?" necesita fecha y hora, una forma de agrupar, y un criterio para no contar dos veces el mismo pedido.
+
+### Problemas que conviene reconocer
+
+- Datos incompletos, duplicados o con formatos distintos.
+- Confundir correlación con causa.
+- Elegir un promedio cuando los valores extremos cambian la lectura.
+- Trabajar sobre una muestra que no representa a las personas del problema.
+- Mostrar un gráfico que no responde la pregunta.
+
+Antes de modelar, hay que saber qué pregunta está mal planteada. Esa es parte de la materia.
+
+### Herramientas
+
+El plan no fija un producto. En la tecnicatura es razonable encontrar hojas de cálculo, consultas SQL (lo que ya viste en bases de datos) y, según la cátedra, un lenguaje como Python. Lo importante es poder:
+
+- Importar o consultar un conjunto de datos.
+- Limpiar lo mínimo para que la cuenta tenga sentido.
+- Agrupar, filtrar y resumir.
+- Explicar el resultado en castellano, no solo mostrar la tabla.
+
+### Modelado
+
+Modelar, en este nivel, es elegir una representación simple del problema: qué entidades hay, qué se mide y qué relación se supone entre las variables. No implica un modelo estadístico avanzado.
+
+Un modelo útil para la cursada declara:
+
+- Las variables (qué se observa).
+- La unidad de análisis (un pedido, una persona, un día).
+- Qué queda afuera a propósito.
+
+### Dónde se aplica
+
+Reportes de un sistema que ustedes mismos programan, indicadores de un proyecto (los de Gestión del Desarrollo de Software) y lectura de datos para decidir qué mejorar. También es la base para seguir después hacia análisis más específico, fuera de esta tecnicatura.
+
+### Cómo estudiarla
+
+Tomá una tabla de una base que ya hayas modelado, escribí tres preguntas y respondé una con una consulta o una hoja de cálculo. Anotá qué dato faltaba y qué podría malinterpretarse.
+
+</div>

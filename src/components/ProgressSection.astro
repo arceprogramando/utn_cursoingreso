@@ -23,19 +23,26 @@ const pendingHours = Math.max(totalPlanHours - completedHours, 0);
 const motivationalPhrase = getMotivationalPhrase(percentageApproved);
 ---
 
-<section
-  class="p-4 rounded-lg shadow-md space-y-4 progress-section overflow-hidden"
->
-  <p class="text-xl text-center font-bold progress-title">Progreso Universitario</p>
+<section class="progress-section" aria-labelledby="progreso-titulo">
+  <h2 id="progreso-titulo" class="progress-title">Progreso</h2>
 
-  <p class="text-center text-xs progress-subtitle">
-    <span data-progress-percentage class="font-semibold progress-value">
+  <p class="progress-status" aria-live="polite">
+    <span data-progress-percentage class="progress-value">
       {percentageApproved.toFixed(1)}
     </span>
     % del plan completado
   </p>
 
-  <div class="charge-bar">
+  <div
+    class="charge-bar"
+    role="progressbar"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-valuenow={Number(percentageApproved.toFixed(1))}
+    aria-valuetext={`${percentageApproved.toFixed(1)} por ciento del plan completado`}
+    aria-label="Porcentaje del plan completado"
+    data-progress-track
+  >
     <div
       class="charge-bar-progress"
       data-progress-bar
@@ -48,14 +55,14 @@ const motivationalPhrase = getMotivationalPhrase(percentageApproved);
   </p>
 
   <div class="mt-2 flex flex-wrap gap-4 justify-center text-sm md:text-base">
-    <p class="text-lg font-semibold progress-title">
+    <p class="progress-hours">
       Horas cursadas:
       <span class="font-bold progress-accent" data-hours-completed>
         {completedHours}
       </span>
     </p>
 
-    <p class="text-lg font-semibold progress-title">
+    <p class="progress-hours">
       Horas restantes:
       <span class="font-bold progress-accent" data-hours-missing>
         {pendingHours}
@@ -65,49 +72,46 @@ const motivationalPhrase = getMotivationalPhrase(percentageApproved);
 </section>
 
 <style>
-  /* Light mode (default) */
   .progress-section {
-    background-color: #f5f3e8;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: var(--bg-secondary);
   }
   .progress-title {
-    color: #231b42;
+    margin: 0;
+    text-align: center;
+    font-size: 1.35rem;
   }
-  .progress-subtitle {
-    color: #4a3f6b;
-  }
-  .progress-value {
-    color: #231b42;
-  }
+  .progress-title,
+  .progress-value,
   .progress-accent {
-    color: #f97992;
+    color: var(--text-primary);
+  }
+  .progress-status,
+  .progress-subtitle,
+  .progress-hours {
+    margin: 0;
+    text-align: center;
+    color: var(--text-secondary);
+  }
+  .progress-hours {
+    color: var(--text-primary);
+    font-weight: 700;
   }
   .charge-bar {
-    height: 20px;
-    border-radius: 10px;
+    height: 1.25rem;
+    border-radius: 999px;
     width: 100%;
     overflow: hidden;
-    background-color: #c6d8c0;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border);
   }
   .charge-bar-progress {
     height: 100%;
-    transition: width 0.3s ease-in-out;
-    background-color: #f97992;
-  }
-
-  /* Dark mode */
-  :global(.dark) .progress-section {
-    background-color: #1f1f1f;
-  }
-  :global(.dark) .progress-title {
-    color: #e6e1cd;
-  }
-  :global(.dark) .progress-subtitle {
-    color: #c6d8c0;
-  }
-  :global(.dark) .progress-value {
-    color: #e6e1cd;
-  }
-  :global(.dark) .charge-bar {
-    background-color: #4a3f6b;
+    background-color: var(--accent);
   }
 </style>

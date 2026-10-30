@@ -25,6 +25,7 @@ function initCorrelativityPage(): void {
   // DOM Elements
   const progressPercentageEl = document.querySelector<HTMLElement>('[data-progress-percentage]');
   const progressBarEl = document.querySelector<HTMLElement>('[data-progress-bar]');
+  const progressTrackEl = document.querySelector<HTMLElement>('[data-progress-track]');
   const motivationalEl = document.querySelector<HTMLElement>('[data-motivational]');
   const hoursCompletedEl = document.querySelector<HTMLElement>('[data-hours-completed]');
   const hoursMissingEl = document.querySelector<HTMLElement>('[data-hours-missing]');
@@ -41,6 +42,13 @@ function initCorrelativityPage(): void {
 
     if (progressPercentageEl) progressPercentageEl.textContent = percentage.toFixed(1);
     if (progressBarEl) progressBarEl.style.width = `${percentage}%`;
+    if (progressTrackEl) {
+      progressTrackEl.setAttribute('aria-valuenow', percentage.toFixed(1));
+      progressTrackEl.setAttribute(
+        'aria-valuetext',
+        `${percentage.toFixed(1)} por ciento del plan completado`
+      );
+    }
     if (hoursCompletedEl) hoursCompletedEl.textContent = completedHours.toString();
     if (hoursMissingEl) hoursMissingEl.textContent = missingHours.toString();
     if (motivationalEl) motivationalEl.textContent = getMotivationalPhrase(percentage);
@@ -64,6 +72,8 @@ function initCorrelativityPage(): void {
 
       pill.classList.toggle('prereq-pill--met', isMet);
       pill.classList.toggle('prereq-pill--pending', !isMet);
+      const state = pill.querySelector<HTMLElement>('[data-prereq-state]');
+      if (state) state.textContent = isMet ? 'cumplida' : 'pendiente';
     });
   }
 

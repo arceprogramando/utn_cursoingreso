@@ -3,30 +3,33 @@ import LogoIcon from '@/components/LogoIcon.astro';
 import Navigation from '@/components/Navigation.astro';
 ---
 
-<div
-  class="fixed top-0 left-0 w-full
-    py-4 z-50
-    /* 🔆 MODO CLARO */
-    bg-(--bg-primary)/90
-    backdrop-blur-md
-    /* 🌙 MODO OSCURO */
-    dark:bg-zinc-700/70
-    dark:backdrop-blur-md
-    /* BORDES */
-    border-t border-(--border)/60
-    dark:border-zinc-600/60
-    sm:border-0
-    /* SOMBRA */
-    shadow-lg shadow-(--text-primary)/10
-    dark:shadow-black/30
-    /* TRANSICIÓN */
-    transition-colors duration-200"
->
-  <nav
-    class="flex justify-between items-center px-4 sm:px-0 max-w-3xl sm:mx-auto"
-  >
+<div class="site-header">
+  <nav class="site-nav" aria-label="Principal">
     <LogoIcon />
     <Navigation />
   </nav>
-  <span class="sr-only">Universidad Tecnológica Nacional</span>
 </div>
+
+<style>
+  .site-header {
+    position: fixed;
+    top: 0.7rem;
+    left: 50%;
+    z-index: 50;
+    width: min(68rem, calc(100% - 1.25rem));
+    transform: translateX(-50%);
+    padding: 0.4rem 0.5rem 0.4rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--bg-secondary) 82%, transparent);
+    box-shadow: 0 10px 30px var(--shadow);
+    backdrop-filter: blur(16px);
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+</style>

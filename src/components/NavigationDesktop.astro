@@ -1,25 +1,48 @@
 ---
 import { linksData } from '@/data/layouts/links';
+import Link from '@/components/layout/Link.astro';
 import ThemeToggle from '@/components/ThemeToggle.astro';
+import { isCurrentPath } from '@/utils/isCurrentPath';
 ---
 
-<div class="hidden sm:flex sm:items-center sm:gap-4">
-  <ul class="flex gap-2 md:gap-4">
+<div class="desktop-nav">
+  <ul>
     {
       linksData.map((item) => (
-        <li class="relative cursor-pointer group z-10 ">
-          <a
+        <li>
+          <Link
             href={item.href}
-            class="block relative border bg-black dark:bg-white z-11 border-black dark:border-gray-300 text-white dark:text-black border-solid p-1 md:px-2 uppercase text-sm font-bold leading-7"
-            title={`Ir a página de ${item.title}`}
-            aria-label={`Ir a página de ${item.title}`}
-          >
-            {item.title}
-          </a>
-          <div class="absolute border border-gray-600 dark:border-gray-400 transform origin-top-right transition-all duration-300 -top-1 right-1 w-full h-full group-hover:top-0 group-hover:right-0" />
+            title={item.title}
+            variant="bar"
+            current={isCurrentPath(Astro.url.pathname, item.href)}
+          />
         </li>
       ))
     }
   </ul>
   <ThemeToggle />
 </div>
+
+<style>
+  .desktop-nav {
+    display: none;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .desktop-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @media (min-width: 768px) {
+    .desktop-nav {
+      display: flex;
+    }
+  }
+</style>

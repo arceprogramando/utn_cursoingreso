@@ -2,38 +2,19 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<a href="/" class="logo-link">
-  <Icon
-    name="utncudi"
-    width={100}
-    height={40}
-    class="logo-icon hover:underline md:font-bold uppercase transition-colors duration-200"
-    title="Logo Universidad Tecnológica Nacional"
-    aria-label="Logo Universidad Tecnológica Nacional"
-  />
+<a href="/" class="logo-link" aria-label="UTN, ir al inicio">
+  <Icon name="utncudi" width={100} height={40} aria-hidden="true" class="logo-icon" />
 </a>
 
 <style>
   .logo-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    color: var(--text-primary);
   }
 
-  /* Modo claro: negro */
   .logo-icon {
-    color: #000000;
-    transition: color 0.2s ease;
-  }
-
-  .logo-icon:hover {
-    color: #065f46; /* Verde oscuro en hover */
-  }
-
-  /* Modo oscuro: blanco */
-  :global(.dark) .logo-icon {
-    color: #ffffff;
-  }
-
-  :global(.dark) .logo-icon:hover {
-    color: #34d399; /* Verde claro en hover oscuro */
+    color: currentColor;
   }
 </style>

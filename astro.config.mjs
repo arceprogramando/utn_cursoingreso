@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import icon from 'astro-icon';
 import mdx from '@astrojs/mdx';
@@ -9,6 +9,29 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://utn.arceprog.dev',
+  // Astro 7 colapsa espacios internos si queda en 'jsx'. El texto en español los necesita.
+  compressHTML: true,
+
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: 'Atkinson Hyperlegible',
+      cssVariable: '--font-atkinson',
+      weights: [400, 700],
+      styles: ['normal'],
+      subsets: ['latin'],
+      fallbacks: ['Segoe UI', 'sans-serif'],
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: 'JetBrains Mono',
+      cssVariable: '--font-jetbrains',
+      weights: [400, 500],
+      styles: ['normal'],
+      subsets: ['latin'],
+      fallbacks: ['ui-monospace', 'monospace'],
+    },
+  ],
 
   integrations: [
     sitemap({
@@ -42,9 +65,9 @@ export default defineConfig({
       manifest: {
         name: 'Tecnicatura en Programación UTN',
         short_name: 'UTN Programación',
-        description: 'Apuntes y recursos para la Tecnicatura Universitaria en Programación en la Universidad Técnica Nacional',
-        theme_color: '#3b82f6',
-        background_color: '#ffffff',
+        description: 'Apuntes y recursos para la Tecnicatura Universitaria en Programación de la Universidad Tecnológica Nacional',
+        theme_color: '#4c4f69',
+        background_color: '#eff1f5',
         start_url: '/',
         display: 'standalone',
         orientation: 'portrait-primary',
@@ -105,35 +128,6 @@ export default defineConfig({
               },
             },
           },
-          // Fuentes de Google
-          {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-            handler: 'StaleWhileRevalidate',
-            options: {
-              cacheName: 'google-fonts-stylesheets',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 año
-              },
-              cacheableResponse: {
-                statuses: [0, 200],
-              },
-            },
-          },
-          {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts-webfonts',
-              expiration: {
-                maxEntries: 30,
-                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 año
-              },
-              cacheableResponse: {
-                statuses: [0, 200],
-              },
-            },
-          },
           // Imágenes de Cloudinary
           {
             urlPattern: /^https:\/\/res\.cloudinary\.com\/.*/i,
@@ -176,7 +170,7 @@ export default defineConfig({
         ],
       },
       devOptions: {
-        enabled: true,
+        enabled: false,
         navigateFallbackAllowlist: [/^\//],
       },
       experimental: {

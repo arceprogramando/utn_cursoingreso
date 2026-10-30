@@ -3,7 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import addSpaceBeforeSecondUppercase from '@/utils/addSpaceBeforeSecondUppercase';
 
-export async function getStaticPaths() {
+async function loadTags() {
   const matchedCareerPosts = await getCollection('career');
   const careerPosts = Object.values(matchedCareerPosts);
 
@@ -18,55 +18,63 @@ export async function getStaticPaths() {
   };
 }
 
-const { allTags } = await getStaticPaths();
+const { allTags } = await loadTags();
 
-const title = 'Tecnicatura en Programación - Índice de Tags';
-const subTitle = 'Índice De Tags';
+const title = 'Tecnicatura en Programación - Índice de temas';
+const subTitle = 'Temas';
 
 ---
 
-<BaseLayout title={`${title}`} subTitle={`${subTitle}`}>
-    <ul class="flex flex-wrap justify-center gap-2 max-w-2xl">
-    {
-      allTags.length > 0 ? (
-        allTags.map((tag) => (
-          <li class="tag-item px-2 md:px-4 py-2 text-lg font-bold uppercase rounded-full shadow-md hover:opacity-80 transition-all">
-            <a href={`/tags/${tag.toLowerCase()}`} title={`Ver elementos con el tag ${tag}`}>
+<BaseLayout
+  title={title}
+  subTitle={subTitle}
+  description="Lista de temas usados para agrupar las materias y los apuntes."
+>
+  {
+    allTags.length > 0 ? (
+      <ul class="tag-index" aria-label="Temas">
+        {allTags.map((tag) => (
+          <li>
+            <a class="tag-item" href={`/tags/${tag.toLowerCase()}`}>
               {addSpaceBeforeSecondUppercase(tag)}
             </a>
           </li>
-        ))
-      ) : (
-        <p class="text-lg font-bold text-gray-500">No hay tags disponibles.</p>
-      )
-    }
-    </ul>
+        ))}
+      </ul>
+    ) : (
+      <p>No hay temas disponibles.</p>
+    )
+  }
 </BaseLayout>
 
-<style is:global>
+<style>
+  .tag-index {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 42rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
   .tag-item {
-    background-color: #231b42;
-    color: #f5f3e8;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0.35rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--bg-tertiary) 75%, transparent);
+    color: var(--text-primary);
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
   }
 
   .tag-item:hover {
-    background-color: #3d3266;
-  }
-
-  .tag-item a {
-    color: #f5f3e8;
-  }
-
-  .dark .tag-item {
-    background-color: #4a3f6b;
-    color: #e6e1cd;
-  }
-
-  .dark .tag-item:hover {
-    background-color: #5a4f7b;
-  }
-
-  .dark .tag-item a {
-    color: #e6e1cd;
+    border-color: var(--accent-2);
   }
 </style>

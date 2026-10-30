@@ -5,7 +5,7 @@ import Image from 'astro/components/Image.astro';
 import { fetchCollaborators } from '@/data/collaborator';
 export const prerender = true;
 const subTitle = 'Colaboradores';
-const title = 'Colaboradores Tecnicatura en Programación - UTN 2025';
+const title = 'Colaboradores de la Tecnicatura en Programación';
 const apiUrl = 'https://apicollaborator.vercel.app/';
 
 const { colaboradores, errorMessage } = await fetchCollaborators(apiUrl);
@@ -14,56 +14,48 @@ const { colaboradores, errorMessage } = await fetchCollaborators(apiUrl);
 <BaseLayout
   title={title}
   subTitle={subTitle}
-  description="Colaboradores Tecnicatura en Programación - UTN 2025"
+  description="Personas que colaboran con los apuntes de la Tecnicatura Universitaria en Programación."
 >
   <div
     class="flex flex-col justify-center items-center container mx-auto text-center"
   >
     {
       errorMessage ? (
-        <p class="text-red-500">{errorMessage}</p>
+        <p role="alert">{errorMessage}</p>
       ) : (
-        <ul class="flex flex-wrap justify-center gap-6">
+        <ul class="collaborator-list" aria-label="Personas que colaboran">
           {colaboradores.map((colaborador) => (
-            <li class="collaborator-card p-6 rounded-xl shadow-lg flex flex-col items-center gap-4 w-64 transition-transform hover:scale-105">
-              <div class="flex flex-col items-center gap-3">
-                <Image
-                  src={colaborador.avatar_url}
-                  alt={colaborador.login}
-                  loading="lazy"
-                  width="96"
-                  height="96"
-                  class="rounded-full border-4 border-[#231b42] dark:border-[#c6d8c0] shadow-md"
-                />
-                <div class="text-center">
-                  <div class="font-bold text-xl collaborator-name">{colaborador.login}</div>
-                  <div class="text-sm font-medium collaborator-role">
-                    {colaborador.description
-                      ? colaborador.description
-                      : 'Contributor'}
-                  </div>
-                </div>
-              </div>
+            <li>
+              <article class="collaborator-card">
+              <h2 class="collaborator-name">{colaborador.login}</h2>
+              <Image
+                src={colaborador.avatar_url}
+                alt=""
+                loading="lazy"
+                width="96"
+                height="96"
+                class="collaborator-photo"
+              />
+              <p class="collaborator-role">
+                {colaborador.description
+                  ? colaborador.description
+                  : 'Colaboración en el sitio'}
+              </p>
               {colaborador.contributions && (
-                <div class="text-center text-sm font-semibold collaborator-contributions">
-                  {colaborador.contributions} Contribuciones
-                </div>
+                <p class="collaborator-contributions">
+                  {colaborador.contributions} contribuciones
+                </p>
               )}
               <a
                 href={colaborador.html_url}
-                title={`Ir a perfil de ${colaborador.login} en Github`}
-                aria-label={`Ir a perfil de ${colaborador.login} en Github`}
-                class="p-2 rounded-full bg-[#231b42] hover:bg-[#3d3266] transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+                aria-label={`Perfil de ${colaborador.login} en GitHub (se abre en una pestaña nueva)`}
               >
-                <Icon
-                  name="github"
-                  width={24}
-                  height={24}
-                  title="github"
-                  aria-label="Ver en github"
-                  class="text-white"
-                />
+                <Icon name="github" width={24} height={24} aria-hidden="true" />
               </a>
+              </article>
             </li>
           ))}
         </ul>
@@ -72,38 +64,65 @@ const { colaboradores, errorMessage } = await fetchCollaborators(apiUrl);
   </div>
 </BaseLayout>
 
-<style is:global>
+<style>
+  .collaborator-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
   .collaborator-card {
-    background-color: #f5f3e8;
-    border: 1px solid #c6d8c0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: 16rem;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    text-align: center;
   }
 
-  .collaborator-card .collaborator-name {
-    color: #000000;
+  .collaborator-photo {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 999px;
+    border: 2px solid var(--border);
+    object-fit: cover;
   }
 
-  .collaborator-card .collaborator-role {
-    color: #333333;
+  .collaborator-name {
+    margin: 0;
+    font-size: 1.25rem;
   }
 
-  .collaborator-card .collaborator-contributions {
-    color: #231b42;
+  .collaborator-name,
+  .collaborator-contributions {
+    color: var(--text-primary);
   }
 
-  .dark .collaborator-card {
-    background-color: #2a2a2a;
-    border-color: #4a3f6b;
+  .collaborator-role {
+    color: var(--text-secondary);
   }
 
-  .dark .collaborator-card .collaborator-name {
-    color: #ffffff;
+  .github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 999px;
+    background: var(--btn-primary);
+    color: var(--btn-primary-text);
   }
 
-  .dark .collaborator-card .collaborator-role {
-    color: #c6d8c0;
-  }
-
-  .dark .collaborator-card .collaborator-contributions {
-    color: #c6d8c0;
+  .github-link:hover {
+    background: var(--btn-primary-hover);
   }
 </style>

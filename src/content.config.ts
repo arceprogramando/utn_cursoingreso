@@ -10,10 +10,9 @@ const career = defineCollection({
     author: z.string(),
     description: z
       .string()
-      .optional()
-      .refine((desc) => !desc || (desc.length > 150 && desc.length < 160), {
-        message: 'La descripción debe tener entre 150 y 160 caracteres si se proporciona.',
-      }),
+      .min(40, 'La descripción es demasiado corta.')
+      .max(220, 'La descripción supera los 220 caracteres.')
+      .optional(),
     image: z
       .object({
         url: z.string().optional(),
