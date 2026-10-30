@@ -1,11 +1,46 @@
 ---
 import type { Link } from '@/data/layouts/links';
-const { href, title } = Astro.props as Link;
+
+interface Props extends Link {
+  current?: boolean;
+}
+
+const { href, title, current = false } = Astro.props;
 ---
 
 <a
   href={href}
-  class="buttons p-1 px-2 block relative max-w-48 bg-black dark:bg-white z-99 text-white dark:text-black uppercase text-sm font-bold leading-7 rounded transition-colors duration-200"
+  class:list={['nav-link', { 'nav-link--current': current }]}
+  aria-current={current ? 'page' : undefined}
 >
   {title}
 </a>
+
+<style>
+  .nav-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-primary);
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+  }
+
+  .nav-link--current {
+    border-color: color-mix(in srgb, var(--accent-2) 55%, transparent);
+    background: color-mix(in srgb, var(--accent-2) 16%, transparent);
+    box-shadow: inset 3px 0 0 var(--accent-2);
+  }
+</style>

@@ -2,27 +2,53 @@
 import Social from '@/components/Social.astro';
 
 const socialMedias = [
-  { red: 'github', perfil: 'https://github.com/arceprogramando/utn_cursoingreso', alt: 'Ver Proyecto en Github' },
-  { red: 'portfolio', perfil: 'https://arceprog.dev', alt: 'Ver portfolio Felipe Arce' },
+  {
+    red: 'github',
+    perfil: 'https://github.com/arceprogramando/utn_cursoingreso',
+    alt: 'Repositorio del sitio en GitHub',
+  },
+  {
+    red: 'portfolio',
+    perfil: 'https://arceprog.dev',
+    alt: 'Portfolio de Felipe Arce',
+  },
 ];
 ---
 
-<footer class="py-4 mx-auto mb-4">
-  <nav>
-    <ul class="flex gap-4 justify-center items-center font-bold">
+<footer class="site-footer">
+  <nav aria-label="Redes y repositorio">
+    <ul>
       {
         socialMedias.map((media) => (
           <li>
-            <Social
-              platform={media.perfil}
-              red={media.red}
-              icon={media.red}
-              alt={media.alt}
-              classValues="hover:underline font-bold uppercase hover:text-green-900"
-            />
+            <Social platform={media.perfil} red={media.red} icon={media.red} alt={media.alt} />
           </li>
         ))
       }
     </ul>
   </nav>
+  <p>Sitio independiente de estudiantes. No es un canal oficial de la UTN.</p>
 </footer>
+
+<style>
+  .site-footer {
+    padding: 1.5rem 1rem 2rem;
+    text-align: center;
+  }
+
+  .site-footer ul {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .site-footer p {
+    margin: 0.75rem 0 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+</style>

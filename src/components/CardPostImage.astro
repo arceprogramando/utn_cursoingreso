@@ -1,10 +1,59 @@
 ---
-const { url, tag, alt, loading } = Astro.props;
-import { Image } from 'astro:assets';
+const { url, tag, alt, loading = 'lazy', title } = Astro.props;
+const label = title || alt || 'Ver apunte';
 ---
 
-<li>
-  <a href={url} title={`Ver ${alt}`} transition:name={tag} class="transition">
-    <Image src={tag} alt={alt} decoding="async" width={175} height={175} densities={[1.5, 2]} class="max-w-44 md:max-w-80 my-1 rounded-md" loading={loading} />
+<li class="subject-card">
+  <a href={url}>
+    {
+      tag && (
+        <img
+          src={tag}
+          alt=""
+          width="175"
+          height="175"
+          decoding="async"
+          loading={loading}
+        />
+      )
+    }
+    <span>{label}</span>
   </a>
 </li>
+
+<style>
+  .subject-card {
+    list-style: none;
+  }
+
+  .subject-card a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.55rem;
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--bg-secondary) 88%, transparent);
+    color: var(--text-primary);
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--font-ui);
+    font-size: 0.82rem;
+    font-weight: 500;
+    line-height: 1.4;
+    box-shadow: 0 8px 24px var(--shadow);
+  }
+
+  .subject-card a:hover {
+    border-color: var(--accent-2);
+  }
+
+  .subject-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.35rem;
+  }
+</style>
