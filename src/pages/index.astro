@@ -1,8 +1,5 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import Header from '@/components/Header.astro';
-import SideMenu from '@/components/layout/SideMenu.astro';
-import Footer from '@/components/Footer.astro';
+import SiteFrame from '@/layouts/SiteFrame.astro';
 import { YouTube } from 'astro-embed';
 import ProgramShowCase from '@/components/ProgramShowCase.astro';
 import PlanVigente from '@/components/PlanVigente.astro';
@@ -12,16 +9,7 @@ const PAGE_DESCRIPTION =
   'Sitio web con recursos y material de estudio para la Tecnicatura Universitaria en Programación de la UTN, según el Plan 2024 vigente desde 2026.';
 ---
 
-<Layout
-  title={PAGE_TITLE}
-  description={PAGE_DESCRIPTION}
->
-  <header>
-    <Header />
-  </header>
-
-  <SideMenu />
-
+<SiteFrame title={PAGE_TITLE} description={PAGE_DESCRIPTION}>
   <main id="contenido" class="home">
     <h1>Tecnicatura Universitaria en Programación</h1>
 
@@ -132,9 +120,7 @@ const PAGE_DESCRIPTION =
       </div>
     </figure>
   </main>
-
-  <Footer />
-</Layout>
+</SiteFrame>
 
 <style>
   .home {

@@ -1,31 +1,11 @@
 ---
+import Social from '@/components/Social.astro';
+import ExternalLink from '@/components/ExternalLink.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { projects } from '@/data/projects';
+
 const title = 'Proyectos de Alumnos de la Tecnicatura en Programación';
 const subTitle = 'Proyectos UTN';
-import Social from '@/components/Social.astro';
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import type { Project } from '@/types/project';
-
-const projects: Project[] = [
-  {
-    title: 'Tecnicatura Universitaria',
-    description:
-      'Web hecha para mejorar el acceso a la información de la Tecnicatura Universitaria en Programación.',
-    image: '/AnimeLeyendo.avif',
-    link: 'https://utn.arceprog.dev/',
-    tags: ['Astro.js', 'TailwindCSS', 'TypeScript'],
-    github: 'https://github.com/arceprogramando/utn_cursoingreso',
-    date: '2024',
-  },
-  {
-    title: 'Registro Profesores',
-    description:
-      'Aplicacion de escritorio en C# con WPF para registrar profesores y asignarlas a las materias que dictan.',
-    image: '/ProyectoUniversidad1.png',
-    tags: ['C#', 'WPF', 'XAML', '.NET'],
-    github: 'https://github.com/r0minaflorencia/Registro-de-profesores',
-    date: '2024',
-  },
-];
 ---
 
 <BaseLayout
@@ -42,10 +22,9 @@ const projects: Project[] = [
   </div>
   <p class="max-w-2xl text-center mb-6">
     Si cursás la tecnicatura y querés sumar un proyecto, abrí un issue en el
-    <a href="https://github.com/arceprogramando/utn_cursoingreso/issues" target="_blank" rel="noopener noreferrer">
+    <ExternalLink href="https://github.com/arceprogramando/utn_cursoingreso/issues">
       repositorio
-      <span class="sr-only"> (se abre en una pestaña nueva)</span>
-    </a>
+    </ExternalLink>
     con el título, una descripción, las tecnologías y el enlace.
   </p>
 
@@ -66,12 +45,10 @@ const projects: Project[] = [
             <ul class="project-actions" aria-label={`Enlaces de ${project.title}`}>
               {project.link && (
                 <li>
-                  <a
+                  <ExternalLink
                     href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     class="project-link"
-                    aria-label={`Sitio web de ${project.title} (se abre en una pestaña nueva)`}
+                    label={`Sitio web de ${project.title}`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +65,7 @@ const projects: Project[] = [
                       <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
                       <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
                     </svg>
-                  </a>
+                  </ExternalLink>
                 </li>
               )}
               <li>

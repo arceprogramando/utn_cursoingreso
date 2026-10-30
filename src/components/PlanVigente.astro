@@ -1,24 +1,6 @@
 ---
-const rows = [
-  ['Programación I', '8', '128', '197', '325', '13'],
-  ['Arquitectura y sistemas operativos', '4', '64', '61', '125', '5'],
-  ['Matemática', '4', '64', '61', '125', '5'],
-  ['Organización empresarial', '4', '64', '61', '125', '5'],
-  ['Programación II', '8', '128', '197', '325', '13'],
-  ['Probabilidad y estadística', '4', '64', '61', '125', '5'],
-  ['Base de datos I', '4', '64', '61', '125', '5'],
-  ['Inglés I', '4', '64', '61', '125', '5'],
-  ['Programación III', '8', '128', '197', '325', '13'],
-  ['Base de datos II', '4', '64', '61', '125', '5'],
-  ['Metodología de sistemas I', '4', '64', '61', '125', '5'],
-  ['Inglés II', '4', '64', '61', '125', '5'],
-  ['Programación IV', '8', '128', '197', '325', '13'],
-  ['Metodología de sistemas II', '4', '64', '61', '125', '5'],
-  ['Introducción al análisis de datos', '2', '32', '18', '50', '2'],
-  ['Legislación', '2', '32', '18', '50', '2'],
-  ['Gestión del desarrollo de software', '4', '64', '61', '125', '5'],
-  ['Trabajo final integrador', '—', '95', '130', '225', '9'],
-];
+import ExternalLink from '@/components/ExternalLink.astro';
+import { planSources, planSubjects, planTotals } from '@/data/plan2024';
 ---
 
 <section class="plan" id="plan" aria-labelledby="plan-titulo">
@@ -72,14 +54,14 @@ const rows = [
       </thead>
       <tbody>
         {
-          rows.map((row) => (
+          planSubjects.map((subject) => (
             <tr>
-              <th scope="row">{row[0]}</th>
-              <td>{row[1]}</td>
-              <td>{row[2]}</td>
-              <td>{row[3]}</td>
-              <td>{row[4]}</td>
-              <td>{row[5]}</td>
+              <th scope="row">{subject.name}</th>
+              <td>{subject.weekly}</td>
+              <td>{subject.classHours}</td>
+              <td>{subject.autonomous}</td>
+              <td>{subject.total}</td>
+              <td>{subject.credits}</td>
             </tr>
           ))
         }
@@ -87,52 +69,26 @@ const rows = [
       <tfoot>
         <tr>
           <th scope="row">Total</th>
-          <td>80</td>
-          <td>1375</td>
-          <td>1625</td>
-          <td>3000</td>
-          <td>120</td>
+          <td>{planTotals.weekly}</td>
+          <td>{planTotals.classHours}</td>
+          <td>{planTotals.autonomous}</td>
+          <td>{planTotals.total}</td>
+          <td>{planTotals.credits}</td>
         </tr>
       </tfoot>
     </table>
   </div>
 
   <ul class="plan-links">
-    <li>
-      <a
-        href="http://csu.rec.utn.edu.ar/CSU/ORD/2018.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Ordenanza 2018, diseño curricular
-        <span class="sr-only"> (se abre en una pestaña nueva)</span>
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://www.frrq.utn.edu.ar/wp-content/uploads/2026/08/CSU-ORD-2115-Modificacion-Punto-8-Diseno-Curricular-TUP.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Ordenanza 2115, horas y créditos
-        <span class="sr-only"> (se abre en una pestaña nueva)</span>
-      </a>
-    </li>
-    <li>
-      <a
-        href="http://csu.rec.utn.edu.ar/CSU/RES/2026/260.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Resolución 260/2026, continuidad en FRA
-        <span class="sr-only"> (se abre en una pestaña nueva)</span>
-      </a>
-    </li>
-    <li>
-      <a href="/NuevoPlanDeEstudio2025.pdf" download="NuevoPlanDeEstudio2025.pdf">
-        PDF local llamado plan 2025
-      </a>
-    </li>
+    {
+      planSources.map((source) => (
+        <li>
+          <ExternalLink href={source.href} download={source.download}>
+            {source.label}
+          </ExternalLink>
+        </li>
+      ))
+    }
   </ul>
   <p class="plan-note">
     El PDF local usa el nombre “plan 2025”, el de la ordenanza de la modalidad a distancia. Las

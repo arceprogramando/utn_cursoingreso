@@ -2,13 +2,7 @@
 import { linksData } from '@/data/layouts/links';
 import Link from '@/components/layout/Link.astro';
 import ThemeToggle from '@/components/ThemeToggle.astro';
-
-const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
-
-function isCurrent(href: string) {
-  const path = href.replace(/\/+$/, '') || '/';
-  return currentPath === path || currentPath.startsWith(`${path}/`);
-}
+import { isCurrentPath } from '@/utils/isCurrentPath';
 ---
 
 <div class="mobile-menu-root">
@@ -38,7 +32,7 @@ function isCurrent(href: string) {
         {
           linksData.map((link) => (
             <li>
-              <Link {...link} current={isCurrent(link.href)} />
+              <Link {...link} current={isCurrentPath(Astro.url.pathname, link.href)} />
             </li>
           ))
         }
