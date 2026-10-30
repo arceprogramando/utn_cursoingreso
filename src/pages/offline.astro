@@ -1,0 +1,30 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Sin conexión"
+  subTitle="Sin conexión"
+  description="Esta página se muestra cuando no hay conexión y el contenido todavía no está guardado en el dispositivo."
+>
+  <p class="offline">
+    No hay conexión en este momento. Cuando vuelva la red, recargá el sitio. Si ya habías
+    abierto una materia, puede seguir disponible desde el caché del navegador.
+  </p>
+  <p class="offline">
+    <a href="/">Reintentar ir al inicio</a>
+  </p>
+</BaseLayout>
+
+<style>
+  .offline {
+    max-width: 40rem;
+    text-align: center;
+    font-size: 1.125rem;
+  }
+
+  .offline a {
+    color: var(--accent);
+    font-weight: 700;
+  }
+</style>

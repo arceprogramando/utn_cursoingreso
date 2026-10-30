@@ -2,62 +2,207 @@
 import { linksData } from '@/data/layouts/links';
 import Link from '@/components/layout/Link.astro';
 import ThemeToggle from '@/components/ThemeToggle.astro';
+
+const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
+
+function isCurrent(href: string) {
+  const path = href.replace(/\/+$/, '') || '/';
+  return currentPath === path || currentPath.startsWith(`${path}/`);
+}
 ---
 
-<header class="md:hidden">
+<div class="mobile-menu-root">
   <div
-    class="bg-(--bg-primary) dark:bg-gray-800 fixed m-4 rounded-xl bottom-20 -right-[500px] transition-all h-auto pb-8 w-[290px] md:w-[350px] lg:[420px] z-50 shadow-lg"
-    id="side_Menu"
+    id="menu-movil"
+    class="menu-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="menu-movil-titulo"
+    hidden
   >
-    <nav class="flex flex-col md:flex-row gap-2">
-      <div class="flex justify-between items-center px-2">
-        <ThemeToggle />
-        <button
-          class="bg-[#231b42] dark:bg-white m-2 rounded-xl p-1"
-          id="side_menu_cross"
-          aria-label="boton para cerrar el menu"
-        >
-          <svg width="40" height="40" viewBox="0 0 32 32" fill="none" class="text-white dark:text-black">
-            <path d="M22.5 9.5L9.5 22.5M9.5 9.5L22.5 22.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </div>
-      <ul class="flex flex-col md:flex-row gap-4 pl-8">
+    <div class="menu-toolbar">
+      <p id="menu-movil-titulo">Menú</p>
+      <ThemeToggle />
+      <button type="button" class="menu-close" id="side_menu_cross" aria-label="Cerrar menú">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+          <path
+            d="M22.5 9.5L9.5 22.5M9.5 9.5L22.5 22.5"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"></path>
+        </svg>
+      </button>
+    </div>
+    <nav aria-label="Secciones">
+      <ul>
         {
           linksData.map((link) => (
-            <li class="relative cursor-pointer group max-w-48">
-              <Link {...link} />
+            <li>
+              <Link {...link} current={isCurrent(link.href)} />
             </li>
           ))
         }
       </ul>
     </nav>
   </div>
-</header>
+</div>
 
-<script is:inline data-astro-rerun>
-  function initializeMenu() {
-    const sideMenu = document.getElementById('side_Menu');
-    const openMenuBtn = document.getElementById('nav_button');
-    const sideMenuCross = document.getElementById('side_menu_cross');
+<style>
+  .mobile-menu-root {
+    display: block;
+  }
 
-    if (sideMenu && openMenuBtn && sideMenuCross) {
-      const toggleMenu = (open) => {
-        if (open) {
-          sideMenu.classList.remove('-right-[500px]');
-          sideMenu.classList.add('right-0');
-        } else {
-          sideMenu.classList.remove('right-0');
-          sideMenu.classList.add('-right-[500px]');
-        }
-      };
-
-      openMenuBtn.addEventListener('click', () => toggleMenu(true));
-      sideMenuCross.addEventListener('click', () => toggleMenu(false));
+  @media (min-width: 768px) {
+    .mobile-menu-root {
+      display: none;
     }
   }
 
-  initializeMenu();
+  .menu-panel {
+    position: fixed;
+    z-index: 60;
+    top: 4.6rem;
+    right: 0.7rem;
+    width: min(17.5rem, calc(100vw - 1.4rem));
+    padding: 0.5rem;
+    border: 1px solid var(--accent-2);
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--bg-secondary) 90%, transparent);
+    color: var(--text-primary);
+    box-shadow: 0 18px 50px var(--shadow);
+    backdrop-filter: blur(18px);
+  }
 
-  document.addEventListener('astro:after-swap', initializeMenu);
+  .menu-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.4rem 0.65rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .menu-toolbar p {
+    flex: 1;
+    margin: 0;
+    color: var(--text-muted);
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  .menu-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-primary);
+    cursor: pointer;
+  }
+
+  .menu-close:hover {
+    border-color: var(--accent-2);
+    color: var(--accent-2);
+  }
+
+  .menu-panel ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin: 0.55rem 0 0.2rem;
+    padding: 0;
+    list-style: none;
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    const focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+    function setBackgroundInert(active) {
+      const root = document.querySelector('.mobile-menu-root');
+      if (!root || !root.parentElement) return;
+      for (const sibling of root.parentElement.children) {
+        if (sibling === root) continue;
+        if (active) sibling.setAttribute('inert', '');
+        else sibling.removeAttribute('inert');
+      }
+      const skip = document.querySelector('.skip-link');
+      if (skip) {
+        if (active) skip.setAttribute('inert', '');
+        else skip.removeAttribute('inert');
+      }
+    }
+
+    function closeMenu(menu, openBtn) {
+      if (!menu || menu.hidden) return;
+      menu.hidden = true;
+      setBackgroundInert(false);
+      if (openBtn) {
+        openBtn.setAttribute('aria-expanded', 'false');
+        openBtn.focus();
+      }
+    }
+
+    function openMenu(menu, openBtn, closeBtn) {
+      menu.hidden = false;
+      setBackgroundInert(true);
+      openBtn.setAttribute('aria-expanded', 'true');
+      closeBtn.focus();
+    }
+
+    function bindMenu() {
+      const menu = document.getElementById('menu-movil');
+      const openBtn = document.getElementById('nav_button');
+      const closeBtn = document.getElementById('side_menu_cross');
+      if (!menu || !openBtn || !closeBtn || openBtn.dataset.bound === 'true') return;
+      openBtn.dataset.bound = 'true';
+
+      openBtn.addEventListener('click', () => openMenu(menu, openBtn, closeBtn));
+      closeBtn.addEventListener('click', () => closeMenu(menu, openBtn));
+      menu.addEventListener('click', (event) => {
+        if (event.target instanceof Element && event.target.closest('a')) {
+          closeMenu(menu, openBtn);
+        }
+      });
+    }
+
+    if (!window.__mobileMenuKeydown) {
+      window.__mobileMenuKeydown = true;
+      document.addEventListener('keydown', (event) => {
+        const menu = document.getElementById('menu-movil');
+        const openBtn = document.getElementById('nav_button');
+        if (!menu || menu.hidden) return;
+
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          closeMenu(menu, openBtn);
+          return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const items = [...menu.querySelectorAll(focusableSelector)];
+        if (!items.length) return;
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      });
+    }
+
+    bindMenu();
+    document.addEventListener('astro:after-swap', () => {
+      setBackgroundInert(false);
+      bindMenu();
+    });
+  })();
 </script>

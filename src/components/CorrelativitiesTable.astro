@@ -10,27 +10,26 @@ const { subjects } = Astro.props;
 const subjectsMap = new Map(subjects.map((s) => [s.id, s]));
 ---
 
-<section class="space-y-4 overflow-hidden">
-  <p class="text-sm text-fixed text-center md:text-left">
+<section class="correlativity-table" aria-labelledby="tabla-materias">
+  <h2 id="tabla-materias">Materias</h2>
+  <p>
     Marcá las materias que tenés aprobadas para ver qué correlatividades te
-    faltan y cómo avanza tu progreso.
+    faltan y cómo avanza tu progreso. En pantallas chicas, las correlativas
+    también figuran debajo del nombre.
   </p>
 
-  <div
-    class="overflow-x-auto border border-(--border) dark:border-zinc-700 rounded-xl shadow-sm bg-(--bg-primary)/90 dark:bg-zinc-950/80 max-w-full"
-  >
-    <table
-      class="w-full divide-y divide-(--border) dark:divide-zinc-800 text-sm table-auto"
-    >
+  <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de correlatividades. Si no entra en la pantalla, se puede desplazar.">
+    <table class="w-full divide-y divide-(--border) text-sm table-auto">
+      <caption class="sr-only">
+        Correlatividades del Plan 2024. Marcá las materias que ya aprobaste.
+      </caption>
       <thead class="bg-(--btn-primary) text-(--btn-primary-text)">
-        <tr class="*:py-3 *:px-2 text-xs uppercase tracking-wide">
-          <th class="text-center w-8 md:w-10">Nº</th>
-          <th class="text-left">Asignatura</th>
-          <th class="text-center hidden md:table-cell"
-            >Correlativas necesarias</th
-          >
-          <th class="text-center w-16 md:w-24">Horas</th>
-          <th class="text-center w-8 md:w-10">✅</th>
+        <tr class="*:py-3 *:px-2">
+          <th scope="col" class="text-center w-8 md:w-10">N.º</th>
+          <th scope="col" class="text-left">Asignatura</th>
+          <th scope="col" class="text-center hidden md:table-cell">Correlativas necesarias</th>
+          <th scope="col" class="text-center w-16 md:w-24">Horas</th>
+          <th scope="col" class="text-center w-12">Estado</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-gray-200 dark:divide-zinc-800">
@@ -52,3 +51,28 @@ const subjectsMap = new Map(subjects.map((s) => [s.id, s]));
     </table>
   </div>
 </section>
+
+<style>
+  .correlativity-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .correlativity-table h2,
+  .correlativity-table p {
+    margin: 0;
+  }
+
+  .correlativity-table h2 {
+    font-size: 1.35rem;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    max-width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+</style>

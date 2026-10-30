@@ -1,14 +1,30 @@
 ---
-const { platform, icon, alt,classValues } = Astro.props;
+const { platform, icon, alt, classValues = '' } = Astro.props;
 import { Icon } from 'astro-icon/components';
 ---
 
-<a href={platform} target="_blank" class="text-black" title={`Ver ${alt}`} aria-label={alt}>
-  {
-    icon ? (
-      <Icon name={icon} width={24} height={24}  title={alt} aria-label={alt} class={classValues} />
-    ) : (
-      'no tiene'
-    )
-  }
+<a
+  href={platform}
+  target="_blank"
+  rel="noopener noreferrer"
+  class:list={['social-link', classValues]}
+  aria-label={`${alt} (se abre en una pestaña nueva)`}
+>
+  {icon && <Icon name={icon} width={24} height={24} aria-hidden="true" />}
 </a>
+
+<style>
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    color: var(--text-primary);
+    border-radius: 0.375rem;
+  }
+
+  .social-link:hover {
+    background: var(--bg-tertiary);
+  }
+</style>

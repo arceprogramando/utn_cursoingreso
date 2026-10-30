@@ -1,7 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
 import Prose from '@/components/Prose.astro';
 import addSpaceBeforeSecondUppercase from '@/utils/addSpaceBeforeSecondUppercase';
 import { careerSlug } from '@/utils/careerSlug';
@@ -26,88 +25,181 @@ const keywords = tags.map((tag) => addSpaceBeforeSecondUppercase(tag)).join(', '
 export const prerender = true;
 ---
 
-<BaseLayout title={`Apunte de  ${addSpaceBeforeSecondUppercase(title)}`} subTitle={title} description={description} keywords={keywords}>
-  <a href="/career" class="hover:underline opacity-75">← Volver atrás</a>
+<style>
+  .back-link,
+  .download-note,
+  .tag-link {
+    color: var(--accent);
+    font-weight: 700;
+    text-underline-offset: 0.15em;
+  }
 
-  <div class="flex justify-around my-10 max-w-lg">
-    <div class="max-w-56 p-2">
-      {
-        image && image.url && image.alt && (
-          <Image
-            src={image.url}
-            width={240}
-            height={100}
-            decoding="async"
-            class="rounded-lg"
-            alt={image.alt}
-            title={`Imagen de ${title}`}
-            transition:name={image.url}
-            loading="eager"
-          />
-        )
-      }
-    </div>
+  .download-note,
+  .tag-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0.35rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--bg-tertiary) 70%, transparent);
+    color: var(--text-primary);
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
 
-    <div class="flex flex-col gap-2 md:gap-0 justify-center px-3 md:px-4 md:items-center">
-      <div class="flex flex-col gap-2">
-        <div class="flex md:gap-8 justify-around">
-          <p class="font-semibold text-xs md:text-base px-2 text-black text-center">
-            Cursada:
-            <span class="block uppercase">{totalTimeClass} hs</span>
-          </p>
-          <p class="font-semibold text-xs md:text-base px-2 text-black text-center">
-            Examen: <span class="block uppercase">{totalExam} hs</span>
-          </p>
+  .tag-link:hover,
+  .download-note:hover {
+    border-color: var(--accent-2);
+  }
+
+  .professor {
+    display: inline-block;
+    margin-top: 0.25rem;
+    padding: 0.15rem 0.55rem;
+    border-radius: 0.25rem;
+    background: var(--bg-tertiary);
+    font-weight: 700;
+  }
+
+  .subject-hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    width: min(100%, 42rem);
+    margin: 0.5rem 0 1.5rem;
+  }
+
+  .subject-cover {
+    width: min(100%, 15rem);
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .subject-facts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+    min-width: min(100%, 16rem);
+  }
+
+  .subject-hours {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(4.5rem, 1fr));
+    gap: 0.75rem;
+    width: 100%;
+    margin: 0;
+  }
+
+  .subject-hours dt {
+    font-weight: 700;
+  }
+
+  .subject-hours dd {
+    margin: 0.15rem 0 0;
+  }
+
+  .subject-hours div,
+  .subject-professor {
+    text-align: center;
+  }
+
+  .subject-professor {
+    margin: 0;
+  }
+
+  .subject-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    width: min(100%, 48rem);
+  }
+
+  .subject-body > p {
+    margin: 0;
+  }
+
+  .subject-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+</style>
+
+<BaseLayout title={`Apunte de ${addSpaceBeforeSecondUppercase(title)}`} subTitle={title} description={description} keywords={keywords}>
+  <a href="/career" class="back-link">Volver a materias</a>
+
+  <div class="subject-hero">
+    {
+      image && image.url && (
+        <img
+          src={image.url}
+          width="240"
+          height="160"
+          decoding="async"
+          class="subject-cover"
+          alt={image.alt || `Portada del apunte de ${title}`}
+          loading="eager"
+        />
+      )
+    }
+
+    <div class="subject-facts">
+      <dl class="subject-hours">
+        <div>
+          <dt>Cursada</dt>
+          <dd>{totalTimeClass} h</dd>
         </div>
-        <p class="font-semibold text-xs md:text-base text-black text-center">
-          Total: <span class="block uppercase">{totalTime} hs</span>
-        </p>
-      </div>
-
-      <div class="text-center my-2">
-        <p>Profesor/a:</p>
-        <div class="relative inline-block">
-          <span class="absolute -inset-x-1 -inset-y-0.5 rounded-sm bg-green-200 rotate-1 -skew-y-3 -z-10"></span>
-          <p class="font-bold relative">{professor || 'Anónimo'}</p>
+        <div>
+          <dt>Examen</dt>
+          <dd>{totalExam} h</dd>
         </div>
-      </div>
+        <div>
+          <dt>Total de clase</dt>
+          <dd>{totalTime} h</dd>
+        </div>
+      </dl>
+
+      <p class="subject-professor">
+        Profesor o profesora:
+        <span class="professor">{professor || 'A confirmar'}</span>
+      </p>
 
       {
         downloadUrl && (
-          <div class="flex hover:bg-blue-100 justify-center text-center ">
-            <a
-              href={downloadUrl}
-              download={`${title.replace(/ /g, '_')}.pdf`}
-              class="bg-black hover:bg-zinc-800 text-white hover:text-zinc-200 max-w-40 md:max-w-max p-2 my-1 md:my-0"
-            >
-              Descargar Apunte de {title}
-            </a>
-          </div>
+          <a href={downloadUrl} download={`${title.replace(/ /g, '_')}.pdf`} class="download-note">
+            Descargar apunte de {title}
+          </a>
         )
       }
     </div>
   </div>
 
-  <div class="flex-col p-4 md:p-0 md:max-w-3xl mx-auto gap-4">
-    <div class="flex gap-4">
-      <p class="font-bold">
+  <div class="subject-body">
+    <p>
+      Publicado el
+      <time datetime={new Date(pubDate).toISOString().slice(0, 10)}>
         {new Date(pubDate).toLocaleDateString('es-AR')}
-      </p>
-      <p class="font-light">Escrito por: {author}</p>
-    </div>
+      </time>
+    </p>
+    {author && <p>Escrito por {author}</p>}
     <Prose>
       <Content />
     </Prose>
 
-    <ul class="flex flex-wrap gap-3 items-center justify-center text-center pt-4">
+    <ul class="subject-tags" aria-label={`Temas de ${title}`}>
       {
         tags.map((tag) => (
-          <li class="px-4 py-2 text-lg font-bold uppercase text-white bg-black rounded-full  hover:bg-gray-800 hover:scale-105 transition-transform">
-            <a
-              href={`/tags/${tag.toLowerCase()}`}
-              title={`Ver todos los contenidos con el tag ${addSpaceBeforeSecondUppercase(tag)}`}
-              aria-label={tag}
-            >
+          <li>
+            <a class="tag-link" href={`/tags/${tag.toLowerCase()}`}>
               {addSpaceBeforeSecondUppercase(tag)}
             </a>
           </li>
