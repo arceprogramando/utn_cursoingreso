@@ -5,10 +5,11 @@ import SideMenu from '@/components/layout/SideMenu.astro';
 import Footer from '@/components/Footer.astro';
 import { YouTube } from 'astro-embed';
 import ProgramShowCase from '@/components/ProgramShowCase.astro';
+import PlanVigente from '@/components/PlanVigente.astro';
 
-const PAGE_TITLE = 'Tecnicatura Universitaria en Programación - UTN 2025';
+const PAGE_TITLE = 'Tecnicatura Universitaria en Programación - UTN';
 const PAGE_DESCRIPTION =
-  'Sitio web con recursos y material de estudio para la Tecnicatura Universitaria en Programación de la UTN, actualizado al plan 2025.';
+  'Sitio web con recursos y material de estudio para la Tecnicatura Universitaria en Programación de la UTN, según el Plan 2024 vigente desde 2026.';
 ---
 
 <Layout
@@ -21,36 +22,16 @@ const PAGE_DESCRIPTION =
 
   <SideMenu />
 
-  <main class="pt-28 max-w-3xl mx-auto md:h-auto">
-    <h1
-      class="text-4xl px-2 md:px-0 md:text-5xl font-bold text-center mt-4 mb-4"
-    >
-      Tecnicatura Universitaria en Programación
-    </h1>
+  <main id="contenido" class="home">
+    <h1>Tecnicatura Universitaria en Programación</h1>
 
-    <h2
-      class="text-3xl md:text-4xl font-bold text-center mt-2 text-gray-700"
-    >
-      Construí el futuro que soñás.
-    </h2>
+    <p class="home-lead">Construí el futuro que soñás.</p>
 
-    <div class="w-full flex justify-center mt-6">
-      <a
-        href="/NuevoPlanDeEstudio2025.pdf"
-        download="NuevoPlanDeEstudio2025.pdf"
-        class="bg-black hover:bg-zinc-800 text-white hover:text-zinc-200 rounded-md px-4 py-2 text-sm md:text-base"
-        title="Descargar Nuevo Plan de Estudio 2025"
-        aria-label="Descargar Nuevo Plan de Estudio 2025"
-      >
-        Descargar Nuevo Plan de Estudio 2025
-      </a>
-    </div>
+    <PlanVigente />
 
     <ProgramShowCase />
 
-    <div
-      class="my-8 max-w-4xl mx-auto text-fixed p-2 md:p-0 text-lg md:text-start leading-relaxed space-y-6"
-    >
+    <div class="home-copy">
 
       <p>
         Esta página está pensada para acompañar a quienes se interesan por la
@@ -61,9 +42,8 @@ const PAGE_DESCRIPTION =
           Universidad Tecnológica Nacional – Facultad Regional Avellaneda (UTN
           FRA)
         </strong>.
-        No es un sitio oficial, pero toma como referencia el plan de estudios
-        vigente y se actualiza constantemente para brindar apoyo a estudiantes y
-        aspirantes.
+        No es un sitio oficial. Toma como referencia el Plan 2024, vigente desde
+        2026, y se actualiza para acompañar a estudiantes y aspirantes.
       </p>
 
       <p>
@@ -79,10 +59,13 @@ const PAGE_DESCRIPTION =
         La Tecnicatura abarca materias fundamentales como programación en
         distintos niveles, matemática, bases de datos, estadística, inglés y
         sistemas operativos. También suma asignaturas avanzadas como metodología
-        de sistemas, gestión del desarrollo de software e introducción al
-        análisis de datos, para culminar con un
-        <strong> Trabajo Final Integrador</strong> donde se pone en práctica
-        todo lo aprendido.
+        de sistemas,
+        <a href="/career/gestiondedesarrollodesoftware">gestión del desarrollo de software</a>
+        e
+        <a href="/career/introduccionalanalisisdedatos">introducción al análisis de datos</a>,
+        para culminar con el
+        <a href="/career/trabajofinalintegrador">Trabajo Final Integrador</a>
+        donde se pone en práctica todo lo aprendido.
       </p>
 
       <p>
@@ -93,9 +76,7 @@ const PAGE_DESCRIPTION =
         empieces a cursar.
       </p>
 
-      <h3 class="text-2xl font-semibold text-start pt-2">
-        Perfil del egresado
-      </h3>
+      <h2>Perfil del egresado</h2>
       <p>
         Quienes egresan de la Tecnicatura Universitaria en Programación están
         capacitados para
@@ -114,9 +95,7 @@ const PAGE_DESCRIPTION =
         cambio.
       </p>
 
-      <h3 class="text-2xl font-semibold text-start pt-4" id="Certificación">
-        Certificación
-      </h3>
+      <h2 id="Certificación">Certificación</h2>
       <p>
         El título de
         <strong> Técnico Universitario en Programación</strong> es otorgado por
@@ -126,9 +105,7 @@ const PAGE_DESCRIPTION =
         ingeniería y tecnología, reconocida en todo el país.
       </p>
 
-      <h3 class="text-2xl font-semibold text-start pt-4" id="Metodologia">
-        Metodología
-      </h3>
+      <h2 id="Metodologia">Metodología</h2>
       <p>
         La carrera combina una
         <strong> base teórica sólida</strong>
@@ -140,16 +117,76 @@ const PAGE_DESCRIPTION =
       </p>
     </div>
 
-    <div class="p-4 pb-10">
+    <figure class="home-video">
+      <figcaption class="mb-2 text-center font-bold">
+        Video de presentación de la tecnicatura
+      </figcaption>
       <div class="aspect-video w-full">
         <YouTube
           id="https://www.youtube.com/watch?v=5azNrCaiqFo"
           class="rounded-xl md:p-0"
           poster="/portadayoutube.webp"
+          title="Presentación de la Tecnicatura Universitaria en Programación"
+          playlabel="Reproducir el video de presentación de la tecnicatura"
         />
       </div>
-    </div>
+    </figure>
   </main>
 
   <Footer />
 </Layout>
+
+<style>
+  .home {
+    width: min(48rem, 100%);
+    margin: 6.25rem auto 2.5rem;
+    padding: 0 1rem 1rem;
+  }
+
+  .home h1 {
+    margin: 0.5rem 0 0.75rem;
+    font-size: clamp(1.85rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .home-lead {
+    margin: 0;
+    font-size: clamp(1.35rem, 3vw, 1.85rem);
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .home-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .home-copy h2 {
+    margin: 0.5rem 0 0;
+    font-size: 1.5rem;
+    text-align: start;
+  }
+
+  .home-copy p {
+    margin: 0;
+  }
+
+  .home-video {
+    margin: 2rem 0 0;
+  }
+
+  .home-video figcaption {
+    margin-bottom: 0.75rem;
+  }
+
+  main p a {
+    color: var(--accent);
+    font-weight: 700;
+    text-underline-offset: 0.15em;
+  }
+</style>

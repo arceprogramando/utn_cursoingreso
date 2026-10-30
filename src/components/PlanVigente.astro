@@ -1,0 +1,285 @@
+---
+const rows = [
+  ['Programación I', '8', '128', '197', '325', '13'],
+  ['Arquitectura y sistemas operativos', '4', '64', '61', '125', '5'],
+  ['Matemática', '4', '64', '61', '125', '5'],
+  ['Organización empresarial', '4', '64', '61', '125', '5'],
+  ['Programación II', '8', '128', '197', '325', '13'],
+  ['Probabilidad y estadística', '4', '64', '61', '125', '5'],
+  ['Base de datos I', '4', '64', '61', '125', '5'],
+  ['Inglés I', '4', '64', '61', '125', '5'],
+  ['Programación III', '8', '128', '197', '325', '13'],
+  ['Base de datos II', '4', '64', '61', '125', '5'],
+  ['Metodología de sistemas I', '4', '64', '61', '125', '5'],
+  ['Inglés II', '4', '64', '61', '125', '5'],
+  ['Programación IV', '8', '128', '197', '325', '13'],
+  ['Metodología de sistemas II', '4', '64', '61', '125', '5'],
+  ['Introducción al análisis de datos', '2', '32', '18', '50', '2'],
+  ['Legislación', '2', '32', '18', '50', '2'],
+  ['Gestión del desarrollo de software', '4', '64', '61', '125', '5'],
+  ['Trabajo final integrador', '—', '95', '130', '225', '9'],
+];
+---
+
+<section class="plan" id="plan" aria-labelledby="plan-titulo">
+  <h2 id="plan-titulo">Plan 2024, vigente desde 2026</h2>
+  <p>
+    En las unidades académicas de la UTN el único plan de la Tecnicatura Universitaria en
+    Programación es el Plan 2024 (Ordenanza del Consejo Superior 2018; correlatividades en la
+    Ordenanza 2019). El Plan 2003 dejó de dictarse después de 2025. La Facultad Regional
+    Avellaneda está autorizada a seguir ofreciéndola en forma presencial durante 2026 y 2027.
+  </p>
+  <p>
+    La Ordenanza 2115 mantiene las mismas materias y las 1375 horas de clase. A esas horas de
+    interacción pedagógica (IP) les suma el trabajo autónomo del estudiante (TAE). La suma es
+    el trabajo total (TTE): 3000 horas y 120 créditos. El curso de ingreso no entra en esa cuenta.
+  </p>
+
+  <dl class="plan-totals">
+    <div>
+      <dt>Interacción pedagógica</dt>
+      <dd>1375 h</dd>
+    </div>
+    <div>
+      <dt>Trabajo autónomo</dt>
+      <dd>1625 h</dd>
+    </div>
+    <div>
+      <dt>Trabajo total</dt>
+      <dd>3000 h</dd>
+    </div>
+    <div>
+      <dt>Créditos</dt>
+      <dd>120</dd>
+    </div>
+  </dl>
+
+  <div class="plan-scroll" tabindex="0" role="region" aria-label="Carga horaria por asignatura">
+    <table>
+      <caption>
+        Carga horaria del Plan 2024 según la Ordenanza 2115. IP es hora de clase, TAE es trabajo
+        autónomo y TTE es el total.
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Asignatura</th>
+          <th scope="col">h/sem</th>
+          <th scope="col">IP</th>
+          <th scope="col">TAE</th>
+          <th scope="col">TTE</th>
+          <th scope="col">Créditos</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map((row) => (
+            <tr>
+              <th scope="row">{row[0]}</th>
+              <td>{row[1]}</td>
+              <td>{row[2]}</td>
+              <td>{row[3]}</td>
+              <td>{row[4]}</td>
+              <td>{row[5]}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row">Total</th>
+          <td>80</td>
+          <td>1375</td>
+          <td>1625</td>
+          <td>3000</td>
+          <td>120</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <ul class="plan-links">
+    <li>
+      <a
+        href="http://csu.rec.utn.edu.ar/CSU/ORD/2018.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ordenanza 2018, diseño curricular
+        <span class="sr-only"> (se abre en una pestaña nueva)</span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.frrq.utn.edu.ar/wp-content/uploads/2026/08/CSU-ORD-2115-Modificacion-Punto-8-Diseno-Curricular-TUP.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ordenanza 2115, horas y créditos
+        <span class="sr-only"> (se abre en una pestaña nueva)</span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="http://csu.rec.utn.edu.ar/CSU/RES/2026/260.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Resolución 260/2026, continuidad en FRA
+        <span class="sr-only"> (se abre en una pestaña nueva)</span>
+      </a>
+    </li>
+    <li>
+      <a href="/NuevoPlanDeEstudio2025.pdf" download="NuevoPlanDeEstudio2025.pdf">
+        PDF local llamado plan 2025
+      </a>
+    </li>
+  </ul>
+  <p class="plan-note">
+    El PDF local usa el nombre “plan 2025”, el de la ordenanza de la modalidad a distancia. Las
+    materias coinciden con el Plan 2024 presencial. Las horas de los apuntes siguen siendo las de
+    clase.
+  </p>
+</section>
+
+<style>
+  .plan {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.75rem;
+  }
+
+  .plan h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .plan p {
+    margin: 0;
+  }
+
+  .plan-totals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 0.25rem 0 0;
+  }
+
+  @media (min-width: 640px) {
+    .plan-totals {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .plan-totals div {
+    padding: 0.75rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--bg-secondary) 88%, transparent);
+  }
+
+  .plan-totals dt {
+    color: var(--text-secondary);
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    line-height: 1.35;
+  }
+
+  .plan-totals dd {
+    margin: 0.2rem 0 0;
+    font-family: var(--font-ui);
+    font-size: 1.15rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .plan-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--bg-secondary) 88%, transparent);
+  }
+
+  .plan table {
+    width: 100%;
+    min-width: 36rem;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .plan caption {
+    padding: 0.85rem 1rem 0.35rem;
+    caption-side: top;
+    text-align: left;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+
+  .plan th,
+  .plan td {
+    padding: 0.55rem 0.75rem;
+    border-top: 1px solid var(--border-light);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .plan thead th {
+    border-top: 0;
+    color: var(--text-secondary);
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  .plan thead th:first-child {
+    text-align: left;
+  }
+
+  .plan th[scope='row'] {
+    text-align: left;
+    font-weight: 700;
+    white-space: normal;
+  }
+
+  .plan tfoot th,
+  .plan tfoot td {
+    border-top: 1px solid var(--border);
+    font-weight: 700;
+  }
+
+  .plan-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.25rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .plan-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    color: var(--accent);
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.3;
+    text-decoration: none;
+  }
+
+  .plan-links a:hover {
+    background: color-mix(in srgb, var(--accent) 22%, transparent);
+  }
+
+  .plan-note {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+</style>

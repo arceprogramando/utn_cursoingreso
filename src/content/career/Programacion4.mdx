@@ -1,7 +1,7 @@
 ---
 title: Programación 4
-author: Felipe Arce
-description: Apuntes de Programación 4 que incluyen frameworks avanzados, arquitecturas de software y desarrollo de aplicaciones complejas para consolidar conocimientos.
+author: Guía del sitio (Plan 2024)
+description: "Guía de Programación IV del Plan 2024: APIs, arquitectura cliente-servidor, autenticación externa y acceso a datos. No reemplaza el programa de la cátedra."
 image:
   url: '/ApunteProgramacion4.avif'
   alt: 'Apunte de Programación 4'
@@ -10,24 +10,89 @@ tags: ['Apuntes', 'Programacion', 'CuartoCuatrimestre']
 totalTimeClass: 120
 totalExam: 8
 totalTime: 128
-order: 18
-professor: Por definir
+order: 15
+professor: A confirmar
 ---
 <div className="text-fixed">
-### Programación 4
 
-#### Introducción a Programación Avanzada
+### Programación IV
 
-En esta materia profundizamos en conceptos avanzados de programación, incluyendo frameworks modernos, patrones de diseño y arquitecturas de software escalables.
+Guía de estudio según los contenidos mínimos del Plan 2024 de la Tecnicatura Universitaria en Programación (UTN). La Facultad Regional define lenguajes, frameworks y trabajos prácticos. Esta página orienta: no reemplaza el programa de la cátedra ni unos apuntes de clase.
 
-### Objetivos del Curso
+Carga de clase: 8 horas semanales, 128 horas. La Ordenanza 2115 suma 197 horas de trabajo autónomo (325 horas totales, 13 créditos). Es asignatura integradora del cuarto cuatrimestre.
 
-- Dominar frameworks de desarrollo avanzados
-- Comprender arquitecturas de software complejas
-- Implementar patrones de diseño en proyectos reales
-- Desarrollar aplicaciones de gran escala
+Fuente: [Ordenanza 2018, Plan 2024](http://csu.rec.utn.edu.ar/CSU/ORD/2018.pdf) y [Ordenanza 2115](https://www.frrq.utn.edu.ar/wp-content/uploads/2026/08/CSU-ORD-2115-Modificacion-Punto-8-Diseno-Curricular-TUP.pdf). Los mismos mínimos figuran en la [ordenanza de la modalidad a distancia](https://www.frsn.utn.edu.ar/wp-content/uploads/2024/12/CSU_ORD__0__2067.pdf).
 
-### Contenido a desarrollar
+### Objetivos
 
-*Este contenido será ampliado próximamente con el material completo de la materia.*
+- Reconocer los protocolos y servicios que intervienen en el desarrollo web.
+- Identificar qué cambia cuando la programación web deja de ser solo una página estática.
+- Desarrollar interfaces de programación de aplicaciones (API).
+- Integrar back end y front end.
+- Comparar estrategias de acceso a datos.
+- Resolver problemas con una arquitectura cliente-servidor y poder explicar, en castellano, qué se hizo y por qué.
+
+### Arquitectura cliente-servidor
+
+El navegador (cliente) pide recursos. Un servidor los procesa y responde. En una aplicación de esta materia suelen convivir tres piezas:
+
+1. La interfaz que usa la persona.
+2. Una API que recibe pedidos y devuelve datos.
+3. Un almacén de datos (base relacional, y a veces una base en tiempo real).
+
+Conviene poder dibujar ese recorrido para un caso concreto: quién inicia el pedido, qué viaja (método, ruta, cuerpo, código de estado) y dónde queda guardado el dato.
+
+### Programación del lado del cliente
+
+El cliente arma la interfaz, reacciona a lo que hace la persona y habla con el servidor. Temas para practicar:
+
+- Formularios, estados de carga y mensajes de error comprensibles.
+- Pedidos HTTP (por ejemplo con `fetch`) y lectura de la respuesta.
+- No confiar en el cliente para reglas de seguridad: lo que se valida en el navegador se vuelve a validar en el servidor.
+
+### Programación del lado del servidor
+
+El servidor autentica, autoriza, aplica reglas de negocio y accede a los datos. Temas para practicar:
+
+- Rutas o endpoints con una responsabilidad clara.
+- Códigos de estado coherentes (200, 201, 400, 401, 403, 404, 500).
+- Separar la entrada de la persona, la regla de negocio y el acceso a la base.
+
+### APIs
+
+Una API es el contrato entre cliente y servidor. Para cada recurso conviene definir:
+
+- La ruta y el método.
+- Qué datos entran y qué datos salen.
+- Qué errores puede devolver.
+- Quién tiene permiso para llamarla.
+
+Integrar back end y front end es hacer que la interfaz consuma ese contrato, no que duplique la base de datos en el navegador.
+
+### Autenticación por medios externos
+
+Además de un usuario y una contraseña propios, el plan pide autenticación delegada (por ejemplo un proveedor externo). La idea, independiente de la marca:
+
+- La aplicación no guarda la contraseña del proveedor.
+- El proveedor confirma la identidad y devuelve un token o un código.
+- La aplicación usa ese resultado para crear o reconocer una sesión propia.
+- Hay que distinguir autenticación (quién es) de autorización (qué puede hacer).
+
+### Acceso a datos y bases en tiempo real
+
+No hay una sola forma de leer y escribir datos. Comparar al menos estas estrategias:
+
+- Consultas directas a una base relacional desde el servidor.
+- Una capa intermedia (repositorio o servicio) para no mezclar SQL con las rutas.
+- Una base o canal en tiempo real, cuando varias personas tienen que ver el mismo cambio sin recargar la página.
+
+El plan menciona la aplicación de bases de datos en tiempo real. El punto de estudio es cuándo hace falta ese canal y qué problema aparece si dos personas modifican el mismo dato a la vez.
+
+### Cómo estudiarla
+
+- Elegí un caso chico (un alta, una lista y un permiso) y recorré cliente, API y base.
+- Escribí el contrato de la API antes de codear la pantalla.
+- Explicá en voz alta el procedimiento. El plan pide fundamentar la solución en lenguaje coloquial.
+- Revisá Programación III (interfaz web) y Base de Datos II (consultas, integridad y seguridad) antes de arrancar.
+
 </div>

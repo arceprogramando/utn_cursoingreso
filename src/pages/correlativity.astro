@@ -10,7 +10,7 @@ const subjectsInitial = subjects.map((subject) => ({
   isPassed: false,
 }));
 
-const title = 'Correlatividades de la Tecnicatura en Programación - UTN 2025';
+const title = 'Correlatividades de la Tecnicatura en Programación - Plan 2024';
 const subTitle = 'Correlatividades';
 const hasSubjects = subjectsInitial.length > 0;
 ---
@@ -18,11 +18,18 @@ const hasSubjects = subjectsInitial.length > 0;
 <BaseLayout
   title={title}
   subTitle={subTitle}
-  description="Correlatividades de la Tecnicatura en Programación - UTN 2025"
+  description="Correlatividades de la Tecnicatura en Programación, Plan 2024. Las 1375 horas son de clase."
 >
   {
     hasSubjects ? (
       <div class="space-y-8 px-4 md:px-0">
+        <p class="max-w-3xl">
+          Las 1375 horas de esta tabla son de clase (interacción pedagógica) del Plan 2024.
+          La Ordenanza 2115 suma 1625 horas de trabajo autónomo: 3000 horas y 120 créditos en
+          total. El curso de ingreso no entra en esa cuenta. El Trabajo Final Integrador es la
+          última asignatura que se aprueba: para la defensa tienen que estar aprobadas todas
+          las materias del plan.
+        </p>
         <ProgressSection subjects={subjectsInitial} />
         <CorrelativitiesTable subjects={subjectsInitial} />
 
